@@ -2050,6 +2050,13 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   [data-aos='flip-down'].aos-animate {
     transform: perspective(2500px) rotateX(0); }
 
+@font-face {
+  font-family: "Pt Sans";
+  src: url("../assets/fonts/Pt-Sans-regular.eot");
+  src: url("../assets/fonts/Pt-Sans-regular.woff") format("woff"), url("../assets/fonts/Pt-Sans-regular.ttf") format("truetype"), url("../assets/fonts/Pt-Sans-regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 .lead {
   font-size: 36.49116px;
   margin-bottom: 0.5rem; }
@@ -2138,17 +2145,14 @@ h6 {
     h6 {
       font-size: 25.45578px; } }
 
-.body,
-p {
+.body {
   font-size: 16px;
   margin-bottom: 0.5rem; }
   @media (min-width: 576px) and (max-width: 1200px) {
-    .body,
-    p {
+    .body {
       font-size: calc( 16px + 2 * ( ( 100vw - 576px) / 624 )); } }
   @media (min-width: 1200px) {
-    .body,
-    p {
+    .body {
       font-size: 18px; } }
 
 .small {
@@ -2663,6 +2667,7 @@ p {
 body {
   font-size: 16px;
   font-kerning: auto;
+  font-family: "Pt Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
   @media (min-width: 576px) and (max-width: 1200px) {
@@ -2671,6 +2676,12 @@ body {
   @media (min-width: 1200px) {
     body {
       font-size: 18px; } }
+
+p {
+  font-size: inherit;
+  margin-bottom: 0; }
+  p + p {
+    margin-top: 1em; }
 
 .c-footer {
   padding: 1em;

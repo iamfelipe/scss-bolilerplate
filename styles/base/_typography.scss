@@ -8,5 +8,10 @@
 }
 
 p {
-  @extend %body;
+  font-size: inherit;
+  margin-bottom: 0;
+
+  + p {
+    margin-top: em(ms(0));
+  }
 }

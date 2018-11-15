@@ -100,5 +100,22 @@ $custom-scale: map-merge(
     $custom-scale
 );
 
-$asset-base-path: '../assets/';
+//
+// Variables
+//
+
+$asset-base-path: '../assets';
 $body-font-size: ms(0) !default;
+
+//
+// Fonts
+//
+// Families and modular scale
+@include font-face('Pt Sans', 'Pt-Sans-regular');
+$font-stack-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-stack-serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+$font-stack-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-stack-primary: 'Pt Sans', $font-stack-sans;
+$font-stack-secondary: 'Roboto', $font-stack-serif;
+
+

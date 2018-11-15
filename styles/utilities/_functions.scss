@@ -13,6 +13,12 @@
 ///     //  font-size: 1.333em;
 
 @function em($pixels, $context: $body-font-size) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
   @return ($pixels / $context) * 1em;
 }
 
@@ -27,6 +33,9 @@
 ///     //  font-size: 1.5rem;
 
 @function rem($pixels) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
   @return ($pixels / $body-font-size) * 1rem;
 }
 
