@@ -1,0 +1,9 @@
+// Extends
+// ---------
+
+@each $base, $scale in $custom-scale {
+  .#{$base},
+  %#{$base} {
+    @include ms-respond(font-size, $scale);
+  }
+}

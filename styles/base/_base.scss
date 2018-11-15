@@ -1,0 +1,9 @@
+// Base
+// ---------
+
+body {
+  @include ms-respond(font-size, 0);
+  font-kerning: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

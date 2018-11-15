@@ -1,0 +1,90 @@
+// Variables
+// ---------
+
+//
+// Color system
+//
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-400: #ced4da !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$grays: map-merge(
+    (
+      "100": $gray-100,
+      "400": $gray-400,
+      "900": $gray-900
+    ),
+    $grays
+);
+
+$primary: #008834 !default;
+$secondary: #2c5e31 !default;
+$tertiary: #d5c796 !default;
+$background: #d3decc !default;
+
+$themes: () !default;
+
+$themes: map-merge(
+    (
+      primary: $primary,
+      secondary: $secondary,
+      tertiary: $tertiary,
+      background: $background,
+    ),
+    $themes
+);
+
+$success: #4ada64 !default;
+$info: #0084ff !default;
+$warning: #ffb204 !default;
+$danger: #ff0000 !default;
+$accent: #449d1b !default;
+
+$states: () !default;
+
+$states: map-merge(
+    (
+      success: $success,
+      info: $info,
+      warning: $warning,
+      danger: $danger,
+      accent: $accent
+    ),
+    $states
+);
+
+//
+// Modular scale
+//
+
+$modularscale: (
+  map-get($grid-breakpoints, "sm"): (
+    base: 16px,
+    ratio: $major-second,
+  ),
+  map-get($grid-breakpoints, "xl"): (
+    base: 18px,
+    ratio: $augmented-fourth,
+  ),
+);
+
+$custom-scale: () !default;
+
+$custom-scale: map-merge(
+    (
+      lead: 7,
+      h1: 6,
+      h2: 5,
+      h3: 4,
+      h4: 3,
+      h5: 2,
+      h6: 1,
+      body: 0,
+      small: -1,
+      tiny: -2,
+    ),
+    $custom-scale
+);
