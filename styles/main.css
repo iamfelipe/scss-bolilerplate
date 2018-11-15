@@ -2059,7 +2059,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 
 .lead {
   font-size: 36.49116px;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.21923em; }
   @media (min-width: 576px) and (max-width: 1200px) {
     .lead {
       font-size: calc( 36.49116px + 167.152 * ( ( 100vw - 576px) / 624 )); } }
@@ -2070,7 +2070,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 .h1,
 h1 {
   font-size: 32.43658px;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.24664em; }
   @media (min-width: 576px) and (max-width: 1200px) {
     .h1,
     h1 {
@@ -2083,7 +2083,7 @@ h1 {
 .h2,
 h2 {
   font-size: 28.83252px;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.27746em; }
   @media (min-width: 576px) and (max-width: 1200px) {
     .h2,
     h2 {
@@ -2096,7 +2096,7 @@ h2 {
 .h3,
 h3 {
   font-size: 25.62891px;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.31215em; }
   @media (min-width: 576px) and (max-width: 1200px) {
     .h3,
     h3 {
@@ -2109,7 +2109,7 @@ h3 {
 .h4,
 h4 {
   font-size: 22.78125px;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.35117em; }
   @media (min-width: 576px) and (max-width: 1200px) {
     .h4,
     h4 {
@@ -2122,7 +2122,7 @@ h4 {
 .h5,
 h5 {
   font-size: 20.25px;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.39506em; }
   @media (min-width: 576px) and (max-width: 1200px) {
     .h5,
     h5 {
@@ -2135,7 +2135,7 @@ h5 {
 .h6,
 h6 {
   font-size: 18px;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.44444em; }
   @media (min-width: 576px) and (max-width: 1200px) {
     .h6,
     h6 {
@@ -2147,7 +2147,7 @@ h6 {
 
 .body {
   font-size: 16px;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5em; }
   @media (min-width: 576px) and (max-width: 1200px) {
     .body {
       font-size: calc( 16px + 2 * ( ( 100vw - 576px) / 624 )); } }
@@ -2157,7 +2157,7 @@ h6 {
 
 .small {
   font-size: 14.22222px;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5625em; }
   @media (min-width: 576px) and (max-width: 1200px) {
     .small {
       font-size: calc( 14.22222px + -1.49427 * ( ( 100vw - 576px) / 624 )); } }
@@ -2167,7 +2167,7 @@ h6 {
 
 .tiny {
   font-size: 12.64198px;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.63281em; }
   @media (min-width: 576px) and (max-width: 1200px) {
     .tiny {
       font-size: calc( 12.64198px + -3.64193 * ( ( 100vw - 576px) / 624 )); } }
