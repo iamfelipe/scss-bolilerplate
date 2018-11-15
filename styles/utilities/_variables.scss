@@ -5,17 +5,15 @@
 // Color system
 //
 
-$white: #fff !default;
 $gray-100: #f8f9fa !default;
-$gray-400: #ced4da !default;
-$gray-900: #212529 !default;
-$black: #000 !default;
+$gray-200: #B0BEC5 !default;
+$gray-400: #78909C !default;
 
 $grays: map-merge(
     (
-      "100": $gray-100,
-      "400": $gray-400,
-      "900": $gray-900
+      gray: $gray-100,
+      light: $gray-200,
+      muted: $gray-400
     ),
     $grays
 );
@@ -56,6 +54,17 @@ $states: map-merge(
     $states
 );
 
+$palettes: (
+  grays: $grays,
+  themes: $themes,
+  states: $states,
+);
+
+$colors: map-merge(
+    map-merge($grays, $themes),
+    $states
+);
+
 //
 // Modular scale
 //
@@ -88,3 +97,6 @@ $custom-scale: map-merge(
     ),
     $custom-scale
 );
+
+
+$asset-base-path: '../assets/'
