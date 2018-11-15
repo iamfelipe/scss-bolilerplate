@@ -1,7 +1,6 @@
 // Typography
 // ---------
 
-
 @for $i from 1 through 6 {
   h#{$i} {
     @extend %h#{$i};
@@ -10,5 +9,4 @@
 
 p {
   @extend %body;
-  //font-size: em(ms(0));
 }

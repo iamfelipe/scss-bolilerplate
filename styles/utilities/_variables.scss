@@ -70,6 +70,8 @@ $colors: map-merge(
 //
 
 $modularscale: (
+  base: 16px,
+  ratio: $major-second,
   map-get($grid-breakpoints, "sm"): (
     base: 16px,
     ratio: $major-second,
@@ -99,4 +101,4 @@ $custom-scale: map-merge(
 );
 
 $asset-base-path: '../assets/';
-$body-font-size: ms(0);
+$body-font-size: ms(0) !default;

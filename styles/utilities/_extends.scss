@@ -5,6 +5,6 @@
   .#{$base},
   %#{$base} {
     @include ms-respond(font-size, $scale);
-    //font-size: em(ms($scale));
+    margin-bottom: rem(8px);
   }
 }
