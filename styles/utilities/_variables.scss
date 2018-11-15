@@ -107,6 +107,11 @@ $custom-scale: map-merge(
 $asset-base-path: '../assets';
 $body-font-size: ms(0) !default;
 
+// Transitions
+$transition-duration: .4s !default;
+$transition-timing-function: $easeOutQuart !default;
+$transition: all $transition-duration $transition-timing-function !default;
+
 //
 // Fonts
 //
