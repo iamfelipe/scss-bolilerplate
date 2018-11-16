@@ -1,6 +1,10 @@
 // Extends
 // ---------
 
+%transition {
+  transition: $transition;
+}
+
 @each $base, $scale in $custom-scale {
   .#{$base},
   %#{$base} {

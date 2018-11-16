@@ -76,7 +76,7 @@ $modularscale: (
     base: 16px,
     ratio: $major-second,
   ),
-  map-get($grid-breakpoints, "xl"): (
+  map-get($grid-breakpoints, "lg"): (
     base: 18px,
     ratio: $augmented-fourth,
   ),
@@ -106,6 +106,7 @@ $custom-scale: map-merge(
 
 $asset-base-path: '../assets';
 $body-font-size: ms(0) !default;
+$btn-name: 'button';
 
 // Transitions
 $transition-duration: .4s !default;
