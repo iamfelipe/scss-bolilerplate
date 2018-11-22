@@ -1,12 +1,21 @@
 {
-  "name": "design-system",
+  "name": "@felipecastillo/scss-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "SCSS Boilerplate ready.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "browser-sync": "^2.26.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^4.0.1",
+    "modularscale-sass": "^3.0.5",
     "aos": "^2.3.4",
     "family.scss": "^1.0.8",
     "gulp-cache": "^1.0.2",
@@ -19,17 +28,6 @@
     "imagemin-pngquant": "^6.0.0",
     "imagemin-zopfli": "^5.1.0"
   },
-  "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "browser-sync": "^2.26.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-sass": "^4.0.1",
-    "modularscale-sass": "^3.0.5"
-  },
-  "author": "",
+  "author": "Felipe Castillo <iamfelipe.dev@gmail.com>",
   "license": "ISC"
 }
