@@ -6,7 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamfelipe/scss-bolilerplate.git"
+  },
+  "keywords": [
+    "iamfelipe",
+    "scss",
+    "mixins",
+    "helpers",
+    "patterns",
+    "variables",
+    "styles",
+    "sass",
+    "boilerplate"
+  ],
+  "dependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "browser-sync": "^2.26.0",
@@ -29,5 +44,5 @@
     "imagemin-zopfli": "^5.1.0"
   },
   "author": "Felipe Castillo <iamfelipe.dev@gmail.com>",
-  "license": "ISC"
+  "license": "MIT"
 }
