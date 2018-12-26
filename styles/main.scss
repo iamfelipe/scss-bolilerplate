@@ -1,5 +1,12 @@
+// Vendors
 @import "vendor/index";
-@import "utilities/index";
+// Configuration and helpers
+@import "abstract/index";
+//Base stuff
 @import "base/index";
+//Layout-related sections
 @import "layout/index";
+//Components
 @import "components/index";
+//Page-specific styles
+@import "pages/index";
