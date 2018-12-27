@@ -150,3 +150,29 @@
     background-image: image($image + '-desktop.' + $ext);
   }
 }
+
+/// Flex position in both axis
+///
+/// @author Felipe Castillo
+/// @group addons
+///
+/// @param {String} $align - Position in Y axis.
+/// @param {String} $justify - Position in X axis.
+///
+/// @example scss
+///     @include flex(flex-end, center);
+///     //  .container {
+///     //      display: flex;
+///     //      align-items: flex-end;
+///     //      justify-content: center;
+///     //  }
+
+@mixin flex($align, $justify: initial) {
+  display: flex;
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
