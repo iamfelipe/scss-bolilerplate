@@ -1,6 +1,14 @@
 // Typography
 // ---------
 
+body {
+  @include ms-respond(font-size, 0);
+  font-kerning: auto;
+  font-family: $font-stack-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @for $i from 1 through 6 {
   h#{$i} {
     @extend %h#{$i};
