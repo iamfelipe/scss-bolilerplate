@@ -21,12 +21,12 @@ const browserSync = bsCreate()
 
 const dirs = {
   src: 'src',
-  dest: 'dist',
+  dest: 'dist'
 }
 
 const cssPaths = {
   srcFiles: `styles/**/*.scss`,
-  destDir: `styles`,
+  destDir: `styles`
 }
 
 const
@@ -35,41 +35,44 @@ const
   LOCAL_PROXY = 'https://callao.dd:8443/'
 
 gulp.task('dev:styles', () => {
-  return gulp.src(cssPaths.srcFiles)
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(cssPaths.destDir))
-    .pipe(browserSync.stream())
+  return gulp.src(cssPaths.srcFiles).
+    pipe(sourcemaps.init()).
+    pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)).
+    pipe(sourcemaps.write('.')).
+    pipe(gulp.dest(cssPaths.destDir)).
+    pipe(browserSync.stream())
 })
 
 gulp.task('prod:styles', () => {
   const plugins = [
     autoprefixer({
       browsers: ['last 2 versions'],
-      cascade: false,
+      cascade: false
     }),
-    // cssnano({
-    //   discardUnused: {fontFace: false},
-    // }),
+    cssnano({
+      discardUnused: {
+        fontFace: false
+      }
+    })
   ]
-  return gulp.src(cssPaths.srcFiles)
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+  return gulp.src(cssPaths.srcFiles).
+    pipe(sourcemaps.init()).
+    pipe(sass().on('error', sass.logError)).
     // Use postcss with autoprefixer and compress the compiled file using cssnano
-    .pipe(postcss(plugins))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(cssPaths.destDir))
+    pipe(postcss(plugins)).
+    pipe(sourcemaps.write('.')).
+    pipe(gulp.dest(cssPaths.destDir))
 })
 
 gulp.task('dev:scripts', () => {
-  return gulp.src(SCRIPTS_SOURCES)
-    .pipe(sourcemaps.init())
-    .pipe(babel({
-      presets: ['es2015'],
-    }))
-    .pipe(concat('scripts.js'))
-    .pipe(sourcemaps.write('.')).pipe(gulp.dest('js'))
+  return gulp.src(SCRIPTS_SOURCES).
+    pipe(sourcemaps.init()).
+    pipe(babel({
+      presets: ['es2015']
+    })).
+    pipe(concat('scripts.js')).
+    pipe(sourcemaps.write('.')).
+    pipe(gulp.dest('js'))
 })
 
 gulp.task('prod:images', function () {
@@ -77,11 +80,11 @@ gulp.task('prod:images', function () {
     //png
     imageminPngquant({
       speed: 1,
-      quality: 98, //lossy settings
+      quality: 98 //lossy settings
     }),
     imageminZopfli({
       more: true,
-      iterations: 50, // very slow but more effective
+      iterations: 50 // very slow but more effective
     }),
     //gif
     // imagemin.gifsicle({
@@ -92,23 +95,23 @@ gulp.task('prod:images', function () {
     imageminGiflossy({
       optimizationLevel: 3,
       optimize: 3, //keep-empty: Preserve empty transparent frames
-      lossy: 2,
+      lossy: 2
     }),
     //svg
     imagemin.svgo({
       plugins: [
         {
-          removeViewBox: false,
-        }],
+          removeViewBox: false
+        }]
     }),
     //jpg lossless
     imagemin.jpegtran({
-      progressive: true,
+      progressive: true
     }),
     //jpg very light lossy, use vs jpegtran
     imageminMozjpeg({
-      quality: 90,
-    }),
+      quality: 90
+    })
   ]))).pipe(gulp.dest('assets/images'))
 })
 
@@ -123,8 +126,8 @@ gulp.task('default', function () {
     // port: 4000,
     // proxy: LOCAL_PROXY,
     server: {
-      baseDir: './',
-    },
+      baseDir: './'
+    }
   })
   gulp.watch(cssPaths.srcFiles, gulp.series('dev:styles'))
   // We should tell gulp which files to watch to trigger the reload
