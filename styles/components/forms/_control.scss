@@ -1,0 +1,17 @@
+// Control root
+// ---------
+
+%control {
+  @extend %box;
+  background-color: $white;
+
+  @include hover-focus() {
+    border-color: palette(states, accent);
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.form-control {
+  @extend %control;
+}

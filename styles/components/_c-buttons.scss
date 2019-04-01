@@ -18,7 +18,8 @@
   @include hover-focus {
     @extend %transition;
     color: $white;
-    background-color: mix(black, $default-color, 8%);
+    //background-color: mix(black, $default-color, 8%);
+    opacity: .9;
     text-decoration: none;
   }
 

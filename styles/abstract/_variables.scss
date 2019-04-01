@@ -5,9 +5,9 @@
 // Color system
 //
 
-$gray-100: #f8f9fa !default;
-$gray-200: #B0BEC5 !default;
-$gray-400: #78909C !default;
+$gray-100: #f8f9fa;
+$gray-200: #B0BEC5;
+$gray-400: #78909C;
 
 $grays: map-merge(
     (
@@ -18,30 +18,30 @@ $grays: map-merge(
     $grays
 );
 
-$primary: #008834 !default;
-$secondary: #2c5e31 !default;
-$tertiary: #d5c796 !default;
-$background: #d3decc !default;
+$primary: #008834;
+$secondary: #2c5e31;
+$tertiary: #d5c796;
+$background: #d3decc;
 
-$themes: () !default;
+$theme-colors: ();
 
-$themes: map-merge(
+$theme-colors: map-merge(
     (
       primary: $primary,
       secondary: $secondary,
       tertiary: $tertiary,
       background: $background,
     ),
-    $themes
+    $theme-colors
 );
 
-$success: #4ada64 !default;
-$info: #0084ff !default;
-$warning: #ffb204 !default;
-$danger: #ff0000 !default;
-$accent: #449d1b !default;
+$success: #4ada64;
+$info: #0084ff;
+$warning: #ffb204;
+$danger: #ff0000;
+$accent: #449d1b;
 
-$states: () !default;
+$states: ();
 
 $states: map-merge(
     (
@@ -56,12 +56,12 @@ $states: map-merge(
 
 $palettes: (
   grays: $grays,
-  themes: $themes,
+  themes: $theme-colors,
   states: $states,
 );
 
 $colors: map-merge(
-    map-merge($grays, $themes),
+    map-merge($grays, $theme-colors),
     $states
 );
 
@@ -82,7 +82,7 @@ $modularscale: (
   ),
 );
 
-$custom-scale: () !default;
+$custom-scale: ();
 
 $custom-scale: map-merge(
     (
@@ -105,22 +105,24 @@ $custom-scale: map-merge(
 //
 
 $asset-base-path: '../assets';
-$body-font-size: ms(0) !default;
-$btn-name: 'button';
+$body-font-size: ms(0);
+$btn-name: 'btn';
+$border-radius: 4px;
+$border-width: 1px;
 
 // Transitions
-$transition-duration: .4s !default;
-$transition-timing-function: $easeOutQuart !default;
-$transition: all $transition-duration $transition-timing-function !default;
+$transition-duration: .4s;
+$transition-timing-function: $easeOutQuart;
+$transition: all $transition-duration $transition-timing-function;
 
 //
 // Fonts
 //
 // Families and modular scale
 @include font-face('Pt Sans', 'Pt-Sans-regular');
-$font-stack-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-stack-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-stack-serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-$font-stack-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-stack-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-stack-primary: 'Pt Sans', $font-stack-sans;
 $font-stack-secondary: 'Roboto', $font-stack-serif;
 

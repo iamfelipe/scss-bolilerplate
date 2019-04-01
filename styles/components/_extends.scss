@@ -3,7 +3,14 @@
 
 %box {
   display: block;
+  padding: em(16px) em(32px);
+  height: auto;
   font-family: $font-stack-primary;
   font-size: inherit;
-  padding: em(16px) em(32px);
+  border-width: $border-width;
+  border-style: solid;
+  border-radius: $border-radius;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
