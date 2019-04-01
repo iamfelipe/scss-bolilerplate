@@ -4,3 +4,8 @@
 %input {
   @extend %control;
 }
+
+input {
+  @extend %input;
+}
+

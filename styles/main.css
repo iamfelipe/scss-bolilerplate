@@ -6536,7 +6536,7 @@ p {
 .btn--light,
 .btn--danger,
 .btn--warning,
-.btn--info, .form-control {
+.btn--info, .form-control, input, select, textarea {
   display: block;
   padding: 1em 1.5em;
   height: auto;
@@ -6704,11 +6704,11 @@ p {
   }
 }
 
-.form-control {
+.form-control, input, select, textarea {
   background-color: #fff;
 }
 
-.form-control:hover, .form-control:focus {
+.form-control:hover, input:hover, select:hover, textarea:hover, .form-control:focus, input:focus, select:focus, textarea:focus {
   border-color: #449d1b;
   outline: none;
   box-shadow: none;

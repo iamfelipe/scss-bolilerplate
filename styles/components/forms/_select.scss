@@ -1,0 +1,10 @@
+// Select root
+// ---------
+
+%select {
+  @extend %control;
+}
+
+select {
+  @extend %select;
+}
