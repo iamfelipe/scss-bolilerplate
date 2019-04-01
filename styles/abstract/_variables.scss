@@ -10,12 +10,12 @@ $gray-200: #B0BEC5;
 $gray-400: #78909C;
 
 $grays: map-merge(
-    (
-      gray: $gray-100,
-      light: $gray-200,
-      muted: $gray-400
-    ),
-    $grays
+                (
+                        gray: $gray-100,
+                        light: $gray-200,
+                        muted: $gray-400
+                ),
+                $grays
 );
 
 $primary: #008834;
@@ -26,13 +26,13 @@ $background: #d3decc;
 $theme-colors: ();
 
 $theme-colors: map-merge(
-    (
-      primary: $primary,
-      secondary: $secondary,
-      tertiary: $tertiary,
-      background: $background,
-    ),
-    $theme-colors
+                (
+                        primary: $primary,
+                        secondary: $secondary,
+                        tertiary: $tertiary,
+                        background: $background,
+                ),
+                $theme-colors
 );
 
 $success: #4ada64;
@@ -44,25 +44,25 @@ $accent: #449d1b;
 $states: ();
 
 $states: map-merge(
-    (
-      success: $success,
-      info: $info,
-      warning: $warning,
-      danger: $danger,
-      accent: $accent
-    ),
-    $states
+                (
+                        success: $success,
+                        info: $info,
+                        warning: $warning,
+                        danger: $danger,
+                        accent: $accent
+                ),
+                $states
 );
 
 $palettes: (
-  grays: $grays,
-  themes: $theme-colors,
-  states: $states,
+        grays: $grays,
+        themes: $theme-colors,
+        states: $states,
 );
 
 $colors: map-merge(
-    map-merge($grays, $theme-colors),
-    $states
+                map-merge($grays, $theme-colors),
+                $states
 );
 
 //
@@ -70,34 +70,33 @@ $colors: map-merge(
 //
 
 $modularscale: (
-  base: 16px,
-  ratio: $major-second,
-  map-get($grid-breakpoints, "sm"): (
-    base: 16px,
-    ratio: $major-second,
-  ),
-  map-get($grid-breakpoints, "lg"): (
-    base: 18px,
-    ratio: $augmented-fourth,
-  ),
+        base: 16px,
+        ratio: $major-second,
+        map-get($grid-breakpoints, "sm"): (
+                base: 16px,
+        ),
+        map-get($grid-breakpoints, "lg"): (
+                base: 18px,
+                ratio: $augmented-fourth,
+        ),
 );
 
 $custom-scale: ();
 
 $custom-scale: map-merge(
-    (
-      lead: 7,
-      h1: 6,
-      h2: 5,
-      h3: 4,
-      h4: 3,
-      h5: 2,
-      h6: 1,
-      body: 0,
-      small: -1,
-      tiny: -2,
-    ),
-    $custom-scale
+                (
+                        lead: 7,
+                        h1: 6,
+                        h2: 5,
+                        h3: 4,
+                        h4: 3,
+                        h5: 2,
+                        h6: 1,
+                        body: 0,
+                        small: -1,
+                        tiny: -2,
+                ),
+                $custom-scale
 );
 
 //
@@ -107,8 +106,8 @@ $custom-scale: map-merge(
 $asset-base-path: '../assets';
 $body-font-size: ms(0);
 $btn-name: 'btn';
-$border-radius: 4px;
-$border-width: 1px;
+$border-radius: em(4);
+$border-width: em(1);
 
 // Transitions
 $transition-duration: .4s;

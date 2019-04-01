@@ -351,8 +351,8 @@ html {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 16px;
+  padding-left: 16px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -383,8 +383,8 @@ html {
 
 .container-fluid {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 16px;
+  padding-left: 16px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -392,8 +392,8 @@ html {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -16px;
+  margin-left: -16px;
 }
 
 .no-gutters {
@@ -416,8 +416,8 @@ html {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
 .col {
@@ -3990,7 +3990,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 
 .lead {
   font-size: 36.49116px;
-  margin-bottom: 0.21923em;
+  margin-bottom: 16px;
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
@@ -4005,10 +4005,22 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   }
 }
 
+@media (min-width: 576px) and (max-width: 992px) {
+  .lead {
+    margin-bottom: calc( 16px + 2 * ( ( 100vw - 576px) / 416 ));
+  }
+}
+
+@media (min-width: 992px) {
+  .lead {
+    margin-bottom: 18px;
+  }
+}
+
 .h1,
 h1 {
   font-size: 32.43658px;
-  margin-bottom: 0.24664em;
+  margin-bottom: 16px;
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
@@ -4025,10 +4037,24 @@ h1 {
   }
 }
 
+@media (min-width: 576px) and (max-width: 992px) {
+  .h1,
+  h1 {
+    margin-bottom: calc( 16px + 2 * ( ( 100vw - 576px) / 416 ));
+  }
+}
+
+@media (min-width: 992px) {
+  .h1,
+  h1 {
+    margin-bottom: 18px;
+  }
+}
+
 .h2,
 h2 {
   font-size: 28.83252px;
-  margin-bottom: 0.27746em;
+  margin-bottom: 16px;
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
@@ -4045,10 +4071,24 @@ h2 {
   }
 }
 
+@media (min-width: 576px) and (max-width: 992px) {
+  .h2,
+  h2 {
+    margin-bottom: calc( 16px + 2 * ( ( 100vw - 576px) / 416 ));
+  }
+}
+
+@media (min-width: 992px) {
+  .h2,
+  h2 {
+    margin-bottom: 18px;
+  }
+}
+
 .h3,
 h3 {
   font-size: 25.62891px;
-  margin-bottom: 0.31215em;
+  margin-bottom: 16px;
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
@@ -4065,10 +4105,24 @@ h3 {
   }
 }
 
+@media (min-width: 576px) and (max-width: 992px) {
+  .h3,
+  h3 {
+    margin-bottom: calc( 16px + 2 * ( ( 100vw - 576px) / 416 ));
+  }
+}
+
+@media (min-width: 992px) {
+  .h3,
+  h3 {
+    margin-bottom: 18px;
+  }
+}
+
 .h4,
 h4 {
   font-size: 22.78125px;
-  margin-bottom: 0.35117em;
+  margin-bottom: 16px;
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
@@ -4085,10 +4139,24 @@ h4 {
   }
 }
 
+@media (min-width: 576px) and (max-width: 992px) {
+  .h4,
+  h4 {
+    margin-bottom: calc( 16px + 2 * ( ( 100vw - 576px) / 416 ));
+  }
+}
+
+@media (min-width: 992px) {
+  .h4,
+  h4 {
+    margin-bottom: 18px;
+  }
+}
+
 .h5,
 h5 {
   font-size: 20.25px;
-  margin-bottom: 0.39506em;
+  margin-bottom: 16px;
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
@@ -4105,10 +4173,24 @@ h5 {
   }
 }
 
+@media (min-width: 576px) and (max-width: 992px) {
+  .h5,
+  h5 {
+    margin-bottom: calc( 16px + 2 * ( ( 100vw - 576px) / 416 ));
+  }
+}
+
+@media (min-width: 992px) {
+  .h5,
+  h5 {
+    margin-bottom: 18px;
+  }
+}
+
 .h6,
 h6 {
   font-size: 18px;
-  margin-bottom: 0.44444em;
+  margin-bottom: 16px;
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
@@ -4125,9 +4207,23 @@ h6 {
   }
 }
 
+@media (min-width: 576px) and (max-width: 992px) {
+  .h6,
+  h6 {
+    margin-bottom: calc( 16px + 2 * ( ( 100vw - 576px) / 416 ));
+  }
+}
+
+@media (min-width: 992px) {
+  .h6,
+  h6 {
+    margin-bottom: 18px;
+  }
+}
+
 .body {
   font-size: 16px;
-  margin-bottom: 0.5em;
+  margin-bottom: 16px;
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
@@ -4142,9 +4238,21 @@ h6 {
   }
 }
 
+@media (min-width: 576px) and (max-width: 992px) {
+  .body {
+    margin-bottom: calc( 16px + 2 * ( ( 100vw - 576px) / 416 ));
+  }
+}
+
+@media (min-width: 992px) {
+  .body {
+    margin-bottom: 18px;
+  }
+}
+
 .small {
   font-size: 14.22222px;
-  margin-bottom: 0.5625em;
+  margin-bottom: 16px;
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
@@ -4159,9 +4267,21 @@ h6 {
   }
 }
 
+@media (min-width: 576px) and (max-width: 992px) {
+  .small {
+    margin-bottom: calc( 16px + 2 * ( ( 100vw - 576px) / 416 ));
+  }
+}
+
+@media (min-width: 992px) {
+  .small {
+    margin-bottom: 18px;
+  }
+}
+
 .tiny {
   font-size: 12.64198px;
-  margin-bottom: 0.63281em;
+  margin-bottom: 16px;
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
@@ -4173,6 +4293,18 @@ h6 {
 @media (min-width: 992px) {
   .tiny {
     font-size: 9.00005px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .tiny {
+    margin-bottom: calc( 16px + 2 * ( ( 100vw - 576px) / 416 ));
+  }
+}
+
+@media (min-width: 992px) {
+  .tiny {
+    margin-bottom: 18px;
   }
 }
 
@@ -4869,11 +5001,19 @@ body {
 
 p {
   font-size: inherit;
-  margin-bottom: 0;
+  margin-bottom: 16px;
 }
 
-p + p {
-  margin-top: 1em;
+@media (min-width: 576px) and (max-width: 992px) {
+  p {
+    margin-bottom: calc( 16px + 2 * ( ( 100vw - 576px) / 416 ));
+  }
+}
+
+@media (min-width: 992px) {
+  p {
+    margin-bottom: 18px;
+  }
 }
 
 
@@ -4892,9 +5032,9 @@ p + p {
   height: auto;
   font-family: "Pt Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: inherit;
-  border-width: 1px;
+  border-width: 0.0625em;
   border-style: solid;
-  border-radius: 4px;
+  border-radius: 0.25em;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -5036,6 +5176,22 @@ p + p {
 .btn--info[disabled] {
   cursor: not-allowed;
   pointer-events: none;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .form-group {
+    margin-bottom: calc( 16px + 2 * ( ( 100vw - 576px) / 416 ));
+  }
+}
+
+@media (min-width: 992px) {
+  .form-group {
+    margin-bottom: 18px;
+  }
 }
 
 .form-control {

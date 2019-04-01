@@ -17,9 +17,9 @@ body {
 
 p {
   font-size: inherit;
-  margin-bottom: 0;
+  @include ms-respond(margin-bottom, 0);
 
   + p {
-    margin-top: em(ms(0));
+    //@include ms-respond(margin-top, 0);
   }
 }
