@@ -1,3 +1,3 @@
 module.exports = {
-  scripts: "./assets/js/scripts.js"
+  scripts: "./src/js/scripts.js"
 };

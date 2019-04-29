@@ -1,0 +1,10 @@
+// Textarea root
+// ---------
+
+%textarea {
+  @extend %control;
+}
+
+textarea {
+  @extend %textarea;
+}

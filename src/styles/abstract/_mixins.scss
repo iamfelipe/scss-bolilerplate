@@ -1,0 +1,178 @@
+// Mixins
+// ---------
+
+/// Import and declare the font face.
+///
+/// @author Felipe Castillo
+/// @group addons
+///
+/// @param {String} $font-name - Declarative font name
+/// @param {String} $file-name - Exact font filename
+/// @param {Number} $weight [normal] - Font-weight
+/// @param {String} $style [normal] - Font-style
+///
+/// @example scss
+///     @include font-face('Circular', 'Circular-Bold', 700);
+///     //  @font-face {
+///     //      font-family: "Circular";
+///     //      src: url("../fonts/Circular-Bold.eot");
+///     //      src: url("../fonts/Circular-Bold.woff") format("woff"), url("../fonts/Circular-Bold.ttf") format("truetype"), url("../fonts/Circular-Bold.svg") format("svg");
+///     //      font-weight: 700;
+///     //      font-style: normal;
+///     //  }
+
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: font($file-name + '.eot');
+    src: font($file-name + '.woff') format('woff'),
+    font($file-name + '.ttf') format('truetype'),
+    font($file-name + '.svg') format('svg');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+/// Wrap BEM element inside block into declarative class.
+///
+/// @author Felipe Castillo
+/// @group addons
+///
+/// @param {String} $element - Element name
+///
+/// @example scss
+///     @include e('item') {
+///         padding-left: 24px;
+///         margin-top: 8px;
+///     }
+///     //  .nav__item {
+///     //      padding-left: 24px;
+///     //      margin-top: 8px;
+///     //  }
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+/// Wrap BEM modifier inside element into declarative class.
+///
+/// @author Felipe Castillo
+/// @group addons
+///
+/// @param {String} $element - Modifier state
+///
+/// @example scss
+///     @include m('is-active') {
+///         background-color: #64DD17;
+///     }
+///     //  .nav__item--is-active {
+///     //      background-color: #64DD17;
+///     //  }
+
+@mixin m($element) {
+  &--#{$element} {
+    @content;
+  }
+}
+
+/// Generate property colors (color, background-colors and border-color) from current project palette.
+///
+/// @author Felipe Castillo
+/// @group addons
+///
+/// @param {Map} $colors - Project colors palette map.
+///
+/// @example scss
+///     @include generate-colors();
+///     //  .color-primary {
+///     //      color: #ef1700 !important;
+///     //  }
+///     //  .bg-primary {
+///     //      background: #ef1700;
+///     //  }
+///     //  .border-primary {
+///     //      border-color: #ef1700;
+///     //  }
+
+@mixin generate-colors() {
+  @each $name, $color in $colors {
+    .color-#{$name} {
+      color: $color !important;
+    }
+    .background-#{$name} {
+      background-color: $color !important;
+    }
+    .border-#{$name} {
+      border-color: $color !important;
+    }
+  }
+}
+
+/// Spacing helpers.
+/// @access private
+/// @group addons
+@mixin spacing-helpers() {
+  $spaceamounts: (0, 8, 16, 24, 32, 40, 48, 56, 64, 72);
+  $sides: (top, bottom, left, right, all);
+
+  @each $space in $spaceamounts {
+    @each $side in $sides {
+
+      @if $side == 'all' {
+        .m-#{$space} {
+          margin: #{$space}px !important;
+        }
+
+        .p-#{$space} {
+          padding: #{$space}px !important;
+        }
+      } @else {
+        .m-#{str-slice($side, 0, 1)}-#{$space} {
+          margin-#{$side}: #{$space}px !important;
+        }
+
+        .p-#{str-slice($side, 0, 1)}-#{$space} {
+          padding-#{$side}: #{$space}px !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin responsive-image($image, $ext: 'png') {
+  background-image: image($image + '.' + $ext);
+  background-size: cover;
+  background-position: center center;
+
+  @include media-breakpoint-up(lg) {
+    background-image: image($image + '-desktop.' + $ext);
+  }
+}
+
+/// Flex position in both axis
+///
+/// @author Felipe Castillo
+/// @group addons
+///
+/// @param {String} $align - Position in Y axis.
+/// @param {String} $justify - Position in X axis.
+///
+/// @example scss
+///     @include flex(flex-end, center);
+///     //  .container {
+///     //      display: flex;
+///     //      align-items: flex-end;
+///     //      justify-content: center;
+///     //  }
+
+@mixin flex($align, $justify: initial) {
+  display: flex;
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+

@@ -52,13 +52,13 @@ const babelConfig = { targets: { browsers: supportedBrowsers } };
 // Paths for reuse
 const exportPath = "./dist/**/*";
 const srcPath = (file, watch = false) => {
-  if (file === "scss" && watch === false) return "./assets/styles/main.scss";
-  if (file === "scss" && watch === true) return "./assets/styles/**/*.scss";
+  if (file === "scss" && watch === false) return "./src/styles/main.scss";
+  if (file === "scss" && watch === true) return "./src/styles/**/*.scss";
   if (file === "js" && watch === false) return entryArray;
-  if (file === "js" && watch === true) return "./assets/js/**/*.js";
+  if (file === "js" && watch === true) return "./src/js/**/*.js";
   if (file === "html") return "./templates/**/*.html";
-  if (file === "img") return "./assets/img/**/*.{png,jpeg,jpg,svg,gif}";
-  if (file === "fonts") return "./assets/fonts/**/*.{eot,woff,woff2,ttf,svg}";
+  if (file === "img") return "./src/img/**/*.{png,jpeg,jpg,svg,gif}";
+  if (file === "fonts") return "./src/fonts/**/*.{eot,woff,woff2,ttf,svg}";
   console.error(
     "Unsupported file type entered into Gulp Task Runner for Source Path"
   );

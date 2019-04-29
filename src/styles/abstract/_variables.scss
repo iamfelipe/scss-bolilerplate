@@ -1,0 +1,128 @@
+// Variables
+// ---------
+
+//
+// Color system
+//
+
+$gray-100: #f8f9fa;
+$gray-200: #B0BEC5;
+$gray-400: #78909C;
+
+$grays: map-merge(
+                (
+                        gray: $gray-100,
+                        light: $gray-200,
+                        muted: $gray-400
+                ),
+                $grays
+);
+
+$primary: #008834;
+$secondary: #2c5e31;
+$tertiary: #d5c796;
+$background: #d3decc;
+
+$theme-colors: ();
+
+$theme-colors: map-merge(
+                (
+                        primary: $primary,
+                        secondary: $secondary,
+                        tertiary: $tertiary,
+                        background: $background,
+                ),
+                $theme-colors
+);
+
+$success: #4ada64;
+$info: #0084ff;
+$warning: #ffb204;
+$danger: #ff0000;
+$accent: #449d1b;
+
+$states: ();
+
+$states: map-merge(
+                (
+                        success: $success,
+                        info: $info,
+                        warning: $warning,
+                        danger: $danger,
+                        accent: $accent
+                ),
+                $states
+);
+
+$palettes: (
+        grays: $grays,
+        themes: $theme-colors,
+        states: $states,
+);
+
+$colors: map-merge(
+                map-merge($grays, $theme-colors),
+                $states
+);
+
+//
+// Modular scale
+//
+
+$modularscale: (
+        base: 16px,
+        ratio: $major-second,
+        map-get($grid-breakpoints, "sm"): (
+                base: 16px,
+        ),
+        map-get($grid-breakpoints, "lg"): (
+                base: 18px,
+                ratio: $augmented-fourth,
+        ),
+);
+
+$custom-scale: ();
+
+$custom-scale: map-merge(
+                (
+                        lead: 7,
+                        h1: 6,
+                        h2: 5,
+                        h3: 4,
+                        h4: 3,
+                        h5: 2,
+                        h6: 1,
+                        body: 0,
+                        small: -1,
+                        tiny: -2,
+                ),
+                $custom-scale
+);
+
+//
+// Variables
+//
+
+$asset-base-path: '../assets';
+$body-font-size: ms(0);
+$btn-name: 'btn';
+$border-radius: em(4);
+$border-width: em(1);
+
+// Transitions
+$transition-duration: .4s;
+$transition-timing-function: $easeOutQuart;
+$transition: all $transition-duration $transition-timing-function;
+
+//
+// Fonts
+//
+// Families and modular scale
+@include font-face('Pt Sans', 'Pt-Sans-regular');
+$font-stack-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-stack-serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+$font-stack-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-stack-primary: 'Pt Sans', $font-stack-sans;
+$font-stack-secondary: 'Roboto', $font-stack-serif;
+
+
