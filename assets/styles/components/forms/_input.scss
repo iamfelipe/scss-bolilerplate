@@ -1,0 +1,15 @@
+// Input root
+// ---------
+
+%input {
+  @extend %control;
+}
+
+input {
+
+  &[type="number"],
+  &[type="text"] {
+    @extend %input;
+  }
+}
+

@@ -1,0 +1,24 @@
+//
+// tagline
+//
+
+.c-tagline {
+
+  @include e(wrap) {
+    width: calc(100vw / 4.5);
+  }
+
+  @include e(position) {
+
+  }
+
+  @include e(logo) {
+
+  }
+
+  @include e(slogan) {
+
+  }
+}
+
+

@@ -1,0 +1,19 @@
+// Extends
+// ---------
+
+%box {
+  display: block;
+  padding: em(4px) em(24px);
+  height: auto;
+  font-family: $font-stack-primary;
+  font-size: inherit;
+  line-height: inherit;
+  border-width: $border-width;
+  border-style: solid;
+  border-radius: $border-radius;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: none;
+}

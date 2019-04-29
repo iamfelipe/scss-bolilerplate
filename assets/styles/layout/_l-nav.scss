@@ -1,0 +1,19 @@
+//
+// nav
+//
+
+.l-nav {
+
+  @include e(wrap) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  @include e(position) {
+
+  }
+}
+
+
+

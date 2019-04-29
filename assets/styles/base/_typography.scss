@@ -1,0 +1,48 @@
+// Typography
+// ---------
+
+body {
+  @include ms-respond(font-size, 0);
+  @include ms-respond(line-height, 2);
+  font-kerning: auto;
+  font-family: $font-stack-primary;
+  color: $white;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    @extend %h#{$i};
+  }
+}
+
+p {
+  font-size: inherit;
+  @include ms-respond(margin-bottom, 0);
+
+  + p {
+    //@include ms-respond(margin-top, 0);
+  }
+}
+
+%title,
+.title {
+  @extend %h1;
+  color: $white;
+  text-align: left;
+  text-transform: uppercase;
+
+  span {
+    color: palette(themes, primary);
+  }
+}
+
+%subtitle,
+.subtitle {
+  @extend %h4;
+  color: palette(grays, 400);
+  text-align: center;
+  text-transform: uppercase;
+}

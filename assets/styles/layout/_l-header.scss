@@ -1,0 +1,13 @@
+// Header root
+// ---------
+
+.l-header {
+  position: absolute;
+  top: $frame-offset-y;
+  right: $frame-offset-x;
+  left: $frame-offset-x;
+  display: flex;
+  z-index: $zindex-popover;
+}
+
+

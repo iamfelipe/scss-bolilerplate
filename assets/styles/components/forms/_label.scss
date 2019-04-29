@@ -1,0 +1,13 @@
+//
+// LABEL
+//
+
+%label {
+  display: block;
+  text-align: left;
+}
+
+label {
+    @extend %label;
+}
+

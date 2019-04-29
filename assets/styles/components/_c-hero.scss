@@ -1,0 +1,19 @@
+//
+// Hero
+//
+
+.c-hero {
+
+  @include e(wrap) {
+
+    @include media-breakpoint-up(lg) {
+
+    }
+  }
+
+  @include e(title) {
+
+  }
+}
+
+

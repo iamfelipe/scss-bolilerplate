@@ -1,0 +1,61 @@
+//
+// INFO
+//
+
+.p-info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: image('abi-bg-agegate.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+
+  .btn {
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    right: 0;
+  }
+
+  @include e(container) {
+
+  }
+
+  @include e(title) {
+    font-size: 8.4vw;
+    line-height: 8.4vw;
+    margin-left: em(-164, ms(6));
+    //margin-bottom: em(72, ms(6));
+    margin-bottom: 3vw;
+  }
+
+  @include e(body) {
+    // margin-top: auto;
+  }
+
+  @include e(logo) {
+    $logo-size: 9.5vw;
+    position: absolute;
+    top: -$logo-size / 2;
+    right: calc(50% - #{$logo-size / 2});
+    width: $logo-size;
+    height: $logo-size;
+    background: transparent image('abi-img-logo.png') no-repeat center;
+    background-size: contain;
+  }
+
+  form {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+
+    .form-group {
+      // @include ms-respond(margin-top, 0);
+    }
+  }
+}

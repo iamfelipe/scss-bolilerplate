@@ -1,0 +1,27 @@
+// Footer root
+// ---------
+
+.l-footer {
+  position: absolute;
+  bottom: $frame-offset-y;
+  right: $frame-offset-x;
+  left: $frame-offset-x;
+  display: flex;
+  z-index: $zindex-popover;
+
+  @include e(text) {
+    width: calc((100vw - #{$frame-offset-x * 2}) - #{em($grid-gutter-width * 6) * 2});
+    text-align: center;
+    line-height: 1.2;
+    position: absolute;
+    margin-bottom: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include media-breakpoint-up(lg) {
+      width: calc((100vw - #{$frame-offset-x * 2}) - #{em($grid-gutter-width * 12) * 2});
+      font-size: 1vw;
+    }
+  }
+}

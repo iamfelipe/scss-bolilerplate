@@ -1,0 +1,81 @@
+//
+// Buttons
+//
+
+
+// Base
+// ---------
+.#{$btn-name} {
+  @extend %box;
+  $default-color: palette(states, accent);
+  text-align: center;
+  background-color: $default-color;
+  border-color: $default-color;
+  z-index: 1;
+
+  @include plain-hover-focus() {
+    color: color-yiq($background);
+    text-decoration: none;
+  }
+
+  @include hover-focus() {
+    @extend %transition;
+    background-color: darken($default-color, 7.5%);
+    border-color: darken($default-color, 7.5%);
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 $border-width rgba($default-color, .5);
+  }
+
+  &.disabled,
+  &:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+}
+
+// Mixin
+// ---------
+@mixin button($background, $hover-background: darken($background, 7.5%), $disabled-background: lighten($background, 7.5%)) {
+  @extend .#{$btn-name};
+  background-color: $background;
+  border-color: $background;
+
+  @include plain-hover-focus() {
+    color: color-yiq($background);
+  }
+
+  @include hover-focus() {
+    background-color: $hover-background;
+    border-color: $hover-background;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 $border-width rgba($background, .5);
+  }
+
+  &.disabled,
+  &:disabled {
+    background-color: $disabled-background;
+    border-color: $disabled-background;
+  }
+}
+
+
+.#{$btn-name} {
+
+  @each $color, $value in $colors {
+    @include m(#{$color}) {
+      @include button($value);
+    }
+  }
+
+  @include m(block) {
+    display: block;
+    width: 100%;
+  }
+}

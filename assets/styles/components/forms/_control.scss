@@ -1,0 +1,23 @@
+// Control root
+// ---------
+
+%control {
+  @extend %box;
+  @include ms-respond(font-size, 1);
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  color: $white;
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: $border-width solid $white;
+
+  @include hover-focus() {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.form-control {
+  @extend %control;
+}
