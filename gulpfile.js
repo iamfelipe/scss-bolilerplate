@@ -184,7 +184,7 @@ const buildStyles = mode => done => {
         [
           gulp.src(srcPath("scss")),
           gulpSourcemaps.init({ loadMaps: true }),
-          gulpSass({ outputStyle }),
+          gulpSass({ outputStyle }).on("error", gulpSass.logError),
           gulpPostcss(postcssPlugins),
           gulpSourcemaps.write("./"),
           gulp.dest(distPath("css")),
