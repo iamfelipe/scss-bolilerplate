@@ -20,6 +20,9 @@ const gulpHtmlmin = require("gulp-htmlmin");
 const imageminPngquant = require("imagemin-pngquant");
 const imageminJpegRecompress = require("imagemin-jpeg-recompress");
 
+// Proxy URL
+const proxyURL = "https://ponymalta.test.dd:8443/";
+
 // Entry point retreive from webpack
 const entry = require("./webpack/entry");
 
@@ -280,7 +283,11 @@ const genericTask = (mode, context = "building") => {
 
   // Browser Loading & Watching
   const browserLoadingWatching = done => {
-    browserSync.init({ port, server: distPath("html", true) });
+    browserSync.init({
+      port,
+      // proxy: proxyURL,
+      server: distPath("html", true)
+    });
 
     // Watch - Markup
     gulp.watch(srcPath("html"), true).on(
