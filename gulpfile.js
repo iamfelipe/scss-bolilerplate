@@ -56,7 +56,7 @@ const srcPath = (file, watch = false) => {
   if (file === "scss" && watch === true) return "./src/styles/**/*.scss";
   if (file === "js" && watch === false) return entryArray;
   if (file === "js" && watch === true) return "./src/js/**/*.js";
-  if (file === "html") return "./templates/**/*.html";
+  if (file === "html") return "./templates/**/*.{html, tpl}";
   if (file === "img") return "./src/img/**/*.{png,jpeg,jpg,svg,gif}";
   if (file === "fonts") return "./src/fonts/**/*.{eot,woff,woff2,ttf,svg}";
   console.error(
@@ -175,8 +175,10 @@ const buildStyles = mode => done => {
   else outputStyle = undefined;
 
   const postcssPlugins = [
-    autoprefixer(autoprefixConfig)
-    // postcssUncss({ html: [distPath("html")] })
+    autoprefixer(autoprefixConfig),
+    postcssUncss({
+      html: [srcPath("html")]
+    })
   ];
 
   ["development", "production"].includes(mode)
