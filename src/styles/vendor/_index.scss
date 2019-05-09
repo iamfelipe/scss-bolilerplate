@@ -1,12 +1,12 @@
 // Vendor root
 // ---------
-@import "bootstrap-4.1.3/bootstrap-reboot";
-@import "bootstrap-4.1.3/bootstrap-grid";
-@import "bootstrap-4.1.3/mixins/hover";
-@import "bootstrap-4.1.3/buttons";
-@import "bootstrap-4.1.3/forms";
-@import "bootstrap-4.1.3/utilities/spacing";
-@import "bootstrap-4.1.3/utilities/text";
-@import "easing";
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../node_modules/bootstrap/scss/mixins/hover";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/utilities/spacing";
+@import "../../node_modules/bootstrap/scss/utilities/text";
 @import "../../node_modules/modularscale-sass/stylesheets/modularscale";
 @import "../../node_modules/family.scss/source/src/family";
+@import "easing";

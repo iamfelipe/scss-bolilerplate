@@ -10,8 +10,8 @@ const through2 = require("through2");
 const gulpZip = require("gulp-zip");
 const gulpUglify = require("gulp-uglify");
 const gulpSourcemaps = require("gulp-sourcemaps");
-const gulpPostcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const gulpPostcss = require("gulp-postcss");
 const postcssUncss = require("postcss-uncss");
 const gulpSass = require("gulp-sass");
 const gulpBabel = require("gulp-babel");
@@ -19,6 +19,8 @@ const gulpImagemin = require("gulp-imagemin");
 const gulpHtmlmin = require("gulp-htmlmin");
 const imageminPngquant = require("imagemin-pngquant");
 const imageminJpegRecompress = require("imagemin-jpeg-recompress");
+const webp = require("gulp-webp");
+const clone = require('gulp-clone');
 
 // Proxy URL
 const proxyURL = "https://ponymalta.test.dd:8443/";
@@ -138,6 +140,8 @@ const buildMarkup = mode => done => {
     : undefined;
 };
 
+var sink = clone.sink();
+
 // Build Images Task
 const buildImages = mode => done => {
   ["development", "production"].includes(mode)
@@ -152,6 +156,9 @@ const buildImages = mode => done => {
             imageminPngquant(),
             imageminJpegRecompress()
           ]),
+          sink,        // clone image
+          webp(),      // convert cloned image to WebP
+          sink.tap(),
           gulp.dest(distPath("img")),
           browserSync.stream()
         ],
@@ -175,10 +182,10 @@ const buildStyles = mode => done => {
   else outputStyle = undefined;
 
   const postcssPlugins = [
-    autoprefixer(autoprefixConfig),
-    postcssUncss({
-      html: [srcPath("html")]
-    })
+    autoprefixer(autoprefixConfig)
+    // postcssUncss({
+    //   html: [srcPath("html")]
+    // })
   ];
 
   ["development", "production"].includes(mode)
@@ -257,6 +264,12 @@ const genericTask = (mode, context = "building") => {
     Object.assign(buildMarkup(mode), {
       displayName: `Booting Markup Task: Build - ${modeName}`
     }),
+    Object.assign(cleanScripts(mode), {
+      displayName: `Booting Scripts Task: Clean - ${modeName}`
+    }),
+    Object.assign(buildScripts(mode), {
+      displayName: `Booting Scripts Task: Build - ${modeName}`
+    }),
     Object.assign(cleanFonts(mode), {
       displayName: `Booting Fonts Task: Clean - ${modeName}`
     }),
@@ -274,12 +287,6 @@ const genericTask = (mode, context = "building") => {
     }),
     Object.assign(buildStyles(mode), {
       displayName: `Booting Styles Task: Build - ${modeName}`
-    }),
-    Object.assign(cleanScripts(mode), {
-      displayName: `Booting Scripts Task: Clean - ${modeName}`
-    }),
-    Object.assign(buildScripts(mode), {
-      displayName: `Booting Scripts Task: Build - ${modeName}`
     })
   ];
 
