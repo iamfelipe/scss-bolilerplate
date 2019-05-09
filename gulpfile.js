@@ -199,6 +199,14 @@ const buildStyles = mode => done => {
           gulpSourcemaps.init({ loadMaps: true }),
           gulpSass({ outputStyle }).on("error", gulpSass.logError),
           gulpPostcss(postcssPlugins),
+          ...(mode === "production"
+            ? [
+              gulpPostcss([
+                postcssUncss({
+                  html: [srcPath("html")]
+                })]),
+            ]
+            : []),
           gulpSourcemaps.write("./"),
           gulp.dest(distPath("css")),
           browserSync.stream()
