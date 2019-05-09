@@ -21,6 +21,7 @@ const imageminPngquant = require("imagemin-pngquant");
 const imageminJpegRecompress = require("imagemin-jpeg-recompress");
 const webp = require("gulp-webp");
 const clone = require('gulp-clone');
+const webpHTML = require('gulp-webp-html');
 
 // Proxy URL
 const proxyURL = "https://ponymalta.test.dd:8443/";
@@ -68,7 +69,7 @@ const srcPath = (file, watch = false) => {
 const distPath = (file, serve = false) => {
   if (["css", "js", "img", "fonts"].includes(file)) return `./dist/${file}`;
   if (file === "html" && serve === false) return `./templates/${file}`;
-  if (file === "html" && serve === true) return "./";
+  if (file === "html" && serve === true) return "./dist/";
   console.error(
     "Unsupported file type entered into Gulp Task Runner for Dist Path"
   );
@@ -131,7 +132,10 @@ const buildMarkup = mode => done => {
         [
           gulp.src(srcPath("html")),
           ...(mode === "production"
-            ? [gulpHtmlmin({ collapseWhitespace: true })]
+            ? [
+              gulpHtmlmin({ collapseWhitespace: true }),
+              webpHTML()
+            ]
             : []),
           gulp.dest(distPath("html", true))
         ],
