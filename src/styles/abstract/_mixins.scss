@@ -141,13 +141,25 @@
   }
 }
 
+@mixin image($name, $ext: 'png', $query: '.') {
+  @at-root .no-js & {
+    background-image: image($name + $query + $ext);
+  }
+  @at-root .no-webp & {
+    background-image: image($name + $query + $ext);
+  }
+  @at-root .webp & {
+    background-image: image($name + $query + 'webp');
+  }
+}
+
 @mixin responsive-image($image, $ext: 'png') {
-  background-image: image($image + '.' + $ext);
+  @include image($image, $ext);
   background-size: cover;
   background-position: center center;
 
   @include media-breakpoint-up(lg) {
-    background-image: image($image + '-desktop.' + $ext);
+    @include image($image, $ext, '-lg.');
   }
 }
 
@@ -167,12 +179,9 @@
 ///     //      justify-content: center;
 ///     //  }
 
-@mixin flex($align, $justify: initial) {
+@mixin flex($justify, $align) {
   display: flex;
-  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-  display: -ms-flexbox; /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  align-items: $align;
   justify-content: $justify;
+  align-items: $align;
 }
 
