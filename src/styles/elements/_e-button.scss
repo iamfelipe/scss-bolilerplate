@@ -10,16 +10,16 @@
 // ---------
 @mixin button($background, $hover-background: darken($background, 7.5%), $disabled-background: lighten($background, 7.5%)) {
   @extend %box;
-  background-color: $background;
-  border-color: $background;
+  //background-color: $background;
+  //border-color: $background;
 
   @include plain-hover-focus() {
-    color: color-yiq($background);
+    // color: color-yiq($background);
   }
 
   @include hover-focus() {
-    background-color: $hover-background;
-    border-color: $hover-background;
+    //background-color: $hover-background;
+    //border-color: $hover-background;
   }
 
   &:focus,
