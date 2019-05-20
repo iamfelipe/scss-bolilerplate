@@ -3,12 +3,14 @@
 
 %control {
   @extend %box;
-  background-color: $white;
 
   @include hover-focus() {
-    border-color: palette(states, accent);
     outline: none;
     box-shadow: none;
+  }
+
+  @include hover() {
+    border-color: theme-color(success);
   }
 }
 

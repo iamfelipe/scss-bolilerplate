@@ -1,0 +1,37 @@
+/// Calculate em values.
+/// @access private
+/// @group addons
+///
+/// @param {Number} $pixels - Font size in pixels
+/// @param {Number} $context [$base-font-size] - Calculate relative to this context.
+///
+/// @example scss
+///     font-size: em(24px, 18px);
+///     //  font-size: 1.333em;
+
+@function em($pixels, $context: ms(0)) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return ($pixels / $context) * 1em;
+}
+
+/// Calculate rem values.
+/// @access private
+/// @group addons
+///
+/// @param {Number} $pixels - Font size in pixels
+///
+/// @example scss
+///     font-size: rem(24px);
+///     //  font-size: 1.5rem;
+
+@function rem($pixels) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @return ($pixels / ms(0)) * 1rem;
+}

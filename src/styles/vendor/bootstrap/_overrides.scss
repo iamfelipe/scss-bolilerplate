@@ -1,0 +1,57 @@
+// CUSTOM
+
+// Grid breakpoints
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+);
+
+// Grid containers
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px
+);
+
+// Modular scale
+$modularscale: (
+        base: 16px,
+        ratio: $major-second,
+        map-get($grid-breakpoints, "sm"): (
+                base: 16px,
+        ),
+        map-get($grid-breakpoints, "lg"): (
+                base: 18px,
+                ratio: $augmented-fourth,
+        ),
+);
+
+@import "../../abstract/transform-units";
+
+// Options
+$enable-responsive-font-sizes: true;
+
+// Color system
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #B0BEC5;
+$gray-400: #78909C;
+$black: #000;
+
+$primary: #008834;
+$secondary: #2c5e31;
+
+// Grid columns
+$grid-gutter-width: 24px;
+
+// Components
+$box-shadow: 0 em(2) em(2) rgba($black, .7);
+
+// Buttons + Forms
+$font-size-base: rem(ms(0));
+$input-btn-padding-y: rem(16);
+$input-btn-padding-x: rem(24);
