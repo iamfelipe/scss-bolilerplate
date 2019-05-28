@@ -20,8 +20,10 @@ const gulpHtmlmin = require("gulp-htmlmin");
 const imageminPngquant = require("imagemin-pngquant");
 const imageminJpegRecompress = require("imagemin-jpeg-recompress");
 const webp = require("gulp-webp");
-const clone = require('gulp-clone');
-const webpHTML = require('gulp-webp-html');
+const clone = require("gulp-clone");
+const webpHTML = require("gulp-webp-html");
+const modernizr = require("gulp-modernizr");
+const cache = require("gulp-cache");
 
 // Proxy URL
 const proxyURL = "https://ponymalta.test.dd:8443/";
@@ -132,11 +134,9 @@ const buildMarkup = mode => done => {
         [
           gulp.src(srcPath("html")),
           ...(mode === "production"
-            ? [
-              gulpHtmlmin({ collapseWhitespace: true }),
-              webpHTML()
-            ]
+            ? [gulpHtmlmin({ collapseWhitespace: true })]
             : []),
+          webpHTML(),
           gulp.dest(distPath("html", true))
         ],
         done()
@@ -152,16 +152,19 @@ const buildImages = mode => done => {
     ? pump(
         [
           gulp.src(srcPath("img")),
-          gulpImagemin([
-            gulpImagemin.gifsicle(),
-            gulpImagemin.jpegtran(),
-            gulpImagemin.optipng(),
-            gulpImagemin.svgo(),
-            imageminPngquant(),
-            imageminJpegRecompress()
-          ]),
-          sink,        // clone image
-          webp(),      // convert cloned image to WebP
+          ...(mode === "production" ? [cache.clearAll()] : []),
+          cache(
+            gulpImagemin([
+              gulpImagemin.gifsicle(),
+              gulpImagemin.jpegtran(),
+              gulpImagemin.optipng(),
+              gulpImagemin.svgo(),
+              imageminPngquant(),
+              imageminJpegRecompress()
+            ])
+          ),
+          sink, // clone image
+          webp(), // convert cloned image to WebP
           sink.tap(),
           gulp.dest(distPath("img")),
           browserSync.stream()
@@ -185,12 +188,7 @@ const buildStyles = mode => done => {
   else if (mode === "production") outputStyle = "compressed";
   else outputStyle = undefined;
 
-  const postcssPlugins = [
-    autoprefixer(autoprefixConfig)
-    // postcssUncss({
-    //   html: [srcPath("html")]
-    // })
-  ];
+  const postcssPlugins = [autoprefixer(autoprefixConfig)];
 
   ["development", "production"].includes(mode)
     ? pump(
@@ -201,15 +199,34 @@ const buildStyles = mode => done => {
           gulpPostcss(postcssPlugins),
           ...(mode === "production"
             ? [
-              gulpPostcss([
-                postcssUncss({
-                  html: [srcPath("html")]
-                })]),
-            ]
+                gulpPostcss([
+                  postcssUncss({
+                    html: [srcPath("html")]
+                  })
+                ])
+              ]
             : []),
           gulpSourcemaps.write("./"),
           gulp.dest(distPath("css")),
           browserSync.stream()
+        ],
+        done()
+      )
+    : undefined;
+};
+
+const buildModernizr = mode => done => {
+  const settings = {
+    options: ["setClasses", "addTest", "html5printshiv", "testProp", "fnBind"],
+    tests: ["objectfit", "webp", "backgroundblendmode"]
+  };
+  ["development", "production"].includes(mode)
+    ? pump(
+        [
+          gulp.src(srcPath("js")),
+          modernizr(settings),
+          ...(mode === "production" ? [gulpUglify()] : []),
+          gulp.dest(distPath("js"))
         ],
         done()
       )
@@ -281,6 +298,9 @@ const genericTask = (mode, context = "building") => {
     }),
     Object.assign(buildScripts(mode), {
       displayName: `Booting Scripts Task: Build - ${modeName}`
+    }),
+    Object.assign(buildModernizr(mode), {
+      displayName: `Booting Modernizr Task: Build - ${modeName}`
     }),
     Object.assign(cleanFonts(mode), {
       displayName: `Booting Fonts Task: Clean - ${modeName}`
