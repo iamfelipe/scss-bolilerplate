@@ -10,7 +10,7 @@
   }
 
   @include hover() {
-    border-color: theme-color(success);
+    border-color: theme-color(primary);
   }
 }
 

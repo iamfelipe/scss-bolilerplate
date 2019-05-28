@@ -42,11 +42,11 @@ $gray-200: #B0BEC5;
 $gray-400: #78909C;
 $black: #000;
 
-$primary: #008834;
-$secondary: #2c5e31;
+$primary: #0090c7;
+$secondary: #008834;
 
 // Grid columns
-$grid-gutter-width: 24px;
+$grid-gutter-width: rem(24);
 
 // Components
 $box-shadow: 0 em(2) em(2) rgba($black, .7);
@@ -58,3 +58,7 @@ $input-btn-padding-x: rem(24);
 
 // Forms
 $form-grid-gutter-width: $grid-gutter-width / 1.5;
+
+// Checkbox
+$custom-control-indicator-size: rem(24);
+$custom-control-gutter: $custom-control-indicator-size / 2;
