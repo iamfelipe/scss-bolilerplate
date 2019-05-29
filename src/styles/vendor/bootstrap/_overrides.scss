@@ -57,12 +57,17 @@ $input-btn-padding-y: rem(16);
 $input-btn-padding-x: rem(24);
 
 // Forms
+//
 $form-grid-gutter-width: $grid-gutter-width / 1.5;
+$input-placeholder-color: $gray-400;
 
 // Lang
 $custom-file-text: (
-  en: "Elegir"
+en: "Elegir"
 );
+
+// Select
+$input-color-placeholder: $input-placeholder-color;
 
 // File
 $input-group-addon-bg: $gray-200;
@@ -70,3 +75,6 @@ $input-group-addon-bg: $gray-200;
 // Checkbox
 $custom-control-indicator-size: rem(24);
 $custom-control-gutter: $custom-control-indicator-size / 2;
+
+// Dropdown
+$dropdown-item-padding-y: $input-btn-padding-y;

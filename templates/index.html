@@ -1,84 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Title</title>
-  <link rel="stylesheet" href="./css/main.css"/>
-</head>
-<body>
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-6">
-      <img src="https://picsum.photos/400" class="w-100" alt="Example image"/>
-    </div>
-    <div class="col-12 col-lg-6">
-      <h5 class="text-primary">Design System <i class="material-icons">face</i></h5>
-      <h6>Standard project module structure</h6>
-      <p class="body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
-        blanditiis debitis deserunt eius in laborum omnis quam rem tempora
-        tenetur.
-      </p>
-      <p>
-        Ab delectus dolore, dolorem error fuga illo ipsa libero minus modi
-        nam officia, pariatur quos recusandae soluta veniam vitae
-        voluptatum?
-      </p>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="col">
-      <div class="form-group">
-        <input type="text" placeholder="ss" id="" class="form-control"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <img
+            src="https://picsum.photos/400"
+            class="w-100"
+            alt="Example image"
+          />
+        </div>
+        <div class="col-12 col-lg-6">
+          <h5 class="text-primary">
+            Design System <i class="material-icons">face</i>
+          </h5>
+          <h6>Standard project module structure</h6>
+          <p class="body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
+            blanditiis debitis deserunt eius in laborum omnis quam rem tempora
+            tenetur.
+          </p>
+          <p>
+            Ab delectus dolore, dolorem error fuga illo ipsa libero minus modi
+            nam officia, pariatur quos recusandae soluta veniam vitae
+            voluptatum?
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="form-group">
-        <select class="custom-select form-control">
-          <option selected>Open this select menu</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
+      <div class="form-row">
+        <div class="col-12 col-lg">
+          <div class="form-group">
+            <label for="text">Text label</label>
+            <input
+              id="text"
+              type="text"
+              placeholder="Placeholder"
+              id=""
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-12 col-lg">
+          <div class="form-group">
+            <label for="select">Select label</label>
+            <select id="select" class="form-control" title="seleccionar género">
+              <option>Male</option>
+              <option>Female</option>
+              <option>Undefined</option>
+            </select>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="col">
-      <div class="form-group">
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="customCheck1">
-          <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+
+      <div class="form-row">
+        <div class="col-12 col-lg">
+          <div class="form-group">
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="customCheck1"
+              />
+              <label class="custom-control-label" for="customCheck1"
+                >Check this custom checkbox</label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg">
+          <div class="form-group">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="customFile" />
+              <label class="custom-file-label" for="customFile"
+                >Seleccionar archivo</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-auto">
+          <a href="" class="btn btn-primary">Anchor primary</a>
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-secondary">Button</button>
+        </div>
+        <div class="col-auto">
+          <input type="submit" class="btn btn-warning" value="Submit" />
         </div>
       </div>
     </div>
-    <div class="col">
-      <div class="form-group">
-        <div class="custom-file">
-          <input type="file" class="custom-file-input" id="customFile">
-          <label class="custom-file-label" for="customFile">Seleccionar archivo</label>
-        </div>
-      </div>
-    </div>
-  </div>
-  <a href="" class="btn btn-primary">Anchor primary</a>
-  <a href="" class="btn btn-secondary">Anchor secondary</a>
-  <button class="btn btn-danger">Button</button>
-  <input type="submit" class="btn btn-warning" value="Submit">
-</div>
-<footer class="c-footer"><p>Footer</p></footer>
-<!--Scripts-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-<script src="./js/modernizr.js"></script>
-<script src="./js/scripts.js"></script>
-</body>
+    <footer class="c-footer"><p>Footer</p></footer>
+    <!--jQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap 4 -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <!-- Custom select -->
+    <script src="./js/modernizr.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
 </html>

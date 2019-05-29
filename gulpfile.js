@@ -23,7 +23,6 @@ const webp = require("gulp-webp");
 const clone = require("gulp-clone");
 const webpHTML = require("gulp-webp-html");
 const modernizr = require("gulp-modernizr");
-const cache = require("gulp-cache");
 
 // Proxy URL
 const proxyURL = "https://ponymalta.test.dd:8443/";
@@ -134,9 +133,8 @@ const buildMarkup = mode => done => {
         [
           gulp.src(srcPath("html")),
           ...(mode === "production"
-            ? [gulpHtmlmin({ collapseWhitespace: true })]
+            ? [gulpHtmlmin({ collapseWhitespace: true }), webpHTML()]
             : []),
-          webpHTML(),
           gulp.dest(distPath("html", true))
         ],
         done()
@@ -152,17 +150,14 @@ const buildImages = mode => done => {
     ? pump(
         [
           gulp.src(srcPath("img")),
-          ...(mode === "production" ? [cache.clearAll()] : []),
-          cache(
-            gulpImagemin([
-              gulpImagemin.gifsicle(),
-              gulpImagemin.jpegtran(),
-              gulpImagemin.optipng(),
-              gulpImagemin.svgo(),
-              imageminPngquant(),
-              imageminJpegRecompress()
-            ])
-          ),
+          gulpImagemin([
+            gulpImagemin.gifsicle(),
+            gulpImagemin.jpegtran(),
+            gulpImagemin.optipng(),
+            gulpImagemin.svgo(),
+            imageminPngquant(),
+            imageminJpegRecompress()
+          ]),
           sink, // clone image
           webp(), // convert cloned image to WebP
           sink.tap(),
@@ -225,6 +220,7 @@ const buildModernizr = mode => done => {
         [
           gulp.src(srcPath("js")),
           modernizr(settings),
+          ...(mode === "production" ? [gulpUglify()] : []),
           gulp.dest(distPath("js"))
         ],
         done()
@@ -397,9 +393,9 @@ const genericTask = (mode, context = "building") => {
         Object.assign(buildScripts(mode), {
           displayName: `Watching Scripts Task: Build - ${modeName}`
         }),
-    Object.assign(buildModernizr(mode), {
-      displayName: `Booting Modernizr Task: Build - ${modeName}`
-    }),
+        Object.assign(buildModernizr(mode), {
+          displayName: `Booting Modernizr Task: Build - ${modeName}`
+        })
       ),
       browserSync.reload
     );
