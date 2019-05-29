@@ -225,7 +225,6 @@ const buildModernizr = mode => done => {
         [
           gulp.src(srcPath("js")),
           modernizr(settings),
-          ...(mode === "production" ? [gulpUglify()] : []),
           gulp.dest(distPath("js"))
         ],
         done()
@@ -397,7 +396,10 @@ const genericTask = (mode, context = "building") => {
         }),
         Object.assign(buildScripts(mode), {
           displayName: `Watching Scripts Task: Build - ${modeName}`
-        })
+        }),
+    Object.assign(buildModernizr(mode), {
+      displayName: `Booting Modernizr Task: Build - ${modeName}`
+    }),
       ),
       browserSync.reload
     );
