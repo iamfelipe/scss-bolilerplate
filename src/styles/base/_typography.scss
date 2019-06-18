@@ -9,17 +9,31 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@each $base, $scale in $custom-scale {
+  .#{$base},
+  %#{$base} {
+    @extend %margin-bottom;
+    @include ms-respond(font-size, $scale);
+
+    @each $base-line, $line-height in $line-heights {
+      @if $base == $base-line {
+        line-height: em($line-height, ms($scale));
+      }
+    }
+  }
+}
+
 @for $i from 1 through 6 {
   h#{$i} {
     @extend %h#{$i};
   }
 }
 
+
 p {
-  font-size: inherit;
-  @include ms-respond(margin-bottom, 0);
+  @extend %body;
 
   + p {
-    //@include ms-respond(margin-top, 0);
+    @extend %margin-bottom;
   }
 }

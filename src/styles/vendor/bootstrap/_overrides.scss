@@ -20,13 +20,13 @@ $container-max-widths: (
 // Modular scale
 $modularscale: (
   base: 16px,
-  ratio: $major-second,
+  ratio: $minor-third,
   map-get($grid-breakpoints, "sm"): (
     base: 16px
   ),
   map-get($grid-breakpoints, "lg"): (
     base: 18px,
-    ratio: $augmented-fourth
+    ratio: $fourth
   )
 );
 
@@ -59,6 +59,7 @@ $border-color: $gray-200;
 
 // Typography
 $font-size-base: rem(ms(0));
+$line-height-base: 1.777777777777778;
 
 $h1-font-size: ms(6);
 $h2-font-size: ms(5);

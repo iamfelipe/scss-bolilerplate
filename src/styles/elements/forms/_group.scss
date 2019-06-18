@@ -2,7 +2,7 @@
 // ---------
 
 %group {
-  @include ms-respond(margin-bottom, 0);
+  @extend %margin-bottom;
 }
 
 .form-group {

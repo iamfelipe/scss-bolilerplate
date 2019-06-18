@@ -186,7 +186,6 @@
   align-items: $align;
 }
 
-
 /// Assign grid area to element
 ///
 /// @author Felipe Castillo
@@ -205,7 +204,7 @@
 
 @mixin template($elements...) {
   @each $element in $elements {
-    &__#{$element} {
+    @include e(#{$element}) {
       grid-area: $element;
     }
   }

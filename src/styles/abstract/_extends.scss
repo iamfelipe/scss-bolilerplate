@@ -5,10 +5,6 @@
   transition: $transition;
 }
 
-@each $base, $scale in $custom-scale {
-  .#{$base},
-  %#{$base} {
-    @include ms-respond(font-size, $scale);
-    @include ms-respond(margin-bottom, 0);
-  }
+%margin-bottom {
+  margin-bottom: rem($vertical-rhythm * 4);
 }
