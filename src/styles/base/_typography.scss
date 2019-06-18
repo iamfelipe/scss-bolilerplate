@@ -9,17 +9,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@each $base, $scale in $custom-scale {
+@each $base, $properties in $custom-scale {
+  // $property 1: Scale
+  // $property 2: Line height
   .#{$base},
   %#{$base} {
     @extend %margin-bottom;
-    @include ms-respond(font-size, $scale);
-
-    @each $base-line, $line-height in $line-heights {
-      @if $base == $base-line {
-        line-height: em($line-height, ms($scale));
-      }
-    }
+    @include ms-respond(font-size, nth($properties, 1));
+    line-height: em(nth($properties, 2), ms(nth($properties, 1)));
   }
 }
 
