@@ -25,10 +25,10 @@
   @at-root {
     @font-face {
       font-family: quote($font-name);
-      src: font($file-name + '.eot');
-      src: font($file-name + '.woff') format('woff'),
-      font($file-name + '.ttf') format('truetype'),
-      font($file-name + '.svg') format('svg');
+      src: font($file-name + ".eot");
+      src: font($file-name + ".woff") format("woff"),
+        font($file-name + ".ttf") format("truetype"),
+        font($file-name + ".svg") format("svg");
       font-weight: $weight;
       font-style: $style;
     }
@@ -121,8 +121,7 @@
 
   @each $space in $spaceamounts {
     @each $side in $sides {
-
-      @if $side == 'all' {
+      @if $side == "all" {
         .m-#{$space} {
           margin: #{$space}px !important;
         }
@@ -143,7 +142,7 @@
   }
 }
 
-@mixin image($name, $ext: 'png', $query: '.') {
+@mixin image($name, $ext: "png", $query: ".") {
   @at-root .no-js & {
     background-image: image($name + $query + $ext);
   }
@@ -151,17 +150,17 @@
     background-image: image($name + $query + $ext);
   }
   @at-root .webp & {
-    background-image: image($name + $query + 'webp');
+    background-image: image($name + $query + "webp");
   }
 }
 
-@mixin responsive-image($image, $ext: 'png') {
+@mixin responsive-image($image, $ext: "png") {
   @include image($image, $ext);
   background-size: cover;
   background-position: center center;
 
   @include media-breakpoint-up(lg) {
-    @include image($image, $ext, '-lg.');
+    @include image($image, $ext, "-lg.");
   }
 }
 
@@ -187,3 +186,27 @@
   align-items: $align;
 }
 
+
+/// Assign grid area to element
+///
+/// @author Felipe Castillo
+/// @group addons
+///
+/// @param {String} $elements - Elements to assign.
+///
+/// @example scss
+///     @include template(image, title);
+///     //  .c-card__image {
+///     //      grid-area: image;
+///     //  }
+///     //  .c-card__title {
+///     //      grid-area: title;
+///     //  }
+
+@mixin template($elements...) {
+  @each $element in $elements {
+    &__#{$element} {
+      grid-area: $element;
+    }
+  }
+}

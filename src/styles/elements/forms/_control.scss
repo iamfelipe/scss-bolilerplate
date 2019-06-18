@@ -4,11 +4,6 @@
 %control {
   @extend %box;
 
-  @include hover-focus() {
-    outline: none;
-    box-shadow: none;
-  }
-
   @include hover() {
     border-color: theme-color(primary);
   }

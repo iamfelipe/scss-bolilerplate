@@ -40,30 +40,48 @@ $white: #fff;
 $gray-100: #f8f9fa;
 $gray-200: #b0bec5;
 $gray-400: #78909c;
+$gray-900: #2c3637;
 $black: #000;
 
 $primary: #0090c7;
 $secondary: #008834;
 
 // Grid columns
+$grid-columns: 12;
 $grid-gutter-width: rem(24);
+
+// Body
+$body-color: $gray-900;
 
 // Components
 $box-shadow: 0 em(2) em(2) rgba($black, 0.7);
+$border-color: $gray-200;
+
+// Typography
+$font-size-base: rem(ms(0));
+
+$h1-font-size: ms(6);
+$h2-font-size: ms(5);
+$h3-font-size: ms(4);
+$h4-font-size: ms(3);
+$h5-font-size: ms(2);
+$h6-font-size: ms(1);
 
 // Buttons + Forms
-$font-size-base: rem(ms(0));
 $input-btn-padding-y: rem(16);
 $input-btn-padding-x: rem(24);
+$border-radius: rem(4);
+$border-width: rem(1);
 
 // Forms
 //
 $form-grid-gutter-width: $grid-gutter-width / 1.5;
 $input-placeholder-color: $gray-400;
+$input-color: $gray-900;
 
 // Lang
 $custom-file-text: (
-en: "Elegir"
+  en: "Elegir"
 );
 
 // Select

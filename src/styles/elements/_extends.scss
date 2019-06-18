@@ -9,4 +9,9 @@
   border-width: $border-width;
   border-radius: $border-radius;
   appearance: none;
+
+  @include hover-focus() {
+    outline: none;
+    box-shadow: none;
+  }
 }
