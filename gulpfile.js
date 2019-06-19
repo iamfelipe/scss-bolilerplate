@@ -190,7 +190,10 @@ const buildStyles = mode => done => {
         [
           gulp.src(srcPath("scss")),
           gulpSourcemaps.init({ loadMaps: true }),
-          gulpSass({ outputStyle }).on("error", gulpSass.logError),
+          gulpSass({ outputStyle, precision: 8 }).on(
+            "error",
+            gulpSass.logError
+          ),
           gulpPostcss(postcssPlugins),
           ...(mode === "production"
             ? [
