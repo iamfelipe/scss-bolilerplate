@@ -9,6 +9,14 @@
   }
 }
 
+.custom-file-label,
 .form-control {
   @extend %control;
+}
+
+.custom-file-label {
+
+  &::after {
+    height: initial;
+  }
 }

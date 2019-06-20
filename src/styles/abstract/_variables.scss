@@ -4,7 +4,7 @@
 $colors: map-merge(map-merge($grays, $theme-colors), $colors);
 
 $font-size-base: ms(0);
-$vertical-rhythm: $font-size-base * 2;
+$vertical-rhythm: $font-size-base * $line-height-base;
 
 $custom-scale: (
   lead: (
@@ -25,7 +25,7 @@ $custom-scale: (
   ),
   h4: (
     3,
-    $vertical-rhythm * 1.25
+    $vertical-rhythm * 1.5
   ),
   h5: (
     2,

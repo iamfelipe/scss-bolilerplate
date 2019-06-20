@@ -59,7 +59,7 @@ $border-color: $gray-200;
 
 // Typography
 $font-size-base: rem(ms(0));
-$line-height-base: 1.777777777777778;
+$line-height-base: 2;
 
 $h1-font-size: ms(6);
 $h2-font-size: ms(5);
@@ -69,10 +69,10 @@ $h5-font-size: ms(2);
 $h6-font-size: ms(1);
 
 // Buttons + Forms
-$input-btn-padding-y: rem(16);
-$input-btn-padding-x: rem(24);
-$border-radius: rem(4);
 $border-width: rem(1);
+$input-btn-padding-y: rem(16) - $border-width;
+$input-btn-padding-x: rem(24) - $border-width;
+$border-radius: rem(4);
 
 // Forms
 //
@@ -90,6 +90,7 @@ $input-color-placeholder: $input-placeholder-color;
 
 // File
 $input-group-addon-bg: $gray-200;
+$input-height-border: $border-width;
 
 // Checkbox
 $custom-control-indicator-size: rem(24);

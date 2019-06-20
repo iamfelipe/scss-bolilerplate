@@ -34,3 +34,7 @@ p {
     @extend %margin-bottom;
   }
 }
+
+.small {
+  padding-top: $vertical-rhythm / 8;
+}
