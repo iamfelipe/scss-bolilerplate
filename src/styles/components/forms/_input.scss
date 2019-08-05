@@ -1,0 +1,11 @@
+// Input root
+// ---------
+
+%input {
+  @extend %control;
+}
+
+input {
+  @extend %input;
+}
+

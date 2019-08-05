@@ -1,0 +1,10 @@
+// Group root
+// ---------
+
+%group {
+  @include ms-respond(margin-bottom, 0);
+}
+
+.form-group {
+  @extend %group;
+}
