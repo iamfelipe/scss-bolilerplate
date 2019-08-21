@@ -1,0 +1,10 @@
+// -----------------------------------------------------------------------------
+// Fonts
+// -----------------------------------------------------------------------------
+
+
+@include font-face("Material Icons", "MaterialIcons-Regular");
+@include font-face("Asap", "Asap-Bold");
+
+$font-stack-primary: "Asap", $font-family-sans-serif;
+$font-stack-secondary: "Roboto", $font-family-serif;
