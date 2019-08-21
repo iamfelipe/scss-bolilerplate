@@ -209,3 +209,11 @@
     }
   }
 }
+
+@mixin transition() {
+  transition: $transition;
+}
+
+@mixin margin-bottom() {
+  margin-bottom: rem($vertical-rhythm);
+}

@@ -1,7 +1,13 @@
 // Typography
 // ---------
 
-body {
+@include font-face("Material Icons", "MaterialIcons-Regular");
+@include font-face("Asap", "Asap-Bold");
+
+$font-stack-primary: "Asap", $font-family-sans-serif;
+$font-stack-secondary: "Roboto", $font-family-serif;
+
+@at-root body {
   @include ms-respond(font-size, 0);
   font-kerning: auto;
   font-family: $font-stack-primary;
@@ -14,7 +20,7 @@ body {
   // $property 2: Line height
   .#{$base},
   %#{$base} {
-    @extend %margin-bottom;
+    @include margin-bottom();
     @include ms-respond(font-size, nth($properties, 1));
     line-height: em(nth($properties, 2), ms(nth($properties, 1)));
   }
@@ -31,7 +37,7 @@ p {
   @extend %body;
 
   + p {
-    @extend %margin-bottom;
+    @include margin-bottom();
   }
 }
 

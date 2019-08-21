@@ -35,7 +35,7 @@
 }
 
 
-.#{$btn-name} {
+.btn {
   @include button(theme-color(primary));
 
   @each $color, $value in $colors {
