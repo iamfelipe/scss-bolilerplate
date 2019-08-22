@@ -6609,9 +6609,12 @@ p + p {
 .form-group {
   margin-bottom: 2rem; }
 
-.custom-file-label:hover,
-.form-control:hover, input:hover, select:hover, textarea:hover {
-  border-color: #0090c7; }
+.custom-file-label,
+.form-control, input, select, textarea {
+  margin-bottom: 0; }
+  .custom-file-label:hover,
+  .form-control:hover, input:hover, select:hover, textarea:hover {
+    border-color: #0090c7; }
 
 .custom-file-label::after {
   height: initial; }
