@@ -1,5 +1,8 @@
 // Component root
 // ---------
 
+$component-modal: '.c-modal';
+
 @import "c-heading";
 @import "c-baseline";
+@import "c-modal";

@@ -1,0 +1,15 @@
+// Component MODAL
+// ---------
+
+#{$component-modal} {
+  text-align: center;
+
+  .modal-footer {
+    justify-content: center;
+    padding-top: $modal-inner-padding * 0.5;
+  }
+
+  .btn {
+    margin-bottom: 0;
+  }
+}
