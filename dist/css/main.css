@@ -7967,19 +7967,19 @@ h6 {
       font-size: 18px; } }
 
 .body, .custom-file-label,
-.form-control, input, select, textarea, .btn, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-table thead tr th,
+.form-control, input, select, textarea, .btn, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-table thead tr th, .c-table tbody tr th,
 p {
   margin-bottom: 1rem;
   font-size: 14px;
   line-height: 2em; }
   @media (min-width: 576px) and (max-width: 1920px) {
     .body, .custom-file-label,
-    .form-control, input, select, textarea, .btn, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-table thead tr th,
+    .form-control, input, select, textarea, .btn, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-table thead tr th, .c-table tbody tr th,
     p {
       font-size: calc( 14px + 1 * ( ( 100vw - 576px) / 1344 )); } }
   @media (min-width: 1920px) {
     .body, .custom-file-label,
-    .form-control, input, select, textarea, .btn, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-table thead tr th,
+    .form-control, input, select, textarea, .btn, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-table thead tr th, .c-table tbody tr th,
     p {
       font-size: 15px; } }
 
@@ -8269,7 +8269,16 @@ p + p {
       @media (min-width: 992px) {
         .c-table tbody tr th,
         .c-table tbody tr td {
+          font-size: 29.0304px;
           padding: 0.57142857rem; } }
+  @media (min-width: 992px) and (min-width: 576px) and (max-width: 1920px) {
+    .c-table tbody tr th,
+    .c-table tbody tr td {
+      font-size: calc( 29.0304px + 2.0736 * ( ( 100vw - 576px) / 1344 )); } }
+  @media (min-width: 992px) and (min-width: 1920px) {
+    .c-table tbody tr th,
+    .c-table tbody tr td {
+      font-size: 31.104px; } }
     .c-table tbody tr th {
       vertical-align: inherit;
       padding-left: 0.71428571rem; }
@@ -8278,13 +8287,13 @@ p + p {
           padding-left: 1.42857143rem; } }
     @media (min-width: 992px) {
       .c-table tbody tr td:not(:last-child) {
-        font-size: 24.192px; } }
+        font-size: 29.0304px; } }
   @media (min-width: 992px) and (min-width: 576px) and (max-width: 1920px) {
     .c-table tbody tr td:not(:last-child) {
-      font-size: calc( 24.192px + 1.728 * ( ( 100vw - 576px) / 1344 )); } }
+      font-size: calc( 29.0304px + 2.0736 * ( ( 100vw - 576px) / 1344 )); } }
   @media (min-width: 992px) and (min-width: 1920px) {
     .c-table tbody tr td:not(:last-child) {
-      font-size: 25.92px; } }
+      font-size: 31.104px; } }
     .c-table tbody tr td:last-child {
       font-size: 29px;
       color: #e2171f;

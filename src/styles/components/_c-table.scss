@@ -69,11 +69,13 @@
         line-height: 1;
 
         @include media-breakpoint-up(lg) {
+          @include ms-respond(font-size, 4);
           padding: $table-cell-padding * 2;
         }
       }
 
       th {
+        @extend .body;
         vertical-align: inherit;
         padding-left: $table-cell-padding-x;
         @include media-breakpoint-up(lg) {
@@ -87,7 +89,7 @@
           @extend .h5;
 
           @include media-breakpoint-up(lg) {
-            @include ms-respond(font-size, 3);
+            @include ms-respond(font-size, 4);
           }
         }
 
