@@ -2,7 +2,7 @@
 // ---------
 
 #{$component-table} {
-  $table-cell-padding-x: $table-cell-padding * 4;
+  $table-cell-padding-x: $table-cell-padding * 2.5;
   margin-bottom: 0;
   //tbody {
   //  display: block;
@@ -35,15 +35,17 @@
         }
 
         &:first-child {
+          padding-left: $table-cell-padding-x;
           @include media-breakpoint-up(lg) {
-            padding-left: $table-cell-padding-x;
+            padding-left: $table-cell-padding-x * 2;
           }
         }
 
         &:last-child {
           text-align: right;
+          padding-right: $table-cell-padding-x;
           @include media-breakpoint-up(lg) {
-            padding-right: $table-cell-padding-x;
+            padding-right: $table-cell-padding-x * 2;
           }
         }
       }
@@ -58,7 +60,7 @@
         border-bottom: $table-border-width solid $table-border-color;
 
         @include media-breakpoint-up(lg) {
-          border-bottom-width: $table-border-width * 2;
+          //border-bottom-width: $table-border-width * 2;
         }
       }
 
@@ -73,8 +75,9 @@
 
       th {
         vertical-align: inherit;
+        padding-left: $table-cell-padding-x;
         @include media-breakpoint-up(lg) {
-          padding-left: $table-cell-padding-x;
+          padding-left: $table-cell-padding-x * 2;
         }
       }
 
@@ -94,9 +97,10 @@
           font-weight: 700;
           text-align: right;
           vertical-align: inherit;
+          padding-right: $table-cell-padding-x;
 
           @include media-breakpoint-up(lg) {
-            padding-right: $table-cell-padding-x;
+            padding-right: $table-cell-padding-x * 2;
           }
         }
       }

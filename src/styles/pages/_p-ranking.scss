@@ -21,12 +21,12 @@
 
   @include e(title) {
     position: relative;
-    padding-top: .38em;
-    padding-right: .3em;
-    padding-left: .3em;
-    line-height: .5;
-    margin-top: .5em;
-    margin-bottom: .5em;
+    padding-top: 0.38em;
+    padding-right: 0.3em;
+    padding-left: 0.3em;
+    line-height: 0.5;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     color: $white;
     text-align: center;
     text-transform: uppercase;
@@ -50,6 +50,10 @@
   }
 
   @include media-breakpoint-up(lg) {
+    .card-header,
+    .card-body {
+      padding: $card-spacer-x * 2.75;
+    }
     .nav.nav-pills {
       display: none;
     }
