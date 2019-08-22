@@ -50,7 +50,11 @@ const supportedBrowsers = [
 ];
 
 // Config
-const autoprefixConfig = { Browserslist: supportedBrowsers, cascade: false };
+const autoprefixConfig = {
+  Browserslist: supportedBrowsers,
+  cascade: false,
+  grid: true
+};
 const babelConfig = { targets: { browsers: supportedBrowsers } };
 
 // Paths for reuse
