@@ -10,11 +10,31 @@
     font-family: $font-stack-secondary;
     text-transform: uppercase;
     text-align: left;
-    color: theme-color('dark');
+    color: theme-color("dark");
     margin-bottom: 0;
 
     @include media-breakpoint-up(lg) {
       font-size: 3vw;
+      @include ms-respond(font-size, 7);
+    }
+  }
+
+  @include m(secondary) {
+    background-color: theme-color("secondary");
+
+    #{$component-table} {
+      tbody {
+        tr {
+          th,
+          td {
+            background-color: $white;
+          }
+        }
+      }
+
+      tbody tr:not(:last-child) {
+        border-bottom-color: theme-color("secondary");
+      }
     }
   }
 }

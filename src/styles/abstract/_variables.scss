@@ -188,12 +188,13 @@ $modal-footer-border-color: $modal-content-border-color;
 // Cards
 $card-spacer-y: em(32);
 $card-spacer-x: em(20);
-$card-cap-bg: $white;
+$card-cap-bg: transparent;
 $card-border-color: $card-cap-bg;
 
 // Tables
-$table-border-width: $border-width * 8;
+$table-border-width: $border-width * 4;
 $table-border-color: $white;
+$table-cell-padding: rem(4);
 
 // Navs
 $nav-pills-link-active-color: $primary;

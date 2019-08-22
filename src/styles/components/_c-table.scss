@@ -2,6 +2,8 @@
 // ---------
 
 #{$component-table} {
+  $table-cell-padding-x: $table-cell-padding * 4;
+  margin-bottom: 0;
   //tbody {
   //  display: block;
   //  overflow: auto;
@@ -23,10 +25,26 @@
 
     tr {
       th {
+        @extend .body;
+        padding-bottom: $table-cell-padding-x;
+        line-height: 1;
         font-weight: 400;
+
+        @include media-breakpoint-up(lg) {
+          @include ms-respond(font-size, 1);
+        }
+
+        &:first-child {
+          @include media-breakpoint-up(lg) {
+            padding-left: $table-cell-padding-x;
+          }
+        }
 
         &:last-child {
           text-align: right;
+          @include media-breakpoint-up(lg) {
+            padding-right: $table-cell-padding-x;
+          }
         }
       }
     }
@@ -38,20 +56,48 @@
 
       &:not(:last-child) {
         border-bottom: $table-border-width solid $table-border-color;
+
+        @include media-breakpoint-up(lg) {
+          border-bottom-width: $table-border-width * 2;
+        }
+      }
+
+      th,
+      td {
+        line-height: 1;
+
+        @include media-breakpoint-up(lg) {
+          padding: $table-cell-padding * 2;
+        }
       }
 
       th {
-        //text-align: center;
+        vertical-align: inherit;
+        @include media-breakpoint-up(lg) {
+          padding-left: $table-cell-padding-x;
+        }
       }
 
       td {
 
+        &:not(:last-child) {
+          @extend .h5;
+
+          @include media-breakpoint-up(lg) {
+            @include ms-respond(font-size, 3);
+          }
+        }
+
         &:last-child {
           font-size: 29px;
-          line-height: 1;
           color: theme-color();
           font-weight: 700;
           text-align: right;
+          vertical-align: inherit;
+
+          @include media-breakpoint-up(lg) {
+            padding-right: $table-cell-padding-x;
+          }
         }
       }
     }

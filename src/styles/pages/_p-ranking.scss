@@ -2,6 +2,7 @@
 // ---------
 
 #{$page-ranking} {
+  min-height: 100vh;
 
   @include e(header) {
     min-height: 100vw;
@@ -55,7 +56,7 @@
 
     .tab-content {
       @include make-row();
-      margin-top: -$grid-gutter-width * 3;
+      margin-top: -$grid-gutter-width * 2;
 
       & > .tab-pane {
         @include make-col-ready();
