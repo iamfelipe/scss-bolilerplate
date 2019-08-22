@@ -33,6 +33,19 @@
     z-index: 1;
     background-color: rgba($white, 0.4) !important;
     backdrop-filter: blur(24px);
+    font-size: 18.4vmin;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 6.2vw;
+    }
+  }
+
+  .nav-link {
+    @extend .h6;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    font-weight: 400;
+    margin-bottom: 0;
   }
 
   @include media-breakpoint-up(lg) {

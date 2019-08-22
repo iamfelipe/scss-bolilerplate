@@ -6,10 +6,15 @@
   margin-bottom: 3em;
 
   @include e(title) {
+    font-size: 7.2vmin;
     font-family: $font-stack-secondary;
     text-transform: uppercase;
     text-align: left;
     color: theme-color('dark');
     margin-bottom: 0;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 3vw;
+    }
   }
 }

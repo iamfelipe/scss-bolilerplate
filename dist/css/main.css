@@ -3952,7 +3952,7 @@ input[type="button"].btn-block {
     border: 0; }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.h1, .h2, .h3, .h4, .h5, .h6, .p-ranking .nav-link {
   margin-bottom: 0.5rem;
   font-weight: 700;
   line-height: 1.2; }
@@ -3972,7 +3972,7 @@ h4, .h4 {
 h5, .h5 {
   font-size: 1.26rem; }
 
-h6, .h6 {
+h6, .h6, .p-ranking .nav-link {
   font-size: 1.05rem; }
 
 .lead {
@@ -7952,17 +7952,17 @@ h5 {
     h5 {
       font-size: 21.6px; } }
 
-.h6,
+.h6, .p-ranking .nav-link,
 h6 {
   margin-bottom: 1rem;
   font-size: 16.8px;
   line-height: 1.66666667em; }
   @media (min-width: 576px) and (max-width: 1920px) {
-    .h6,
+    .h6, .p-ranking .nav-link,
     h6 {
       font-size: calc( 16.8px + 1.2 * ( ( 100vw - 576px) / 1344 )); } }
   @media (min-width: 1920px) {
-    .h6,
+    .h6, .p-ranking .nav-link,
     h6 {
       font-size: 18px; } }
 
@@ -8202,11 +8202,15 @@ p + p {
   box-shadow: 0 0.21428571em 0.57142857em rgba(0, 0, 0, 0.16);
   margin-bottom: 3em; }
   .c-ranking__title {
+    font-size: 7.2vmin;
     font-family: "Tolyer", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     text-transform: uppercase;
     text-align: left;
     color: #39100f;
     margin-bottom: 0; }
+    @media (min-width: 992px) {
+      .c-ranking__title {
+        font-size: 3vw; } }
 
 .c-table thead {
   background-color: transparent; }
@@ -8280,7 +8284,17 @@ p + p {
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.4) !important;
   -webkit-backdrop-filter: blur(24px);
-  backdrop-filter: blur(24px); }
+  backdrop-filter: blur(24px);
+  font-size: 18.4vmin; }
+  @media (min-width: 992px) {
+    .p-ranking__title {
+      font-size: 6.2vw; } }
+
+.p-ranking .nav-link {
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  font-weight: 400;
+  margin-bottom: 0; }
 
 @media (min-width: 992px) {
   .p-ranking .nav.nav-pills {
