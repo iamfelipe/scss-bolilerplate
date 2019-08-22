@@ -57,7 +57,7 @@ $gray-900: #39100f;
 $black: #000;
 
 $primary: #e2171f;
-$secondary: #e2171f;
+$secondary: #EBE3D5;
 
 $dark: $gray-900;
 
@@ -146,7 +146,7 @@ $headings-font-weight: 700;
 $border-width: rem(1);
 $input-btn-padding-y: rem(16) - $border-width;
 $input-btn-padding-x: rem(24) - $border-width;
-$border-radius: rem(6);
+$border-radius: rem(4);
 
 // Forms
 //
@@ -184,5 +184,14 @@ $modal-footer-border-color: $modal-content-border-color;
 $card-spacer-y: em(32);
 $card-spacer-x: em(20);
 $card-border-color: transparent;
+
+// Tables
+$table-border-width: $border-width * 8;
+$table-border-color: $white;
+
+// Navs
+$nav-pills-link-active-color: $primary;
+$nav-pills-link-active-bg: $secondary;
+$nav-pills-border-radius: 0;
 
 //$colors: map-merge(map-merge($grays, $theme-colors), $colors);

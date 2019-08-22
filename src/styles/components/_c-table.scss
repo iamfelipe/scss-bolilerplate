@@ -1,0 +1,52 @@
+// Component TABLE
+// ---------
+
+#{$component-table} {
+  //tbody {
+  //  display: block;
+  //  overflow: auto;
+  //  height: 100px;
+  //  width: 100%;
+  //}
+  //thead tr {
+  //  display: block;
+  //}
+  //
+  //th,
+  //td {
+  //  text-align: left;
+  //  width: 100%;
+  //}
+
+  thead {
+    background-color: transparent;
+
+    tr {
+      th {
+        font-weight: 400;
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      font-weight: 700;
+
+      &:not(:last-child) {
+        border-bottom: $table-border-width solid $table-border-color;
+      }
+
+      td {
+        &:last-child {
+          color: theme-color();
+          font-weight: 700;
+          text-align: right;
+        }
+      }
+    }
+  }
+}

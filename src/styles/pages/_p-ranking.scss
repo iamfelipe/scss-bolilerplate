@@ -1,0 +1,45 @@
+// Pages RANKING
+// ---------
+
+#{$page-ranking} {
+  @include e(header) {
+    min-height: 100vw;
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-down(md) {
+      justify-content: flex-end;
+    }
+
+    @include media-breakpoint-up(lg) {
+      min-height: 46.7vmin;
+    }
+  }
+
+  @include e(title) {
+    position: relative;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font-stack-secondary;
+    z-index: 1;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .nav.nav-pills {
+      display: none;
+    }
+
+    .tab-content {
+      @include make-row();
+
+      & > .tab-pane {
+        @include make-col-ready();
+        @include make-col(6);
+        display: block;
+      }
+    }
+  }
+}
