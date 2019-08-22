@@ -3,7 +3,8 @@
 // -----------------------------------------------------------------------------
 
 @include font-face("Material Icons", "MaterialIcons-Regular");
-@include font-face("Asap", "Asap-Bold");
+@include font-face("Gilroy", "Gilroy-Regular");
+@include font-face("Gilroy", "Gilroy-Bold", 700);
 
-$font-stack-primary: "Asap", $font-family-sans-serif;
+$font-stack-primary: "Gilroy", $font-family-sans-serif;
 $font-stack-secondary: "Roboto", $font-family-serif;

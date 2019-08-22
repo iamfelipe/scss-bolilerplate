@@ -7,6 +7,49 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
+    <!--Page Home-->
+    <article class="p-home">
+      <img src="https://picsum.photos/1024" alt="Operario todo bien" class="p-home__bg"/>
+      <div class="p-home-container">
+        <!--Component Login-->
+        <div class="p-home-container__login">
+          <section class="c-login card">
+            <div class="card-body">
+              <!--Header-->
+              <header class="text-center">
+                <h2 class="h2">Inicio de sesión</h2>
+                <p class="body">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                  nonumy eirmod tempor invidunt ut labore et dolore
+                </p>
+              </header>
+              <!--End. Header-->
+              <!--Component Form-->
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter email"
+                  />
+                  <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                  >
+                </div>
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+              </form>
+              <!--End. Component Form-->
+            </div>
+          </section>
+        </div>
+        <!--End. Component Login-->
+      </div>
+    </article>
+    <!--End. Page Home-->
+
     <section id="c-baseline">
       <div class="container">
         <div class="row justify-content-center">
@@ -65,9 +108,9 @@
             <div class="c-heading">
               <div class="c-heading__image">
                 <img
-                    src="https://picsum.photos/400"
-                    class="w-100"
-                    alt="Example image"
+                  src="https://picsum.photos/400"
+                  class="w-100"
+                  alt="Example image"
                 />
               </div>
               <div class="c-heading__title">

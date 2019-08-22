@@ -3,6 +3,7 @@
 
 %control {
   @extend %box;
+  margin-bottom: 0;
 
   @include hover() {
     border-color: theme-color(primary);
