@@ -1,0 +1,15 @@
+// Component RANKING
+// ---------
+
+#{$component-ranking} {
+  box-shadow: $box-shadow;
+  margin-bottom: 3em;
+
+  @include e(title) {
+    font-family: $font-stack-secondary;
+    text-transform: uppercase;
+    text-align: left;
+    color: theme-color('dark');
+    margin-bottom: 0;
+  }
+}

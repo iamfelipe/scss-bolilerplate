@@ -27,26 +27,31 @@ $container-max-widths: (
 
 // Modular scale
 $modularscale: (
-  base: 16px,
+  base: 14px,
   ratio: $minor-third,
   map-get($grid-breakpoints, "sm"): (
-    base: 16px
+    base: 14px
   ),
-  map-get($grid-breakpoints, "lg"): (
-    base: 18px,
-    ratio: $fourth
+  map-get($grid-breakpoints, "xxl"): (
+    base: 15px,
+    //ratio: $augmented-fourth
   )
 );
 
 //  TAG     MB      DK
-//  lead    00      62
-//  h1      00      57
-//  h2      00      39
-//  h3      00      32
-//  h4      00      29/30
-//  h5      00      24/25
+//  hh      69/50   116 - vmin
+//  hh      50/32   82 - vmin
+//  lead    21      62 - vmin
+//  hh      27      57 - vmin
+//  h2      30      48
+//  h3      25      39
+//  h4      17      29/30
+//  h5      20      24/25
 //  h6      00      20/21
-//  p       00      18
+//  p       14      18/19
+//  small   14      15
+
+$enable-shadows: true;
 
 // Color system
 $white: #fff;
@@ -57,7 +62,7 @@ $gray-900: #39100f;
 $black: #000;
 
 $primary: #e2171f;
-$secondary: #EBE3D5;
+$secondary: #ebe3d5;
 
 $dark: $gray-900;
 
@@ -72,7 +77,7 @@ $body-bg: $white;
 $body-color: $gray-900;
 
 // Components
-$box-shadow: 0 em(2) em(2) rgba($black, 0.7);
+$box-shadow: 0 em(3) em(8) rgba($black, 0.16);
 $border-color: $gray-200;
 
 // Transitions
@@ -183,7 +188,8 @@ $modal-footer-border-color: $modal-content-border-color;
 // Cards
 $card-spacer-y: em(32);
 $card-spacer-x: em(20);
-$card-border-color: transparent;
+$card-cap-bg: $white;
+$card-border-color: $card-cap-bg;
 
 // Tables
 $table-border-width: $border-width * 8;

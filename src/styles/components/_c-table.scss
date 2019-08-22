@@ -40,8 +40,15 @@
         border-bottom: $table-border-width solid $table-border-color;
       }
 
+      th {
+        //text-align: center;
+      }
+
       td {
+
         &:last-child {
+          font-size: 29px;
+          line-height: 1;
           color: theme-color();
           font-weight: 700;
           text-align: right;

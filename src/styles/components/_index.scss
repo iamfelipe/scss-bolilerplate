@@ -3,8 +3,12 @@
 
 $component-modal: '.c-modal';
 $component-table: '.c-table';
+$component-ranking: '.c-ranking';
+$component-login: '.c-login';
 
 @import "c-heading";
 @import "c-baseline";
 @import "c-modal";
+@import "c-login";
+@import "c-ranking";
 @import "c-table";
