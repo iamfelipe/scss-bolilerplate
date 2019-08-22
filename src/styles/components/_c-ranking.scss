@@ -6,12 +6,20 @@
   margin-bottom: 3em;
 
   @include e(title) {
+    position: relative;
     font-size: 7.2vmin;
     font-family: $font-stack-secondary;
     text-transform: uppercase;
     text-align: left;
     color: theme-color("dark");
     margin-bottom: 0;
+
+    &::before {
+      @extend .material-icons;
+      content: 'keyboard_arrow_down';
+      left: 0;
+      vertical-align: sub;
+    }
 
     @include media-breakpoint-up(lg) {
       font-size: 3vw;

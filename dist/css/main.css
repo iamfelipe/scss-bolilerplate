@@ -7777,7 +7777,7 @@ select.selectpicker {
 .p-72 {
   padding: 72px !important; }
 
-.material-icons {
+.material-icons, .c-ranking__title::before {
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
@@ -8202,12 +8202,17 @@ p + p {
   box-shadow: 0 0.21428571em 0.57142857em rgba(0, 0, 0, 0.16);
   margin-bottom: 3em; }
   .c-ranking__title {
+    position: relative;
     font-size: 7.2vmin;
     font-family: "Tolyer", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     text-transform: uppercase;
     text-align: left;
     color: #39100f;
     margin-bottom: 0; }
+    .c-ranking__title::before {
+      content: 'keyboard_arrow_down';
+      left: 0;
+      vertical-align: sub; }
     @media (min-width: 992px) {
       .c-ranking__title {
         font-size: 3vw;
