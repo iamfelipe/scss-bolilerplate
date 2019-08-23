@@ -23,6 +23,9 @@
 
     @include media-breakpoint-up(lg) {
       font-size: 3vw;
+    }
+
+    @include media-breakpoint-up(xxl) {
       @include ms-respond(font-size, 7);
     }
   }

@@ -3,6 +3,14 @@
 
 $page-home: '.p-home';
 $page-ranking: '.p-ranking';
+$page-instructions: '.p-instructions';
+$page-trivia: '.p-trivia';
+$page-terms: '.p-terms';
+$page-repo: '.p-repo';
 
 @import "p-home";
 @import "p-ranking";
+@import "p-instructions";
+//@import "p-repo";
+//@import "p-terms";
+//@import "p-trivia";

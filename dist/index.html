@@ -7,11 +7,80 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
+    <!--Page Instructions-->
+    <article class="p-instructions">
+      <!--Header-->
+      <div class="p-instructions__header">
+        <picture>
+          <source
+            srcset="img/embajadores-img-instructions-header.webp"
+            type="image/webp"
+          />
+          <source
+            srcset="img/embajadores-img-instructions-header.png"
+            type="image/png"
+          />
+          <img
+            src="img/embajadores-img-instructions-header.png"
+            alt="Operario con pulgar arriba"
+          />
+        </picture>
+      </div>
+      <!--Info-->
+      <div class="p-instructions__info">
+        <div class="container">
+          <!--List-->
+          <ul class="c-instructions__list">
+            <!--Item-->
+            <li class="c-instructions__item">
+              <h6 class="c-instructions__title">Lorem ipsum dolor sit amet.</h6>
+              <p class="c-instructions__description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Delectus facilis id laboriosam nam nesciunt numquam quas quasi
+                repellendus ullam voluptatibus!
+              </p>
+            </li>
+            <li class="c-instructions__item">
+              <h6 class="c-instructions__title">Lorem ipsum dolor sit amet.</h6>
+              <p class="c-instructions__description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Delectus facilis id laboriosam nam nesciunt numquam quas quasi
+                repellendus ullam voluptatibus!
+              </p>
+            </li>
+            <li class="c-instructions__item">
+              <h6 class="c-instructions__title">Lorem ipsum dolor sit amet.</h6>
+              <p class="c-instructions__description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Delectus facilis id laboriosam nam nesciunt numquam quas quasi
+                repellendus ullam voluptatibus!
+              </p>
+            </li>
+          </ul>
+          <!--CTA-->
+          <a href="#" class="btn btn-dark">Jugar</a>
+        </div>
+      </div>
+      <!--Footer-->
+      <footer class="p-instructions__footer">
+        <h6>Lorem ipsum dolor sit amet.</h6>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa,
+          molestiae?
+        </p>
+      </footer>
+    </article>
+    <!--End. Page Instructions-->
+
     <!--Page Ranking-->
     <article class="p-ranking">
       <!--Header-->
       <header class="p-ranking__header bg-absolute">
-        <img src="https://picsum.photos/1024" alt="Encabezado ranking" class="" />
+        <img
+          src="https://picsum.photos/1024"
+          alt="Encabezado ranking"
+          class=""
+        />
         <h2 class="h2 p-ranking__title">Ranking</h2>
       </header>
       <!--End. Header-->
@@ -104,28 +173,28 @@
               <div class="card-body">
                 <table class="table table-borderless c-table">
                   <thead>
-                  <tr>
-                    <th scope="col">No.</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Puntos</th>
-                  </tr>
+                    <tr>
+                      <th scope="col">No.</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Puntos</th>
+                    </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <th scope="row">1.</th>
-                    <td>Andrés Cuestas</td>
-                    <td>100</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2.</th>
-                    <td>Jacob</td>
-                    <td>100</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3.</th>
-                    <td>Larry</td>
-                    <td>100</td>
-                  </tr>
+                    <tr>
+                      <th scope="row">1.</th>
+                      <td>Andrés Cuestas</td>
+                      <td>100</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2.</th>
+                      <td>Jacob</td>
+                      <td>100</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3.</th>
+                      <td>Larry</td>
+                      <td>100</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -160,7 +229,9 @@
               <!--Component Form-->
               <form>
                 <div class="form-group">
-                  <label for="exampleInputEmail1" class="d-none">Email address</label>
+                  <label for="exampleInputEmail1" class="d-none"
+                    >Email address</label
+                  >
                   <input
                     type="email"
                     class="form-control"
