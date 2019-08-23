@@ -1,0 +1,30 @@
+// Component CARD
+// ---------
+
+.c-card {
+  box-shadow: $box-shadow;
+  overflow: hidden;
+
+  iframe {
+    border-radius: $border-radius * 2;
+  }
+
+  @include e(title) {
+    @extend .h5;
+    font-weight: 700;
+    margin-bottom: em(2);
+
+    @include media-breakpoint-up(lg) {
+      //@include ms-respond(font-size, 2);
+    }
+  }
+
+  @include e(description) {
+    @extend .body;
+    font-weight: 400;
+
+    @include media-breakpoint-up(lg) {
+      //@include ms-respond(font-size, 1);
+    }
+  }
+}

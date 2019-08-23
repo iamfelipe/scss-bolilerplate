@@ -201,4 +201,10 @@ $nav-pills-link-active-color: $primary;
 $nav-pills-link-active-bg: $secondary;
 $nav-pills-border-radius: 0;
 
+$embed-responsive-aspect-ratios: ();
+
+// Embed
+$embed-responsive-aspect-ratios: join(
+  ((21 9), (16 9), (9 6), (4 3), (1 1)), $embed-responsive-aspect-ratios
+);
 //$colors: map-merge(map-merge($grays, $theme-colors), $colors);

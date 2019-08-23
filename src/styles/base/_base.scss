@@ -21,6 +21,13 @@ html {
   box-sizing: inherit;
 }
 
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 // Transitions
 $transition-timing-function: $easeOutQuart;
 $transition: all $transition-duration $transition-timing-function;

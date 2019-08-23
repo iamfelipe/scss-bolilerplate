@@ -1,0 +1,30 @@
+// Pages REPO
+// ---------
+
+#{$page-repo} {
+  padding-top: 10vmin;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: em(32);
+  }
+
+  @include e(title) {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: $font-stack-secondary;
+    color: theme-color();
+    font-size: 13.4vmin;
+    line-height: 1.5;
+    margin-bottom: em(4);
+
+    @include media-breakpoint-up(lg) {
+      @include ms-respond(font-size, 9);
+    }
+  }
+
+  @include e(placeholder) {
+    @include media-breakpoint-up(lg) {
+      @include ms-respond(font-size, 3);
+    }
+  }
+}

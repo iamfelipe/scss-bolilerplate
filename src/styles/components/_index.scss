@@ -6,6 +6,8 @@ $component-table: '.c-table';
 $component-ranking: '.c-ranking';
 $component-login: '.c-login';
 $component-trivia: '.c-trivia';
+$component-card: '.c-card';
+$component-slider: '.c-slider';
 
 @import "c-heading";
 @import "c-baseline";
@@ -15,3 +17,5 @@ $component-trivia: '.c-trivia';
 @import "c-table";
 @import "c-trivia";
 @import "c-counter";
+@import "c-card";
+@import "c-slider";
