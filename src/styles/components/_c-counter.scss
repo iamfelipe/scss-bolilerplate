@@ -1,0 +1,10 @@
+// Component COUNTER
+// ---------
+
+.c-counter {
+  background-color: $white;
+  color: theme-color('dark');
+  font-family: $font-stack-secondary;
+  text-align: center;
+  text-transform: uppercase;
+}

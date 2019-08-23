@@ -8346,7 +8346,7 @@ p + p {
   @media (min-width: 992px) {
     .c-trivia__wrap {
       margin-top: 2.28571429em;
-      padding: 3.14285714em 3.71428571em; } }
+      padding: 3.71428571em; } }
 
 .c-trivia__title {
   margin-right: auto;
@@ -8372,6 +8372,24 @@ p + p {
     .c-trivia__title {
       font-size: 64.4972544px; } }
 
+.c-trivia .btn-group {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.85714286rem; }
+  @media (min-width: 992px) {
+    .c-trivia .btn-group {
+      grid-gap: 3.71428571em;
+      grid-column-gap: 2.47619048em;
+      -ms-grid-rows: 1fr 3.71428571em 1fr;
+      -ms-grid-columns: 1fr 2.47619048em 1fr;
+      grid-template: repeat(2, 1fr)/repeat(2, 1fr); } }
+  .c-trivia .btn-group .btn {
+    margin-bottom: 0;
+    border-radius: 0; }
+    .c-trivia .btn-group .btn.active {
+      color: #fff;
+      background-color: #39100f; }
+
 .c-trivia__disclaimer {
   font-weight: 400;
   text-align: center;
@@ -8389,6 +8407,13 @@ p + p {
       margin-left: auto;
       padding-right: 8em;
       padding-left: 8em; } }
+
+.c-counter {
+  background-color: #fff;
+  color: #39100f;
+  font-family: "Tolyer", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-align: center;
+  text-transform: uppercase; }
 
 .p-home {
   background-color: #f8f9fa;

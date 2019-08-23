@@ -2,6 +2,7 @@
 // ---------
 
 #{$component-trivia} {
+  $trivia-gap-lg: em(52);
 
   @include e(wrap) {
     margin-top: 1em;
@@ -13,7 +14,7 @@
 
     @include media-breakpoint-up(lg) {
       margin-top: em(32);
-      padding: em(44) em(52);
+      padding: $trivia-gap-lg;
     }
   }
 
@@ -36,6 +37,27 @@
 
     @include media-breakpoint-up(xxl) {
       @include ms-respond(font-size, 8);
+    }
+  }
+
+  .btn-group {
+    display: grid;
+    grid-gap: $grid-gutter-width / 2;
+
+    @include media-breakpoint-up(lg) {
+      grid-gap: $trivia-gap-lg;
+      grid-column-gap: $trivia-gap-lg / 1.5;
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+
+    .btn {
+      margin-bottom: 0;
+      border-radius: 0;
+
+      &.active {
+        color: $white;
+        background-color: theme-color('dark');
+      }
     }
   }
 
