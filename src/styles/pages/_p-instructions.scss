@@ -2,8 +2,9 @@
 // ---------
 
 #{$page-instructions} {
-  @include template(header, info, footer);
+  position: relative;
   min-height: 100vh;
+  @include template(header, info, footer);
 
   @include media-breakpoint-up(lg) {
     grid-template-columns: auto 1fr;

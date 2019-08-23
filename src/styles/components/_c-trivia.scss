@@ -44,6 +44,7 @@
   .btn-group {
     display: grid;
     grid-gap: $grid-gutter-width / 2;
+    grid-template-rows: repeat(4, 1fr);
 
     @include media-breakpoint-up(lg) {
       grid-gap: $trivia-gap-lg;
@@ -53,8 +54,17 @@
 
     .btn {
       margin-bottom: 0;
-      border-radius: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-weight: 700;
+      @include ms-respond(font-size, 1);
+      line-height: 1.2;
+      border-radius: 0;
+
+      @include media-breakpoint-up(lg) {
+        @include ms-respond(font-size, 4);
+      }
 
       @include plain-hover-focus() {
         border: 0 none;

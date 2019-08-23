@@ -10,17 +10,22 @@
   min-height: 100vh;
   @include template(timer, quit, wrap);
 
+  @include media-breakpoint-down(md) {
+    display: flex;
+    align-items: center;
+  }
+
   @include media-breakpoint-up(lg) {
     padding-top: em(72);
   }
 
   .container {
     display: grid;
-    height: 100%;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto auto 1fr;
 
     @include media-breakpoint-up(lg) {
+      height: 100%;
       grid-template-columns: repeat(3, 1fr);
     }
   }
