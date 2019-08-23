@@ -1,0 +1,64 @@
+// Component TRIVIA
+// ---------
+
+#{$component-trivia} {
+
+  @include e(wrap) {
+    margin-top: 1em;
+    margin-bottom: em(16);
+    background-color: theme-color('secondary');
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: em(36) $grid-gutter-width / 2;
+
+    @include media-breakpoint-up(lg) {
+      margin-top: em(32);
+      padding: em(44) em(52);
+    }
+  }
+
+  @include e(title) {
+    margin-right: auto;
+    margin-left: auto;
+    color: theme-color();
+    text-align: center;
+    font-family: $font-stack-secondary;
+    font-size: 5.6vmin;
+    line-height: 1.2;
+
+    @include media-breakpoint-down(md) {
+      max-width: 70%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 3.2vw;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      @include ms-respond(font-size, 8);
+    }
+  }
+
+  @include e(disclaimer) {
+    @extend .h6;
+    font-weight: 400;
+    text-align: center;
+    color: $white;
+
+    @include media-breakpoint-up(lg) {
+      text-align: right;
+    }
+  }
+
+  @include e(btn) {
+    margin-top: 2em;
+
+    @include media-breakpoint-up(lg) {
+      width: auto;
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: 8em;
+      padding-left: 8em;
+    }
+  }
+}

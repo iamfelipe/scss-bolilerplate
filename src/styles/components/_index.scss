@@ -5,6 +5,7 @@ $component-modal: '.c-modal';
 $component-table: '.c-table';
 $component-ranking: '.c-ranking';
 $component-login: '.c-login';
+$component-trivia: '.c-trivia';
 
 @import "c-heading";
 @import "c-baseline";
@@ -12,3 +13,4 @@ $component-login: '.c-login';
 @import "c-login";
 @import "c-ranking";
 @import "c-table";
+@import "c-trivia";

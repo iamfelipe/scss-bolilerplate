@@ -31,12 +31,14 @@
   }
 
   @include e(info) {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: em(32) em(56);
     background-color: theme-color();
     color: $white;
+    min-height: em(290);
 
     @include media-breakpoint-up(lg) {
       grid-area: 1 / 2 / 2 / 3;
