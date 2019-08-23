@@ -62,7 +62,7 @@
       line-height: 1.2;
       border-radius: 0;
 
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xl) {
         @include ms-respond(font-size, 4);
       }
 
