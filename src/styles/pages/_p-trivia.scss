@@ -9,7 +9,6 @@
   height: 100%;
   min-height: 100vh;
   @include template(timer, quit, wrap);
-  background: red;
 
   @include media-breakpoint-up(lg) {
     padding-top: em(72);
@@ -27,6 +26,8 @@
   }
 
   @include e(timer) {
+    align-self: center;
+    justify-self: center;
     grid-area: 1 / 1 / 2 / 2;
 
     @include media-breakpoint-up(lg) {
@@ -35,6 +36,7 @@
   }
 
   @include e(quit) {
+    align-self: center;
     grid-area: 1 / 3 / 2 / 4;
 
     .btn {

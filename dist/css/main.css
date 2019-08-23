@@ -8355,7 +8355,8 @@ p + p {
   text-align: center;
   font-family: "Tolyer", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 5.6vmin;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin-bottom: .5em; }
   @media (max-width: 991.98px) {
     .c-trivia__title {
       max-width: 70%; } }
@@ -8385,7 +8386,14 @@ p + p {
       grid-template: repeat(2, 1fr)/repeat(2, 1fr); } }
   .c-trivia .btn-group .btn {
     margin-bottom: 0;
-    border-radius: 0; }
+    border-radius: 0;
+    font-weight: 700; }
+    .c-trivia .btn-group .btn, .c-trivia .btn-group .btn:hover, .c-trivia .btn-group .btn:focus {
+      border: 0 none; }
+    .c-trivia .btn-group .btn:not(.active):hover, .c-trivia .btn-group .btn:not(.active):focus {
+      background-color: #fff;
+      cursor: pointer;
+      box-shadow: 0 0.21428571em 0.57142857em rgba(0, 0, 0, 0.16); }
     .c-trivia .btn-group .btn.active {
       color: #fff;
       background-color: #39100f; }
@@ -8409,6 +8417,12 @@ p + p {
       padding-left: 8em; } }
 
 .c-counter {
+  display: inline-block;
+  padding-top: 0.35714286em;
+  padding-right: 0.85714286em;
+  padding-left: 0.85714286em;
+  font-size: 7.4vmin;
+  line-height: 1;
   background-color: #fff;
   color: #39100f;
   font-family: "Tolyer", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -8584,7 +8598,8 @@ p + p {
         -ms-grid-column: 2;
         -ms-grid-column-span: 1;
         grid-area: 2 / 2 / 3 / 3;
-        padding: 1.7vw 10vw; } }
+        padding: 1.7vw 10vw;
+        min-height: 8.85714286em; } }
 
 .p-trivia {
   position: absolute;
@@ -8592,8 +8607,7 @@ p + p {
   left: 0;
   width: 100%;
   height: 100%;
-  min-height: 100vh;
-  background: red; }
+  min-height: 100vh; }
   .p-trivia__timer {
     grid-area: timer; }
   .p-trivia__quit {
@@ -8616,6 +8630,10 @@ p + p {
         -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr); } }
   .p-trivia__timer {
+    -ms-grid-row-align: center;
+    align-self: center;
+    -ms-grid-column-align: center;
+    justify-self: center;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
@@ -8627,6 +8645,8 @@ p + p {
         -ms-grid-column-span: 1;
         grid-column: 2 / 3; } }
   .p-trivia__quit {
+    -ms-grid-row-align: center;
+    align-self: center;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 3;

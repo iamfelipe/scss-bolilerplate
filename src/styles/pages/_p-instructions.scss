@@ -74,6 +74,7 @@
     @include media-breakpoint-up(lg) {
       grid-area: 2 / 2 / 3 / 3;
       padding: 1.7vw 10vw;
+      min-height: em(124);
     }
   }
 }

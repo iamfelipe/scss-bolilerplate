@@ -2,9 +2,20 @@
 // ---------
 
 .c-counter {
+  $counter-padding-x: em(12);
+  display: inline-block;
+  padding-top: em(5);
+  padding-right: $counter-padding-x;
+  padding-left: $counter-padding-x;
+  font-size: 7.4vmin;
+  line-height: 1;
   background-color: $white;
   color: theme-color('dark');
   font-family: $font-stack-secondary;
   text-align: center;
   text-transform: uppercase;
+
+  @include media-breakpoint-up(lg) {
+
+  }
 }

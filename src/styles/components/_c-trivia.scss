@@ -7,7 +7,7 @@
   @include e(wrap) {
     margin-top: 1em;
     margin-bottom: em(16);
-    background-color: theme-color('secondary');
+    background-color: theme-color("secondary");
     border-radius: $border-radius;
     box-shadow: $box-shadow;
     padding: em(36) $grid-gutter-width / 2;
@@ -26,6 +26,7 @@
     font-family: $font-stack-secondary;
     font-size: 5.6vmin;
     line-height: 1.2;
+    margin-bottom: .5em;
 
     @include media-breakpoint-down(md) {
       max-width: 70%;
@@ -53,10 +54,24 @@
     .btn {
       margin-bottom: 0;
       border-radius: 0;
+      font-weight: 700;
+
+      @include plain-hover-focus() {
+        border: 0 none;
+      }
+
+      &:not(.active) {
+        @include hover-focus() {
+          background-color: $white;
+          //border-color: theme-color("dark");
+          cursor: pointer;
+          box-shadow: $box-shadow;
+        }
+      }
 
       &.active {
         color: $white;
-        background-color: theme-color('dark');
+        background-color: theme-color("dark");
       }
     }
   }
