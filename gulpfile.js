@@ -165,8 +165,7 @@ const buildImages = mode => done => {
           sink, // clone image
           webp(), // convert cloned image to WebP
           sink.tap(),
-          gulp.dest(distPath("img")),
-          browserSync.stream()
+          gulp.dest(distPath("img"))
         ],
         done()
       )

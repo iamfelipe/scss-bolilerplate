@@ -4,6 +4,7 @@
 .c-card {
   box-shadow: $box-shadow;
   overflow: hidden;
+  border: 0 none;
 
   iframe {
     border-radius: $border-radius * 2;
@@ -22,6 +23,7 @@
   @include e(description) {
     @extend .body;
     font-weight: 400;
+    line-height: 1.4;
 
     @include media-breakpoint-up(lg) {
       //@include ms-respond(font-size, 1);

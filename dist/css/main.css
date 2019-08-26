@@ -4092,9 +4092,6 @@ mark,
   .form-control::-webkit-input-placeholder {
     color: #78909c;
     opacity: 1; }
-  .form-control::-moz-placeholder {
-    color: #78909c;
-    opacity: 1; }
   .form-control:-ms-input-placeholder {
     color: #78909c;
     opacity: 1; }
@@ -4555,12 +4552,15 @@ textarea.form-control {
     height: calc(1.71428571rem - 0.57142857rem);
     background-color: #adb5bd;
     border-radius: 0.85714286rem;
-    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out; }
     @media (prefers-reduced-motion: reduce) {
       .custom-switch .custom-control-label::after {
         transition: none; } }
   .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
     background-color: #fff;
+    -webkit-transform: translateX(1.28571429rem);
     transform: translateX(1.28571429rem); }
   .custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
     background-color: rgba(226, 23, 31, 0.5); }
@@ -5219,9 +5219,9 @@ textarea.form-control {
 
 @media (min-width: 576px) {
   .card-columns {
-    -moz-column-count: 3;
+    -webkit-column-count: 3;
     column-count: 3;
-    -moz-column-gap: 1.25rem;
+    -webkit-column-gap: 1.25rem;
     column-gap: 1.25rem;
     orphans: 1;
     widows: 1; }
@@ -5269,12 +5269,16 @@ textarea.form-control {
   margin: 0.5rem;
   pointer-events: none; }
   .modal.fade .modal-dialog {
+    transition: -webkit-transform 0.3s ease-out;
     transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+    -webkit-transform: translate(0, -50px);
     transform: translate(0, -50px); }
     @media (prefers-reduced-motion: reduce) {
       .modal.fade .modal-dialog {
         transition: none; } }
   .modal.show .modal-dialog {
+    -webkit-transform: none;
     transform: none; }
 
 .modal-dialog-scrollable {
@@ -7890,6 +7894,7 @@ select.selectpicker {
   height: 1em;
   border-style: solid;
   border-width: 0 0.26em 0.26em 0;
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg); }
 
 .bootstrap-select.show-menu-arrow.open > .dropdown-toggle,
@@ -8287,6 +8292,7 @@ select.selectpicker {
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
+  -webkit-font-feature-settings: "liga";
   font-feature-settings: "liga"; }
 
 .bg-absolute {
@@ -8945,14 +8951,16 @@ p + p {
 
 .c-card {
   box-shadow: 0 0.21428571em 0.57142857em rgba(0, 0, 0, 0.16);
-  overflow: hidden; }
+  overflow: hidden;
+  border: 0 none; }
   .c-card iframe {
     border-radius: 0.57142857rem; }
   .c-card__title {
     font-weight: 700;
     margin-bottom: 0.14285714em; }
   .c-card__description {
-    font-weight: 400; }
+    font-weight: 400;
+    line-height: 1.4; }
 
 @media (max-width: 767.98px) {
   .c-slider .slick-list {
@@ -8971,6 +8979,7 @@ p + p {
     width: 100vw;
     position: relative;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%); } }
 
 @media (max-width: 767.98px) {
