@@ -197,6 +197,13 @@ $table-cell-padding: rem(4);
 $table-border-width: $card-spacer-x;
 $table-border-color: $white;
 
+// Navbar
+$navbar-padding-y: 0;
+$navbar-brand-padding-y: $navbar-padding-y;
+$navbar-brand-font-size: 1em;
+$navbar-light-color: $dark;
+$navbar-light-active-color: $primary;
+
 // Navs
 $nav-pills-link-active-color: $primary;
 $nav-pills-link-active-bg: $secondary;

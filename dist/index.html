@@ -13,31 +13,48 @@
   </head>
   <body>
     <!--Navbar-->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Juego</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Repositorio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Ranking</a>
-          </li>
-        </ul>
+    <nav class="navbar l-navbar sticky-top navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <picture>
+            <source
+                srcset="img/embajadores-img-cap.webp"
+                type="image/webp"
+            />
+            <source
+                srcset="img/embajadores-img-cap.png"
+                type="image/png"
+            />
+            <img
+                src="img/embajadores-img-cap.png"
+                alt="Logo de bavaria Embajadores"
+            />
+          </picture>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Juego</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Repositorio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ranking</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
     <!--Page Terms-->
@@ -379,17 +396,11 @@
       <!--Header-->
       <header class="p-ranking__header bg-absolute">
         <picture>
-          <source
-              srcset="img/embajadores-img-ranking.webp"
-              type="image/webp"
-          />
-          <source
-              srcset="img/embajadores-img-ranking.png"
-              type="image/png"
-          />
+          <source srcset="img/embajadores-img-ranking.webp" type="image/webp" />
+          <source srcset="img/embajadores-img-ranking.png" type="image/png" />
           <img
-              src="img/embajadores-img-ranking.png"
-              alt="Grupo de personas con camisetas de Bavaria"
+            src="img/embajadores-img-ranking.png"
+            alt="Grupo de personas con camisetas de Bavaria"
           />
         </picture>
         <h2 class="h2 p-ranking__title">Ranking</h2>
@@ -519,18 +530,12 @@
     <!--Page Home-->
     <article class="p-home">
       <picture>
-        <source
-            srcset="img/embajadores-img-login.webp"
-            type="image/webp"
-        />
-        <source
-            srcset="img/embajadores-img-login.png"
-            type="image/png"
-        />
+        <source srcset="img/embajadores-img-login.webp" type="image/webp" />
+        <source srcset="img/embajadores-img-login.png" type="image/png" />
         <img
-            src="img/embajadores-img-login.png"
-            alt="Operario pulgar arriba"
-            class="p-home__bg"
+          src="img/embajadores-img-login.png"
+          alt="Operario pulgar arriba"
+          class="p-home__bg"
         />
       </picture>
       <div class="p-home-container">
@@ -606,17 +611,14 @@
         <!--Logo-->
         <picture class="l-footer__logo">
           <source
-              srcset="img/embajadores-img-aguila-logo.webp"
-              type="image/webp"
+            srcset="img/embajadores-img-aguila-logo.webp"
+            type="image/webp"
           />
           <source
-              srcset="img/embajadores-img-aguila-logo.png"
-              type="image/png"
+            srcset="img/embajadores-img-aguila-logo.png"
+            type="image/png"
           />
-          <img
-              src="img/embajadores-img-aguila-logo.png"
-              alt="Águila logo"
-          />
+          <img src="img/embajadores-img-aguila-logo.png" alt="Águila logo" />
         </picture>
         <!--Social-->
         <div class="l-footer__social">
@@ -626,28 +628,19 @@
             </p>
             <ul class="c-social__list">
               <li class="c-social__item">
-                <a
-                    href="#"
-                    class="c-social__link c-social__link--youtube"
-                ></a>
+                <a href="#" class="c-social__link c-social__link--youtube"></a>
+              </li>
+              <li class="c-social__item">
+                <a href="#" class="c-social__link c-social__link--twitter"></a>
               </li>
               <li class="c-social__item">
                 <a
-                    href="#"
-                    class="c-social__link c-social__link--twitter"
+                  href="#"
+                  class="c-social__link c-social__link--instagram"
                 ></a>
               </li>
               <li class="c-social__item">
-                <a
-                    href="#"
-                    class="c-social__link c-social__link--instagram"
-                ></a>
-              </li>
-              <li class="c-social__item">
-                <a
-                    href="#"
-                    class="c-social__link c-social__link--facebook"
-                ></a>
+                <a href="#" class="c-social__link c-social__link--facebook"></a>
               </li>
             </ul>
           </div>
@@ -655,9 +648,9 @@
         <!--Disclaimer-->
         <div class="l-footer__disclaimer">
           <p class="mb-0">
-            PROHÍBASE EL EXPENDIO DE BEBIDAS EMBRIAGANTES A MENORES DE EDAD.
-            EL EXCESO DE ALCOHOL ES PERJUDICIAL PARA LA SALUD. NO COMPARTA
-            ESTE CONTENIDO CON MENORES DE EDAD.
+            PROHÍBASE EL EXPENDIO DE BEBIDAS EMBRIAGANTES A MENORES DE EDAD. EL
+            EXCESO DE ALCOHOL ES PERJUDICIAL PARA LA SALUD. NO COMPARTA ESTE
+            CONTENIDO CON MENORES DE EDAD.
           </p>
         </div>
       </div>

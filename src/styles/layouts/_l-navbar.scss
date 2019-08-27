@@ -1,0 +1,19 @@
+// Layout NAVBAR
+// ---------
+
+#{$layout-navbar} {
+  $navbar-height: em(100);
+
+  .navbar-brand {
+    transform: translateY(29%);
+
+    @include media-breakpoint-up(lg) {
+      transform: translateY(3%) scale(1.54);
+      transform-origin: left top;
+    }
+
+    img {
+      height: $navbar-height;
+    }
+  }
+}
