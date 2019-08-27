@@ -2,6 +2,18 @@
 // ---------
 
 .c-slider {
+  $grid-gutter-width: $grid-gutter-width / 2;
+  $arrow-size: em(40);
+  $arrow-size-lg: em(64);
+
+  position: relative;
+
+  @include media-breakpoint-down(sm) {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   .slick-list {
     @include media-breakpoint-down(sm) {
@@ -9,23 +21,86 @@
     }
   }
 
-  $grid-gutter-width: $grid-gutter-width / 2;
-
   .slick-track {
-    margin-right: -$grid-gutter-width;
-    margin-left: -$grid-gutter-width;
+    @include media-breakpoint-up(md) {
+      margin-right: -$grid-gutter-width;
+      margin-left: -$grid-gutter-width;
+    }
   }
 
   .slick-slide {
     margin-right: $grid-gutter-width;
     margin-left: $grid-gutter-width;
+    margin-bottom: $grid-gutter-width;
   }
 
-  @include media-breakpoint-down(sm) {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+  .slick-arrow {
+    @include hover-element();
+    position: absolute;
+    width: $arrow-size;
+    height: $arrow-size;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 0 none;
+    background-color: $white;
+    box-shadow: $box-shadow;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include media-breakpoint-up(md) {
+      width: $arrow-size-lg;
+      height: $arrow-size-lg;
+    }
+
+    @include plain-hover-focus() {
+      outline: 0 none;
+    }
+
+    @include hover-focus() {
+
+      @include media-breakpoint-up(md) {
+        transform: translateY(-50%) scale(0.99);
+      }
+    }
+
+    &.slick-disabled {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &.slick-prev {
+      @include media-breakpoint-down(sm) {
+        left: calc(#{$grid-gutter-width * 1});
+      }
+
+      @include media-breakpoint-up(md) {
+        left: calc(#{-$arrow-size-lg} - #{$grid-gutter-width * 2});
+      }
+    }
+
+    &.slick-next {
+      @include media-breakpoint-down(sm) {
+        right: calc(#{$grid-gutter-width * 1});
+      }
+      @include media-breakpoint-up(md) {
+        right: calc(#{-$arrow-size-lg} - #{$grid-gutter-width * 2});
+      }
+    }
+
+    i.material-icons {
+      font-size: 2em;
+
+      @include media-breakpoint-up(md) {
+        font-size: 3em;
+      }
+    }
   }
 
   @include m(docs) {

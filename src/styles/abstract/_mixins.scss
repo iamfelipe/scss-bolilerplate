@@ -217,3 +217,16 @@
 @mixin margin-bottom() {
   margin-bottom: rem($vertical-rhythm / 2);
 }
+
+@mixin hover-element() {
+  @include transition();
+
+  @include media-breakpoint-up(md) {
+    will-change: transform;
+    transform-origin: center bottom;
+    @include hover-focus() {
+      transform: scale(0.98);
+      box-shadow: $box-shadow-hover;
+    }
+  }
+}

@@ -10,6 +10,14 @@ $(document).ready(function() {
   $(".c-slider").slick({
     mobileFirst: true,
     variableWidth: true,
+    arrows: true,
+    prevArrow: `<button type="button" class="slick-arrow slick-prev"><i class="material-icons">
+keyboard_arrow_left
+</i></button>`,
+    nextArrow: `<button type="button" class="slick-arrow slick-next"><i class="material-icons">
+keyboard_arrow_right
+</i></button>`,
+    infinite: true,
     // centerMode: true,
     responsive: [
       {
@@ -18,7 +26,7 @@ $(document).ready(function() {
           variableWidth: false,
           slidesToShow: 4,
           slidesToScroll: 4,
-          infinite: true
+          infinite: false
         }
       }
     ]

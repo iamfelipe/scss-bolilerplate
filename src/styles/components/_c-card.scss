@@ -2,6 +2,7 @@
 // ---------
 
 .c-card {
+  @include hover-element();
   box-shadow: $box-shadow;
   overflow: hidden;
   border: 0 none;
