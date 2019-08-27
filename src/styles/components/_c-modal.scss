@@ -4,9 +4,13 @@
 #{$component-modal} {
   text-align: center;
 
+  .modal-body {
+
+  }
+
   .modal-footer {
     justify-content: center;
-    padding-top: $modal-inner-padding * 0.5;
+    padding-top: 0;
   }
 
   .btn {

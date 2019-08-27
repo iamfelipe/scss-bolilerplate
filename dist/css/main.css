@@ -8696,7 +8696,7 @@ p + p {
   text-align: center; }
   .c-modal .modal-footer {
     justify-content: center;
-    padding-top: 1.14285714em; }
+    padding-top: 0; }
   .c-modal .btn, .c-modal .l-footer__btn {
     margin-bottom: 0; }
 
