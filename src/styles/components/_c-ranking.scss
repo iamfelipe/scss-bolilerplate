@@ -2,6 +2,7 @@
 // ---------
 
 #{$component-ranking} {
+  $icon-size: 1em;
   box-shadow: $box-shadow;
   margin-bottom: 3em;
 
@@ -13,11 +14,19 @@
     text-align: left;
     color: theme-color("dark");
     margin-bottom: 0;
+    padding-left: calc(#{$icon-size} + #{$grid-gutter-width / 2});
 
     &::before {
-      @extend .material-icons;
-      content: 'keyboard_arrow_down';
+      content: "";
+      position: absolute;
+      @include image("embajadores-icon-group");
+      -webkit-background-size: contain;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
       left: 0;
+      width: $icon-size;
+      height: $icon-size;
       vertical-align: sub;
     }
 
@@ -45,6 +54,14 @@
 
       tbody tr:not(:last-child) {
         border-bottom-color: theme-color("secondary");
+      }
+    }
+
+    #{$component-ranking} {
+      @include e(title) {
+        &::before {
+          @include image("embajadores-icon-manager");
+        }
       }
     }
   }

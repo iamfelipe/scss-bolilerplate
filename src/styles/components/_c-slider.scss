@@ -81,6 +81,10 @@
       }
 
       @include media-breakpoint-up(md) {
+        left: calc(#{-$arrow-size-lg});
+      }
+
+      @include media-breakpoint-up(xl) {
         left: calc(#{-$arrow-size-lg} - #{$grid-gutter-width * 2});
       }
     }

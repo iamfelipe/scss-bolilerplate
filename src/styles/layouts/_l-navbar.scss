@@ -149,13 +149,14 @@
         }
       }
 
-      .nav-link {
-        font-family: $font-stack-secondary;
+      }
 
-        @include media-breakpoint-up(lg) {
-          @include ms-respond(font-size, 4);
-          padding-bottom: 0;
-        }
+    .nav-link {
+      font-family: $font-stack-secondary;
+
+      @include media-breakpoint-up(lg) {
+        @include ms-respond(font-size, 4);
+        padding-bottom: 0;
       }
     }
   }

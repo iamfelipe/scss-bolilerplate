@@ -59,6 +59,7 @@
     padding-left: 1.5em;
     font-weight: 400;
     margin-bottom: 0;
+    color: theme-color('dark');
   }
 
   @include media-breakpoint-up(lg) {
