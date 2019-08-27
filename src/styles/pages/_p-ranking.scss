@@ -41,6 +41,18 @@
     }
   }
 
+  @include e(header) {
+    @include media-breakpoint-up(lg) {
+      picture {
+        @include image('embajadores-img-ranking-lg');
+
+        img {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
   .nav-link {
     @extend .h6;
     padding-right: 1.5em;
@@ -65,7 +77,8 @@
       & > .tab-pane {
         @include make-col-ready();
         @include make-col(6);
-        display: block;
+        display: block !important;
+        opacity: 1 !important;
       }
     }
   }

@@ -4,6 +4,7 @@
 #{$page-instructions} {
   position: relative;
   min-height: 100vh;
+  background-color: theme-color('dark');
   @include template(header, info, footer);
 
   @include media-breakpoint-up(lg) {
@@ -15,6 +16,7 @@
   @include e(header) {
     @include media-breakpoint-up(lg) {
       grid-area: 1 / 1 / 3 / 2;
+      align-self: center;
     }
 
     img {
@@ -36,10 +38,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: em(32) em(56);
+    padding: em(24) em(40);
     background-color: theme-color();
     color: $white;
     min-height: em(290);
+
+    @include media-breakpoint-up(md) {
+      padding: em(32) em(56);
+    }
 
     @include media-breakpoint-up(lg) {
       grid-area: 1 / 2 / 2 / 3;
@@ -56,10 +62,14 @@
 
     .btn {
       display: block;
-      width: 80%;
+      width: 100%;
       margin-right: auto;
       margin-left: auto;
       border-color: $white;
+
+      @include media-breakpoint-up(md) {
+        width: 80%;
+      }
     }
   }
 

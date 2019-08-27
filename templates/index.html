@@ -276,24 +276,21 @@
               <h6 class="c-instructions__title">Lorem ipsum dolor sit amet.</h6>
               <p class="c-instructions__description">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Delectus facilis id laboriosam nam nesciunt numquam quas quasi
-                repellendus ullam voluptatibus!
+                Delectus facilis id laboriosam.
               </p>
             </li>
             <li class="c-instructions__item">
               <h6 class="c-instructions__title">Lorem ipsum dolor sit amet.</h6>
               <p class="c-instructions__description">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Delectus facilis id laboriosam nam nesciunt numquam quas quasi
-                repellendus ullam voluptatibus!
+                Delectus facilis id laboriosam.
               </p>
             </li>
             <li class="c-instructions__item">
               <h6 class="c-instructions__title">Lorem ipsum dolor sit amet.</h6>
               <p class="c-instructions__description">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Delectus facilis id laboriosam nam nesciunt numquam quas quasi
-                repellendus ullam voluptatibus!
+                Delectus facilis id laboriosam.
               </p>
             </li>
           </ul>
@@ -303,15 +300,15 @@
       </div>
       <!--Footer-->
       <footer class="p-instructions__footer">
-        <h6>Lorem ipsum dolor sit amet.</h6>
-        <p>
+        <h6 class="mb-0">Lorem ipsum dolor sit amet.</h6>
+        <p class="mb-0">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa,
           molestiae?
         </p>
       </footer>
 
       <!--Page Trivia-->
-      <article class="p-trivia">
+      <article class="p-trivia d-none">
         <div class="container">
           <!--Timer-->
           <div class="p-trivia__timer">
@@ -367,11 +364,20 @@
     <article class="p-ranking">
       <!--Header-->
       <header class="p-ranking__header bg-absolute">
-        <img
-          src="https://picsum.photos/1024"
-          alt="Encabezado ranking"
-          class=""
-        />
+        <picture>
+          <source
+              srcset="img/embajadores-img-ranking.webp"
+              type="image/webp"
+          />
+          <source
+              srcset="img/embajadores-img-ranking.png"
+              type="image/png"
+          />
+          <img
+              src="img/embajadores-img-ranking.png"
+              alt="Grupo de personas con camisetas de Bavaria"
+          />
+        </picture>
         <h2 class="h2 p-ranking__title">Ranking</h2>
       </header>
       <!--End. Header-->
@@ -498,11 +504,21 @@
     <!--End. Page Ranking-->
     <!--Page Home-->
     <article class="p-home">
-      <img
-        src="https://picsum.photos/1024"
-        alt="Operario todo bien"
-        class="p-home__bg"
-      />
+      <picture>
+        <source
+            srcset="img/embajadores-img-login.webp"
+            type="image/webp"
+        />
+        <source
+            srcset="img/embajadores-img-login.png"
+            type="image/png"
+        />
+        <img
+            src="img/embajadores-img-login.png"
+            alt="Operario pulgar arriba"
+            class="p-home__bg"
+        />
+      </picture>
       <div class="p-home-container">
         <!--Component Login-->
         <div class="p-home-container__login">

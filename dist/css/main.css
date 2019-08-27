@@ -8294,12 +8294,14 @@ select.selectpicker {
 
 .bg-absolute {
   position: relative; }
-  .bg-absolute img {
+  .bg-absolute picture, .bg-absolute img {
+    width: 100%;
+    height: 100%; }
+  .bg-absolute picture {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    left: 0; }
+  .bg-absolute img {
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: center center;
@@ -8994,6 +8996,75 @@ p + p {
     font-weight: 400;
     line-height: 1.4; }
 
+body {
+  counter-reset: list; }
+
+.c-instructions__item {
+  position: relative;
+  margin-bottom: 2em;
+  padding-left: calc(1em + 1.71428571rem); }
+  @media (min-width: 768px) {
+    .c-instructions__item {
+      padding-left: calc(2.5em + 1.71428571rem); } }
+  .c-instructions__item::before {
+    counter-increment: list;
+    content: counter(list) ".";
+    font-family: "Tolyer", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); }
+    @media (max-width: 767.98px) {
+      .c-instructions__item::before {
+        font-size: 41.803776px; } }
+  @media (max-width: 767.98px) and (min-width: 576px) and (max-width: 1920px) {
+    .c-instructions__item::before {
+      font-size: calc( 41.803776px + 2.985984 * ( ( 100vw - 576px) / 1344 )); } }
+  @media (max-width: 767.98px) and (min-width: 1920px) {
+    .c-instructions__item::before {
+      font-size: 44.78976px; } }
+    @media (min-width: 1920px) {
+      .c-instructions__item::before {
+        font-size: 60.19743744px; } }
+  @media (min-width: 1920px) and (min-width: 576px) and (max-width: 1920px) {
+    .c-instructions__item::before {
+      font-size: calc( 60.19743744px + 4.29981696 * ( ( 100vw - 576px) / 1344 )); } }
+  @media (min-width: 1920px) and (min-width: 1920px) {
+    .c-instructions__item::before {
+      font-size: 64.4972544px; } }
+
+.c-instructions__title {
+  margin-bottom: 0;
+  line-height: 1.75; }
+  @media (min-width: 768px) {
+    .c-instructions__title {
+      font-size: 1.3vw; } }
+  @media (min-width: 1920px) {
+    .c-instructions__title {
+      font-size: 24.192px; } }
+  @media (min-width: 1920px) and (min-width: 576px) and (max-width: 1920px) {
+    .c-instructions__title {
+      font-size: calc( 24.192px + 1.728 * ( ( 100vw - 576px) / 1344 )); } }
+  @media (min-width: 1920px) and (min-width: 1920px) {
+    .c-instructions__title {
+      font-size: 25.92px; } }
+
+.c-instructions__description {
+  margin-bottom: 0;
+  line-height: 1.75; }
+  @media (min-width: 768px) {
+    .c-instructions__description {
+      font-size: 0.95vw; } }
+  @media (min-width: 1920px) {
+    .c-instructions__description {
+      font-size: 16.8px; } }
+  @media (min-width: 1920px) and (min-width: 576px) and (max-width: 1920px) {
+    .c-instructions__description {
+      font-size: calc( 16.8px + 1.2 * ( ( 100vw - 576px) / 1344 )); } }
+  @media (min-width: 1920px) and (min-width: 1920px) {
+    .c-instructions__description {
+      font-size: 18px; } }
+
 .c-social__title {
   text-align: center;
   margin-bottom: 0; }
@@ -9264,8 +9335,12 @@ p + p {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-    -o-object-position: center center;
-    object-position: center center; }
+    -o-object-position: 23% center;
+    object-position: 23% center; }
+    @media (min-width: 992px) {
+      .p-home__bg {
+        -o-object-position: center center;
+        object-position: center center; } }
   .p-home-container {
     display: -ms-grid;
     display: grid;
@@ -9321,6 +9396,15 @@ p + p {
     @media (min-width: 992px) {
       .p-ranking__title {
         font-size: 6.2vw; } }
+  @media (min-width: 992px) {
+    .no-js .p-ranking__header picture {
+      background-image: url("../img/embajadores-img-ranking-lg.png"); }
+    .no-webp .p-ranking__header picture {
+      background-image: url("../img/embajadores-img-ranking-lg.png"); }
+    .webp .p-ranking__header picture {
+      background-image: url("../img/embajadores-img-ranking-lg.webp"); }
+    .p-ranking__header picture img {
+      opacity: 0; } }
   .p-ranking .nav-link {
     padding-right: 1.5em;
     padding-left: 1.5em;
@@ -9345,11 +9429,13 @@ p + p {
         padding-left: 0.85714286rem;
         flex: 0 0 50%;
         max-width: 50%;
-        display: block; } }
+        display: block !important;
+        opacity: 1 !important; } }
 
 .p-instructions {
   position: relative;
-  min-height: 100vh; }
+  min-height: 100vh;
+  background-color: #39100f; }
   .p-instructions__header {
     grid-area: header; }
   .p-instructions__info {
@@ -9370,7 +9456,9 @@ p + p {
       -ms-grid-row-span: 2;
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
-      grid-area: 1 / 1 / 3 / 2; } }
+      grid-area: 1 / 1 / 3 / 2;
+      -ms-grid-row-align: center;
+      align-self: center; } }
   .p-instructions__header img {
     -o-object-fit: cover;
     object-fit: cover; }
@@ -9386,10 +9474,13 @@ p + p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2.28571429em 4em;
+    padding: 1.71428571em 2.85714286em;
     background-color: #e2171f;
     color: #fff;
     min-height: 20.71428571em; }
+    @media (min-width: 768px) {
+      .p-instructions__info {
+        padding: 2.28571429em 4em; } }
     @media (min-width: 992px) {
       .p-instructions__info {
         -ms-grid-row: 1;
@@ -9405,10 +9496,13 @@ p + p {
       padding: 0; }
     .p-instructions__info .btn, .p-instructions__info .l-footer__btn {
       display: block;
-      width: 80%;
+      width: 100%;
       margin-right: auto;
       margin-left: auto;
       border-color: #fff; }
+      @media (min-width: 768px) {
+        .p-instructions__info .btn, .p-instructions__info .l-footer__btn {
+          width: 80%; } }
   .p-instructions__footer {
     background-color: #39100f;
     text-align: center;

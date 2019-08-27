@@ -12,7 +12,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: 23% center;
+
+    @include media-breakpoint-up(lg) {
+      object-position: center center;
+    }
   }
 
   &-container {
