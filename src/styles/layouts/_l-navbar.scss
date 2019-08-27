@@ -3,6 +3,8 @@
 
 #{$layout-navbar} {
   $navbar-height: em(100);
+  $toggler-size: em(32);
+  $toggler-thickness: em(3);
 
   .navbar-brand {
     transform: translateY(29%);
@@ -14,6 +16,104 @@
 
     img {
       height: $navbar-height;
+    }
+  }
+
+  .navbar-toggler {
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    width: $toggler-size;
+    height: $toggler-size;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    @include media-breakpoint-down(md) {
+      display: flex;
+    }
+
+    @include plain-hover-focus() {
+      box-shadow: none;
+      outline: 0;
+    }
+
+    span {
+      position: absolute;
+      width: 100%;
+      height: $toggler-thickness;
+      background-color: theme-color("dark");
+      transition: all #{$transition-duration / 2};
+      border-radius: $border-radius;
+      transform: translateY(-50%);
+      will-change: transform;
+      z-index: 1;
+
+      &:nth-child(1) {
+        top: calc(50% - #{$toggler-thickness * 1});
+      }
+
+      &:nth-child(2) {
+        right: 0;
+        width: 50%;
+        top: calc(50% + #{$toggler-thickness});
+      }
+    }
+
+    &:not(.collapsed) {
+      span {
+        top: 50%;
+
+        &:nth-child(1) {
+          transform: rotate(45deg)
+            translate(#{$toggler-thickness / -2}, #{$toggler-thickness / -2});
+        }
+
+        &:nth-child(2) {
+          width: 100%;
+          transform: rotate(-45deg)
+            translate(#{$toggler-thickness / 2}, #{$toggler-thickness / -2});
+        }
+      }
+    }
+  }
+
+  .navbar-collapse {
+    @include media-breakpoint-down(md) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh !important;
+      background: $white;
+      transform: translateX(-100%);
+      @include transition($transition-collapse);
+
+      &.show,
+      &.collapsing {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .nav-link {
+          text-align: center;
+          font-size: 10.4vmin;
+        }
+      }
+
+      &.collapsing {
+        //height: 0% !important;
+      }
+
+      &.show {
+        transform: none;
+        //height: 100%;
+        //left: 0;
+      }
     }
   }
 }

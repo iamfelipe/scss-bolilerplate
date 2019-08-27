@@ -203,6 +203,7 @@ $navbar-brand-padding-y: $navbar-padding-y;
 $navbar-brand-font-size: 1em;
 $navbar-light-color: $dark;
 $navbar-light-active-color: $primary;
+$navbar-light-toggler-border-color: transparent;
 
 // Navs
 $nav-pills-link-active-color: $primary;
@@ -213,6 +214,10 @@ $embed-responsive-aspect-ratios: ();
 
 // Embed
 $embed-responsive-aspect-ratios: join(
-  ((21 9), (16 9), (9 6), (4 3), (1 1)), $embed-responsive-aspect-ratios
+  ((21 9), (16 9), (9 6), (4 3), (1 1)),
+  $embed-responsive-aspect-ratios
 );
+
+// Transition
+$transition-collapse: transform ($transition-duration / 2) ease;
 //$colors: map-merge(map-merge($grays, $theme-colors), $colors);
