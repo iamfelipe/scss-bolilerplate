@@ -12,6 +12,86 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
+    <!--Component Footer-->
+    <footer class="l-footer">
+      <!--Button Tap-->
+      <a href="#" class="l-footer__btn">Tap into your beer</a>
+      <div class="container">
+        <!--List-->
+        <ul class="l-footer__list">
+          <li>
+            <a href="#">Inicio</a>
+          </li>
+          <li>
+            <a href="#">Términos y condiciones</a>
+          </li>
+          <li>
+            <a href="#">Aviso de privacidad</a>
+          </li>
+          <li>
+            <a href="#">Política de privacidad</a>
+          </li>
+        </ul>
+        <!--Logo-->
+        <picture class="l-footer__logo">
+          <source
+              srcset="img/embajadores-img-aguila-logo.webp"
+              type="image/webp"
+          />
+          <source
+              srcset="img/embajadores-img-aguila-logo.png"
+              type="image/png"
+          />
+          <img
+              src="img/embajadores-img-aguila-logo.png"
+              alt="Águila logo"
+          />
+        </picture>
+        <!--Social-->
+        <div class="l-footer__social">
+          <div class="c-social">
+            <p class="c-social__title">
+              Síganos en:
+            </p>
+            <ul class="c-social__list">
+              <li class="c-social__item">
+                <a
+                    href="#"
+                    class="c-social__link c-social__link--youtube"
+                ></a>
+              </li>
+              <li class="c-social__item">
+                <a
+                    href="#"
+                    class="c-social__link c-social__link--twitter"
+                ></a>
+              </li>
+              <li class="c-social__item">
+                <a
+                    href="#"
+                    class="c-social__link c-social__link--instagram"
+                ></a>
+              </li>
+              <li class="c-social__item">
+                <a
+                    href="#"
+                    class="c-social__link c-social__link--facebook"
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--Disclaimer-->
+        <div class="l-footer__disclaimer">
+          <p class="mb-0">
+            PROHÍBASE EL EXPENDIO DE BEBIDAS EMBRIAGANTES A MENORES DE EDAD.
+            EL EXCESO DE ALCOHOL ES PERJUDICIAL PARA LA SALUD. NO COMPARTA
+            ESTE CONTENIDO CON MENORES DE EDAD.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!--End. Component Footer-->
     <!--Navbar-->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Navbar</a>
@@ -718,7 +798,6 @@
         </div>
       </div>
     </section>
-    <footer class="c-footer"><p>Footer</p></footer>
     <!--jQuery-->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

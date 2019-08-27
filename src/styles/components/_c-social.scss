@@ -1,0 +1,42 @@
+// Component SOCIAL
+// ---------
+
+#{$component-social} {
+  $social-gutter: $grid-gutter-width / 4;
+  $social-icon-size: 36px;
+  $social-apps: youtube twitter instagram facebook;
+
+  @include e(title) {
+    text-align: center;
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(md) {
+      text-align: right;
+    }
+  }
+
+  @include e(list) {
+    display: flex;
+    justify-content: center;
+    margin: $social-gutter (-$social-gutter);
+  }
+
+  @include e(item) {
+    padding: 0 $social-gutter;
+  }
+
+  @include e(link) {
+    display: block;
+    width: $social-icon-size;
+    height: $social-icon-size;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @each $app in $social-apps {
+      @include m(#{$app}) {
+        @include image('embajadores-icon-#{$app}');
+      }
+    }
+  }
+}

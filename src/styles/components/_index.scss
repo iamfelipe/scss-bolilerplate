@@ -8,6 +8,7 @@ $component-login: '.c-login';
 $component-trivia: '.c-trivia';
 $component-card: '.c-card';
 $component-slider: '.c-slider';
+$component-social: '.c-social';
 
 @import "c-heading";
 @import "c-baseline";
@@ -18,4 +19,5 @@ $component-slider: '.c-slider';
 @import "c-trivia";
 @import "c-counter";
 @import "c-card";
+@import "c-social";
 @import "c-slider";

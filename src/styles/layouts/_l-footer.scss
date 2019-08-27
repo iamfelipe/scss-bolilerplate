@@ -2,5 +2,132 @@
 // ---------
 
 #{$layout-footer} {
+  $footer-gap: em(48);
+  $footer-gap-lg: em(32);
+  background-color: theme-color();
+  color: $white;
+  @include template(list, logo, social, disclaimer);
 
+  .container {
+    display: grid;
+    grid-row-gap: $footer-gap;
+    padding-top: $footer-gap;
+    padding-bottom: em(32);
+
+    @include media-breakpoint-down(sm) {
+      grid-template-areas:
+        "list"
+        "logo"
+        "social"
+        "disclaimer";
+      justify-content: center;
+    }
+
+    @include media-breakpoint-up(md) {
+      grid-row-gap: $footer-gap-lg;
+      grid-column-gap: $footer-gap-lg;
+      grid-template-rows: auto auto;
+      grid-template-columns: auto 1fr auto;
+      grid-template-areas:
+        "list list ."
+        "logo disclaimer social";
+      padding-top: $footer-gap-lg;
+      padding-bottom: $footer-gap-lg;
+    }
+  }
+
+  // List
+  @include e(list) {
+    display: flex;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+
+    li {
+      @include media-breakpoint-up(md) {
+        &:first-child a {
+          padding-left: 0;
+        }
+        &:last-child a {
+          padding-right: 0;
+        }
+
+        &:not(:last-child) {
+          border-right: 1px solid $white;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      font-size: 19px;
+      line-height: 1;
+      padding: em(11);
+      text-align: center;
+      font-weight: 400;
+      color: $white;
+
+      @include media-breakpoint-up(md) {
+        padding: em(6) em(38);
+      }
+    }
+  }
+
+  // Logo
+  @include e(logo) {
+    @include media-breakpoint-down(sm) {
+      justify-self: center;
+    }
+
+    img {
+      max-width: 77px;
+    }
+  }
+
+  // Social
+  @include e(social) {
+  }
+
+  // Disclaimer
+  @include e(disclaimer) {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: center;
+      max-width: 90%;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      max-width: 80%;
+    }
+
+    p {
+      margin-bottom: 0;
+      text-align: center;
+      line-height: 1.6;
+      font-weight: 500;
+
+      @include media-breakpoint-up(md) {
+        text-align: left;
+      }
+    }
+  }
+
+  // Button
+  @include e(btn) {
+    @extend .btn;
+    @extend .btn-dark;
+    @include ms-respond(font-size, 2);
+    margin-bottom: 0;
+    line-height: 1;
+    padding: rem(18) 1em;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 0;
+
+    @include media-breakpoint-up(md) {
+      @include ms-respond(font-size, 4);
+    }
+  }
 }

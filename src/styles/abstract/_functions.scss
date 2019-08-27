@@ -22,7 +22,7 @@
 ///
 /// @require {function} asset
 @function image($file) {
-  @return asset('images', $file);
+  @return asset('img', $file);
 }
 
 /// Font asset helper
