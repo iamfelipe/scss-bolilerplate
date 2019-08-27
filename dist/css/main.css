@@ -8879,6 +8879,8 @@ p + p {
       -ms-grid-columns: 1fr 2.47619048em 1fr;
       grid-template: repeat(2, 1fr)/repeat(2, 1fr); } }
   .c-trivia .btn-group .btn {
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0.28571429em 0.42857143em rgba(0, 0, 0, 0.16);
     margin-bottom: 0;
     display: flex;
     justify-content: center;
@@ -8887,6 +8889,16 @@ p + p {
     font-size: 16.8px;
     line-height: 1.2;
     border-radius: 0; }
+    @media (prefers-reduced-motion: reduce) {
+      .c-trivia .btn-group .btn {
+        transition: none; } }
+    @media (min-width: 768px) {
+      .c-trivia .btn-group .btn {
+        will-change: transform;
+        transform-origin: center bottom; }
+        .c-trivia .btn-group .btn:hover, .c-trivia .btn-group .btn:focus {
+          transform: scale(0.985);
+          box-shadow: 0 0.14285714em 0.28571429em rgba(0, 0, 0, 0.32); } }
     @media (min-width: 576px) and (max-width: 1920px) {
       .c-trivia .btn-group .btn {
         font-size: calc( 16.8px + 1.2 * ( ( 100vw - 576px) / 1344 )); } }
@@ -8906,8 +8918,7 @@ p + p {
       border: 0 none; }
     .c-trivia .btn-group .btn:not(.active):hover, .c-trivia .btn-group .btn:not(.active):focus {
       background-color: #fff;
-      cursor: pointer;
-      box-shadow: 0 0.28571429em 0.42857143em rgba(0, 0, 0, 0.16); }
+      cursor: pointer; }
     .c-trivia .btn-group .btn.active {
       color: #fff;
       background-color: #39100f; }
@@ -8921,7 +8932,19 @@ p + p {
       text-align: right; } }
 
 .c-trivia__btn {
-  margin-top: 2em; }
+  margin-top: 2em;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0.28571429em 0.42857143em rgba(0, 0, 0, 0.16); }
+  @media (prefers-reduced-motion: reduce) {
+    .c-trivia__btn {
+      transition: none; } }
+  @media (min-width: 768px) {
+    .c-trivia__btn {
+      will-change: transform;
+      transform-origin: center bottom; }
+      .c-trivia__btn:hover, .c-trivia__btn:focus {
+        transform: scale(0.985);
+        box-shadow: 0 0.14285714em 0.28571429em rgba(0, 0, 0, 0.32); } }
   @media (min-width: 992px) {
     .c-trivia__btn {
       width: auto;
@@ -8946,6 +8969,7 @@ p + p {
 .c-card {
   transition: all 0.2s ease-in-out;
   box-shadow: 0 0.28571429em 0.42857143em rgba(0, 0, 0, 0.16);
+  box-shadow: 0 0.28571429em 0.42857143em rgba(0, 0, 0, 0.16);
   overflow: hidden;
   border: 0 none; }
   @media (prefers-reduced-motion: reduce) {
@@ -8956,7 +8980,7 @@ p + p {
       will-change: transform;
       transform-origin: center bottom; }
       .c-card:hover, .c-card:focus {
-        transform: scale(0.98);
+        transform: scale(0.985);
         box-shadow: 0 0.14285714em 0.28571429em rgba(0, 0, 0, 0.32); } }
   .c-card iframe {
     border-radius: 0.57142857rem; }
@@ -8988,6 +9012,7 @@ p + p {
     margin-bottom: 0.85714286rem; }
   .c-slider .slick-arrow {
     transition: all 0.2s ease-in-out;
+    box-shadow: 0 0.28571429em 0.42857143em rgba(0, 0, 0, 0.16);
     position: absolute;
     width: 2.85714286em;
     height: 2.85714286em;
@@ -9013,7 +9038,7 @@ p + p {
         will-change: transform;
         transform-origin: center bottom; }
         .c-slider .slick-arrow:hover, .c-slider .slick-arrow:focus {
-          transform: scale(0.98);
+          transform: scale(0.985);
           box-shadow: 0 0.14285714em 0.28571429em rgba(0, 0, 0, 0.32); } }
     @media (min-width: 768px) {
       .c-slider .slick-arrow {
@@ -9309,10 +9334,15 @@ p + p {
     grid-area: 2 / 1 / 3 / 4; }
 
 .p-repo {
-  padding-top: 10vmin; }
+  padding-top: 10vmin;
+  padding-bottom: 4vmin;
+  min-height: 100vh; }
   @media (min-width: 992px) {
     .p-repo {
-      padding-top: 2.28571429em; } }
+      padding-top: 2.28571429em;
+      padding-bottom: 4.57142857em;
+      display: flex;
+      align-items: center; } }
   .p-repo__title {
     text-transform: uppercase;
     text-align: center;
@@ -9338,6 +9368,95 @@ p + p {
       font-size: calc( 24.192px + 1.728 * ( ( 100vw - 576px) / 1344 )); } }
   @media (min-width: 992px) and (min-width: 1920px) {
     .p-repo__placeholder {
+      font-size: 25.92px; } }
+
+.p-terms {
+  padding-top: 16vmin;
+  padding-bottom: 8vmin;
+  min-height: 100vh; }
+  @media (min-width: 768px) {
+    .p-terms {
+      display: flex;
+      align-items: center;
+      padding: 5.71428571em 0; }
+      .p-terms__link {
+        grid-area: link; }
+      .p-terms__header {
+        grid-area: header; }
+      .p-terms__content {
+        grid-area: content; }
+      .p-terms .container, .p-terms .p-home-container {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+        -ms-grid-columns: 1fr auto 1fr;
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-areas: "link header ." "content content content"; }
+      .p-instructions__header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2; } }
+  @media (min-width: 768px) {
+      .p-terms__link {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1; }
+      .p-terms__header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2; }
+      .p-terms__content {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3; } }
+  .p-terms .btn-link {
+    font-weight: 700;
+    text-decoration: underline;
+    padding: 0; }
+    @media (max-width: 767.98px) {
+      .p-terms .btn-link {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        margin-bottom: 2em; } }
+    @media (min-width: 992px) {
+      .p-terms .btn-link {
+        font-size: 24.192px;
+        margin-bottom: 0; } }
+  @media (min-width: 992px) and (min-width: 576px) and (max-width: 1920px) {
+    .p-terms .btn-link {
+      font-size: calc( 24.192px + 1.728 * ( ( 100vw - 576px) / 1344 )); } }
+  @media (min-width: 992px) and (min-width: 1920px) {
+    .p-terms .btn-link {
+      font-size: 25.92px; } }
+  @media (min-width: 768px) {
+    .p-terms__link {
+      justify-self: flex-start; } }
+  .p-terms__title {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Tolyer", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #e2171f;
+    font-size: 8.6vmin;
+    line-height: 1;
+    margin-bottom: 1.14285714em; }
+    @media (min-width: 992px) {
+      .p-terms__title {
+        font-size: 72.23692493px;
+        margin-bottom: 0.57142857em; } }
+  @media (min-width: 992px) and (min-width: 576px) and (max-width: 1920px) {
+    .p-terms__title {
+      font-size: calc( 72.23692493px + 5.15978035 * ( ( 100vw - 576px) / 1344 )); } }
+  @media (min-width: 992px) and (min-width: 1920px) {
+    .p-terms__title {
+      font-size: 77.39670528px; } }
+  @media (min-width: 992px) {
+    .p-terms__content p {
+      font-size: 24.192px; } }
+  @media (min-width: 992px) and (min-width: 576px) and (max-width: 1920px) {
+    .p-terms__content p {
+      font-size: calc( 24.192px + 1.728 * ( ( 100vw - 576px) / 1344 )); } }
+  @media (min-width: 992px) and (min-width: 1920px) {
+    .p-terms__content p {
       font-size: 25.92px; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -220,12 +220,13 @@
 
 @mixin hover-element() {
   @include transition();
+  box-shadow: $box-shadow;
 
   @include media-breakpoint-up(md) {
     will-change: transform;
     transform-origin: center bottom;
     @include hover-focus() {
-      transform: scale(0.98);
+      transform: scale(0.985);
       box-shadow: $box-shadow-hover;
     }
   }

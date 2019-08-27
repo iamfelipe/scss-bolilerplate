@@ -309,6 +309,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       $(".c-slider").slick({
         mobileFirst: true,
         variableWidth: true,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-arrow slick-prev"><i class="material-icons">\nkeyboard_arrow_left\n</i></button>',
+        nextArrow: '<button type="button" class="slick-arrow slick-next"><i class="material-icons">\nkeyboard_arrow_right\n</i></button>',
+        infinite: true,
         // centerMode: true,
         responsive: [{
           breakpoint: 576,
@@ -316,7 +320,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             variableWidth: false,
             slidesToShow: 4,
             slidesToScroll: 4,
-            infinite: true
+            infinite: false
           }
         }]
       });

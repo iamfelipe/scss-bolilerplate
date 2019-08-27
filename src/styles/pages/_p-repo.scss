@@ -3,9 +3,14 @@
 
 #{$page-repo} {
   padding-top: 10vmin;
+  padding-bottom: 4vmin;
+  min-height: 100vh;
 
   @include media-breakpoint-up(lg) {
     padding-top: em(32);
+    padding-bottom: em(64);
+    display: flex;
+    align-items: center;
   }
 
   @include e(title) {

@@ -53,6 +53,7 @@
     }
 
     .btn {
+      @include hover-element();
       margin-bottom: 0;
       display: flex;
       justify-content: center;
@@ -75,7 +76,7 @@
           background-color: $white;
           //border-color: theme-color("dark");
           cursor: pointer;
-          box-shadow: $box-shadow;
+          //box-shadow: $box-shadow;
         }
       }
 
@@ -99,6 +100,7 @@
 
   @include e(btn) {
     margin-top: 2em;
+    @include hover-element();
 
     @include media-breakpoint-up(lg) {
       width: auto;
