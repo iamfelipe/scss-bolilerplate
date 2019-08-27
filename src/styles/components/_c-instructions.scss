@@ -28,10 +28,7 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-
-      @include media-breakpoint-down(sm) {
-        @include ms-respond(font-size, 6);
-      }
+      @include ms-respond(font-size, 6);
 
       @include media-breakpoint-up(xxl) {
         @include ms-respond(font-size, 8);

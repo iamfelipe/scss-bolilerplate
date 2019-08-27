@@ -44,7 +44,7 @@
     min-height: em(290);
 
     @include media-breakpoint-up(md) {
-      padding: em(32) em(56);
+      padding: em(24) em(56);
     }
 
     @include media-breakpoint-up(lg) {
@@ -52,7 +52,7 @@
     }
 
     @include media-breakpoint-up(xl) {
-      padding: 5vw 13.3vw;
+      padding: 1vw 13.3vw;
     }
 
     .container {
