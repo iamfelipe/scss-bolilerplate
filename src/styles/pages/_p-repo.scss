@@ -5,6 +5,7 @@
   padding-top: 10vmin;
   padding-bottom: 4vmin;
   min-height: 100vh;
+  overflow: hidden;
 
   @include media-breakpoint-up(lg) {
     padding-top: em(32);
