@@ -83,6 +83,15 @@
   }
 
   .navbar-collapse {
+    .nav-link {
+      font-family: $font-stack-secondary;
+
+      @include media-breakpoint-up(lg) {
+        @include ms-respond(font-size, 4);
+        padding-bottom: 0;
+      }
+    }
+
     @include media-breakpoint-down(md) {
       position: fixed;
       top: 0;
@@ -92,6 +101,20 @@
       background: $white;
       transform: translateX(-100%);
       @include transition($transition-collapse);
+
+      .nav-item {
+        @include transition();
+        transition-timing-function: $easeOutSine;
+        will-change: transform;
+        transform: translateY(100%);
+        opacity: 0;
+
+        @for $i from 1 through 4 {
+          &:nth-child(#{$i}) {
+            transition-delay: $transition-duration * ($i / 2.5);
+          }
+        }
+      }
 
       &.show,
       &.collapsing {
@@ -111,8 +134,11 @@
 
       &.show {
         transform: none;
-        //height: 100%;
-        //left: 0;
+
+        .nav-item {
+          transform: none;
+          opacity: 1;
+        }
       }
     }
   }
