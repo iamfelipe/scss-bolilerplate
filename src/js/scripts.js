@@ -1,86 +1,84 @@
 import bsCustomFileInput from "bs-custom-file-input";
 
 $(document).ready(function() {
+  jQuery.validator.setDefaults({
+    lang: "es",
+    errorElement: "span",
+    errorPlacement: function(error, element) {
+      error.addClass("invalid-feedback");
+      element.closest(".form-group").append(error);
+    },
+    highlight: function(element, errorClass, validClass) {
+      $(element).addClass("is-invalid");
+    },
+    unhighlight: function(element, errorClass, validClass) {
+      $(element).removeClass("is-invalid");
+    }
+  });
+
+  // Custom File Input
   bsCustomFileInput.init();
-  // $("select").selectpicker({
-  //   style: "",
-  //   styleBase: "form-control"
-  //   // liveSearch: true
-  // });
-});
 
-// Login
-// Upon load..
-// window.addEventListener("load", () => {
-//   // Grab all the forms
-//   var forms = document.getElementsByClassName("needs-validation");
-//
-//   // Iterate over each one
-//   for (let form of forms) {
-//     // Add a 'submit' event listener on each one
-//     form.addEventListener("submit", evt => {
-//       // check if the form input elements have the 'required' attribute
-//       if (!form.checkValidity()) {
-//         evt.preventDefault();
-//         evt.stopPropagation();
-//         console.log("Bootstrap will handle incomplete form fields");
-//       } else {
-//         // Since form is now valid, prevent default behavior..
-//         evt.preventDefault();
-//         console.info("All form fields are now valid...");
-//       }
-//
-//       form.classList.add("was-validated");
-//     });
-//   }
-// });
-
-// Wizard validation
-$(document).ready(function() {
-  var navListItems = $("div.setup-panel div a"),
-    allWells = $(".setup-content"),
-    allNextBtn = $(".nextBtn");
-
-  allWells.hide();
-
-  navListItems.click(function(e) {
-    e.preventDefault();
-    var $target = $($(this).attr("href")),
-      $item = $(this);
-
-    if (!$item.hasClass("disabled")) {
-      navListItems.removeClass("btn-primary").addClass("btn-default");
-      $item.addClass("btn-primary");
-      allWells.hide();
-      $target.show();
-      $target.find("input:eq(0)").focus();
-    }
-  });
-
-  allNextBtn.click(function() {
-    var curStep = $(this).closest(".setup-content"),
-      curStepBtn = curStep.attr("id"),
-      nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]')
-        .parent()
-        .next()
-        .children("a"),
-      curInputs = curStep.find(
-        "input[type='text'],input[type='url'],input[type='number']"
-      ),
-      isValid = true;
-
-    $(".form-group").removeClass("has-error");
-    for (var i = 0; i < curInputs.length; i++) {
-      if (!curInputs[i].validity.valid) {
-        isValid = false;
-        $(curInputs[i])
-          .closest(".form-group")
-          .addClass("has-error");
+  // Validate
+  // $("#login-form").validate();
+  var form = $("#example-advanced-form").show();
+  form
+    .steps({
+      /* Labels */
+      labels: {
+        cancel: "Cancelar",
+        finish: "Enviar",
+        next: "Siguiente",
+        previous: "Volver",
+        loading: "Cargando..."
+      },
+      headerTag: "h3",
+      bodyTag: "fieldset",
+      transitionEffect: "slideLeft",
+      onStepChanging: function(event, currentIndex, newIndex) {
+        // Allways allow previous action even if the current form is not valid!
+        if (currentIndex > newIndex) {
+          return true;
+        }
+        // Forbid next action on "Warning" step if the user is to young
+        if (newIndex === 3 && Number($("#age-2").val()) < 18) {
+          return false;
+        }
+        // Needed in some cases if the user went back (clean up)
+        if (currentIndex < newIndex) {
+          // To remove error styles
+          form.find(".body:eq(" + newIndex + ") label.error").remove();
+          form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
+        }
+        form.validate().settings.ignore = ":disabled,:hidden";
+        return form.valid();
+      },
+      onStepChanged: function(event, currentIndex, priorIndex) {
+        // Used to skip the "Warning" step if the user is old enough.
+        if (currentIndex === 2 && Number($("#age-2").val()) >= 18) {
+          form.steps("next");
+        }
+        // Used to skip the "Warning" step if the user is old enough and wants to the previous step.
+        if (currentIndex === 2 && priorIndex === 3) {
+          form.steps("previous");
+        }
+      },
+      onFinishing: function(event, currentIndex) {
+        form.validate().settings.ignore = ":disabled";
+        return form.valid();
+      },
+      onFinished: function(event, currentIndex) {
+        alert("Submitted!");
       }
-    }
-
-    if (isValid) nextStepWizard.removeAttr("disabled").trigger("click");
-  });
-
-  $("div.setup-panel div a.btn-primary").trigger("click");
+    })
+    .validate({
+      errorPlacement: function errorPlacement(error, element) {
+        element.before(error);
+      },
+      rules: {
+        confirm: {
+          equalTo: "#password-2"
+        }
+      }
+    });
 });

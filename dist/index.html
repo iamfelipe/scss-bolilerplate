@@ -10,48 +10,28 @@
     <!--Page Login-->
     <article class="p-login">
       <div class="container">
-        <!--StepsWizard-->
-        <div class="stepwizard">
-          <div class="stepwizard-row setup-panel">
-            <div class="stepwizard-step">
-              <a href="#step-1" type="button" class="btn btn-primary btn-circle"
-                >1</a
-              >
-              <p>Step 1</p>
-            </div>
-            <div class="stepwizard-step">
-              <a
-                href="#step-2"
-                type="button"
-                class="btn btn-default btn-circle"
-                disabled="disabled"
-                >2</a
-              >
-              <p>Step 2</p>
-            </div>
-          </div>
-        </div>
+        <!--Wizard Header-->
+
         <!--Component Login-->
-        <form class="-needs-validation" role="form">
-          <div class="setup-content" id="step-1">
-            <!--Heading-->
-            <h2 class="c-heading">Datos de la empresa</h2>
+        <form id="example-advanced-form" action="#">
+          <h3>Datos de la empresa</h3>
+          <fieldset>
+            <legend>
+              Datos de la empresa
+            </legend>
             <!--Row-->
             <div class="form-row">
               <!--NIT-->
               <div class="col-6">
                 <div class="form-group">
-                  <label for="loginNIT" class="control-label">NIT</label>
+                  <label for="LoginNIT" class="control-label">NIT</label>
                   <input
+                    id="LoginNIT"
+                    name="LoginNIT"
                     type="number"
-                    class="form-control"
-                    id="loginNIT"
+                    class="form-control required"
                     placeholder="Ej. 12345678"
-                    required
                   />
-                  <div class="invalid-feedback">
-                    El campo NIT es obligatorio
-                  </div>
                 </div>
               </div>
               <!--CIUU-->
@@ -60,17 +40,13 @@
                   <label for="loginCIUU" class="control-label">CIUU</label>
                   <select
                     id="loginCIUU"
-                    class="custom-select"
-                    title="Selecciona CIUU"
-                    required
+                    name="loginCIUU"
+                    class="custom-select required"
                   >
                     <option value="" selected disabled>Selecciona CIUU</option>
                     <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
                   </select>
-                  <div class="invalid-feedback">
-                    El campo CIUU es obligatorio
-                  </div>
                 </div>
               </div>
             </div>
@@ -84,14 +60,12 @@
                   >
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control required"
+                    name="loginCompany"
                     id="loginCompany"
                     placeholder="Ej. Novartis Colombia S.A."
                     required
                   />
-                  <div class="invalid-feedback">
-                    El campo Compañía es obligatorio
-                  </div>
                 </div>
               </div>
               <!--Direction-->
@@ -102,7 +76,8 @@
                   >
                   <select
                     id="loginAddress"
-                    class="custom-select"
+                    name="loginAddress"
+                    class="custom-select required"
                     title="Selecciona Dirección"
                     required
                   >
@@ -112,9 +87,6 @@
                     <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
                   </select>
-                  <div class="invalid-feedback">
-                    El campo Dirección es obligatorio
-                  </div>
                 </div>
               </div>
             </div>
@@ -126,6 +98,7 @@
                   <label for="loginSector" class="control-label">Sector</label>
                   <select
                     id="loginSector"
+                    name="loginSector"
                     class="custom-select"
                     title="Selecciona Sector"
                     required
@@ -136,9 +109,6 @@
                     <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
                   </select>
-                  <div class="invalid-feedback">
-                    El campo Sector es obligatorio
-                  </div>
                 </div>
               </div>
               <!--Size-->
@@ -147,6 +117,7 @@
                   <label for="loginSize" class="control-label">Tamaño</label>
                   <select
                     id="loginSize"
+                    name="loginSize"
                     class="custom-select"
                     title="Selecciona Tamaño"
                     required
@@ -157,9 +128,6 @@
                     <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
                   </select>
-                  <div class="invalid-feedback">
-                    El campo Tamaño es obligatorio
-                  </div>
                 </div>
               </div>
             </div>
@@ -173,6 +141,7 @@
                   >
                   <select
                     id="loginState"
+                    name="loginState"
                     class="custom-select"
                     title="Selecciona Departamento"
                     required
@@ -183,9 +152,6 @@
                     <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
                   </select>
-                  <div class="invalid-feedback">
-                    El campo Departamento es obligatorio
-                  </div>
                 </div>
               </div>
               <!--Municipality-->
@@ -196,6 +162,7 @@
                   >
                   <select
                     id="loginMunicipality"
+                    name="loginMunicipality"
                     class="custom-select"
                     title="Selecciona Municipio"
                     required
@@ -206,22 +173,15 @@
                     <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
                   </select>
-                  <div class="invalid-feedback">
-                    El campo Municipio es obligatorio
-                  </div>
                 </div>
               </div>
             </div>
-            <!--Row-->
-            <div class="form-row">
-              <div class="col-auto">
-                <button class="btn btn-secondary nextBtn" type="button">
-                  Volver
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="setup-content" id="step-2">
+          </fieldset>
+          <h3>Datos del contacto</h3>
+          <fieldset>
+            <legend>
+              Datos del contacto
+            </legend>
             <!--Row-->
             <div class="form-row">
               <!--Name-->
@@ -232,14 +192,12 @@
                   >
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control required"
                     id="loginName"
+                    name="loginName"
                     placeholder="Ej. José Cuervo"
                     required
                   />
-                  <div class="invalid-feedback">
-                    El campo Nombre es obligatorio
-                  </div>
                 </div>
               </div>
               <!--Charge-->
@@ -248,14 +206,12 @@
                   <label for="loginCharge" class="control-label">Cargo</label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control required"
+                    name="loginCharge"
                     id="loginCharge"
                     placeholder="Ej. Jefe"
                     required
                   />
-                  <div class="invalid-feedback">
-                    El campo Cargo es obligatorio
-                  </div>
                 </div>
               </div>
             </div>
@@ -267,14 +223,12 @@
                   <label for="loginPhone" class="control-label">Teléfono</label>
                   <input
                     type="number"
-                    class="form-control"
+                    class="form-control required"
                     id="loginPhone"
+                    name="loginPhone"
                     placeholder="Ej. 1234567"
                     required
                   />
-                  <div class="invalid-feedback">
-                    El campo Teléfono es obligatorio
-                  </div>
                 </div>
               </div>
               <!--Mail-->
@@ -283,14 +237,12 @@
                   <label for="loginMail" class="control-label">Correo</label>
                   <input
                     type="email"
-                    class="form-control"
+                    class="form-control required"
                     id="loginMail"
+                    name="loginMail"
                     placeholder="Ej. jose@mail.com"
                     required
                   />
-                  <div class="invalid-feedback">
-                    El campo Correo es obligatorio
-                  </div>
                 </div>
               </div>
             </div>
@@ -304,14 +256,12 @@
                   >
                   <input
                     type="number"
-                    class="form-control"
+                    class="form-control required"
                     id="loginBoss"
+                    name="loginBoss"
                     placeholder=""
                     required
                   />
-                  <div class="invalid-feedback">
-                    El campo es obligatorio
-                  </div>
                 </div>
               </div>
               <!--Mail-->
@@ -322,42 +272,23 @@
                   >
                   <input
                     type="email"
-                    class="form-control"
+                    class="form-control required"
                     id="loginBossMail"
+                    name="loginBossMail"
                     placeholder=""
                     required
                   />
-                  <div class="invalid-feedback">
-                    El campo Correo es obligatorio
-                  </div>
                 </div>
               </div>
             </div>
-            <!--Row-->
-            <div class="form-row">
-              <div class="col-auto">
-                <a href="#step-1" class="btn btn-secondary">
-                  Volver
-                </a>
-              </div>
-              <div class="col-auto">
-                <button class="btn btn-secondary" type="submit">
-                  Finish!
-                </button>
-              </div>
-            </div>
-          </div>
+          </fieldset>
         </form>
         <!--End. Component Login-->
       </div>
     </article>
     <!--End. Page Login-->
     <!--jQuery-->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -370,8 +301,10 @@
       crossorigin="anonymous"
     ></script>
     <!--Validate-->
-    <script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"></script>
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>-->
     <!-- Custom select -->
     <script src="./js/modernizr.js"></script>
     <script src="./js/scripts.js"></script>
