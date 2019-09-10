@@ -301,11 +301,63 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
     $(document).ready(function () {
       bs_custom_file_input__WEBPACK_IMPORTED_MODULE_0___default.a.init();
-      $('select').selectpicker({
-        style: '',
-        styleBase: 'form-control'
-        // liveSearch: true
-      });
+      // $("select").selectpicker({
+      //   style: "",
+      //   styleBase: "form-control"
+      //   // liveSearch: true
+      // });
+    });
+
+    // Login
+    // Upon load..
+    window.addEventListener("load", function () {
+      // Grab all the forms
+      var forms = document.getElementsByClassName("needs-validation");
+
+      // Iterate over each one
+
+      var _loop = function _loop(form) {
+        // Add a 'submit' event listener on each one
+        form.addEventListener("submit", function (evt) {
+          // check if the form input elements have the 'required' attribute
+          if (!form.checkValidity()) {
+            evt.preventDefault();
+            evt.stopPropagation();
+            console.log("Bootstrap will handle incomplete form fields");
+          } else {
+            // Since form is now valid, prevent default behavior..
+            evt.preventDefault();
+            console.info("All form fields are now valid...");
+          }
+
+          form.classList.add("was-validated");
+        });
+      };
+
+      var _iteratorNormalCompletion = true;
+      var _didIteratorError = false;
+      var _iteratorError = undefined;
+
+      try {
+        for (var _iterator = forms[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+          var form = _step.value;
+
+          _loop(form);
+        }
+      } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion && _iterator.return) {
+            _iterator.return();
+          }
+        } finally {
+          if (_didIteratorError) {
+            throw _iteratorError;
+          }
+        }
+      }
     });
 
     /***/

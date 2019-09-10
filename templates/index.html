@@ -7,6 +7,187 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
+    <!--Page Login-->
+    <article class="p-login">
+      <div class="container">
+        <!--Component Login-->
+        <form class="needs-validation" novalidate>
+          <!--Row-->
+          <div class="form-row">
+            <!--NIT-->
+            <div class="col-6">
+              <div class="form-group">
+                <label for="loginNIT">NIT</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="loginNIT"
+                  placeholder="Ej. 12345678"
+                  required
+                />
+                <div class="invalid-feedback">
+                  El campo NIT es obligatorio
+                </div>
+              </div>
+            </div>
+            <!--CIUU-->
+            <div class="col-6">
+              <div class="form-group">
+                <label for="loginCIUU">CIUU</label>
+                <select
+                  id="loginCIUU"
+                  class="custom-select"
+                  title="Selecciona CIUU"
+                  required
+                >
+                  <option value="" selected disabled>Selecciona CIUU</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                </select>
+                <div class="invalid-feedback">
+                  El campo CIUU es obligatorio
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Row-->
+          <div class="form-row">
+            <!--Company-->
+            <div class="col-6">
+              <div class="form-group">
+                <label for="loginCompany">Compañía</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="loginCompany"
+                  placeholder="Ej. Novartis Colombia S.A."
+                  required
+                />
+                <div class="invalid-feedback">
+                  El campo Compañía es obligatorio
+                </div>
+              </div>
+            </div>
+            <!--Direction-->
+            <div class="col-6">
+              <div class="form-group">
+                <label for="loginAddress">Dirección</label>
+                <select
+                  id="loginAddress"
+                  class="custom-select"
+                  title="Selecciona Dirección"
+                  required
+                >
+                  <option value="" selected disabled
+                    >Selecciona Dirección</option
+                  >
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                </select>
+                <div class="invalid-feedback">
+                  El campo Dirección es obligatorio
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Row-->
+          <div class="form-row">
+            <!--Sector-->
+            <div class="col-6">
+              <div class="form-group">
+                <label for="loginSector">Sector</label>
+                <select
+                  id="loginSector"
+                  class="custom-select"
+                  title="Selecciona Sector"
+                  required
+                >
+                  <option value="" selected disabled>Selecciona Sector</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                </select>
+                <div class="invalid-feedback">
+                  El campo Sector es obligatorio
+                </div>
+              </div>
+            </div>
+            <!--Size-->
+            <div class="col-6">
+              <div class="form-group">
+                <label for="loginSize">Tamaño</label>
+                <select
+                  id="loginSize"
+                  class="custom-select"
+                  title="Selecciona Tamaño"
+                  required
+                >
+                  <option value="" selected disabled>Selecciona Tamaño</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                </select>
+                <div class="invalid-feedback">
+                  El campo Tamaño es obligatorio
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Row-->
+          <div class="form-row">
+            <!--State-->
+            <div class="col-6">
+              <div class="form-group">
+                <label for="loginState">Departamento</label>
+                <select
+                  id="loginState"
+                  class="custom-select"
+                  title="Selecciona Departamento"
+                  required
+                >
+                  <option value="" selected disabled
+                    >Selecciona Departamento</option
+                  >
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                </select>
+                <div class="invalid-feedback">
+                  El campo Departamento es obligatorio
+                </div>
+              </div>
+            </div>
+            <!--Municipality-->
+            <div class="col-6">
+              <div class="form-group">
+                <label for="loginMunicipality">Municipio</label>
+                <select
+                  id="loginMunicipality"
+                  class="custom-select"
+                  title="Selecciona Municipio"
+                  required
+                >
+                  <option value="" selected disabled
+                    >Selecciona Municipio</option
+                  >
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                </select>
+                <div class="invalid-feedback">
+                  El campo Municipio es obligatorio
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Row-->
+          <div class="form-row">
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary">Continuar</button>
+            </div>
+          </div>
+        </form>
+        <!--End. Component Login-->
+      </div>
+    </article>
+    <!--End. Page Login-->
+
     <section id="c-baseline">
       <div class="container">
         <div class="row justify-content-center">
@@ -65,9 +246,9 @@
             <div class="c-heading">
               <div class="c-heading__image">
                 <img
-                    src="https://picsum.photos/400"
-                    class="w-100"
-                    alt="Example image"
+                  src="https://picsum.photos/400"
+                  class="w-100"
+                  alt="Example image"
                 />
               </div>
               <div class="c-heading__title">
@@ -99,7 +280,7 @@
               <label for="select" class="label">Select label</label>
               <select
                 id="select"
-                class="form-control"
+                class="custom-select"
                 title="seleccionar género"
               >
                 <option>Male</option>
@@ -167,6 +348,8 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <!--Validate-->
+    <script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
     <!-- Custom select -->
     <script src="./js/modernizr.js"></script>
