@@ -78,7 +78,8 @@
 .body, p, .custom-file-label,
 .form-control, input, select, textarea, .btn, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark {
   font-size: 16px;
-  line-height: 1.375em;
+  line-height: 1.5em;
+  font-weight: 400;
   margin-top: 0;
   margin-bottom: 0; }
   @media (min-width: 576px) and (max-width: 992px) {
