@@ -28,7 +28,7 @@ $(document).ready(function() {
       labels: {
         cancel: "Cancelar",
         finish: "Enviar",
-        next: "Siguiente",
+        next: "Continuar",
         previous: "Volver",
         loading: "Cargando..."
       },

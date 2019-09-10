@@ -2,9 +2,19 @@
 // ---------
 
 .c-heading {
+  @extend %h4;
   text-transform: uppercase;
   color: theme-color();
-  font-weight: 400;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i.material-icons {
+    margin-right: 0.25em;
+    font-size: 1.25em;
+  }
+
   //display: grid;
   //@include template(title, subtitle, image);
   //grid-column-gap: $grid-gutter-width;

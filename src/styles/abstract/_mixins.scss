@@ -215,5 +215,5 @@
 }
 
 @mixin margin-bottom() {
-  margin-bottom: rem($vertical-rhythm);
+  margin-bottom: $grid-gutter-width;
 }

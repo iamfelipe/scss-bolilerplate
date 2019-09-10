@@ -13,7 +13,8 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
+  xxl: 1920px
 );
 
 // Grid containers
@@ -28,12 +29,12 @@ $container-max-widths: (
 $modularscale: (
   base: 16px,
   ratio: $minor-third,
-  map-get($grid-breakpoints, "sm"): (
-    base: 16px
-  ),
   map-get($grid-breakpoints, "lg"): (
-    base: 18px,
-    ratio: $fourth
+    //base: 14px
+  ),
+  map-get($grid-breakpoints, "xxl"): (
+    //base: 18px,
+      //ratio: $fourth
   )
 );
 
@@ -147,15 +148,19 @@ $h6-font-size: ms(1);
 
 // Buttons + Forms
 $border-width: rem(1);
-$input-btn-padding-y: rem(16) - $border-width;
-$input-btn-padding-x: rem(24) - $border-width;
+$input-btn-padding-y: rem(12) - $border-width;
+$input-btn-padding-x: rem(16) - $border-width;
 $border-radius: rem(4);
 
+// Buttons
+$btn-border-radius: 10em;
+
 // Forms
-//
 $form-grid-gutter-width: $grid-gutter-width / 1.5;
 $input-placeholder-color: $gray-400;
 $input-color: $gray-900;
+$input-border-color: $gray-200;
+$input-placeholder-color: $gray-200;
 
 // Lang
 $custom-file-text: (

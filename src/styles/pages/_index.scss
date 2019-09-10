@@ -1,6 +1,8 @@
 // Pages root
 // ---------
 
-$page-home: '.p-home';
+$page-home: ".p-home";
+$page-auth: ".p-auth";
 
 //@import "p-home";
+@import "p-auth";

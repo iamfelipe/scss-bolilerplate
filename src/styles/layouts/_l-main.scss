@@ -1,0 +1,17 @@
+// Layout MAIN
+// ---------
+
+#{$layout-main} {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "header" "content";
+  @include template(header, content);
+  background-image: url(https://picsum.photos/720);
+  background-size: cover;
+
+  @include e(content) {
+    overflow-y: auto;
+  }
+}

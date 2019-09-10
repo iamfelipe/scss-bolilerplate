@@ -1,8 +1,17 @@
 // Label
 // ---------
 
-.label {
+%label {
   @extend .small;
-  display: block;
-  margin-bottom: $vertical-rhythm / 8;
+  color: gray("600");
+  margin-bottom: em(4, ms(-1));
+  text-transform: uppercase;
+}
+
+.control-label {
+  @extend %label;
+}
+
+span[id$="error"] {
+  display: none !important;
 }

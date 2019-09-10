@@ -5,8 +5,10 @@ $layout-header: ".l-header";
 $layout-sidebar: ".l-sidebar";
 $layout-footer: ".l-footer";
 $layout-form: ".l-form";
+$layout-main: ".l-main";
 
-//@import "l-header";
+@import "l-header";
+@import "l-main";
 //@import "l-footer";
 //@import "l-sidebar";
 //@import "l-forms";

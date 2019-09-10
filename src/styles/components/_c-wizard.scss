@@ -5,6 +5,67 @@ $c-wizard: "wizard";
 .#{$c-wizard} {
   display: flex;
   flex-direction: column;
+
+  &,
   > .content {
+    height: 100%;
+  }
+
+  > .content {
+    overflow-y: auto;
+    background-color: transparent;
+    > .body {
+      padding: $grid-gutter-width;
+      margin-bottom: 0;
+    }
+  }
+
+  .actions {
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      padding: $grid-gutter-width;
+      width: 100%;
+      background-color: theme-color();
+    }
+
+    li {
+      &:last-child {
+        margin-left: auto;
+      }
+
+      &.disabled {
+        display: none;
+      }
+    }
+
+    a {
+      margin-bottom: 0;
+    }
+  }
+
+  // Heading
+  legend {
+    @extend .c-heading;
+    padding-top: $grid-gutter-width;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  // Actions
+  a {
+    @extend .btn;
+    @extend .btn-secondary;
+  }
+
+  @include e(header) {
+    @extend %h4;
+    margin-bottom: 0;
+    background-color: theme-color();
+    width: 100%;
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: $grid-gutter-width;
   }
 }

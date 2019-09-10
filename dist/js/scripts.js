@@ -326,7 +326,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         labels: {
           cancel: "Cancelar",
           finish: "Enviar",
-          next: "Siguiente",
+          next: "Continuar",
           previous: "Volver",
           loading: "Cargando..."
         },

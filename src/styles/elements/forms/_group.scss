@@ -6,10 +6,10 @@
 
   &.has-error {
     .control-label {
-      color: theme-color("danger");
+      //color: theme-color("danger");
     }
     .form-control {
-      @extend .is-invalid;
+      //@extend .is-invalid;
     }
   }
 }

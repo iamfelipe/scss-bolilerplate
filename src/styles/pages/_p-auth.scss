@@ -1,0 +1,33 @@
+// Pages Auth
+// ---------
+
+#{$page-auth} {
+  //display: grid;
+  //align-items: center;
+  //grid-template-columns: repeat(2, 1fr);
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba($white, 0.9);
+    width: 50vw;
+    height: 100%;
+  }
+
+  @include e(container) {
+    padding: $grid-gutter-width;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .steps {
+      display: none;
+    }
+  }
+}

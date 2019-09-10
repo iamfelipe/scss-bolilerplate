@@ -1,5 +1,5 @@
 ﻿/*
-    Common 
+    Common
 */
 
 .wizard,
@@ -7,11 +7,6 @@
   display: block;
   width: 100%;
   overflow: hidden;
-}
-
-.wizard a,
-.tabcontrol a {
-  outline: 0;
 }
 
 .wizard ul,
@@ -52,7 +47,6 @@
 
 .wizard.vertical > .steps {
   display: inline;
-  float: left;
   width: 30%;
 }
 
@@ -66,11 +60,9 @@
 
 .wizard > .steps > ul > li,
 .wizard > .actions > ul > li {
-  float: left;
 }
 
 .wizard.vertical > .steps > ul > li {
-  float: none;
   width: 100%;
 }
 
@@ -121,30 +113,22 @@
 .wizard > .content {
   background: #eee;
   display: block;
-  margin: 0.5em;
-  min-height: 35em;
+  //min-height: 35em;
   overflow: hidden;
   position: relative;
   width: auto;
-
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
 }
 
 .wizard.vertical > .content {
   display: inline;
-  float: left;
   margin: 0 2.5% 0.5em 2.5%;
   width: 65%;
 }
 
 .wizard > .content > .body {
-  float: left;
   position: absolute;
-  width: 95%;
-  height: 95%;
-  padding: 2.5%;
+  width: 100%;
+  height: 100%;
 }
 
 .wizard > .content > .body ul {
@@ -161,11 +145,6 @@
   height: 100%;
 }
 
-.wizard > .content > .body input {
-  display: block;
-  border: 1px solid #ccc;
-}
-
 .wizard > .content > .body input[type="checkbox"] {
   display: inline-block;
 }
@@ -177,14 +156,14 @@
 }
 
 .wizard > .content > .body label {
-  display: inline-block;
-  margin-bottom: 0.5em;
+  //display: inline-block;
+  //margin-bottom: 0.5em;
 }
 
 .wizard > .content > .body label.error {
-  color: #8a1f11;
-  display: inline-block;
-  margin-left: 1.5em;
+  //color: #8a1f11;
+  //display: inline-block;
+  //margin-left: 1.5em;
 }
 
 .wizard > .actions {
@@ -196,7 +175,6 @@
 
 .wizard.vertical > .actions {
   display: inline;
-  float: right;
   margin: 0 2.5%;
   width: 95%;
 }
@@ -207,32 +185,11 @@
 }
 
 .wizard > .actions > ul > li {
-  margin: 0 0.5em;
+  //margin: 0 0.5em;
 }
 
 .wizard.vertical > .actions > ul > li {
   margin: 0 0 0 1em;
-}
-
-.wizard > .actions a,
-.wizard > .actions a:hover,
-.wizard > .actions a:active {
-  background: #2184be;
-  color: #fff;
-  display: block;
-  padding: 0.5em 1em;
-  text-decoration: none;
-
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-
-.wizard > .actions .disabled a,
-.wizard > .actions .disabled a:hover,
-.wizard > .actions .disabled a:active {
-  background: #eee;
-  color: #aaa;
 }
 
 .wizard > .loading {
@@ -259,7 +216,6 @@
 }
 
 .tabcontrol > .steps > ul > li {
-  float: left;
   margin: 5px 2px 0 0;
   padding: 1px;
 
@@ -313,7 +269,6 @@
 }
 
 .tabcontrol > .content > .body {
-  float: left;
   position: absolute;
   width: 95%;
   height: 95%;
