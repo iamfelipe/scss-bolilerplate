@@ -1,32 +1,28 @@
 // -----------------------------------------------------------------------------
 // Typography
 // -----------------------------------------------------------------------------
-
-@at-root body {
+@at-root html {
   @include ms-respond(font-size, 0);
+}
+@at-root body {
+  font-size: inherit;
   font-kerning: auto;
   font-family: $font-stack-primary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-@each $base, $properties in $custom-scale {
-  // $property 1: Scale
-  // $property 2: Line height
-  .#{$base},
-  %#{$base} {
-    @include margin-bottom();
-    @include ms-respond(font-size, nth($properties, 1));
-    line-height: em(nth($properties, 2), ms(nth($properties, 1)));
-  }
-}
-
 @for $i from 1 through 6 {
   h#{$i} {
-    @extend %h#{$i};
+    //@extend %h#{$i};
   }
 }
 
+@each $base, $properties in $custom-scale {
+  .#{$base} {
+    @extend %#{$base};
+  }
+}
 
 p {
   @extend %body;

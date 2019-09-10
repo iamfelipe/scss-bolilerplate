@@ -71,7 +71,7 @@ $border-color: $gray-200;
 
 // Transitions
 $transition-timing-function: $easeOutQuart;
-$transition-duration: .4s;
+$transition-duration: 0.4s;
 $transition: all $transition-duration $transition-timing-function;
 
 // Typography
@@ -83,49 +83,57 @@ $line-height-base: 2;
 $vertical-rhythm: $ms-base * $line-height-base;
 
 $font-family-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-"Segoe UI Symbol";
+  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
 
+/// @param {Number} scale
+/// @param {Number} line-height
+/// @param {Number} font-weight
 $custom-scale: (
-  lead: (
-    7,
-    $vertical-rhythm * 2
-  ),
   h1: (
-    6,
-    $vertical-rhythm * 2
+    scale: 6,
+    line-height: 56,
+    font-weight: 700
   ),
   h2: (
-    5,
-    $vertical-rhythm * 1.75
+    scale: 5,
+    line-height: 30,
+    font-weight: 700
   ),
   h3: (
-    4,
-    $vertical-rhythm * 1.5
+    scale: 4,
+    line-height: 28,
+    font-weight: 400
   ),
   h4: (
-    3,
-    $vertical-rhythm * 1.5
+    scale: 3,
+    line-height: 24,
+    font-weight: 700
   ),
   h5: (
-    2,
-    $vertical-rhythm
+    scale: 2,
+    line-height: 22
   ),
   h6: (
-    1,
-    $vertical-rhythm
+    scale: 1,
+    line-height: 20,
+    font-weight: 600
   ),
   body: (
-    0,
-    $vertical-rhythm
+    scale: 0,
+    line-height: 22
   ),
   small: (
-    -1,
-    $vertical-rhythm / 1.333333333333333
+    scale: -1,
+    line-height: 20
+  ),
+  caption: (
+    scale: -1,
+    line-height: 20
   ),
   tiny: (
-    -2,
-    $vertical-rhythm / 1.333333333333333
+    scale: -2,
+    line-height: 18
   )
 );
 
@@ -168,4 +176,3 @@ $custom-control-gutter: $custom-control-indicator-size / 2;
 $dropdown-item-padding-y: $input-btn-padding-y;
 
 //$colors: map-merge(map-merge($grays, $theme-colors), $colors);
-

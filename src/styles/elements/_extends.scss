@@ -3,12 +3,12 @@
 
 %box {
   // padding: em(16px) em(24px);
+  @extend %body;
   height: auto;
   font-family: $font-stack-primary;
   border-width: $border-width;
   border-radius: $border-radius;
   appearance: none;
-  @extend .body;
 
   @include hover-focus() {
     outline: none;
