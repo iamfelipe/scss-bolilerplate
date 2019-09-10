@@ -20,7 +20,3 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
-// Transitions
-$transition-timing-function: $easeOutQuart;
-$transition: all $transition-duration $transition-timing-function;

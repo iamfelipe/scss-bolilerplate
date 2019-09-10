@@ -6,6 +6,7 @@ $asset-base-path: "..";
 
 // Grid breakpoints
 @import "../../../node_modules/modularscale-sass/stylesheets/modularscale";
+@import "../vendor/easing";
 
 $grid-breakpoints: (
   xs: 0,
@@ -69,7 +70,9 @@ $box-shadow: 0 em(2) em(2) rgba($black, 0.7);
 $border-color: $gray-200;
 
 // Transitions
+$transition-timing-function: $easeOutQuart;
 $transition-duration: .4s;
+$transition: all $transition-duration $transition-timing-function;
 
 // Typography
 //
@@ -165,3 +168,4 @@ $custom-control-gutter: $custom-control-indicator-size / 2;
 $dropdown-item-padding-y: $input-btn-padding-y;
 
 //$colors: map-merge(map-merge($grays, $theme-colors), $colors);
+
