@@ -26,7 +26,7 @@
                   <div class="wizard__header">
                     Paso 1 de 2
                   </div>
-                  <form id="example-advanced-form" action="#">
+                  <form id="example-advanced-form" action="#" class="c-wizard">
                     <h3>Datos de la empresa</h3>
                     <fieldset>
                       <legend>
@@ -343,7 +343,7 @@
         </div>
         <!--End. Page Signup Successful-->
         <!--Page Signup Successful-->
-        <div class="container h-100 py-4">
+        <div class="container h-100 py-4 d-none">
           <div class="c-card h-100">
             <!--Heading-->
             <div class="c-card__header">
@@ -362,6 +362,73 @@
           </div>
         </div>
         <!--End. Page Signup Successful-->
+        <!--Page Form-->
+        <div class="p-form h-100 py-4 -d-none">
+          <div class="container h-100">
+            <div class="p-form__container h-100">
+              <form id="diagnostic-form" action="#" class="c-wizard">
+                <h3>Encuesta</h3>
+                <fieldset class="c-card">
+                  <div class="c-card__header">
+                    Preguntas Generales
+                  </div>
+                  <!--Row-->
+                  <div class="form-row">
+                    <!--NIT-->
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="LoginNIT2" class="control-label">NIT</label>
+                        <input
+                          id="LoginNIT2"
+                          name="LoginNIT2"
+                          type="number"
+                          class="form-control required"
+                          placeholder="Ej. 12345678"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label class="control-label">NIT</label>
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-primary">
+                            <input type="radio" name="options" id="option1" />
+                            Option 1
+                          </label>
+                          <label class="btn btn-primary">
+                            <input type="radio" name="options" id="option2" />
+                            Option 2
+                          </label>
+                          <label class="btn btn-primary">
+                            <input type="radio" name="options" id="option3" />
+                            Option 3
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <h3>Compañía</h3>
+                <fieldset>
+                  <legend>
+                    Datos del contacto
+                  </legend>
+                  <div class="row">
+                    <div class="col-12">
+                      <p class="small text-primary mb-1">
+                        *En el caso que usted no sea el gerente, director o jefe
+                        de logística de la compañía, diligencie los siguientes
+                        datos:
+                      </p>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+              <!--End. Component Login-->
+            </div>
+          </div>
+        </div>
+        <!--End. Page Form-->
       </article>
     </main>
     <!--jQuery-->

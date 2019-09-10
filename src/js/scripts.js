@@ -20,8 +20,9 @@ $(document).ready(function() {
   bsCustomFileInput.init();
 
   // Validate
-  // $("#login-form").validate();
-  var form = $("#example-advanced-form").show();
+  let $diagnosticForm = $("#diagnostic-form");
+  let $signupForm = $("#example-advanced-form");
+  var form = $(".c-wizard").show();
   form
     .steps({
       /* Labels */
@@ -39,10 +40,6 @@ $(document).ready(function() {
         // Allways allow previous action even if the current form is not valid!
         if (currentIndex > newIndex) {
           return true;
-        }
-        // Forbid next action on "Warning" step if the user is to young
-        if (newIndex === 3 && Number($("#age-2").val()) < 18) {
-          return false;
         }
         // Needed in some cases if the user went back (clean up)
         if (currentIndex < newIndex) {

@@ -319,8 +319,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       bs_custom_file_input__WEBPACK_IMPORTED_MODULE_0___default.a.init();
 
       // Validate
-      // $("#login-form").validate();
-      var form = $("#example-advanced-form").show();
+      var $diagnosticForm = $("#diagnostic-form");
+      var $signupForm = $("#example-advanced-form");
+      var form = $(".c-wizard").show();
       form.steps({
         /* Labels */
         labels: {
@@ -337,10 +338,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
           // Allways allow previous action even if the current form is not valid!
           if (currentIndex > newIndex) {
             return true;
-          }
-          // Forbid next action on "Warning" step if the user is to young
-          if (newIndex === 3 && Number($("#age-2").val()) < 18) {
-            return false;
           }
           // Needed in some cases if the user went back (clean up)
           if (currentIndex < newIndex) {

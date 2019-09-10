@@ -6616,60 +6616,6 @@ a.text-dark:hover, a.text-dark:focus {
 /*
     Wizard
 */
-.wizard > .steps {
-  position: relative;
-  display: block;
-  width: 100%; }
-
-.wizard.vertical > .steps {
-  display: inline;
-  width: 30%; }
-
-.wizard > .steps .number {
-  font-size: 1.429em; }
-
-.wizard > .steps > ul > li {
-  width: 25%; }
-
-.wizard.vertical > .steps > ul > li {
-  width: 100%; }
-
-.wizard > .steps a,
-.wizard > .steps a:hover,
-.wizard > .steps a:active {
-  display: block;
-  width: auto;
-  margin: 0 0.5em 0.5em;
-  padding: 1em 1em;
-  text-decoration: none;
-  border-radius: 5px; }
-
-.wizard > .steps .disabled a,
-.wizard > .steps .disabled a:hover,
-.wizard > .steps .disabled a:active {
-  background: #eee;
-  color: #aaa;
-  cursor: default; }
-
-.wizard > .steps .current a,
-.wizard > .steps .current a:hover,
-.wizard > .steps .current a:active {
-  background: #2184be;
-  color: #fff;
-  cursor: default; }
-
-.wizard > .steps .done a,
-.wizard > .steps .done a:hover,
-.wizard > .steps .done a:active {
-  background: #9dc8e2;
-  color: #fff; }
-
-.wizard > .steps .error a,
-.wizard > .steps .error a:hover,
-.wizard > .steps .error a:active {
-  background: #ff3111;
-  color: #fff; }
-
 .wizard > .content {
   background: #eee;
   display: block;
@@ -7680,8 +7626,23 @@ span[id$="error"] {
     overflow-y: auto;
     background-color: transparent; }
     .wizard > .content > .body {
-      padding: 1.5rem;
+      padding: 0 1.5rem;
       margin-bottom: 0; }
+  .wizard > .steps ul {
+    display: flex; }
+    .wizard > .steps ul li {
+      flex-grow: 1; }
+      .wizard > .steps ul li.current a {
+        background-color: #ffdc5d;
+        border-color: #ffdc5d; }
+    .wizard > .steps ul a {
+      width: 100%;
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color: rgba(255, 255, 255, 0.9);
+      text-transform: initial;
+      color: #008c44;
+      border-color: #b0bec5; }
   .wizard .actions ul {
     display: flex;
     justify-content: flex-end;
@@ -7696,7 +7657,6 @@ span[id$="error"] {
     margin-bottom: 0; }
   .wizard legend {
     padding-top: 1.5rem;
-    margin-bottom: 0;
     text-align: center; }
   .wizard__header {
     margin-bottom: 0;
@@ -7714,7 +7674,7 @@ span[id$="error"] {
   padding: 0 1.5rem;
   background-color: rgba(255, 255, 255, 0.9); }
   .c-card__header {
-    margin-bottom: 0;
+    margin-bottom: 1.5rem;
     justify-content: flex-start;
     padding: 1.5rem 0;
     border-bottom: 0.0625rem solid #b0bec5; }

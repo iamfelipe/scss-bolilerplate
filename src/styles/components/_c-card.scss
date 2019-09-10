@@ -11,7 +11,7 @@ $c-card: "c-card";
 
   @include e(header) {
     @extend .c-heading;
-    margin-bottom: 0;
+    @include margin-bottom();
     justify-content: flex-start;
     padding: $grid-gutter-width 0;
     border-bottom: $border-width solid gray("200");

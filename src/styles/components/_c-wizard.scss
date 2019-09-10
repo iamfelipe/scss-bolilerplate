@@ -15,8 +15,33 @@ $c-wizard: "wizard";
     overflow-y: auto;
     background-color: transparent;
     > .body {
-      padding: $grid-gutter-width;
+      padding: 0 $grid-gutter-width;
       margin-bottom: 0;
+    }
+  }
+
+  > .steps {
+    ul {
+      display: flex;
+
+      li {
+        flex-grow: 1;
+
+        &.current a {
+          background-color: theme-color("secondary");
+          border-color: theme-color("secondary");
+        }
+      }
+
+      a {
+        width: 100%;
+        margin-bottom: 0;
+        border-radius: 0;
+        background-color: $background-opacity;
+        text-transform: initial;
+        color: theme-color();
+        border-color: gray("200");
+      }
     }
   }
 
@@ -48,7 +73,6 @@ $c-wizard: "wizard";
   legend {
     @extend .c-heading;
     padding-top: $grid-gutter-width;
-    margin-bottom: 0;
     text-align: center;
   }
 
