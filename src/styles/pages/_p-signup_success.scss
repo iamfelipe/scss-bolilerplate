@@ -1,0 +1,16 @@
+// Pages signup_success
+// ---------
+
+#{$page-signup_success} {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include e(container) {
+    background-color: $background-opacity;
+    padding: $grid-gutter-width * 2;
+    max-width: map-get($grid-breakpoints, "sm");
+    border-radius: $border-radius * 4;
+  }
+}

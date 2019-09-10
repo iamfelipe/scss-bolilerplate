@@ -1,7 +1,7 @@
 h1, .h1 {
   font-size: 47.775744px;
   line-height: 1.17214292em;
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 0;
   margin-bottom: 24px; }
   @media (min-width: 992px) and (max-width: 1920px) {
@@ -14,7 +14,7 @@ h1, .h1 {
 h2, .h2 {
   font-size: 39.81312px;
   line-height: 0.75352045em;
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 0;
   margin-bottom: 24px; }
   @media (min-width: 992px) and (max-width: 1920px) {
@@ -37,22 +37,23 @@ h3, .h3 {
     h3, .h3 {
       font-size: 33.1776px; } }
 
-h4, .h4, .c-heading, .wizard legend, .wizard__header {
+h4, .h4, .c-heading, .wizard legend, .c-card__header, .wizard__header {
   font-size: 27.648px;
   line-height: 0.86805556em;
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 0;
   margin-bottom: 24px; }
   @media (min-width: 992px) and (max-width: 1920px) {
-    h4, .h4, .c-heading, .wizard legend, .wizard__header {
+    h4, .h4, .c-heading, .wizard legend, .c-card__header, .wizard__header {
       font-size: calc( 27.648px + 0 * ( ( 100vw - 992px) / 928 )); } }
   @media (min-width: 1920px) {
-    h4, .h4, .c-heading, .wizard legend, .wizard__header {
+    h4, .h4, .c-heading, .wizard legend, .c-card__header, .wizard__header {
       font-size: 27.648px; } }
 
 h5, .h5 {
   font-size: 23.04px;
   line-height: 0.95486111em;
+  font-weight: 400;
   margin-top: 0;
   margin-bottom: 24px; }
   @media (min-width: 992px) and (max-width: 1920px) {
@@ -65,7 +66,7 @@ h5, .h5 {
 h6, .h6 {
   font-size: 19.2px;
   line-height: 1.04166667em;
-  font-weight: 600;
+  font-weight: 400;
   margin-top: 0;
   margin-bottom: 24px; }
   @media (min-width: 992px) and (max-width: 1920px) {
@@ -91,16 +92,19 @@ h6, .h6 {
     .form-control, input, select, textarea, .btn, .wizard a, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark {
       font-size: 16px; } }
 
-.small, .control-label {
+.small, .label,
+.control-label {
   font-size: 13.33333333px;
   line-height: 1.5em;
   margin-top: 0;
   margin-bottom: 24px; }
   @media (min-width: 992px) and (max-width: 1920px) {
-    .small, .control-label {
+    .small, .label,
+    .control-label {
       font-size: calc( 13.33333333px + 0 * ( ( 100vw - 992px) / 928 )); } }
   @media (min-width: 1920px) {
-    .small, .control-label {
+    .small, .label,
+    .control-label {
       font-size: 13.33333333px; } }
 
 .caption {
@@ -7537,10 +7541,13 @@ p + p {
 .custom-file-label::after {
   height: initial; }
 
+.label,
 .control-label {
   color: #6c757d;
-  margin-bottom: 0.3em;
   text-transform: uppercase; }
+
+.control-label {
+  margin-bottom: 0.3em; }
 
 span[id$="error"] {
   display: none !important; }
@@ -7647,14 +7654,14 @@ span[id$="error"] {
 .form-row {
   align-items: flex-end; }
 
-.c-heading, .wizard legend {
+.c-heading, .wizard legend, .c-card__header {
   text-transform: uppercase;
   color: #008c44;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center; }
-  .c-heading i.material-icons, .wizard legend i.material-icons {
+  .c-heading i.material-icons, .wizard legend i.material-icons, .c-card__header i.material-icons {
     margin-right: 0.25em;
     font-size: 1.25em; }
 
@@ -7700,6 +7707,25 @@ span[id$="error"] {
     text-transform: uppercase;
     padding: 1.5rem; }
 
+.c-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 1.5rem;
+  background-color: rgba(255, 255, 255, 0.9); }
+  .c-card__header {
+    margin-bottom: 0;
+    justify-content: flex-start;
+    padding: 1.5rem 0;
+    border-bottom: 0.0625rem solid #b0bec5; }
+  .c-card__body {
+    height: 100%;
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
 .l-header {
   background-color: #008c44; }
 
@@ -7743,5 +7769,16 @@ span[id$="error"] {
     height: 100%; }
     .p-auth__container .steps {
       display: none; }
+
+.p-signup_success {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .p-signup_success__container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    max-width: 576px;
+    border-radius: 1rem; }
 
 /*# sourceMappingURL=main.css.map */

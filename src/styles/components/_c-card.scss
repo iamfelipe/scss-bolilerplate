@@ -1,0 +1,28 @@
+// Component card
+// ---------
+
+$c-card: "c-card";
+.#{$c-card} {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 $grid-gutter-width;
+  background-color: $background-opacity;
+
+  @include e(header) {
+    @extend .c-heading;
+    margin-bottom: 0;
+    justify-content: flex-start;
+    padding: $grid-gutter-width 0;
+    border-bottom: $border-width solid gray("200");
+  }
+
+  @include e(body) {
+    height: 100%;
+    padding: $grid-gutter-width 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

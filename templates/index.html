@@ -15,319 +15,354 @@
         </div>
       </header>
       <!--End. Component Header-->
-      <!--Page Login-->
-      <article class="l-main__content p-auth">
-        <div class="container h-100">
-          <div class="row h-100">
-            <div class="col-12 col-md-6">
-              <div class="p-auth__container">
-                <!--Component Login-->
-                <div class="wizard__header">
-                  Paso 1 de 2
+      <article class="l-main__content">
+        <!--Page Login-->
+        <div class="p-auth h-100 d-none">
+          <div class="container h-100">
+            <div class="row h-100">
+              <div class="col-12 col-md-6">
+                <div class="p-auth__container">
+                  <!--Component Login-->
+                  <div class="wizard__header">
+                    Paso 1 de 2
+                  </div>
+                  <form id="example-advanced-form" action="#">
+                    <h3>Datos de la empresa</h3>
+                    <fieldset>
+                      <legend>
+                        <i class="material-icons">edit</i>Datos de la empresa
+                      </legend>
+                      <!--Row-->
+                      <div class="form-row">
+                        <!--NIT-->
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label for="LoginNIT" class="control-label"
+                              >NIT</label
+                            >
+                            <input
+                              id="LoginNIT"
+                              name="LoginNIT"
+                              type="number"
+                              class="form-control required"
+                              placeholder="Ej. 12345678"
+                            />
+                          </div>
+                        </div>
+                        <!--CIUU-->
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label for="loginCIUU" class="control-label"
+                              >CIUU</label
+                            >
+                            <select
+                              id="loginCIUU"
+                              name="loginCIUU"
+                              class="custom-select required"
+                            >
+                              <option value="" selected disabled
+                                >Selecciona CIUU</option
+                              >
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <!--Row-->
+                      <div class="form-row">
+                        <!--Company-->
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label for="loginCompany" class="control-label"
+                              >Compañía</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control required"
+                              name="loginCompany"
+                              id="loginCompany"
+                              placeholder="Ej. Novartis Colombia S.A."
+                              required
+                            />
+                          </div>
+                        </div>
+                        <!--Direction-->
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label for="loginAddress" class="control-label"
+                              >Dirección</label
+                            >
+                            <select
+                              id="loginAddress"
+                              name="loginAddress"
+                              class="custom-select required"
+                              title="Selecciona Dirección"
+                              required
+                            >
+                              <option value="" selected disabled
+                                >Selecciona Dirección</option
+                              >
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <!--Row-->
+                      <div class="form-row">
+                        <!--Sector-->
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label for="loginSector" class="control-label"
+                              >Sector</label
+                            >
+                            <select
+                              id="loginSector"
+                              name="loginSector"
+                              class="custom-select"
+                              title="Selecciona Sector"
+                              required
+                            >
+                              <option value="" selected disabled
+                                >Selecciona Sector</option
+                              >
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                            </select>
+                          </div>
+                        </div>
+                        <!--Size-->
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label for="loginSize" class="control-label"
+                              >Tamaño</label
+                            >
+                            <select
+                              id="loginSize"
+                              name="loginSize"
+                              class="custom-select"
+                              title="Selecciona Tamaño"
+                              required
+                            >
+                              <option value="" selected disabled
+                                >Selecciona Tamaño</option
+                              >
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <!--Row-->
+                      <div class="form-row">
+                        <!--State-->
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label for="loginState" class="control-label"
+                              >Departamento</label
+                            >
+                            <select
+                              id="loginState"
+                              name="loginState"
+                              class="custom-select"
+                              title="Selecciona Departamento"
+                              required
+                            >
+                              <option value="" selected disabled
+                                >Selecciona Departamento</option
+                              >
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                            </select>
+                          </div>
+                        </div>
+                        <!--Municipality-->
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label for="loginMunicipality" class="control-label"
+                              >Municipio</label
+                            >
+                            <select
+                              id="loginMunicipality"
+                              name="loginMunicipality"
+                              class="custom-select"
+                              title="Selecciona Municipio"
+                              required
+                            >
+                              <option value="" selected disabled
+                                >Selecciona Municipio</option
+                              >
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <h3>Datos del contacto</h3>
+                    <fieldset>
+                      <legend>
+                        Datos del contacto
+                      </legend>
+                      <!--Row-->
+                      <div class="form-row">
+                        <!--Name-->
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label for="loginName" class="control-label"
+                              >Nombre del contacto</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control required"
+                              id="loginName"
+                              name="loginName"
+                              placeholder="Ej. José Cuervo"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <!--Charge-->
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label for="loginCharge" class="control-label"
+                              >Cargo</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control required"
+                              name="loginCharge"
+                              id="loginCharge"
+                              placeholder="Ej. Jefe"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <!--Row-->
+                      <div class="form-row">
+                        <!--Phone-->
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label for="loginPhone" class="control-label"
+                              >Teléfono</label
+                            >
+                            <input
+                              type="number"
+                              class="form-control required"
+                              id="loginPhone"
+                              name="loginPhone"
+                              placeholder="Ej. 1234567"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <!--Mail-->
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label for="loginMail" class="control-label"
+                              >Correo</label
+                            >
+                            <input
+                              type="email"
+                              class="form-control required"
+                              id="loginMail"
+                              name="loginMail"
+                              placeholder="Ej. jose@mail.com"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <p class="small text-primary mb-1">
+                            *En el caso que usted no sea el gerente, director o
+                            jefe de logística de la compañía, diligencie los
+                            siguientes datos:
+                          </p>
+                        </div>
+                      </div>
+                      <!--Row-->
+                      <div class="form-row">
+                        <!--Boss-->
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label for="loginBoss" class="control-label"
+                              >Nombre del gerente, director o jefe de
+                              logística</label
+                            >
+                            <input
+                              type="number"
+                              class="form-control required"
+                              id="loginBoss"
+                              name="loginBoss"
+                              placeholder=""
+                              required
+                            />
+                          </div>
+                        </div>
+                        <!--Mail-->
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label for="loginBossMail" class="control-label"
+                              >Correo</label
+                            >
+                            <input
+                              type="email"
+                              class="form-control required"
+                              id="loginBossMail"
+                              name="loginBossMail"
+                              placeholder=""
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </form>
+                  <!--End. Component Login-->
                 </div>
-                <form id="example-advanced-form" action="#">
-                  <h3>Datos de la empresa</h3>
-                  <fieldset>
-                    <legend>
-                      <i class="material-icons">edit</i>Datos de la empresa
-                    </legend>
-                    <!--Row-->
-                    <div class="form-row">
-                      <!--NIT-->
-                      <div class="col-6">
-                        <div class="form-group">
-                          <label for="LoginNIT" class="control-label"
-                            >NIT</label
-                          >
-                          <input
-                            id="LoginNIT"
-                            name="LoginNIT"
-                            type="number"
-                            class="form-control required"
-                            placeholder="Ej. 12345678"
-                          />
-                        </div>
-                      </div>
-                      <!--CIUU-->
-                      <div class="col-6">
-                        <div class="form-group">
-                          <label for="loginCIUU" class="control-label"
-                            >CIUU</label
-                          >
-                          <select
-                            id="loginCIUU"
-                            name="loginCIUU"
-                            class="custom-select required"
-                          >
-                            <option value="" selected disabled
-                              >Selecciona CIUU</option
-                            >
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <!--Row-->
-                    <div class="form-row">
-                      <!--Company-->
-                      <div class="col-6">
-                        <div class="form-group">
-                          <label for="loginCompany" class="control-label"
-                            >Compañía</label
-                          >
-                          <input
-                            type="text"
-                            class="form-control required"
-                            name="loginCompany"
-                            id="loginCompany"
-                            placeholder="Ej. Novartis Colombia S.A."
-                            required
-                          />
-                        </div>
-                      </div>
-                      <!--Direction-->
-                      <div class="col-6">
-                        <div class="form-group">
-                          <label for="loginAddress" class="control-label"
-                            >Dirección</label
-                          >
-                          <select
-                            id="loginAddress"
-                            name="loginAddress"
-                            class="custom-select required"
-                            title="Selecciona Dirección"
-                            required
-                          >
-                            <option value="" selected disabled
-                              >Selecciona Dirección</option
-                            >
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <!--Row-->
-                    <div class="form-row">
-                      <!--Sector-->
-                      <div class="col-6">
-                        <div class="form-group">
-                          <label for="loginSector" class="control-label"
-                            >Sector</label
-                          >
-                          <select
-                            id="loginSector"
-                            name="loginSector"
-                            class="custom-select"
-                            title="Selecciona Sector"
-                            required
-                          >
-                            <option value="" selected disabled
-                              >Selecciona Sector</option
-                            >
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                          </select>
-                        </div>
-                      </div>
-                      <!--Size-->
-                      <div class="col-6">
-                        <div class="form-group">
-                          <label for="loginSize" class="control-label"
-                            >Tamaño</label
-                          >
-                          <select
-                            id="loginSize"
-                            name="loginSize"
-                            class="custom-select"
-                            title="Selecciona Tamaño"
-                            required
-                          >
-                            <option value="" selected disabled
-                              >Selecciona Tamaño</option
-                            >
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <!--Row-->
-                    <div class="form-row">
-                      <!--State-->
-                      <div class="col-6">
-                        <div class="form-group">
-                          <label for="loginState" class="control-label"
-                            >Departamento</label
-                          >
-                          <select
-                            id="loginState"
-                            name="loginState"
-                            class="custom-select"
-                            title="Selecciona Departamento"
-                            required
-                          >
-                            <option value="" selected disabled
-                              >Selecciona Departamento</option
-                            >
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                          </select>
-                        </div>
-                      </div>
-                      <!--Municipality-->
-                      <div class="col-6">
-                        <div class="form-group">
-                          <label for="loginMunicipality" class="control-label"
-                            >Municipio</label
-                          >
-                          <select
-                            id="loginMunicipality"
-                            name="loginMunicipality"
-                            class="custom-select"
-                            title="Selecciona Municipio"
-                            required
-                          >
-                            <option value="" selected disabled
-                              >Selecciona Municipio</option
-                            >
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </fieldset>
-                  <h3>Datos del contacto</h3>
-                  <fieldset>
-                    <legend>
-                      Datos del contacto
-                    </legend>
-                    <!--Row-->
-                    <div class="form-row">
-                      <!--Name-->
-                      <div class="col-6">
-                        <div class="form-group">
-                          <label for="loginName" class="control-label"
-                            >Nombre del contacto</label
-                          >
-                          <input
-                            type="text"
-                            class="form-control required"
-                            id="loginName"
-                            name="loginName"
-                            placeholder="Ej. José Cuervo"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <!--Charge-->
-                      <div class="col-6">
-                        <div class="form-group">
-                          <label for="loginCharge" class="control-label"
-                            >Cargo</label
-                          >
-                          <input
-                            type="text"
-                            class="form-control required"
-                            name="loginCharge"
-                            id="loginCharge"
-                            placeholder="Ej. Jefe"
-                            required
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <!--Row-->
-                    <div class="form-row">
-                      <!--Phone-->
-                      <div class="col-6">
-                        <div class="form-group">
-                          <label for="loginPhone" class="control-label"
-                            >Teléfono</label
-                          >
-                          <input
-                            type="number"
-                            class="form-control required"
-                            id="loginPhone"
-                            name="loginPhone"
-                            placeholder="Ej. 1234567"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <!--Mail-->
-                      <div class="col-6">
-                        <div class="form-group">
-                          <label for="loginMail" class="control-label"
-                            >Correo</label
-                          >
-                          <input
-                            type="email"
-                            class="form-control required"
-                            id="loginMail"
-                            name="loginMail"
-                            placeholder="Ej. jose@mail.com"
-                            required
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12">
-                        <p class="small text-primary mb-1">
-                          *En el caso que usted no sea el gerente, director o
-                          jefe de logística de la compañía, diligencie los
-                          siguientes datos:
-                        </p>
-                      </div>
-                    </div>
-                    <!--Row-->
-                    <div class="form-row">
-                      <!--Boss-->
-                      <div class="col-6">
-                        <div class="form-group">
-                          <label for="loginBoss" class="control-label"
-                            >Nombre del gerente, director o jefe de
-                            logística</label
-                          >
-                          <input
-                            type="number"
-                            class="form-control required"
-                            id="loginBoss"
-                            name="loginBoss"
-                            placeholder=""
-                            required
-                          />
-                        </div>
-                      </div>
-                      <!--Mail-->
-                      <div class="col-6">
-                        <div class="form-group">
-                          <label for="loginBossMail" class="control-label"
-                            >Correo</label
-                          >
-                          <input
-                            type="email"
-                            class="form-control required"
-                            id="loginBossMail"
-                            name="loginBossMail"
-                            placeholder=""
-                            required
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </fieldset>
-                </form>
-                <!--End. Component Login-->
               </div>
             </div>
           </div>
         </div>
+        <!--End. Page Login-->
+        <!--Page Signup Successful-->
+        <div class="p-signup_success d-none">
+          <div class="p-signup_success__container">
+            <h3 class="h3 text-primary text-center text-uppercase">
+              Registro exitoso
+            </h3>
+            <p class="h6 text-center text-muted mb-0">
+              hemos enviado un correo con la contraseña al e-mail registrado,
+              por favor utilícela para ingresar a la herramienta
+            </p>
+          </div>
+        </div>
+        <!--End. Page Signup Successful-->
+        <!--Page Signup Successful-->
+        <div class="container h-100 py-4">
+          <div class="c-card h-100">
+            <!--Heading-->
+            <div class="c-card__header">
+              <i class="material-icons"> remove_red_eye </i>Diagnósticos
+            </div>
+            <!--Content-->
+            <div class="c-card__body">
+              <p class="label text-center">
+                Hola! Actualmente no tiene historial de diagnósticos
+              </p>
+              <p class="label text-center">
+                Le invitamos a realizar cu primer diagnóstico
+              </p>
+              <a href="#" class="btn btn-secondary mt-4">Crear diagnóstico</a>
+            </div>
+          </div>
+        </div>
+        <!--End. Page Signup Successful-->
       </article>
-      <!--End. Page Login-->
     </main>
     <!--jQuery-->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>

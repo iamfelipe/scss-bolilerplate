@@ -33,7 +33,7 @@ $modularscale: (
     //base: 14px
   ),
   map-get($grid-breakpoints, "xxl"): (
-    //base: 18px,
+    //base: 21px,
       //ratio: $fourth
   )
 );
@@ -94,12 +94,12 @@ $custom-scale: (
   h1: (
     scale: 6,
     line-height: 56,
-    font-weight: 700
+    font-weight: 400
   ),
   h2: (
     scale: 5,
     line-height: 30,
-    font-weight: 700
+    font-weight: 400
   ),
   h3: (
     scale: 4,
@@ -109,16 +109,17 @@ $custom-scale: (
   h4: (
     scale: 3,
     line-height: 24,
-    font-weight: 700
+    font-weight: 400
   ),
   h5: (
     scale: 2,
-    line-height: 22
+    line-height: 22,
+    font-weight: 400
   ),
   h6: (
     scale: 1,
     line-height: 20,
-    font-weight: 600
+    font-weight: 400
   ),
   body: (
     scale: 0,
@@ -182,3 +183,4 @@ $custom-control-gutter: $custom-control-indicator-size / 2;
 $dropdown-item-padding-y: $input-btn-padding-y;
 
 //$colors: map-merge(map-merge($grays, $theme-colors), $colors);
+$background-opacity: rgba($white, 0.9);

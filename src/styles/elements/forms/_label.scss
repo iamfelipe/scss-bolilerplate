@@ -4,12 +4,16 @@
 %label {
   @extend .small;
   color: gray("600");
-  margin-bottom: em(4, ms(-1));
   text-transform: uppercase;
 }
 
+.label,
 .control-label {
   @extend %label;
+}
+
+.control-label {
+  margin-bottom: em(4, ms(-1));
 }
 
 span[id$="error"] {
