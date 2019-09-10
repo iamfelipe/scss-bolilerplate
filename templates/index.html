@@ -10,176 +10,341 @@
     <!--Page Login-->
     <article class="p-login">
       <div class="container">
+        <!--StepsWizard-->
+        <div class="stepwizard">
+          <div class="stepwizard-row setup-panel">
+            <div class="stepwizard-step">
+              <a href="#step-1" type="button" class="btn btn-primary btn-circle"
+                >1</a
+              >
+              <p>Step 1</p>
+            </div>
+            <div class="stepwizard-step">
+              <a
+                href="#step-2"
+                type="button"
+                class="btn btn-default btn-circle"
+                disabled="disabled"
+                >2</a
+              >
+              <p>Step 2</p>
+            </div>
+          </div>
+        </div>
         <!--Component Login-->
-        <form class="needs-validation" novalidate>
-          <!--Row-->
-          <div class="form-row">
-            <!--NIT-->
-            <div class="col-6">
-              <div class="form-group">
-                <label for="loginNIT">NIT</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="loginNIT"
-                  placeholder="Ej. 12345678"
-                  required
-                />
-                <div class="invalid-feedback">
-                  El campo NIT es obligatorio
+        <form class="-needs-validation" role="form">
+          <div class="setup-content" id="step-1">
+            <!--Heading-->
+            <h2 class="c-heading">Datos de la empresa</h2>
+            <!--Row-->
+            <div class="form-row">
+              <!--NIT-->
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="loginNIT" class="control-label">NIT</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="loginNIT"
+                    placeholder="Ej. 12345678"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    El campo NIT es obligatorio
+                  </div>
                 </div>
               </div>
-            </div>
-            <!--CIUU-->
-            <div class="col-6">
-              <div class="form-group">
-                <label for="loginCIUU">CIUU</label>
-                <select
-                  id="loginCIUU"
-                  class="custom-select"
-                  title="Selecciona CIUU"
-                  required
-                >
-                  <option value="" selected disabled>Selecciona CIUU</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                </select>
-                <div class="invalid-feedback">
-                  El campo CIUU es obligatorio
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--Row-->
-          <div class="form-row">
-            <!--Company-->
-            <div class="col-6">
-              <div class="form-group">
-                <label for="loginCompany">Compañía</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="loginCompany"
-                  placeholder="Ej. Novartis Colombia S.A."
-                  required
-                />
-                <div class="invalid-feedback">
-                  El campo Compañía es obligatorio
-                </div>
-              </div>
-            </div>
-            <!--Direction-->
-            <div class="col-6">
-              <div class="form-group">
-                <label for="loginAddress">Dirección</label>
-                <select
-                  id="loginAddress"
-                  class="custom-select"
-                  title="Selecciona Dirección"
-                  required
-                >
-                  <option value="" selected disabled
-                    >Selecciona Dirección</option
+              <!--CIUU-->
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="loginCIUU" class="control-label">CIUU</label>
+                  <select
+                    id="loginCIUU"
+                    class="custom-select"
+                    title="Selecciona CIUU"
+                    required
                   >
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                </select>
-                <div class="invalid-feedback">
-                  El campo Dirección es obligatorio
+                    <option value="" selected disabled>Selecciona CIUU</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    El campo CIUU es obligatorio
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!--Row-->
-          <div class="form-row">
-            <!--Sector-->
-            <div class="col-6">
-              <div class="form-group">
-                <label for="loginSector">Sector</label>
-                <select
-                  id="loginSector"
-                  class="custom-select"
-                  title="Selecciona Sector"
-                  required
-                >
-                  <option value="" selected disabled>Selecciona Sector</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                </select>
-                <div class="invalid-feedback">
-                  El campo Sector es obligatorio
-                </div>
-              </div>
-            </div>
-            <!--Size-->
-            <div class="col-6">
-              <div class="form-group">
-                <label for="loginSize">Tamaño</label>
-                <select
-                  id="loginSize"
-                  class="custom-select"
-                  title="Selecciona Tamaño"
-                  required
-                >
-                  <option value="" selected disabled>Selecciona Tamaño</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                </select>
-                <div class="invalid-feedback">
-                  El campo Tamaño es obligatorio
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--Row-->
-          <div class="form-row">
-            <!--State-->
-            <div class="col-6">
-              <div class="form-group">
-                <label for="loginState">Departamento</label>
-                <select
-                  id="loginState"
-                  class="custom-select"
-                  title="Selecciona Departamento"
-                  required
-                >
-                  <option value="" selected disabled
-                    >Selecciona Departamento</option
+            <!--Row-->
+            <div class="form-row">
+              <!--Company-->
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="loginCompany" class="control-label"
+                    >Compañía</label
                   >
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                </select>
-                <div class="invalid-feedback">
-                  El campo Departamento es obligatorio
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="loginCompany"
+                    placeholder="Ej. Novartis Colombia S.A."
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    El campo Compañía es obligatorio
+                  </div>
+                </div>
+              </div>
+              <!--Direction-->
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="loginAddress" class="control-label"
+                    >Dirección</label
+                  >
+                  <select
+                    id="loginAddress"
+                    class="custom-select"
+                    title="Selecciona Dirección"
+                    required
+                  >
+                    <option value="" selected disabled
+                      >Selecciona Dirección</option
+                    >
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    El campo Dirección es obligatorio
+                  </div>
                 </div>
               </div>
             </div>
-            <!--Municipality-->
-            <div class="col-6">
-              <div class="form-group">
-                <label for="loginMunicipality">Municipio</label>
-                <select
-                  id="loginMunicipality"
-                  class="custom-select"
-                  title="Selecciona Municipio"
-                  required
-                >
-                  <option value="" selected disabled
-                    >Selecciona Municipio</option
+            <!--Row-->
+            <div class="form-row">
+              <!--Sector-->
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="loginSector" class="control-label">Sector</label>
+                  <select
+                    id="loginSector"
+                    class="custom-select"
+                    title="Selecciona Sector"
+                    required
                   >
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                </select>
-                <div class="invalid-feedback">
-                  El campo Municipio es obligatorio
+                    <option value="" selected disabled
+                      >Selecciona Sector</option
+                    >
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    El campo Sector es obligatorio
+                  </div>
                 </div>
+              </div>
+              <!--Size-->
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="loginSize" class="control-label">Tamaño</label>
+                  <select
+                    id="loginSize"
+                    class="custom-select"
+                    title="Selecciona Tamaño"
+                    required
+                  >
+                    <option value="" selected disabled
+                      >Selecciona Tamaño</option
+                    >
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    El campo Tamaño es obligatorio
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Row-->
+            <div class="form-row">
+              <!--State-->
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="loginState" class="control-label"
+                    >Departamento</label
+                  >
+                  <select
+                    id="loginState"
+                    class="custom-select"
+                    title="Selecciona Departamento"
+                    required
+                  >
+                    <option value="" selected disabled
+                      >Selecciona Departamento</option
+                    >
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    El campo Departamento es obligatorio
+                  </div>
+                </div>
+              </div>
+              <!--Municipality-->
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="loginMunicipality" class="control-label"
+                    >Municipio</label
+                  >
+                  <select
+                    id="loginMunicipality"
+                    class="custom-select"
+                    title="Selecciona Municipio"
+                    required
+                  >
+                    <option value="" selected disabled
+                      >Selecciona Municipio</option
+                    >
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    El campo Municipio es obligatorio
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Row-->
+            <div class="form-row">
+              <div class="col-auto">
+                <button class="btn btn-secondary nextBtn" type="button">
+                  Volver
+                </button>
               </div>
             </div>
           </div>
-          <!--Row-->
-          <div class="form-row">
-            <div class="col-auto">
-              <button type="submit" class="btn btn-primary">Continuar</button>
+          <div class="setup-content" id="step-2">
+            <!--Row-->
+            <div class="form-row">
+              <!--Name-->
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="loginName" class="control-label"
+                    >Nombre del contacto</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="loginName"
+                    placeholder="Ej. José Cuervo"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    El campo Nombre es obligatorio
+                  </div>
+                </div>
+              </div>
+              <!--Charge-->
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="loginCharge" class="control-label">Cargo</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="loginCharge"
+                    placeholder="Ej. Jefe"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    El campo Cargo es obligatorio
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Row-->
+            <div class="form-row">
+              <!--Phone-->
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="loginPhone" class="control-label">Teléfono</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="loginPhone"
+                    placeholder="Ej. 1234567"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    El campo Teléfono es obligatorio
+                  </div>
+                </div>
+              </div>
+              <!--Mail-->
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="loginMail" class="control-label">Correo</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="loginMail"
+                    placeholder="Ej. jose@mail.com"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    El campo Correo es obligatorio
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Row-->
+            <div class="form-row">
+              <!--Boss-->
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="loginBoss" class="control-label"
+                    >Nombre del gerente, director o jefe de logística</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="loginBoss"
+                    placeholder=""
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    El campo es obligatorio
+                  </div>
+                </div>
+              </div>
+              <!--Mail-->
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="loginBossMail" class="control-label"
+                    >Correo</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="loginBossMail"
+                    placeholder=""
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    El campo Correo es obligatorio
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Row-->
+            <div class="form-row">
+              <div class="col-auto">
+                <a href="#step-1" class="btn btn-secondary">
+                  Volver
+                </a>
+              </div>
+              <div class="col-auto">
+                <button class="btn btn-secondary" type="submit">
+                  Finish!
+                </button>
+              </div>
             </div>
           </div>
         </form>
@@ -187,150 +352,6 @@
       </div>
     </article>
     <!--End. Page Login-->
-
-    <section id="c-baseline">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12">
-            <h1 class="h1">H1: What Can I Do With Archetype?</h1>
-            <p>
-              Paragraph: Archetype lets designers like you very quickly and
-              easily create consistent typography styling and spacing live, in
-              the browser. These styles are all underpinned by established
-              typographic best practices meaning less guesswork and more
-              harmonious designs.
-            </p>
-            <h2>H2: Sounds Great, Where Do I Start?</h2>
-            <p>
-              Paragraph: It's easy peasy: 1) Start by selecting a visually
-              compatible font pair. 2) Define harmoniously proportioned sizes
-              for all the standard typographic elements your design might
-              require. 3) Set the optimal vertical spacing of all elements in
-              your design. 4) Tweak and refine individual elements to get
-              everything looking exactly the way you want. 5) Export as CSS
-              ready to send to a developer. Job Done.
-            </p>
-            <h3>H3: Help Us Improve</h3>
-            <p>
-              Paragraph: This is version 1 of Archetype and we'd love your
-              feedback and suggestions on how we can improve it to make it even
-              more useful. Please use the feedback link in the header to let us
-              know what you think. Be as critical as you like, we have thick
-              skin.
-            </p>
-            <h4>H4: Still Reading? H4: Still Reading? H4: Still Reading?</h4>
-            <p>
-              Well here's some inspirational quotes for you: “Good design is
-              making something intelligible and memorable. Great design is
-              making something memorable and meaningful”: Dieter Rams.
-            </p>
-            <h5>H5: More? Ok</h5>
-            <p>
-              Paragraph: “A designer knows he has achieved perfection not when
-              there is nothing left to add, but when there is nothing left to
-              take away”: Antoine de Saint-Exupery.
-            </p>
-            <h6>H6: One For the Road</h6>
-            <p class="body">
-              Paragraph: Archetype lets designers like you very quickly and
-              easily create consistent typography styling and spacing live, in
-              the browser. These styles are all underpinned by established
-              typographic best practices meaning less guesswork and more
-              harmonious designs.
-            </p>
-            <p>
-              Ab delectus dolore, dolorem error fuga illo ipsa libero minus modi
-              nam officia, pariatur quos recusandae soluta veniam vitae
-              voluptatum?
-            </p>
-            <div class="c-heading">
-              <div class="c-heading__image">
-                <img
-                  src="https://picsum.photos/400"
-                  class="w-100"
-                  alt="Example image"
-                />
-              </div>
-              <div class="c-heading__title">
-                <h1 class="text-primary">
-                  Design System <i class="material-icons">face</i>
-                </h1>
-              </div>
-              <div class="c-heading__subtitle">
-                <h6>Standard project module structure</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-12 col-lg">
-            <div class="form-group">
-              <label for="text" class="label">Text label</label>
-              <input
-                id="text"
-                type="text"
-                placeholder="Placeholder"
-                id=""
-                class="form-control"
-              />
-            </div>
-          </div>
-          <div class="col-12 col-lg">
-            <div class="form-group">
-              <label for="select" class="label">Select label</label>
-              <select
-                id="select"
-                class="custom-select"
-                title="seleccionar género"
-              >
-                <option>Male</option>
-                <option>Female</option>
-                <option>Undefined</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col-12 col-lg">
-            <div class="form-group">
-              <div class="custom-control custom-checkbox">
-                <input
-                  type="checkbox"
-                  class="custom-control-input"
-                  id="customCheck1"
-                />
-                <label class="custom-control-label label" for="customCheck1"
-                  >Check this custom checkbox</label
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg">
-            <div class="form-group">
-              <div class="custom-file">
-                <input type="file" class="custom-file-input" id="customFile" />
-                <label class="custom-file-label" for="customFile"
-                  >Seleccionar archivo</label
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-auto">
-            <a href="" class="btn btn-primary">Anchor primary</a>
-          </div>
-          <div class="col-auto">
-            <button class="btn btn-secondary">Button</button>
-          </div>
-          <div class="col-auto">
-            <input type="submit" class="btn btn-warning" value="Submit" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer class="c-footer"><p>Footer</p></footer>
     <!--jQuery-->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

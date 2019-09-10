@@ -310,54 +310,71 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
     // Login
     // Upon load..
-    window.addEventListener("load", function () {
-      // Grab all the forms
-      var forms = document.getElementsByClassName("needs-validation");
+    // window.addEventListener("load", () => {
+    //   // Grab all the forms
+    //   var forms = document.getElementsByClassName("needs-validation");
+    //
+    //   // Iterate over each one
+    //   for (let form of forms) {
+    //     // Add a 'submit' event listener on each one
+    //     form.addEventListener("submit", evt => {
+    //       // check if the form input elements have the 'required' attribute
+    //       if (!form.checkValidity()) {
+    //         evt.preventDefault();
+    //         evt.stopPropagation();
+    //         console.log("Bootstrap will handle incomplete form fields");
+    //       } else {
+    //         // Since form is now valid, prevent default behavior..
+    //         evt.preventDefault();
+    //         console.info("All form fields are now valid...");
+    //       }
+    //
+    //       form.classList.add("was-validated");
+    //     });
+    //   }
+    // });
 
-      // Iterate over each one
+    // Wizard validation
+    $(document).ready(function () {
+      var navListItems = $("div.setup-panel div a"),
+          allWells = $(".setup-content"),
+          allNextBtn = $(".nextBtn");
 
-      var _loop = function _loop(form) {
-        // Add a 'submit' event listener on each one
-        form.addEventListener("submit", function (evt) {
-          // check if the form input elements have the 'required' attribute
-          if (!form.checkValidity()) {
-            evt.preventDefault();
-            evt.stopPropagation();
-            console.log("Bootstrap will handle incomplete form fields");
-          } else {
-            // Since form is now valid, prevent default behavior..
-            evt.preventDefault();
-            console.info("All form fields are now valid...");
-          }
+      allWells.hide();
 
-          form.classList.add("was-validated");
-        });
-      };
+      navListItems.click(function (e) {
+        e.preventDefault();
+        var $target = $($(this).attr("href")),
+            $item = $(this);
 
-      var _iteratorNormalCompletion = true;
-      var _didIteratorError = false;
-      var _iteratorError = undefined;
-
-      try {
-        for (var _iterator = forms[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-          var form = _step.value;
-
-          _loop(form);
+        if (!$item.hasClass("disabled")) {
+          navListItems.removeClass("btn-primary").addClass("btn-default");
+          $item.addClass("btn-primary");
+          allWells.hide();
+          $target.show();
+          $target.find("input:eq(0)").focus();
         }
-      } catch (err) {
-        _didIteratorError = true;
-        _iteratorError = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion && _iterator.return) {
-            _iterator.return();
-          }
-        } finally {
-          if (_didIteratorError) {
-            throw _iteratorError;
+      });
+
+      allNextBtn.click(function () {
+        var curStep = $(this).closest(".setup-content"),
+            curStepBtn = curStep.attr("id"),
+            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+            curInputs = curStep.find("input[type='text'],input[type='url'],input[type='number']"),
+            isValid = true;
+
+        $(".form-group").removeClass("has-error");
+        for (var i = 0; i < curInputs.length; i++) {
+          if (!curInputs[i].validity.valid) {
+            isValid = false;
+            $(curInputs[i]).closest(".form-group").addClass("has-error");
           }
         }
-      }
+
+        if (isValid) nextStepWizard.removeAttr("disabled").trigger("click");
+      });
+
+      $("div.setup-panel div a.btn-primary").trigger("click");
     });
 
     /***/

@@ -2,11 +2,14 @@
 // ---------
 
 .c-heading {
-  display: grid;
-  @include template(title, subtitle, image);
-  grid-column-gap: $grid-gutter-width;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-areas:
-    "image title title"
-    "image subtitle subtitle";
+  text-transform: uppercase;
+  color: theme-color();
+  font-weight: 400;
+  //display: grid;
+  //@include template(title, subtitle, image);
+  //grid-column-gap: $grid-gutter-width;
+  //grid-template-columns: 2fr 1fr 1fr;
+  //grid-template-areas:
+  //  "image title title"
+  //  "image subtitle subtitle";
 }
