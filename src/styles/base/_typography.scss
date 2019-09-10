@@ -14,7 +14,7 @@
 
 @for $i from 1 through 6 {
   h#{$i} {
-    //@extend %h#{$i};
+    @extend %h#{$i};
   }
 }
 
@@ -30,8 +30,4 @@ p {
   + p {
     @include margin-bottom();
   }
-}
-
-.small {
-  padding-top: $vertical-rhythm / 8;
 }
