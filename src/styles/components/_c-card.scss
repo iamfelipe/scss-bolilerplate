@@ -6,7 +6,7 @@ $c-card: "c-card";
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 0 $grid-gutter-width;
+  //padding: 0 $grid-gutter-width;
   background-color: $background-opacity;
 
   @include e(header) {
@@ -19,7 +19,7 @@ $c-card: "c-card";
 
   @include e(body) {
     height: 100%;
-    padding: $grid-gutter-width 0;
+    padding: $grid-gutter-width;
     display: flex;
     flex-direction: column;
     justify-content: center;

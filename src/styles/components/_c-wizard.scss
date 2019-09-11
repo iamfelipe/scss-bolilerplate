@@ -13,9 +13,11 @@ $c-wizard: "wizard";
 
   > .content {
     overflow-y: auto;
-    background-color: transparent;
+    @extend .c-card;
+
+    // Body
     > .body {
-      padding: 0 $grid-gutter-width;
+      @extend .c-card__body;
       margin-bottom: 0;
     }
   }
@@ -28,8 +30,16 @@ $c-wizard: "wizard";
         flex-grow: 1;
 
         &.current a {
+          cursor: initial;
           background-color: theme-color("secondary");
           border-color: theme-color("secondary");
+        }
+
+        &.disabled {
+          cursor: not-allowed;
+          a {
+            pointer-events: none;
+          }
         }
       }
 
@@ -71,7 +81,7 @@ $c-wizard: "wizard";
 
   // Heading
   legend {
-    @extend .c-heading;
+    @extend .c-card__header;
     padding-top: $grid-gutter-width;
     text-align: center;
   }

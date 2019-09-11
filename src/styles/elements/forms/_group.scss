@@ -4,6 +4,14 @@
 %group {
   @include margin-bottom();
 
+  .btn-group {
+    text-align: center;
+    .btn {
+      margin: 0 ($grid-gutter-width / 2);
+      min-width: $grid-gutter-width * 4;
+    }
+  }
+
   &.has-error {
     .control-label {
       //color: theme-color("danger");

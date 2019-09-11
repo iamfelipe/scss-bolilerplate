@@ -368,40 +368,49 @@
             <div class="p-form__container h-100">
               <form id="diagnostic-form" action="#" class="c-wizard">
                 <h3>Encuesta</h3>
-                <fieldset class="c-card">
-                  <div class="c-card__header">
-                    Preguntas Generales
-                  </div>
+                <fieldset>
+                  <legend>Preguntas Generales</legend>
                   <!--Row-->
-                  <div class="form-row">
-                    <!--NIT-->
-                    <div class="col-6">
-                      <div class="form-group">
-                        <label for="LoginNIT2" class="control-label">NIT</label>
-                        <input
-                          id="LoginNIT2"
-                          name="LoginNIT2"
-                          type="number"
-                          class="form-control required"
-                          placeholder="Ej. 12345678"
-                        />
+                  <div class="form-row justify-content-center">
+                    <div class="col-auto">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >Su compañía identifica los riesgos de incumplimiento
+                          de la ley y de la regulación interna?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optEncuesta1" required />
+                            Si
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optEncuesta1" />
+                            No
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optEncuesta1" />
+                            No sé
+                          </label>
+                        </div>
                       </div>
                     </div>
+                  </div>
+                  <div class="form-row justify-content-center">
                     <div class="col-6">
-                      <div class="form-group">
+                      <div class="form-group form-group-radios">
                         <label class="control-label">NIT</label>
                         <div class="btn-group" data-toggle="buttons">
-                          <label class="btn btn-primary">
-                            <input type="radio" name="options" id="option1" />
-                            Option 1
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optEncuesta2" required />
+                            Si
                           </label>
-                          <label class="btn btn-primary">
-                            <input type="radio" name="options" id="option2" />
-                            Option 2
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optEncuesta2" />
+                            No
                           </label>
-                          <label class="btn btn-primary">
-                            <input type="radio" name="options" id="option3" />
-                            Option 3
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optEncuesta2" />
+                            No sé
                           </label>
                         </div>
                       </div>

@@ -3,6 +3,8 @@
 
 %label {
   @extend .small;
+  text-align: center;
+  display: block;
   color: gray("600");
   text-transform: uppercase;
 }
@@ -13,7 +15,7 @@
 }
 
 .control-label {
-  margin-bottom: em(4, ms(-1));
+  //margin-bottom: em(4, ms(-1));
 }
 
 span[id$="error"] {
