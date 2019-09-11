@@ -2,7 +2,7 @@
 // ---------
 
 %label {
-  @extend .body;
+  @extend %body;
   text-align: center;
   display: block;
   color: gray("600");
@@ -14,8 +14,12 @@
   @extend %label;
 }
 
+span[id$="error"],
 .invalid-feedback {
+  @extend %small;
+  margin-bottom: 0;
   color: theme-color("danger");
+  order: 1;
 }
 
 .control-label {

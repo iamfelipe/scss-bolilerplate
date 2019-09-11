@@ -367,6 +367,7 @@
           <div class="container h-100">
             <div class="p-form__container h-100">
               <form id="diagnostic-form" action="#" class="c-wizard">
+                <!--1. Encuesta-->
                 <h3>Encuesta</h3>
                 <fieldset>
                   <!--Heading-->
@@ -426,7 +427,61 @@
                       </div>
                     </div>
                   </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-6">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Su compañía cuenta con un plan de continuidad del
+                          negocio en cada macro proceso de la cadena de
+                          suministro?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optEncuesta3" required />
+                            Si
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optEncuesta3" />
+                            No
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optEncuesta3" />
+                            No sé
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-6">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Su compañía define indicadores de gestión que
+                          permitan evaluar el nivel de la gestión de los
+                          administradores con el cumplimiento de los objetivos
+                          estratégicos previstos?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optEncuesta2" required />
+                            Si
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optEncuesta2" />
+                            No
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optEncuesta2" />
+                            No sé
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </fieldset>
+                <!--2. Compañía-->
                 <h3>Compañía</h3>
                 <fieldset>
                   <!--Heading-->
@@ -438,22 +493,563 @@
                     <div class="col-6">
                       <div class="form-group form-group-radios">
                         <label class="control-label"
-                          >Su compañía determina cuáles riesgos pueden mitigar,
-                          cuáles son aceptables y cuáles se pueden
-                          controlar?</label
+                          >Escoja el enfoque estratégico de su compañía</label
                         >
                         <div class="btn-group" data-toggle="buttons">
                           <label class="btn btn-outline-primary">
                             <input type="radio" name="optCompania1" required />
-                            Si
+                            Cliente
                           </label>
                           <label class="btn btn-outline-primary">
                             <input type="radio" name="optCompania1" />
-                            No
+                            Financiero
                           </label>
                           <label class="btn btn-outline-primary">
                             <input type="radio" name="optCompania1" />
-                            No sé
+                            Mercado
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <!--3. Cadena-->
+                <h3>Cadena</h3>
+                <fieldset>
+                  <!--Heading-->
+                  <legend>
+                    Enfoque Estratégico de la Cadena de Abastecimiento
+                  </legend>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >Escoja el enfoque estratégico de su cadena de
+                          abastecimiento</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optCadena1" required />
+                            Velocidad de respuesta
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optCadena1" />
+                            Confiabilidad
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optCadena1" />
+                            Sostenibilidad
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <!--4. Tipo-->
+                <h3>Tipo</h3>
+                <fieldset>
+                  <!--Heading-->
+                  <legend>
+                    Tipo de Cadena de Abastecimiento
+                  </legend>
+                  <label class="control-label"
+                    >Su tipo de cadena de abastecimiento por defecto es:</label
+                  >
+                </fieldset>
+                <!--5. KPI's-->
+                <h3>KPS's</h3>
+                <fieldset>
+                  <!--Heading-->
+                  <legend>
+                    KPI'S en los procesos clave de su cadena de abastecimiento
+                  </legend>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12">
+                      <p class="body text-center text-primary">
+                        Planeación
+                      </p>
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Cómo es el porcentaje de sus productos que tienen
+                          alguna certificación ambiental?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis1"
+                              value="Muy bueno"
+                              required
+                            />
+                            Muy bueno
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis1"
+                              value="Bueno"
+                              required
+                            />
+                            Bueno
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis1"
+                              value="Aceptable"
+                            />
+                            Aceptable
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optKpis1" value="Malo" />
+                            Malo
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis1"
+                              value="Muy malo"
+                            />
+                            Muy malo
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12">
+                      <p class="body text-center text-primary">
+                        Abastecimiento
+                      </p>
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Cómo es el porcentaje de sus proveedores que tienen
+                          programas de responsabilidad Social Empresarial
+                          ?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis2"
+                              value="Muy bueno"
+                              required
+                            />
+                            Muy bueno
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis2"
+                              value="Bueno"
+                              required
+                            />
+                            Bueno
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis2"
+                              value="Aceptable"
+                            />
+                            Aceptable
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optKpis2" value="Malo" />
+                            Malo
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis2"
+                              value="Muy malo"
+                            />
+                            Muy malo
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12">
+                      <p class="body text-center text-primary">
+                        Producción
+                      </p>
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Cómo es el porcentaje de residuos generados?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis3"
+                              value="Muy bueno"
+                              required
+                            />
+                            Muy bueno
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis3"
+                              value="Bueno"
+                              required
+                            />
+                            Bueno
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis3"
+                              value="Aceptable"
+                            />
+                            Aceptable
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optKpis3" value="Malo" />
+                            Malo
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis3"
+                              value="Muy malo"
+                            />
+                            Muy malo
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12">
+                      <p class="body text-center text-primary">
+                        Distribución
+                      </p>
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Cómo es el porcentaje de residuos generados?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis4"
+                              value="Muy bueno"
+                              required
+                            />
+                            Muy bueno
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis4"
+                              value="Bueno"
+                              required
+                            />
+                            Bueno
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis4"
+                              value="Aceptable"
+                            />
+                            Aceptable
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optKpis4" value="Malo" />
+                            Malo
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis4"
+                              value="Muy malo"
+                            />
+                            Muy malo
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12">
+                      <p class="body text-center text-primary">
+                        Devolución
+                      </p>
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Cómo es el porcentaje de residuos dispuestos
+                          correctamente?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis5"
+                              value="Muy bueno"
+                              required
+                            />
+                            Muy bueno
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis5"
+                              value="Bueno"
+                              required
+                            />
+                            Bueno
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis5"
+                              value="Aceptable"
+                            />
+                            Aceptable
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optKpis5" value="Malo" />
+                            Malo
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKpis5"
+                              value="Muy malo"
+                            />
+                            Muy malo
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <!--6. KRI's-->
+                <h3>KPS's</h3>
+                <fieldset>
+                  <!--Heading-->
+                  <legend>
+                    KRI'S en los procesos clave de su cadena de abastecimiento
+                  </legend>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12">
+                      <p class="body text-center text-primary">
+                        Planeación
+                      </p>
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >El porcentaje de cumplimiento de normas ambientales
+                          ha disminuido, aumentando o mantenido en los últimos 3
+                          meses</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKris1"
+                              value="Aumentado"
+                              required
+                            />
+                            Aumentado
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKris1"
+                              value="Disminuido"
+                              required
+                            />
+                            Disminuido
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKris1"
+                              value="Mantenido"
+                            />
+                            Mantenido
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12">
+                      <p class="body text-center text-primary">
+                        Abastecimiento
+                      </p>
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >El porcentaje de sus proveedores certificados con ISO
+                          14000 ha disminuid, aumentado o mantenido</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKris2"
+                              value="Aumentado"
+                              required
+                            />
+                            Aumentado
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKris2"
+                              value="Disminuido"
+                              required
+                            />
+                            Disminuido
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKris2"
+                              value="Mantenido"
+                            />
+                            Mantenido
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12">
+                      <p class="body text-center text-primary">
+                        Producción
+                      </p>
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >El porcentaje de materias primas e insumos reciclados
+                          en sus procesos ha disminuido, aumentado o
+                          mantenido</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKris3"
+                              value="Aumentado"
+                              required
+                            />
+                            Aumentado
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKris3"
+                              value="Disminuido"
+                              required
+                            />
+                            Disminuido
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKris3"
+                              value="Mantenido"
+                            />
+                            Mantenido
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12">
+                      <p class="body text-center text-primary">
+                        Distribución
+                      </p>
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >El porcentaje de vehículos o híbridos que utiliza en
+                          la distribución de sus productos ha disminuido,
+                          aumentado o mantenido</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKris4"
+                              value="Aumentado"
+                              required
+                            />
+                            Aumentado
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKris4"
+                              value="Disminuido"
+                              required
+                            />
+                            Disminuido
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKris4"
+                              value="Mantenido"
+                            />
+                            Mantenido
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12">
+                      <p class="body text-center text-primary">
+                        Devolución
+                      </p>
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >El porcentaje de los productos devueltos que pueder
+                          ser reutilizado o remanufacturado ha disminuido,
+                          aumentado o mantenido</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKris5"
+                              value="Aumentado"
+                              required
+                            />
+                            Aumentado
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKris5"
+                              value="Disminuido"
+                              required
+                            />
+                            Disminuido
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optKris5"
+                              value="Mantenido"
+                            />
+                            Mantenido
                           </label>
                         </div>
                       </div>

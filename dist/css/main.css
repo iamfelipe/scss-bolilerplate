@@ -76,38 +76,38 @@ h6, .h6 {
     h6, .h6 {
       font-size: 19.2px; } }
 
-.body, .invalid-feedback,
+.body, p, .custom-file-label,
+.form-control, input, select, textarea, .btn, .wizard a, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .invalid-feedback,
 .label,
-.control-label, p, .custom-file-label,
-.form-control, input, select, textarea, .btn, .wizard a, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark {
+.control-label {
   font-size: 16px;
   line-height: 1.5em;
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 24px; }
   @media (min-width: 992px) and (max-width: 1920px) {
-    .body, .invalid-feedback,
+    .body, p, .custom-file-label,
+    .form-control, input, select, textarea, .btn, .wizard a, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .invalid-feedback,
     .label,
-    .control-label, p, .custom-file-label,
-    .form-control, input, select, textarea, .btn, .wizard a, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark {
+    .control-label {
       font-size: calc( 16px + 0 * ( ( 100vw - 992px) / 928 )); } }
   @media (min-width: 1920px) {
-    .body, .invalid-feedback,
+    .body, p, .custom-file-label,
+    .form-control, input, select, textarea, .btn, .wizard a, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .invalid-feedback,
     .label,
-    .control-label, p, .custom-file-label,
-    .form-control, input, select, textarea, .btn, .wizard a, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark {
+    .control-label {
       font-size: 16px; } }
 
-.small {
+.small, span[id$="error"], .invalid-feedback {
   font-size: 13.33333333px;
   line-height: 1.5em;
   margin-top: 0;
   margin-bottom: 24px; }
   @media (min-width: 992px) and (max-width: 1920px) {
-    .small {
+    .small, span[id$="error"], .invalid-feedback {
       font-size: calc( 13.33333333px + 0 * ( ( 100vw - 992px) / 928 )); } }
   @media (min-width: 1920px) {
-    .small {
+    .small, span[id$="error"], .invalid-feedback {
       font-size: 13.33333333px; } }
 
 .caption {
@@ -6631,28 +6631,26 @@ a.text-dark:hover, a.text-dark:focus {
   margin: 0 2.5% 0.5em 2.5%;
   width: 65%; }
 
-.wizard > .content > .body, .wizard > .content > .invalid-feedback,
-.wizard > .content > .label,
-.wizard > .content > .control-label {
+.wizard > .content > .body {
   position: absolute;
   width: 100%;
   height: 100%; }
 
-.wizard > .content > .body ul, .wizard > .content > .invalid-feedback ul, .wizard > .content > .label ul, .wizard > .content > .control-label ul {
+.wizard > .content > .body ul {
   list-style: disc !important; }
 
-.wizard > .content > .body ul > li, .wizard > .content > .invalid-feedback ul > li, .wizard > .content > .label ul > li, .wizard > .content > .control-label ul > li {
+.wizard > .content > .body ul > li {
   display: list-item; }
 
-.wizard > .content > .body > iframe, .wizard > .content > .invalid-feedback > iframe, .wizard > .content > .label > iframe, .wizard > .content > .control-label > iframe {
+.wizard > .content > .body > iframe {
   border: 0 none;
   width: 100%;
   height: 100%; }
 
-.wizard > .content > .body input[type="checkbox"], .wizard > .content > .invalid-feedback input[type="checkbox"], .wizard > .content > .label input[type="checkbox"], .wizard > .content > .control-label input[type="checkbox"] {
+.wizard > .content > .body input[type="checkbox"] {
   display: inline-block; }
 
-.wizard > .content > .body input.error, .wizard > .content > .invalid-feedback input.error, .wizard > .content > .label input.error, .wizard > .content > .control-label input.error {
+.wizard > .content > .body input.error {
   background: #fbe3e4;
   border: 1px solid #fbc2c4;
   color: #8a1f11; }
@@ -6734,18 +6732,16 @@ a.text-dark:hover, a.text-dark:focus {
   border-top: 1px solid #bbb;
   padding-top: 20px; }
 
-.tabcontrol > .content > .body, .tabcontrol > .content > .invalid-feedback,
-.tabcontrol > .content > .label,
-.tabcontrol > .content > .control-label {
+.tabcontrol > .content > .body {
   position: absolute;
   width: 95%;
   height: 95%;
   padding: 2.5%; }
 
-.tabcontrol > .content > .body ul, .tabcontrol > .content > .invalid-feedback ul, .tabcontrol > .content > .label ul, .tabcontrol > .content > .control-label ul {
+.tabcontrol > .content > .body ul {
   list-style: disc !important; }
 
-.tabcontrol > .content > .body ul > li, .tabcontrol > .content > .invalid-feedback ul > li, .tabcontrol > .content > .label ul > li, .tabcontrol > .content > .control-label ul > li {
+.tabcontrol > .content > .body ul > li {
   display: list-item; }
 
 select.bs-select-hidden,
@@ -7482,7 +7478,9 @@ p + p {
     box-shadow: none; }
 
 .form-group {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column; }
   .form-group .btn-group {
     text-align: center; }
     .form-group .btn-group .btn, .form-group .btn-group .wizard a, .wizard .form-group .btn-group a {
@@ -7508,8 +7506,11 @@ p + p {
   display: block;
   color: #6c757d; }
 
+span[id$="error"],
 .invalid-feedback {
-  color: #dc3545; }
+  margin-bottom: 0;
+  color: #dc3545;
+  order: 1; }
 
 span[id$="error"] {
   display: none !important; }
@@ -7640,9 +7641,7 @@ span[id$="error"] {
     height: 100%; }
   .wizard > .content {
     overflow-y: auto; }
-    .wizard > .content > .body, .wizard > .content > .invalid-feedback,
-    .wizard > .content > .label,
-    .wizard > .content > .control-label {
+    .wizard > .content > .body {
       margin-bottom: 0; }
   .wizard > .steps ul {
     display: flex; }
@@ -7698,9 +7697,7 @@ span[id$="error"] {
     justify-content: flex-start;
     padding: 1.5rem 0;
     border-bottom: 0.0625rem solid #b0bec5; }
-  .c-card__body, .wizard > .content > .body, .wizard > .content > .invalid-feedback,
-  .wizard > .content > .label,
-  .wizard > .content > .control-label {
+  .c-card__body, .wizard > .content > .body {
     height: 100%;
     padding: 1.5rem;
     display: flex;
