@@ -2,16 +2,20 @@
 // ---------
 
 %label {
-  @extend .small;
+  @extend .body;
   text-align: center;
   display: block;
   color: gray("600");
-  text-transform: uppercase;
 }
 
+.invalid-feedback,
 .label,
 .control-label {
   @extend %label;
+}
+
+.invalid-feedback {
+  color: theme-color("danger");
 }
 
 .control-label {

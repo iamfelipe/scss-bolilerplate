@@ -7,7 +7,7 @@ class Form {
   }
   validateRadios(currentIndex) {
     const $currentFieldset = this.DOM.el.find(
-      ".body:eq(" + currentIndex + ") "
+      "fieldset.body:eq(" + currentIndex + ") "
     );
     const $radios = $currentFieldset.find("input:radio");
     // Make groups
@@ -33,7 +33,6 @@ class Form {
       if ($radioChecked.length === 0) {
         $radioGroup.addClass(classIsInvalid);
         $radioGroup.append(invalidFeedback);
-        console.log("not checked");
         checked = false;
       }
     });
@@ -59,7 +58,6 @@ class Form {
           if (currentIndex > newIndex) {
             return true;
           }
-          // console.log(this.validateRadios(currentIndex));
           return this.validateRadios(currentIndex);
           // Needed in some cases if the user went back (clean up)
           if (currentIndex < newIndex) {
@@ -84,6 +82,7 @@ class Form {
           }
         },
         onFinishing: (event, currentIndex) => {
+          return this.validateRadios(currentIndex);
           this.DOM.el.validate().settings.ignore = ":disabled";
           return this.DOM.el.valid();
         },

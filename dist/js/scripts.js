@@ -314,7 +314,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(Form, [{
         key: 'validateRadios',
         value: function validateRadios(currentIndex) {
-          var $currentFieldset = this.DOM.el.find(".body:eq(" + currentIndex + ") ");
+          var $currentFieldset = this.DOM.el.find("fieldset.body:eq(" + currentIndex + ") ");
           var $radios = $currentFieldset.find("input:radio");
           // Make groups
           var checked = true;
@@ -338,7 +338,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             if ($radioChecked.length === 0) {
               $radioGroup.addClass(classIsInvalid);
               $radioGroup.append(invalidFeedback);
-              console.log("not checked");
               checked = false;
             }
           });
@@ -367,7 +366,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               if (currentIndex > newIndex) {
                 return true;
               }
-              // console.log(this.validateRadios(currentIndex));
               return _this.validateRadios(currentIndex);
               // Needed in some cases if the user went back (clean up)
               if (currentIndex < newIndex) {
@@ -390,6 +388,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             },
             onFinishing: function onFinishing(event, currentIndex) {
+              return _this.validateRadios(currentIndex);
               _this.DOM.el.validate().settings.ignore = ":disabled";
               return _this.DOM.el.valid();
             },

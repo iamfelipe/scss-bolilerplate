@@ -369,7 +369,12 @@
               <form id="diagnostic-form" action="#" class="c-wizard">
                 <h3>Encuesta</h3>
                 <fieldset>
+                  <!--Heading-->
                   <legend>Preguntas Generales</legend>
+                  <!--Description-->
+                  <p class="body text-center text-primary">
+                    Para empezar responda las siguientes preguntas
+                  </p>
                   <!--Row-->
                   <div class="form-row justify-content-center">
                     <div class="col-auto">
@@ -395,10 +400,15 @@
                       </div>
                     </div>
                   </div>
+                  <!--Row-->
                   <div class="form-row justify-content-center">
                     <div class="col-6">
                       <div class="form-group form-group-radios">
-                        <label class="control-label">NIT</label>
+                        <label class="control-label"
+                          >Su compañía determina cuáles riesgos pueden mitigar,
+                          cuáles son aceptables y cuáles se pueden
+                          controlar?</label
+                        >
                         <div class="btn-group" data-toggle="buttons">
                           <label class="btn btn-outline-primary">
                             <input type="radio" name="optEncuesta2" required />
@@ -419,16 +429,34 @@
                 </fieldset>
                 <h3>Compañía</h3>
                 <fieldset>
+                  <!--Heading-->
                   <legend>
-                    Datos del contacto
+                    Enfoque Estratégico de la Compañía
                   </legend>
-                  <div class="row">
-                    <div class="col-12">
-                      <p class="small text-primary mb-1">
-                        *En el caso que usted no sea el gerente, director o jefe
-                        de logística de la compañía, diligencie los siguientes
-                        datos:
-                      </p>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-6">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >Su compañía determina cuáles riesgos pueden mitigar,
+                          cuáles son aceptables y cuáles se pueden
+                          controlar?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optCompania1" required />
+                            Si
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optCompania1" />
+                            No
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input type="radio" name="optCompania1" />
+                            No sé
+                          </label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </fieldset>
