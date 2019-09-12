@@ -360,6 +360,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             },
             headerTag: "h3",
             bodyTag: "fieldset",
+            titleTemplate: "#title#",
             transitionEffect: "slideLeft",
             onStepChanging: function onStepChanging(event, currentIndex, newIndex) {
               // Allways allow previous action even if the current form is not valid!

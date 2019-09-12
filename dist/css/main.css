@@ -6376,7 +6376,7 @@ textarea.form-control {
 .text-nowrap {
   white-space: nowrap !important; }
 
-.text-truncate {
+.text-truncate, .wizard > .steps ul a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
@@ -7647,29 +7647,39 @@ span[id$="error"] {
     display: flex; }
     .wizard > .steps ul li {
       flex-grow: 1; }
+      .wizard > .steps ul li:not(.current) + li a {
+        border-left-color: #b0bec5; }
       .wizard > .steps ul li.current a {
         cursor: initial;
         background-color: #ffdc5d;
-        border-color: #ffdc5d; }
+        border-color: #ffdc5d !important; }
       .wizard > .steps ul li.disabled {
         cursor: not-allowed; }
         .wizard > .steps ul li.disabled a {
-          pointer-events: none; }
+          pointer-events: none;
+          color: #8fccad; }
     .wizard > .steps ul a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
       margin-bottom: 0;
       border-radius: 0;
       background-color: rgba(255, 255, 255, 0.9);
       text-transform: initial;
       color: #008c44;
-      border-color: #b0bec5; }
+      border-color: transparent; }
+      .wizard > .steps ul a i.material-icons {
+        font-size: 1em;
+        margin-right: 0.5em;
+        transform: scale(1.5); }
   .wizard .actions ul {
     display: flex;
     justify-content: flex-end;
     padding: 1.5rem;
     width: 100%;
     background-color: #008c44; }
-  .wizard .actions li:last-child {
+  .wizard .actions li[aria-hidden="false"] {
     margin-left: auto; }
   .wizard .actions li.disabled {
     display: none; }

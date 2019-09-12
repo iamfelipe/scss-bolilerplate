@@ -29,28 +29,43 @@ $c-wizard: "wizard";
       li {
         flex-grow: 1;
 
+        &:not(.current) + li a {
+          border-left-color: gray("200");
+        }
+
         &.current a {
           cursor: initial;
           background-color: theme-color("secondary");
-          border-color: theme-color("secondary");
+          border-color: theme-color("secondary") !important;
         }
 
         &.disabled {
           cursor: not-allowed;
           a {
             pointer-events: none;
+            color: theme-color-level("primary", -7);
           }
         }
       }
 
       a {
+        @extend .text-truncate;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         margin-bottom: 0;
         border-radius: 0;
         background-color: $background-opacity;
         text-transform: initial;
         color: theme-color();
-        border-color: gray("200");
+        border-color: transparent;
+
+        i.material-icons {
+          font-size: 1em;
+          margin-right: 0.5em;
+          transform: scale(1.5);
+        }
       }
     }
   }
@@ -65,7 +80,7 @@ $c-wizard: "wizard";
     }
 
     li {
-      &:last-child {
+      &[aria-hidden="false"] {
         margin-left: auto;
       }
 

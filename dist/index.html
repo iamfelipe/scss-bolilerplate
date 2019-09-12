@@ -11,7 +11,28 @@
       <!--Component Header-->
       <header class="l-main__header l-header">
         <div class="container">
-          <p>Logo</p>
+          <div class="row align-items-center justify-content-between">
+            <div class="col-auto">
+              <a href="#" class="text-white">Logo</a>
+            </div>
+            <div class="col-auto ml-auto">
+              <a href="#" class="text-secondary"
+                ><i class="material-icons">
+                  edit
+                </i></a
+              >
+            </div>
+            <div class="col-auto">
+              <a href="#" class="text-secondary"
+                ><i class="material-icons">
+                  remove_red_eye
+                </i></a
+              >
+            </div>
+            <div class="col-auto">
+              <a href="#" class="btn btn-secondary mb-0">Salir</a>
+            </div>
+          </div>
         </div>
       </header>
       <!--End. Component Header-->
@@ -368,7 +389,7 @@
             <div class="p-form__container h-100">
               <form id="diagnostic-form" action="#" class="c-wizard">
                 <!--1. Encuesta-->
-                <h3>Encuesta</h3>
+                <h3><i class="material-icons"> book </i>Encuesta</h3>
                 <fieldset>
                   <!--Heading-->
                   <legend>Preguntas Generales</legend>
@@ -482,7 +503,7 @@
                   </div>
                 </fieldset>
                 <!--2. Compañía-->
-                <h3>Compañía</h3>
+                <h3><i class="material-icons"> account_balance </i>Compañía</h3>
                 <fieldset>
                   <!--Heading-->
                   <legend>
@@ -514,7 +535,7 @@
                   </div>
                 </fieldset>
                 <!--3. Cadena-->
-                <h3>Cadena</h3>
+                <h3><i class="material-icons"> link </i>Cadena</h3>
                 <fieldset>
                   <!--Heading-->
                   <legend>
@@ -547,7 +568,7 @@
                   </div>
                 </fieldset>
                 <!--4. Tipo-->
-                <h3>Tipo</h3>
+                <h3><i class="material-icons"> link </i>Tipo</h3>
                 <fieldset>
                   <!--Heading-->
                   <legend>
@@ -558,7 +579,7 @@
                   >
                 </fieldset>
                 <!--5. KPI's-->
-                <h3>KPS's</h3>
+                <h3><i class="material-icons"> search </i>KPS's</h3>
                 <fieldset>
                   <!--Heading-->
                   <legend>
@@ -835,7 +856,9 @@
                   </div>
                 </fieldset>
                 <!--6. KRI's-->
-                <h3>KRI's</h3>
+                <h3>
+                  <i class="material-icons"> youtube_searched_for </i>KRI's
+                </h3>
                 <fieldset>
                   <!--Heading-->
                   <legend>
@@ -1057,7 +1080,9 @@
                   </div>
                 </fieldset>
                 <!--7. Aguas arriba-->
-                <h3>Aguas arriba</h3>
+                <h3>
+                  <i class="material-icons"> arrow_upward </i>Aguas arriba
+                </h3>
                 <fieldset>
                   <!--Heading-->
                   <legend>
@@ -1174,6 +1199,575 @@
                             <input
                               type="radio"
                               name="optAguasarriba3"
+                              value="No se"
+                            />
+                            No sé
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <!--8. Proceso-->
+                <h3><i class="material-icons"> refresh </i>Proceso</h3>
+                <fieldset>
+                  <!--Heading-->
+                  <legend>
+                    Proceso en planta de producción
+                  </legend>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12 col-md-7">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Se ejecutan varios turnos en su planta?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso1"
+                              value="SI"
+                              required
+                            />
+                            SI
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso1"
+                              value="No"
+                              required
+                            />
+                            No
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso1"
+                              value="No se"
+                            />
+                            No sé
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12 col-md-7">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Se ejecuta un proceso de una sola línea en su
+                          planta?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso2"
+                              value="SI"
+                              required
+                            />
+                            SI
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso2"
+                              value="No"
+                              required
+                            />
+                            No
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso2"
+                              value="No se"
+                            />
+                            No sé
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12 col-md-7">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Los reemplazos o repuestos para sus equipos más
+                          críticos se consiguen fácilmente?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso3"
+                              value="SI"
+                              required
+                            />
+                            SI
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso3"
+                              value="No"
+                              required
+                            />
+                            No
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso3"
+                              value="No se"
+                            />
+                            No sé
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12 col-md-7">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Cuánto se afectaría su empresa sí su equipo más
+                          crítico presenta una avería?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso4"
+                              value="Aceptación total"
+                              required
+                            />
+                            Aceptación total
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso4"
+                              value="Afectación parcial"
+                              required
+                            />
+                            Afectación parcial
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso4"
+                              value="Afectación mínima"
+                            />
+                            Afectación mínima
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12 col-md-7">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Ha identificado formalmente a los empleados que son
+                          más críticos para sus operacionales
+                          comerciales?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso5"
+                              value="SI"
+                              required
+                            />
+                            SI
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso5"
+                              value="No"
+                              required
+                            />
+                            No
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso5"
+                              value="No sé"
+                            />
+                            No sé
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12 col-md-7">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Tiene políticas y procedimiento para proteger sus
+                          datos, la propiedad intelectual y los equipos críticos
+                          de daños y/ averías?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso6"
+                              value="SI"
+                              required
+                            />
+                            SI
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso6"
+                              value="No"
+                              required
+                            />
+                            No
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso6"
+                              value="No se"
+                            />
+                            No sé
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12 col-md-7">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Realiza rutinas formales de mantenimiento y
+                          reparación de equipos?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso7"
+                              value="SI"
+                              required
+                            />
+                            SI
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso7"
+                              value="No"
+                              required
+                            />
+                            No
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optProceso7"
+                              value="No se"
+                            />
+                            No sé
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <!--9. Aguas abajo-->
+                <h3>
+                  <i class="material-icons"> arrow_downward </i>Aguas abajo
+                </h3>
+                <fieldset>
+                  <!--Heading-->
+                  <legend>
+                    Proceso de aguas abajos
+                  </legend>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12 col-md-7">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Un solo cliente representa el 25% o más de los
+                          ingresos del negocio?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo1"
+                              value="SI"
+                              required
+                            />
+                            SI
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo1"
+                              value="No"
+                              required
+                            />
+                            No
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo1"
+                              value="No se"
+                            />
+                            No sé
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12 col-md-7">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Sus ventas son 25% o más de clientes
+                          nacionales?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo2"
+                              value="SI"
+                              required
+                            />
+                            SI
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo2"
+                              value="No"
+                              required
+                            />
+                            No
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo2"
+                              value="No se"
+                            />
+                            No sé
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12 col-md-7">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Tiene sus principales clientes ubicados en una zona
+                          propensa a condiciones metereológicas adversas,
+                          desastres naturales o conflictos políticos?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo3"
+                              value="SI"
+                              required
+                            />
+                            SI
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo3"
+                              value="No"
+                              required
+                            />
+                            No
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo3"
+                              value="No se"
+                            />
+                            No sé
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12 col-md-7">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Tiene un solo centro de distribución o almacen desde
+                          el que se nevía todos sus productos?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo4"
+                              value="SI"
+                              required
+                            />
+                            SI
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo4"
+                              value="No"
+                              required
+                            />
+                            No
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo4"
+                              value="No se"
+                            />
+                            No sé
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12 col-md-7">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Tiene un plan de seguridad de
+                          transporte/logística?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo5"
+                              value="SI"
+                              required
+                            />
+                            SI
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo5"
+                              value="No"
+                              required
+                            />
+                            No
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo5"
+                              value="No se"
+                            />
+                            No sé
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12 col-md-7">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Tiene políticas y procedimientos bien documentados
+                          para verificar al entregar de productos que incluya la
+                          posibilidad de contactar directamente a los clientes y
+                          un plan de respuestos?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo6"
+                              value="SI"
+                              required
+                            />
+                            SI
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo6"
+                              value="No"
+                              required
+                            />
+                            No
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo6"
+                              value="No se"
+                            />
+                            No sé
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12 col-md-7">
+                      <div class="form-group form-group-radios">
+                        <label class="control-label"
+                          >¿Revisa periódicamente las políticas de seguro de su
+                          agente o aseguradora para garantizar que sus riesgos
+                          están cubiertos de manera adecuada?</label
+                        >
+                        <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo7"
+                              value="SI"
+                              required
+                            />
+                            SI
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo7"
+                              value="No"
+                              required
+                            />
+                            No
+                          </label>
+                          <label class="btn btn-outline-primary">
+                            <input
+                              type="radio"
+                              name="optAguasabajo7"
                               value="No se"
                             />
                             No sé
