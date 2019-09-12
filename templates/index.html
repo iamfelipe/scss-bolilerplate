@@ -148,6 +148,8 @@
                           <a
                             href="#"
                             class="control-label text-right text-primary"
+                            data-toggle="modal"
+                            data-target="#modalRecoveryPass"
                           >
                             Olvidé mi contraseña
                           </a>
@@ -189,7 +191,74 @@
                     >
                   </form>
                   <!--End. Form-->
-                  <!--End. Component Login-->
+                  <!--Modal Recovery pass-->
+                  <div
+                    class="c-modal modal fade"
+                    id="modalRecoveryPass"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="modalRecoveryPassTitle"
+                    aria-hidden="true"
+                  >
+                    <div
+                      class="modal-dialog modal-dialog-centered"
+                      role="document"
+                    >
+                      <div class="modal-content">
+                        <div class="modal-body">
+                          <form action="">
+                            <div class="form-group w-75 mx-auto">
+                              <label
+                                for="recovrypassMail"
+                                class="control-label text-white text-center mb-4"
+                                >Ingrese su e-mail y le enviaremos un
+                                enlace</label
+                              >
+                              <input
+                                id="recovrypassMail"
+                                name="recovrypassMail"
+                                type="email"
+                                class="form-control"
+                                placeholder="Ej. destilero@novartis.com"
+                              />
+                            </div>
+                            <button
+                              type="submit"
+                              class="btn btn-secondary mb-0"
+                              data-toggle="modal"
+                              data-target="#modalRecoveryPassSuccess"
+                              data-dismiss="modal"
+                            >
+                              Enviar
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--End. Modal Recovery pass-->
+                  <!--Modal Recovery pass success-->
+                  <div
+                    class="c-modal modal fade"
+                    id="modalRecoveryPassSuccess"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="modalRecoveryPassSuccessTitle"
+                    aria-hidden="true"
+                  >
+                    <div
+                      class="modal-dialog modal-dialog-centered"
+                      role="document"
+                    >
+                      <div class="modal-content">
+                        <div class="modal-body">
+                          Hemos enviado un enlace a su correo electrónico,<br />
+                          por favor revíselo
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--End. Modal Recovery pass success-->
                 </div>
               </div>
             </div>
