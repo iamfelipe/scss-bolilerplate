@@ -13,7 +13,7 @@ h1, .h1 {
 
 h2, .h2 {
   font-size: 39.81312px;
-  line-height: 0.75352045em;
+  line-height: 1.20563272em;
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 24px; }
@@ -77,7 +77,7 @@ h6, .h6 {
       font-size: 19.2px; } }
 
 .body, p, .custom-file-label,
-.form-control, input, select, textarea, .btn, .wizard a, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .invalid-feedback,
+.form-control, input, select, textarea, .btn, .wizard a, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-intro__header, .c-intro__body, .invalid-feedback,
 .label,
 .control-label {
   font-size: 16px;
@@ -87,13 +87,13 @@ h6, .h6 {
   margin-bottom: 24px; }
   @media (min-width: 992px) and (max-width: 1920px) {
     .body, p, .custom-file-label,
-    .form-control, input, select, textarea, .btn, .wizard a, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .invalid-feedback,
+    .form-control, input, select, textarea, .btn, .wizard a, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-intro__header, .c-intro__body, .invalid-feedback,
     .label,
     .control-label {
       font-size: calc( 16px + 0 * ( ( 100vw - 992px) / 928 )); } }
   @media (min-width: 1920px) {
     .body, p, .custom-file-label,
-    .form-control, input, select, textarea, .btn, .wizard a, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .invalid-feedback,
+    .form-control, input, select, textarea, .btn, .wizard a, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-intro__header, .c-intro__body, .invalid-feedback,
     .label,
     .control-label {
       font-size: 16px; } }
@@ -7618,13 +7618,13 @@ p + p {
   margin-bottom: 1.5rem; }
 
 .custom-file-label,
-.form-control, input, select, textarea, .btn, .wizard a, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark {
+.form-control, input, select, textarea, .btn, .wizard a, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-intro__header, .c-intro__body {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; }
   .custom-file-label:hover,
-  .form-control:hover, input:hover, select:hover, textarea:hover, .btn:hover, .wizard a:hover, .btn-blue:hover, .btn-indigo:hover, .btn-purple:hover, .btn-pink:hover, .btn-red:hover, .btn-orange:hover, .btn-yellow:hover, .btn-green:hover, .btn-teal:hover, .btn-cyan:hover, .btn-white:hover, .btn-gray:hover, .btn-gray-dark:hover, .custom-file-label:focus,
-  .form-control:focus, input:focus, select:focus, textarea:focus, .btn:focus, .wizard a:focus, .btn-blue:focus, .btn-indigo:focus, .btn-purple:focus, .btn-pink:focus, .btn-red:focus, .btn-orange:focus, .btn-yellow:focus, .btn-green:focus, .btn-teal:focus, .btn-cyan:focus, .btn-white:focus, .btn-gray:focus, .btn-gray-dark:focus {
+  .form-control:hover, input:hover, select:hover, textarea:hover, .btn:hover, .wizard a:hover, .btn-blue:hover, .btn-indigo:hover, .btn-purple:hover, .btn-pink:hover, .btn-red:hover, .btn-orange:hover, .btn-yellow:hover, .btn-green:hover, .btn-teal:hover, .btn-cyan:hover, .btn-white:hover, .btn-gray:hover, .btn-gray-dark:hover, .c-intro__header:hover, .c-intro__body:hover, .custom-file-label:focus,
+  .form-control:focus, input:focus, select:focus, textarea:focus, .btn:focus, .wizard a:focus, .btn-blue:focus, .btn-indigo:focus, .btn-purple:focus, .btn-pink:focus, .btn-red:focus, .btn-orange:focus, .btn-yellow:focus, .btn-green:focus, .btn-teal:focus, .btn-cyan:focus, .btn-white:focus, .btn-gray:focus, .btn-gray-dark:focus, .c-intro__header:focus, .c-intro__body:focus {
     outline: none;
     box-shadow: none; }
 
@@ -7873,6 +7873,43 @@ span[id$="error"] {
   padding-top: 0; }
   .modal .modal-footer .btn, .modal .modal-footer .wizard a, .wizard .modal .modal-footer a {
     margin-bottom: 0; }
+
+.c-intro {
+  counter-reset: intro; }
+  .c-intro .custom-file-label,
+  .c-intro .form-control, .c-intro input, .c-intro select, .c-intro textarea, .c-intro .btn, .c-intro .wizard a, .wizard .c-intro a, .c-intro .btn-blue, .c-intro .btn-indigo, .c-intro .btn-purple, .c-intro .btn-pink, .c-intro .btn-red, .c-intro .btn-orange, .c-intro .btn-yellow, .c-intro .btn-green, .c-intro .btn-teal, .c-intro .btn-cyan, .c-intro .btn-white, .c-intro .btn-gray, .c-intro .btn-gray-dark, .c-intro .c-intro__header, .c-intro .c-intro__body {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    margin-bottom: 0.5em; }
+  .c-intro__body ul {
+    padding-left: 3rem;
+    margin-bottom: 0; }
+    .c-intro__body ul li {
+      padding-left: 0;
+      position: relative;
+      color: #fff;
+      list-style: none;
+      margin-bottom: 1.5em; }
+      .c-intro__body ul li::before, .c-intro__body ul li::after {
+        position: absolute;
+        left: -3rem;
+        top: 0;
+        padding: 0.25em;
+        width: 1.5rem;
+        height: 2rem; }
+      .c-intro__body ul li::after {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        counter-increment: intro;
+        content: counter(intro);
+        color: #2c3637;
+        text-align: center; }
+      .c-intro__body ul li::before {
+        content: "";
+        background-color: #ffdc5d;
+        transform: skewX(-20deg); }
+      .c-intro__body ul li p {
+        margin-bottom: 0; }
 
 .l-header {
   background-color: #008c44; }

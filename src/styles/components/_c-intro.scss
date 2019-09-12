@@ -1,0 +1,63 @@
+// Component intro
+// ---------
+
+$c-intro: "c-intro";
+.#{$c-intro} {
+  counter-reset: intro;
+  %box {
+    background: rgba($black, 0.5);
+    padding: $grid-gutter-width;
+    margin-bottom: em(8);
+  }
+
+  @include e(header) {
+    @extend %box;
+  }
+
+  @include e(body) {
+    @extend %box;
+
+    ul {
+      $bullet-size: 1rem;
+      padding-left: $bullet-size * 3;
+      margin-bottom: 0;
+
+      li {
+        padding-left: 0;
+        position: relative;
+        color: $white;
+        list-style: none;
+        margin-bottom: 1.5em;
+
+        &::before,
+        &::after {
+          position: absolute;
+          left: -$bullet-size * 3;
+          top: 0;
+          padding: em(4);
+          width: $bullet-size * 1.5;
+          height: $bullet-size * 2;
+        }
+
+        &::after {
+          font-size: $bullet-size * 1.5;
+          margin-bottom: 0;
+          counter-increment: intro;
+          content: counter(intro);
+          color: $body-color;
+          text-align: center;
+        }
+
+        &::before {
+          content: "";
+          background-color: theme-color("secondary");
+          transform: skewX(-20deg);
+        }
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
