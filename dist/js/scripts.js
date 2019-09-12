@@ -316,10 +316,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function validateRadios(currentIndex) {
           var $currentFieldset = this.DOM.el.find("fieldset.body:eq(" + currentIndex + ") ");
           var $radios = $currentFieldset.find("input:radio");
-          var checked = void 0;
-          if ($radios.length === 0) {
-            checked = true;
-          } else {
+          var checked = true;
+          if ($radios.length !== 0) {
             // Make groups
             checked = true;
             var names = [];

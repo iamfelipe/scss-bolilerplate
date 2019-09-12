@@ -10,10 +10,8 @@ class Form {
       "fieldset.body:eq(" + currentIndex + ") "
     );
     const $radios = $currentFieldset.find("input:radio");
-    let checked;
-    if ($radios.length === 0) {
-      checked = true;
-    } else {
+    let checked = true;
+    if ($radios.length !== 0) {
       // Make groups
       checked = true;
       const names = [];
