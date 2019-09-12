@@ -115,12 +115,82 @@
         </div>
         <!--End. Page Intro-->
         <!--Page Login-->
+        <div class="p-auth h-100 -d-none">
+          <div class="container h-100">
+            <div class="row h-100">
+              <div class="col-12 col-md-6">
+                <div class="p-auth__container">
+                  <h2 class="h1 text-primary">
+                    Ingresa a la herramienta de autogestión de riesgos
+                  </h2>
+                  <!--Form-->
+                  <form action="" id="loginForm" class="c-form w-100">
+                    <!--Row-->
+                    <div class="form-group">
+                      <label for="loginNIT" class="control-label">NIT</label>
+                      <input
+                        id="loginNIT"
+                        name="loginNIT"
+                        type="number"
+                        class="form-control"
+                        placeholder="Ej. 12345678"
+                      />
+                    </div>
+                    <!--Row-->
+                    <div class="form-group">
+                      <label for="loginPass" class="control-label"
+                        >Contraseña</label
+                      >
+                      <input
+                        id="loginPass"
+                        name="loginPass"
+                        type="password"
+                        class="form-control"
+                        autocomplete="false"
+                        required
+                      />
+                    </div>
+                    <!--Row-->
+                    <div class="form-group">
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          name="loginTerms"
+                          value="accepted"
+                          id="loginTerms"
+                        />
+                        <label class="custom-control-label" for="loginTerms"
+                          >Acepto
+                          <a href="#" class="text-primary"
+                            >términos y condiciones</a
+                          ></label
+                        >
+                      </div>
+                    </div>
+                    <!--Row-->
+                    <button type="submit" class="btn btn-block btn-primary">
+                      Ingresar
+                    </button>
+                    <a href="#" class="text-primary"
+                      >¿No tiene cuenta?, regístrese aquí</a
+                    >
+                  </form>
+                  <!--End. Form-->
+                  <!--End. Component Login-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End. Page Login-->
+        <!--Page sign up-->
         <div class="p-auth h-100 d-none">
           <div class="container h-100">
             <div class="row h-100">
               <div class="col-12 col-md-6">
                 <div class="p-auth__container">
-                  <!--Component Login-->
+                  <!--Component sign up-->
                   <div class="wizard__header">
                     Paso 1 de 2
                   </div>
@@ -135,12 +205,12 @@
                         <!--NIT-->
                         <div class="col-6">
                           <div class="form-group">
-                            <label for="LoginNIT" class="control-label"
+                            <label for="signupNIT" class="control-label"
                               >NIT</label
                             >
                             <input
-                              id="LoginNIT"
-                              name="LoginNIT"
+                              id="signupNIT"
+                              name="signupNIT"
                               type="number"
                               class="form-control required"
                               placeholder="Ej. 12345678"
@@ -150,12 +220,12 @@
                         <!--CIUU-->
                         <div class="col-6">
                           <div class="form-group">
-                            <label for="loginCIUU" class="control-label"
+                            <label for="signupCIUU" class="control-label"
                               >CIUU</label
                             >
                             <select
-                              id="loginCIUU"
-                              name="loginCIUU"
+                              id="signupCIUU"
+                              name="signupCIUU"
                               class="custom-select required"
                             >
                               <option value="" selected disabled
@@ -172,14 +242,14 @@
                         <!--Company-->
                         <div class="col-6">
                           <div class="form-group">
-                            <label for="loginCompany" class="control-label"
+                            <label for="signupCompany" class="control-label"
                               >Compañía</label
                             >
                             <input
                               type="text"
                               class="form-control required"
-                              name="loginCompany"
-                              id="loginCompany"
+                              name="signupCompany"
+                              id="signupCompany"
                               placeholder="Ej. Novartis Colombia S.A."
                               required
                             />
@@ -188,12 +258,12 @@
                         <!--Direction-->
                         <div class="col-6">
                           <div class="form-group">
-                            <label for="loginAddress" class="control-label"
+                            <label for="signupAddress" class="control-label"
                               >Dirección</label
                             >
                             <select
-                              id="loginAddress"
-                              name="loginAddress"
+                              id="signupAddress"
+                              name="signupAddress"
                               class="custom-select required"
                               title="Selecciona Dirección"
                               required
@@ -212,12 +282,12 @@
                         <!--Sector-->
                         <div class="col-6">
                           <div class="form-group">
-                            <label for="loginSector" class="control-label"
+                            <label for="signupSector" class="control-label"
                               >Sector</label
                             >
                             <select
-                              id="loginSector"
-                              name="loginSector"
+                              id="signupSector"
+                              name="signupSector"
                               class="custom-select"
                               title="Selecciona Sector"
                               required
@@ -233,12 +303,12 @@
                         <!--Size-->
                         <div class="col-6">
                           <div class="form-group">
-                            <label for="loginSize" class="control-label"
+                            <label for="signupSize" class="control-label"
                               >Tamaño</label
                             >
                             <select
-                              id="loginSize"
-                              name="loginSize"
+                              id="signupSize"
+                              name="signupSize"
                               class="custom-select"
                               title="Selecciona Tamaño"
                               required
@@ -257,12 +327,12 @@
                         <!--State-->
                         <div class="col-6">
                           <div class="form-group">
-                            <label for="loginState" class="control-label"
+                            <label for="signupState" class="control-label"
                               >Departamento</label
                             >
                             <select
-                              id="loginState"
-                              name="loginState"
+                              id="signupState"
+                              name="signupState"
                               class="custom-select"
                               title="Selecciona Departamento"
                               required
@@ -278,12 +348,14 @@
                         <!--Municipality-->
                         <div class="col-6">
                           <div class="form-group">
-                            <label for="loginMunicipality" class="control-label"
+                            <label
+                              for="signupMunicipality"
+                              class="control-label"
                               >Municipio</label
                             >
                             <select
-                              id="loginMunicipality"
-                              name="loginMunicipality"
+                              id="signupMunicipality"
+                              name="signupMunicipality"
                               class="custom-select"
                               title="Selecciona Municipio"
                               required
@@ -308,14 +380,14 @@
                         <!--Name-->
                         <div class="col-6">
                           <div class="form-group">
-                            <label for="loginName" class="control-label"
+                            <label for="signupName" class="control-label"
                               >Nombre del contacto</label
                             >
                             <input
                               type="text"
                               class="form-control required"
-                              id="loginName"
-                              name="loginName"
+                              id="signupName"
+                              name="signupName"
                               placeholder="Ej. José Cuervo"
                               required
                             />
@@ -324,14 +396,14 @@
                         <!--Charge-->
                         <div class="col-6">
                           <div class="form-group">
-                            <label for="loginCharge" class="control-label"
+                            <label for="signupCharge" class="control-label"
                               >Cargo</label
                             >
                             <input
                               type="text"
                               class="form-control required"
-                              name="loginCharge"
-                              id="loginCharge"
+                              name="signupCharge"
+                              id="signupCharge"
                               placeholder="Ej. Jefe"
                               required
                             />
@@ -343,14 +415,14 @@
                         <!--Phone-->
                         <div class="col-6">
                           <div class="form-group">
-                            <label for="loginPhone" class="control-label"
+                            <label for="signupPhone" class="control-label"
                               >Teléfono</label
                             >
                             <input
                               type="number"
                               class="form-control required"
-                              id="loginPhone"
-                              name="loginPhone"
+                              id="signupPhone"
+                              name="signupPhone"
                               placeholder="Ej. 1234567"
                               required
                             />
@@ -359,14 +431,14 @@
                         <!--Mail-->
                         <div class="col-6">
                           <div class="form-group">
-                            <label for="loginMail" class="control-label"
+                            <label for="signupMail" class="control-label"
                               >Correo</label
                             >
                             <input
                               type="email"
                               class="form-control required"
-                              id="loginMail"
-                              name="loginMail"
+                              id="signupMail"
+                              name="signupMail"
                               placeholder="Ej. jose@mail.com"
                               required
                             />
@@ -387,15 +459,15 @@
                         <!--Boss-->
                         <div class="col-6">
                           <div class="form-group">
-                            <label for="loginBoss" class="control-label"
+                            <label for="signupBoss" class="control-label"
                               >Nombre del gerente, director o jefe de
                               logística</label
                             >
                             <input
                               type="number"
                               class="form-control required"
-                              id="loginBoss"
-                              name="loginBoss"
+                              id="signupBoss"
+                              name="signupBoss"
                               placeholder=""
                               required
                             />
@@ -404,14 +476,14 @@
                         <!--Mail-->
                         <div class="col-6">
                           <div class="form-group">
-                            <label for="loginBossMail" class="control-label"
+                            <label for="signupBossMail" class="control-label"
                               >Correo</label
                             >
                             <input
                               type="email"
                               class="form-control required"
-                              id="loginBossMail"
-                              name="loginBossMail"
+                              id="signupBossMail"
+                              name="signupBossMail"
                               placeholder=""
                               required
                             />
@@ -420,13 +492,13 @@
                       </div>
                     </fieldset>
                   </form>
-                  <!--End. Component Login-->
+                  <!--End. Component sign up-->
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!--End. Page Login-->
+        <!--End. Page sign up-->
         <!--Page Signup Successful-->
         <div class="p-signup_success d-none">
           <div class="p-signup_success__container">
@@ -461,7 +533,7 @@
         </div>
         <!--End. Page Signup Successful-->
         <!--Page Form-->
-        <div class="p-form h-100 py-4 -d-none">
+        <div class="p-form h-100 py-4 d-none">
           <div class="container h-100">
             <div class="p-form__container h-100">
               <!--Form-->

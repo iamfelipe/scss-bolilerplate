@@ -21,8 +21,22 @@ $(document).ready(function() {
   bsCustomFileInput.init();
 
   // Validate
+  const $loginForm = $("#loginForm");
   const $diagnosticForm = $("#diagnostic-form");
   const $signupForm = $("#signup-form");
+
+  $loginForm.validate({
+    rules: {
+      loginTerms: {
+        required: true
+      }
+    },
+    messages: {
+      terms: {
+        required: "check the checbox"
+      }
+    }
+  });
 
   const forms = [$diagnosticForm, $signupForm];
 

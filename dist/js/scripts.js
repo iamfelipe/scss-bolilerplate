@@ -466,8 +466,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       bs_custom_file_input__WEBPACK_IMPORTED_MODULE_0___default.a.init();
 
       // Validate
+      var $loginForm = $("#loginForm");
       var $diagnosticForm = $("#diagnostic-form");
       var $signupForm = $("#signup-form");
+
+      $loginForm.validate({
+        rules: {
+          loginTerms: {
+            required: true
+          }
+        },
+        messages: {
+          terms: {
+            required: "check the checbox"
+          }
+        }
+      });
 
       var forms = [$diagnosticForm, $signupForm];
 

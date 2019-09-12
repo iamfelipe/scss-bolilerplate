@@ -18,6 +18,11 @@
     height: 100%;
   }
 
+  .control-label {
+    text-align: left;
+    margin-bottom: em(8);
+  }
+
   @include e(container) {
     padding: $grid-gutter-width;
     display: flex;

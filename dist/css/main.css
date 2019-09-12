@@ -7945,6 +7945,9 @@ span[id$="error"] {
     background-color: rgba(255, 255, 255, 0.9);
     width: 50vw;
     height: 100%; }
+  .p-auth .control-label {
+    text-align: left;
+    margin-bottom: 0.5em; }
   .p-auth__container {
     padding: 1.5rem;
     display: flex;
