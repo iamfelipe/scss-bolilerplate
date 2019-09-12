@@ -74,7 +74,7 @@
       <!--End. Component Header-->
       <article class="l-main__content">
         <!--Page Intro-->
-        <div class="p-intro h-100 -d-none">
+        <div class="p-intro h-100 d-none">
           <div class="container h-100">
             <div class="row h-100 align-items-center">
               <div class="col-lg-6">
@@ -115,7 +115,7 @@
         </div>
         <!--End. Page Intro-->
         <!--Page Login-->
-        <div class="p-auth h-100 d-none">
+        <div class="p-auth h-100 -d-none">
           <div class="container h-100">
             <div class="row h-100">
               <div class="col-12 col-md-6">
@@ -1857,38 +1857,38 @@
                 </fieldset>
               </form>
               <!--End. Form-->
-              <!--Modal diagnostic error-->
-              <div
-                class="c-modal modal fade"
-                id="diagnosticFormError"
-                tabindex="-1"
-                role="dialog"
-                aria-labelledby="diagnosticFormErrorTitle"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                    <div class="modal-body">
-                      Por favor responda las preguntas para poder continuar.
-                    </div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-secondary mx-auto"
-                        data-dismiss="modal"
-                      >
-                        Entendido
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--End. Modal diagnostic error-->
             </div>
           </div>
         </div>
         <!--End. Page Form-->
       </article>
+      <!--Modal diagnostic error-->
+      <div
+        class="c-modal modal fade"
+        id="modalFormError"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modalFormErrorTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              Por favor llena todos los campos para poder continuar.
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary mx-auto"
+                data-dismiss="modal"
+              >
+                Entendido
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End. Modal diagnostic error-->
     </main>
     <!--jQuery-->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>

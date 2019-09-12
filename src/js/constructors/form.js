@@ -10,32 +10,37 @@ class Form {
       "fieldset.body:eq(" + currentIndex + ") "
     );
     const $radios = $currentFieldset.find("input:radio");
-    // Make groups
-    let checked = true;
-    const names = [];
-    $radios.each(function() {
-      const radioName = $(this).attr("name");
-      if ($.inArray(radioName, names) === -1) names.push(radioName);
-    });
+    let checked;
+    if ($radios.length === 0) {
+      checked = true;
+    } else {
+      // Make groups
+      checked = true;
+      const names = [];
+      $radios.each(function() {
+        const radioName = $(this).attr("name");
+        if ($.inArray(radioName, names) === -1) names.push(radioName);
+      });
 
-    // Do validation for each group
-    $.each(names, (i, name) => {
-      const $radio = $('input[name="' + name + '"]');
-      const $radioGroup = $radio.closest(".form-group");
-      const $radioChecked = $('input[name="' + name + '"]:checked');
-      const classIsInvalid = "is-invalid";
-      const invalidFeedback =
-        '<span class="invalid-feedback d-block">Campo requerido</span>';
+      // Do validation for each group
+      $.each(names, (i, name) => {
+        const $radio = $('input[name="' + name + '"]');
+        const $radioGroup = $radio.closest(".form-group");
+        const $radioChecked = $('input[name="' + name + '"]:checked');
+        const classIsInvalid = "is-invalid";
+        const invalidFeedback =
+          '<span class="invalid-feedback d-block">Campo requerido</span>';
 
-      $radioGroup.removeClass(classIsInvalid);
-      $radioGroup.children("span.invalid-feedback").remove();
+        $radioGroup.removeClass(classIsInvalid);
+        $radioGroup.children("span.invalid-feedback").remove();
 
-      if ($radioChecked.length === 0) {
-        $radioGroup.addClass(classIsInvalid);
-        $radioGroup.append(invalidFeedback);
-        checked = false;
-      }
-    });
+        if ($radioChecked.length === 0) {
+          $radioGroup.addClass(classIsInvalid);
+          $radioGroup.append(invalidFeedback);
+          checked = false;
+        }
+      });
+    }
     return checked;
   }
   init() {
@@ -60,7 +65,9 @@ class Form {
             if (currentIndex > newIndex) {
               return true;
             }
-            return this.validateRadios(currentIndex);
+            if (!this.validateRadios(currentIndex)) {
+              return;
+            }
             // Needed in some cases if the user went back (clean up)
             if (currentIndex < newIndex) {
               // To remove error styles
@@ -77,7 +84,7 @@ class Form {
           if (openModal(event, currentIndex, newIndex)) {
             return true;
           } else {
-            $("#diagnosticFormError").modal();
+            $("#modalFormError").modal();
             return false;
           }
         },
