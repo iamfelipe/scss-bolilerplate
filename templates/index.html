@@ -73,6 +73,97 @@
       <!--End. Modal confirmation logout-->
       <!--End. Component Header-->
       <article class="l-main__content">
+        <!--Dashboard-->
+        <div class="p-dashboard h100 d-none">
+          <div class="container py-4">
+            <div class="c-card">
+              <div class="c-card__header px-4 mb-0">
+                <i class="material-icons"> remove_red_eye </i>Diagnósticos
+              </div>
+              <div class="c-card__body px-4">
+                <!--Collapse-->
+                <div class="c-accordion accordion" id="accordionDashboard">
+                  <div class="c-accordion__item">
+                    <div
+                      class="c-accordion__header"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Diagnóstico actual
+                    </div>
+
+                    <div
+                      id="collapseOne"
+                      class="collapse show"
+                      aria-labelledby="headingOne"
+                      data-parent="#accordionDashboard"
+                    >
+                      <div class="c-accordion__body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high
+                        life accusamus terry richardson ad squid. 3 wolf moon
+                        officia aute, non cupidatat skateboard dolor brunch.
+                        Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                        wolf moon tempor, sunt aliqua put a bird on it squid
+                        single-origin coffee nulla assumenda shoreditch et.
+                        Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan
+                        excepteur butcher vice lomo. Leggings occaecat craft
+                        beer farm-to-table, raw denim aesthetic synth nesciunt
+                        you probably haven't heard of them accusamus labore
+                        sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <h2 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                        >
+                          Collapsible Group Item #2
+                        </button>
+                      </h2>
+                    </div>
+                    <div
+                      id="collapseTwo"
+                      class="collapse"
+                      aria-labelledby="headingTwo"
+                      data-parent="#accordionDashboard"
+                    >
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high
+                        life accusamus terry richardson ad squid. 3 wolf moon
+                        officia aute, non cupidatat skateboard dolor brunch.
+                        Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                        wolf moon tempor, sunt aliqua put a bird on it squid
+                        single-origin coffee nulla assumenda shoreditch et.
+                        Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan
+                        excepteur butcher vice lomo. Leggings occaecat craft
+                        beer farm-to-table, raw denim aesthetic synth nesciunt
+                        you probably haven't heard of them accusamus labore
+                        sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--End. Collapse-->
+              </div>
+              <div class="c-card__footer">
+                <a href="#" class="btn btn-secondary mb-0"
+                  >Realizar nuevo diagnóstico</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
         <!--Page Intro-->
         <div class="p-intro h-100 d-none">
           <div class="container h-100">
@@ -113,9 +204,8 @@
             </div>
           </div>
         </div>
-        <!--End. Page Intro-->
         <!--Page Login-->
-        <div class="p-auth h-100 -d-none">
+        <div class="p-auth h-100 d-none">
           <div class="container h-100">
             <div class="row h-100">
               <div class="col-12 col-md-6">
@@ -264,7 +354,6 @@
             </div>
           </div>
         </div>
-        <!--End. Page Login-->
         <!--Page sign up-->
         <div class="p-auth h-100 d-none">
           <div class="container h-100">
@@ -579,7 +668,6 @@
             </div>
           </div>
         </div>
-        <!--End. Page sign up-->
         <!--Page Signup Successful-->
         <div class="p-signup_success d-none">
           <div class="p-signup_success__container">
@@ -592,7 +680,6 @@
             </p>
           </div>
         </div>
-        <!--End. Page Signup Successful-->
         <!--Page Signup Successful-->
         <div class="container h-100 py-4 d-none">
           <div class="c-card h-100">
@@ -612,9 +699,8 @@
             </div>
           </div>
         </div>
-        <!--End. Page Signup Successful-->
         <!--Page Form-->
-        <div class="p-form h-100 py-4 d-none">
+        <div class="p-form h-100 py-4 -d-none">
           <div class="container h-100">
             <div class="p-form__container h-100">
               <!--Form-->

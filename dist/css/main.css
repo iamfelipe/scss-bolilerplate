@@ -4903,6 +4903,26 @@ textarea.form-control {
   padding: 0.6875rem 1.5rem;
   color: #2c3637; }
 
+.fade {
+  transition: opacity 0.15s linear; }
+  @media (prefers-reduced-motion: reduce) {
+    .fade {
+      transition: none; } }
+  .fade:not(.show) {
+    opacity: 0; }
+
+.collapse:not(.show) {
+  display: none; }
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease; }
+  @media (prefers-reduced-motion: reduce) {
+    .collapsing {
+      transition: none; } }
+
 .m-0 {
   margin: 0 !important; }
 
@@ -6515,6 +6535,12 @@ textarea.form-control {
   .mx-xxl-auto {
     margin-left: auto !important; } }
 
+.visible {
+  visibility: visible !important; }
+
+.invisible {
+  visibility: hidden !important; }
+
 .text-monospace {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important; }
 
@@ -7865,6 +7891,11 @@ span[id$="error"] {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+  .c-card__footer {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: rgba(0, 140, 68, 0.8); }
 
 .modal .modal-body {
   text-align: center; }
@@ -7910,6 +7941,9 @@ span[id$="error"] {
         transform: skewX(-20deg); }
       .c-intro__body ul li p {
         margin-bottom: 0; }
+
+.accordion {
+  width: 100%; }
 
 .l-header {
   background-color: #008c44; }
