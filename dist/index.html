@@ -387,6 +387,7 @@
         <div class="p-form h-100 py-4 -d-none">
           <div class="container h-100">
             <div class="p-form__container h-100">
+              <!--Form-->
               <form id="diagnostic-form" action="#" class="c-wizard">
                 <!--1. Encuesta-->
                 <h3><i class="material-icons"> book </i>Encuesta</h3>
@@ -1778,7 +1779,34 @@
                   </div>
                 </fieldset>
               </form>
-              <!--End. Component Login-->
+              <!--End. Form-->
+              <!--Modal error-->
+              <!-- Modal -->
+              <div
+                class="c-modal modal fade"
+                id="diagnosticFormError"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="diagnosticFormErrorTitle"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      Por favor responda las preguntas para poder continuar.
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal"
+                      >
+                        Entendido
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

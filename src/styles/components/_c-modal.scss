@@ -1,0 +1,18 @@
+// Component modal
+// ---------
+
+$c-modal: "modal";
+.#{$c-modal} {
+  .modal-body {
+    text-align: center;
+  }
+
+  .modal-footer {
+    padding-top: 0;
+    justify-content: center;
+
+    .btn {
+      margin-bottom: 0;
+    }
+  }
+}

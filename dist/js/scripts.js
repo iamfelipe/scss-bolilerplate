@@ -364,19 +364,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             transitionEffect: "slideLeft",
             onStepChanging: function onStepChanging(event, currentIndex, newIndex) {
               // Allways allow previous action even if the current form is not valid!
-              if (currentIndex > newIndex) {
+              var openModal = function openModal(event, currentIndex, newIndex) {
+                if (currentIndex > newIndex) {
+                  return true;
+                }
+                return _this.validateRadios(currentIndex);
+                // Needed in some cases if the user went back (clean up)
+                if (currentIndex < newIndex) {
+                  // To remove error styles
+                  _this.DOM.el.find(".body:eq(" + newIndex + ") label.error").remove();
+                  _this.DOM.el.find(".body:eq(" + newIndex + ") .error").removeClass("error");
+                }
+                _this.DOM.el.validate().settings.ignore = ":disabled,:hidden";
+                return _this.DOM.el.valid();
+              };
+              if (openModal(event, currentIndex, newIndex)) {
                 return true;
+              } else {
+                $("#diagnosticFormError").modal();
+                return false;
               }
-              return _this.validateRadios(currentIndex);
-              // Needed in some cases if the user went back (clean up)
-              if (currentIndex < newIndex) {
-                // To remove error styles
-                _this.DOM.el.find(".body:eq(" + newIndex + ") label.error").remove();
-                _this.DOM.el.find(".body:eq(" + newIndex + ") .error").removeClass("error");
-              }
-              _this.DOM.el.validate().settings.ignore = ":disabled,:hidden";
-              // console.log(this.DOM.el.valid());
-              return _this.DOM.el.valid();
             },
             onStepChanged: function onStepChanged(event, currentIndex, priorIndex) {
               // Used to skip the "Warning" step if the user is old enough.

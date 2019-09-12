@@ -56,21 +56,30 @@ class Form {
         transitionEffect: "slideLeft",
         onStepChanging: (event, currentIndex, newIndex) => {
           // Allways allow previous action even if the current form is not valid!
-          if (currentIndex > newIndex) {
+          let openModal = (event, currentIndex, newIndex) => {
+            if (currentIndex > newIndex) {
+              return true;
+            }
+            return this.validateRadios(currentIndex);
+            // Needed in some cases if the user went back (clean up)
+            if (currentIndex < newIndex) {
+              // To remove error styles
+              this.DOM.el
+                .find(".body:eq(" + newIndex + ") label.error")
+                .remove();
+              this.DOM.el
+                .find(".body:eq(" + newIndex + ") .error")
+                .removeClass("error");
+            }
+            this.DOM.el.validate().settings.ignore = ":disabled,:hidden";
+            return this.DOM.el.valid();
+          };
+          if (openModal(event, currentIndex, newIndex)) {
             return true;
+          } else {
+            $("#diagnosticFormError").modal();
+            return false;
           }
-          return this.validateRadios(currentIndex);
-          // Needed in some cases if the user went back (clean up)
-          if (currentIndex < newIndex) {
-            // To remove error styles
-            this.DOM.el.find(".body:eq(" + newIndex + ") label.error").remove();
-            this.DOM.el
-              .find(".body:eq(" + newIndex + ") .error")
-              .removeClass("error");
-          }
-          this.DOM.el.validate().settings.ignore = ":disabled,:hidden";
-          // console.log(this.DOM.el.valid());
-          return this.DOM.el.valid();
         },
         onStepChanged: (event, currentIndex, priorIndex) => {
           // Used to skip the "Warning" step if the user is old enough.

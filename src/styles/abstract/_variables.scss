@@ -182,5 +182,13 @@ $custom-control-gutter: $custom-control-indicator-size / 2;
 // Dropdown
 $dropdown-item-padding-y: $input-btn-padding-y;
 
+// Modal
+$modal-inner-padding: $grid-gutter-width * 2;
+$modal-content-bg: $primary;
+$modal-content-color: $white;
+$modal-content-border-color: transparent;
+$modal-header-border-color: $modal-content-border-color;
+$modal-content-border-radius: $border-radius * 4;
+
 //$colors: map-merge(map-merge($grays, $theme-colors), $colors);
 $background-opacity: rgba($white, 0.9);
