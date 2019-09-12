@@ -7870,8 +7870,7 @@ span[id$="error"] {
   text-align: center; }
 
 .modal .modal-footer {
-  padding-top: 0;
-  justify-content: center; }
+  padding-top: 0; }
   .modal .modal-footer .btn, .modal .modal-footer .wizard a, .wizard .modal .modal-footer a {
     margin-bottom: 0; }
 

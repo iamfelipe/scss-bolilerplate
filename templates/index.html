@@ -30,11 +30,47 @@
               >
             </div>
             <div class="col-auto">
-              <a href="#" class="btn btn-secondary mb-0">Salir</a>
+              <button
+                data-toggle="modal"
+                data-target="#modalLogout"
+                class="btn btn-secondary mb-0"
+              >
+                Salir
+              </button>
             </div>
           </div>
         </div>
       </header>
+      <!--Modal confirmation logout-->
+      <div
+        class="c-modal modal fade"
+        id="modalLogout"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modalLogoutTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-uppercase">
+              ¿Realmente desde salir de la herramienta?
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger px-4 mr-auto"
+                data-dismiss="modal"
+              >
+                No
+              </button>
+              <button type="button" class="btn btn-secondary px-4">
+                Si
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End. Modal confirmation logout-->
       <!--End. Component Header-->
       <article class="l-main__content">
         <!--Page Login-->
@@ -1780,8 +1816,7 @@
                 </fieldset>
               </form>
               <!--End. Form-->
-              <!--Modal error-->
-              <!-- Modal -->
+              <!--Modal diagnostic error-->
               <div
                 class="c-modal modal fade"
                 id="diagnosticFormError"
@@ -1798,7 +1833,7 @@
                     <div class="modal-footer">
                       <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-secondary mx-auto"
                         data-dismiss="modal"
                       >
                         Entendido
@@ -1807,6 +1842,7 @@
                   </div>
                 </div>
               </div>
+              <!--End. Modal diagnostic error-->
             </div>
           </div>
         </div>
