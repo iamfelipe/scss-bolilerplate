@@ -8,9 +8,164 @@
   </head>
   <body>
     <section id="-c-baseline">
+      <!--Component Signup-->
+      <article class="p-signup">
+        <div class="container">
+          <!--Box-->
+          <section class="c-signup border border-secondary py-4 px-3">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-7">
+                <!--Title-->
+                <header class="text-center">
+                  <h1 class="h1 mb-1">Crea tu cuenta</h1>
+                  <p class="h5 badge badge-secondary mb-4">
+                    Si ya tienes cuenta inicia sesión aquí
+                  </p>
+                </header>
+                <!--Subtitle-->
+                <p class="h5 text-secondary text-center">
+                  Accede usando tu cuenta de Facebook o Google
+                </p>
+                <!--Form-->
+                <form action="">
+                  <div class="form-row">
+                    <!--Name-->
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label for="signupFirstname" class="label"
+                          >Nombres</label
+                        >
+                        <input
+                          id="signupFirstname"
+                          type="text"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                    <!--Last name-->
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label for="signupLastname" class="label"
+                          >Apellidos</label
+                        >
+                        <input
+                          id="signupLastname"
+                          type="text"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row">
+                    <!--Email-->
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label for="signupEmail" class="label">E-mail</label>
+                        <input
+                          id="signupEmail"
+                          type="email"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                    <!--Phone-->
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label for="signupPhone" class="label">Teléfono</label>
+                        <input
+                          id="signupPhone"
+                          type="tel"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row">
+                    <!--Email-->
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label for="signupCity" class="label">Ciudad</label>
+                        <select
+                          id="signupCity"
+                          class="form-control"
+                          title="Ciudad"
+                        >
+                          <option value="CDMX">CDMX</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row mb-4">
+                    <!--Password-->
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label for="signupPass" class="label">Contraseña</label>
+                        <input
+                          id="signupPass"
+                          type="password"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                    <!--Recover password-->
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label for="signupPassrecover" class="label"
+                          >Confirmar Contraseña</label
+                        >
+                        <input
+                          id="signupPassrecover"
+                          type="password"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center mb-4">
+                    <div class="form-group">
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="signupTerms"
+                        />
+                        <label class="custom-control-label" for="signupTerms"
+                          >Acepto <a href="#">términos y condiciones</a> y
+                          <a href="#">política de privacidad</a></label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!--Row-->
+                  <div class="form-row justify-content-center">
+                    <div class="col-12 col-md-auto">
+                      <input
+                        type="submit"
+                        value="Crear cuenta"
+                        class="btn btn-secondary btn-block"
+                      />
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col-12 col-md-auto">
+                      <a href="#" class="text-center d-block"
+                        >Leer políticas de uso</a
+                      >
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-6">
+          <div class="col-12">
             <h1 class="h1">H1: What Can I Do With Archetype?</h1>
             <p>
               Paragraph: Archetype lets designers like you very quickly and
@@ -19,7 +174,7 @@
               typographic best practices meaning less guesswork and more
               harmonious designs.
             </p>
-            <h2>H2: Sounds Great, Where Do I Start?</h2>
+            <h2 class="h2">H2: Sounds Great, Where Do I Start?</h2>
             <p>
               Paragraph: It's easy peasy: 1) Start by selecting a visually
               compatible font pair. 2) Define harmoniously proportioned sizes
@@ -29,7 +184,7 @@
               everything looking exactly the way you want. 5) Export as CSS
               ready to send to a developer. Job Done.
             </p>
-            <h3>H3: Help Us Improve</h3>
+            <h3 class="h3">H3: Help Us Improve</h3>
             <p>
               Paragraph: This is version 1 of Archetype and we'd love your
               feedback and suggestions on how we can improve it to make it even
@@ -37,20 +192,22 @@
               know what you think. Be as critical as you like, we have thick
               skin.
             </p>
-            <h4>H4: Still Reading? H4: Still Reading? H4: Still Reading?</h4>
+            <h4 class="h4">
+              H4: Still Reading? H4: Still Reading? H4: Still Reading?
+            </h4>
             <p>
               Well here's some inspirational quotes for you: “Good design is
               making something intelligible and memorable. Great design is
               making something memorable and meaningful”: Dieter Rams.
             </p>
-            <h5>H5: More? Ok</h5>
+            <h5 class="h5">H5: More? Ok</h5>
             <p>
               Paragraph: “A designer knows he has achieved perfection not when
               there is nothing left to add, but when there is nothing left to
               take away”: Antoine de Saint-Exupery.
             </p>
-            <h6>H6: One For the Road</h6>
-            <p class="body">
+            <h6 class="h6">H6: One For the Road</h6>
+            <p class="p">
               Paragraph: Archetype lets designers like you very quickly and
               easily create consistent typography styling and spacing live, in
               the browser. These styles are all underpinned by established

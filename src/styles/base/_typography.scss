@@ -13,6 +13,7 @@
 }
 
 @for $i from 1 through 6 {
+  %h#{$i},
   h#{$i} {
     @extend %h#{$i};
     font-family: $font-stack-secondary;
@@ -22,13 +23,5 @@
 @each $base, $properties in $custom-scale {
   .#{$base} {
     @extend %#{$base};
-  }
-}
-
-p {
-  @extend %body;
-
-  + p {
-    @include margin-bottom();
   }
 }

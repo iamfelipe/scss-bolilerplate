@@ -2,7 +2,9 @@
 // ---------
 
 .label {
-  @extend .small;
+  @extend .p;
   display: block;
-  margin-bottom: $vertical-rhythm / 8;
+  margin-bottom: 0;
+  font-family: $font-stack-secondary;
+  //margin-bottom: $vertical-rhythm / 8;
 }
