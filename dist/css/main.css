@@ -6457,9 +6457,23 @@ select.selectpicker {
   font-style: normal; }
 
 @font-face {
-  font-family: "Asap";
-  src: url("../fonts/Asap-Bold.eot");
-  src: url("../fonts/Asap-Bold.woff") format("woff"), url("../fonts/Asap-Bold.ttf") format("truetype"), url("../fonts/Asap-Bold.svg") format("svg");
+  font-family: "Roboto Condensed";
+  src: url("../fonts/RobotoCondensed-Regular.eot");
+  src: url("../fonts/RobotoCondensed-Regular.woff") format("woff"), url("../fonts/RobotoCondensed-Regular.ttf") format("truetype"), url("../fonts/RobotoCondensed-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../fonts/RobotoCondensed-Bold.eot");
+  src: url("../fonts/RobotoCondensed-Bold.woff") format("woff"), url("../fonts/RobotoCondensed-Bold.ttf") format("truetype"), url("../fonts/RobotoCondensed-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Hudson NY";
+  src: url("../fonts/HudsonNY.eot");
+  src: url("../fonts/HudsonNY.woff") format("woff"), url("../fonts/HudsonNY.ttf") format("truetype"), url("../fonts/HudsonNY.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -6493,9 +6507,27 @@ body {
   font-size: inherit;
   -webkit-font-kerning: auto;
   font-kerning: auto;
-  font-family: "Asap", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+h1 {
+  font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+
+h2 {
+  font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+
+h3 {
+  font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+
+h4 {
+  font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+
+h5 {
+  font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+
+h6 {
+  font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
 p + p {
   margin-bottom: 1.5rem; }
@@ -6503,7 +6535,7 @@ p + p {
 .custom-file-label,
 .form-control, input, select, textarea, .btn, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark {
   height: auto;
-  font-family: "Asap", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   border-width: 0.0625rem;
   border-radius: 0.25rem;
   -webkit-appearance: none;

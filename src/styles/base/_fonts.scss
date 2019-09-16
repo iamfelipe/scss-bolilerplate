@@ -3,7 +3,9 @@
 // -----------------------------------------------------------------------------
 
 @include font-face("Material Icons", "MaterialIcons-Regular");
-@include font-face("Asap", "Asap-Bold");
+@include font-face("Roboto Condensed", "RobotoCondensed-Regular");
+@include font-face("Roboto Condensed", "RobotoCondensed-Bold", 700);
+@include font-face("Hudson NY", "HudsonNY");
 
-$font-stack-primary: "Asap", $font-family-sans-serif;
-$font-stack-secondary: "Roboto", $font-family-serif;
+$font-stack-primary: "Roboto Condensed", $font-family-sans-serif;
+$font-stack-secondary: "Hudson NY", $font-family-serif;
