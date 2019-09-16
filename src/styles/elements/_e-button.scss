@@ -2,13 +2,16 @@
 // Buttons
 //
 
-
 // Base
 // ---------
 
 // Mixin
 // ---------
-@mixin button($background, $hover-background: darken($background, 7.5%), $disabled-background: lighten($background, 7.5%)) {
+@mixin button(
+  $background,
+  $hover-background: darken($background, 7.5%),
+  $disabled-background: lighten($background, 7.5%)
+) {
   @extend %box;
   //background-color: $background;
   //border-color: $background;
@@ -24,7 +27,7 @@
 
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 $border-width rgba($background, .5);
+    box-shadow: 0 0 0 $border-width rgba($background, 0.5);
   }
 
   &.disabled,
@@ -33,7 +36,6 @@
     border-color: $disabled-background;
   }
 }
-
 
 .btn {
   @include button(theme-color(primary));
