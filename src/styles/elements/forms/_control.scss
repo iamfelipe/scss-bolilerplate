@@ -4,9 +4,12 @@
 %control {
   @extend %box;
   margin-bottom: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 
   @include hover() {
-    border-color: theme-color(primary);
+    //border-color: theme-color(primary);
   }
 }
 
@@ -16,7 +19,6 @@
 }
 
 .custom-file-label {
-
   &::after {
     height: initial;
   }
