@@ -165,7 +165,7 @@ $form-grid-gutter-width: $grid-gutter-width / 1.5;
 $input-placeholder-color: $gray-400;
 $input-color: $gray-900;
 // Forms
-$input-padding-x: $border-width;
+$input-padding-x: 0;
 $input-padding-y: rem(8) - $border-width;
 $input-bg: transparent;
 
