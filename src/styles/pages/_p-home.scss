@@ -2,5 +2,17 @@
 // ---------
 
 #{$page-home} {
+  @include e(title) {
+    @include ms-respond(font-size, 10);
+    margin-bottom: 1em;
 
+    @include media-breakpoint-up(md) {
+      font-size: 12vw;
+      margin-bottom: 0.5em;
+    }
+
+    small {
+      line-height: 0.5;
+    }
+  }
 }

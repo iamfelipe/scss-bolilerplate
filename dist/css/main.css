@@ -3312,9 +3312,6 @@ input[type="button"].btn-block {
   .form-control::-webkit-input-placeholder {
     color: #78909c;
     opacity: 1; }
-  .form-control::-moz-placeholder {
-    color: #78909c;
-    opacity: 1; }
   .form-control:-ms-input-placeholder {
     color: #78909c;
     opacity: 1; }
@@ -3771,12 +3768,15 @@ textarea.form-control {
     height: calc(1.33333333rem - 0.44444444rem);
     background-color: #adb5bd;
     border-radius: 0.66666667rem;
-    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out; }
     @media (prefers-reduced-motion: reduce) {
       .custom-switch .custom-control-label::after {
         transition: none; } }
   .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
     background-color: transparent;
+    -webkit-transform: translateX(1rem);
     transform: translateX(1rem); }
   .custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
     background-color: rgba(12, 35, 64, 0.5); }
@@ -5570,7 +5570,7 @@ textarea.form-control {
 .text-nowrap {
   white-space: nowrap !important; }
 
-.text-truncate {
+.text-truncate, .badge {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
@@ -6120,6 +6120,7 @@ select.selectpicker {
   height: 1em;
   border-style: solid;
   border-width: 0 0.26em 0.26em 0;
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg); }
 
 .bootstrap-select.show-menu-arrow.open > .dropdown-toggle,
@@ -6665,6 +6666,7 @@ h6, .h6 {
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
+  -webkit-font-feature-settings: "liga";
   font-feature-settings: "liga"; }
 
 @font-face {
@@ -6892,6 +6894,7 @@ h6 {
       border-color: #454d55; }
 
 .badge {
+  max-width: 100%;
   text-transform: uppercase;
   font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-align: center; }
@@ -6923,5 +6926,41 @@ h6 {
   background-image: linear-gradient(to bottom, #0ff 0, rgba(255, 255, 255, 0) 1px);
   background-repeat: repeat-y;
   background-size: 100% 1rem; }
+
+@media (max-width: 767.98px) {
+  .c-signup .l-container {
+    margin-bottom: 6em; }
+    .c-signup .l-container__footer {
+      margin-bottom: -6em; } }
+
+.l-container {
+  border: 0.11111111rem solid #ffc629;
+  margin-top: 1.33333333rem;
+  margin-bottom: 1.33333333rem; }
+  @media (max-width: 767.98px) {
+    .l-container {
+      margin-right: 0.66666667rem;
+      margin-left: 0.66666667rem; } }
+  .l-container__body {
+    margin: 1.33333333rem; }
+    .l-container__body--bg {
+      padding: 1.33333333rem;
+      background-color: #33465f; }
+
+.p-home__title {
+  font-size: 45.46249436px;
+  margin-bottom: 1em; }
+  @media (min-width: 576px) and (max-width: 992px) {
+    .p-home__title {
+      font-size: calc( 45.46249436px + 65.98876125 * ( ( 100vw - 576px) / 416 )); } }
+  @media (min-width: 992px) {
+    .p-home__title {
+      font-size: 111.4512556px; } }
+  @media (min-width: 768px) {
+    .p-home__title {
+      font-size: 12vw;
+      margin-bottom: 0.5em; } }
+  .p-home__title small {
+    line-height: 0.5; }
 
 /*# sourceMappingURL=main.css.map */

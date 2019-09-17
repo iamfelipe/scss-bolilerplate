@@ -1,0 +1,16 @@
+// Component signup
+// ---------
+
+.c-signup {
+
+  .l-container {
+    @include media-breakpoint-down(sm) {
+    $footer-offset: 6em;
+      margin-bottom: $footer-offset;
+
+    @include e(footer) {
+        margin-bottom: -$footer-offset;
+      }
+    }
+  }
+}

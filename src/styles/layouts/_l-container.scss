@@ -1,0 +1,27 @@
+// Layout container
+// ---------
+
+#{$layout-container} {
+  $container-bg-level: -2;
+  border: $border-width solid theme-color('secondary');
+  margin-top: $grid-gutter-width;
+  margin-bottom: $grid-gutter-width;
+
+  @include media-breakpoint-down(sm) {
+    margin-right: $grid-gutter-width / 2;
+    margin-left: $grid-gutter-width / 2;
+  }
+
+  @include e(body) {
+    margin: $grid-gutter-width;
+
+    @include m(bg) {
+      padding: $grid-gutter-width;
+      background-color: theme-color-level('primary', $container-bg-level);
+    }
+  }
+
+  @include e(footer) {
+
+  }
+}

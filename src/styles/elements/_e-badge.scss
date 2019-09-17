@@ -3,6 +3,8 @@
 //
 
 .badge {
+  @extend .text-truncate;
+  max-width: 100%;
   text-transform: uppercase;
   font-family: $font-stack-secondary;
   text-align: center;
