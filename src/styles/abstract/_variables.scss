@@ -214,6 +214,14 @@ $spacers: (
   )
 );
 
+// Navs
+
+// Navbar
+$navbar-padding-x: 0;
+$navbar-padding-y: $grid-gutter-width;
+$navbar-dark-color: $component-active-bg;
+$navbar-dark-hover-color: rgba($component-active-bg, 0.75);
+
 // Badges
 $badge-padding-x: em(24);
 $badge-padding-y: em(6);

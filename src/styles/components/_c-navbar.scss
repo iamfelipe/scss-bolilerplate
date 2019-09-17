@@ -1,0 +1,24 @@
+// Component navbar
+// ---------
+
+.c-navbar {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: $border-width;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    border-bottom: $border-width solid $component-active-bg;
+  }
+  .nav-link {
+    @extend %h6;
+    margin-bottom: 0;
+    display: block;
+    padding: 0 ($grid-gutter-width / 2);
+    text-transform: uppercase;
+    font-family: $font-stack-secondary;
+  }
+}
