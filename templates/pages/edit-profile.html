@@ -12,9 +12,16 @@ title: Editar Perfil
             <!--Header-->
             <header class="text-center">
               <h1 class="h1 -mb-1">{{edit-profile.title}}</h1>
-              <p class="h4 badge badge-secondary mb-3">
+              <img
+                src="https://picsum.photos/200"
+                alt="..."
+                class="rounded-circle"
+              />
+              <div class="w-100"></div>
+              <p class="h4 badge badge-secondary my-3">
                 {{user.firstname}} {{user.lastname}}
               </p>
+              <div class="w-100"></div>
               <p class="h5 text-secondary mb-4">ID CORONA: {{user.id}}</p>
             </header>
             <!--Form-->
@@ -65,7 +72,7 @@ title: Editar Perfil
                 </div>
                 <div class="w-100"></div>
                 <div class="col-12 col-md-auto">
-                  <p class="text-white">* Campos obligatorios</p>
+                  <p class="text-white text-center">* Campos obligatorios</p>
                 </div>
               </div>
             </form>
