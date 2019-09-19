@@ -7,24 +7,18 @@ description: Lorem ipsum.
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12">
-        {{contact.name}} - <i>{{contact.email}}</i>
-        <h1 class="h1">H1: What Can I Do With Archetype?</h1>
-        <p>
-          Paragraph: Archetype lets designers like you very quickly and easily
-          create consistent typography styling and spacing live, in the browser.
-          These styles are all underpinned by established typographic best
-          practices meaning less guesswork and more harmonious designs.
-        </p>
-        <h2>H2: Sounds Great, Where Do I Start?</h2>
-        <p>
-          Paragraph: It's easy peasy: 1) Start by selecting a visually
-          compatible font pair. 2) Define harmoniously proportioned sizes for
-          all the standard typographic elements your design might require. 3)
-          Set the optimal vertical spacing of all elements in your design. 4)
-          Tweak and refine individual elements to get everything looking exactly
-          the way you want. 5) Export as CSS ready to send to a developer. Job
-          Done.
-        </p>
+        <h1 class="h1">H1: Each list example</h1>
+        <ul class="breakfast-items">
+          {{#each contact.list}}
+          <li class="{{this}}-{{@index}}">{{ this }}</li>
+          {{/each}}
+        </ul>
+        <h2>H2: Repeat N times example</h2>
+        <ul>
+          {{#repeat 3}}
+          <li>Lorem ipsum dolor sit amet.</li>
+          {{/repeat}}
+        </ul>
         <h3>H3: Help Us Improve</h3>
         <p>
           Paragraph: This is version 1 of Archetype and we'd love your feedback
@@ -58,9 +52,9 @@ description: Lorem ipsum.
         <div class="c-heading">
           <div class="c-heading__image">
             <img
-                src="https://picsum.photos/400"
-                class="w-100"
-                alt="Example image"
+              src="https://picsum.photos/400"
+              class="w-100"
+              alt="Example image"
             />
           </div>
           <div class="c-heading__title">
@@ -79,11 +73,11 @@ description: Lorem ipsum.
         <div class="form-group">
           <label for="text" class="label">Text label</label>
           <input
-              id="text"
-              type="text"
-              placeholder="Placeholder"
-              id=""
-              class="form-control"
+            id="text"
+            type="text"
+            placeholder="Placeholder"
+            id=""
+            class="form-control"
           />
         </div>
       </div>
@@ -104,12 +98,12 @@ description: Lorem ipsum.
         <div class="form-group">
           <div class="custom-control custom-checkbox">
             <input
-                type="checkbox"
-                class="custom-control-input"
-                id="customCheck1"
+              type="checkbox"
+              class="custom-control-input"
+              id="customCheck1"
             />
             <label class="custom-control-label label" for="customCheck1"
-            >Check this custom checkbox</label
+              >Check this custom checkbox</label
             >
           </div>
         </div>
@@ -117,9 +111,9 @@ description: Lorem ipsum.
       <div class="col-12 col-lg">
         <div class="form-group">
           <div class="custom-file">
-            <input type="file" class="custom-file-input" id="customFile"/>
+            <input type="file" class="custom-file-input" id="customFile" />
             <label class="custom-file-label" for="customFile"
-            >Seleccionar archivo</label
+              >Seleccionar archivo</label
             >
           </div>
         </div>
@@ -133,7 +127,7 @@ description: Lorem ipsum.
         <button class="btn btn-secondary">Button</button>
       </div>
       <div class="col-auto">
-        <input type="submit" class="btn btn-warning" value="Submit"/>
+        <input type="submit" class="btn btn-warning" value="Submit" />
       </div>
     </div>
   </div>

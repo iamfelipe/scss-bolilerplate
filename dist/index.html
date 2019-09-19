@@ -8,30 +8,67 @@
   <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-<header class="c-header"><p>Header</p></header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarTogglerDemo03"
+    aria-controls="navbarTogglerDemo03"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"
+          >Home <span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+          >Disabled</a
+        >
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input
+        class="form-control mr-sm-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        Search
+      </button>
+    </form>
+  </div>
+</nav>
 
 <section id="c-baseline">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12">
-        John Doe - <i>john.doe@gmail.com</i>
-        <h1 class="h1">H1: What Can I Do With Archetype?</h1>
-        <p>
-          Paragraph: Archetype lets designers like you very quickly and easily
-          create consistent typography styling and spacing live, in the browser.
-          These styles are all underpinned by established typographic best
-          practices meaning less guesswork and more harmonious designs.
-        </p>
-        <h2>H2: Sounds Great, Where Do I Start?</h2>
-        <p>
-          Paragraph: It's easy peasy: 1) Start by selecting a visually
-          compatible font pair. 2) Define harmoniously proportioned sizes for
-          all the standard typographic elements your design might require. 3)
-          Set the optimal vertical spacing of all elements in your design. 4)
-          Tweak and refine individual elements to get everything looking exactly
-          the way you want. 5) Export as CSS ready to send to a developer. Job
-          Done.
-        </p>
+        <h1 class="h1">H1: Each list example</h1>
+        <ul class="breakfast-items">
+          <li class="pizza-0">pizza</li>
+          <li class="burger-1">burger</li>
+          <li class="coffee-2">coffee</li>
+          <li class="panini-3">panini</li>
+        </ul>
+        <h2>H2: Repeat N times example</h2>
+        <ul>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
         <h3>H3: Help Us Improve</h3>
         <p>
           Paragraph: This is version 1 of Archetype and we'd love your feedback
@@ -65,9 +102,9 @@
         <div class="c-heading">
           <div class="c-heading__image">
             <img
-                src="https://picsum.photos/400"
-                class="w-100"
-                alt="Example image"
+              src="https://picsum.photos/400"
+              class="w-100"
+              alt="Example image"
             />
           </div>
           <div class="c-heading__title">
@@ -86,11 +123,11 @@
         <div class="form-group">
           <label for="text" class="label">Text label</label>
           <input
-              id="text"
-              type="text"
-              placeholder="Placeholder"
-              id=""
-              class="form-control"
+            id="text"
+            type="text"
+            placeholder="Placeholder"
+            id=""
+            class="form-control"
           />
         </div>
       </div>
@@ -111,12 +148,12 @@
         <div class="form-group">
           <div class="custom-control custom-checkbox">
             <input
-                type="checkbox"
-                class="custom-control-input"
-                id="customCheck1"
+              type="checkbox"
+              class="custom-control-input"
+              id="customCheck1"
             />
             <label class="custom-control-label label" for="customCheck1"
-            >Check this custom checkbox</label
+              >Check this custom checkbox</label
             >
           </div>
         </div>
@@ -124,9 +161,9 @@
       <div class="col-12 col-lg">
         <div class="form-group">
           <div class="custom-file">
-            <input type="file" class="custom-file-input" id="customFile"/>
+            <input type="file" class="custom-file-input" id="customFile" />
             <label class="custom-file-label" for="customFile"
-            >Seleccionar archivo</label
+              >Seleccionar archivo</label
             >
           </div>
         </div>
@@ -140,7 +177,7 @@
         <button class="btn btn-secondary">Button</button>
       </div>
       <div class="col-auto">
-        <input type="submit" class="btn btn-warning" value="Submit"/>
+        <input type="submit" class="btn btn-warning" value="Submit" />
       </div>
     </div>
   </div>
