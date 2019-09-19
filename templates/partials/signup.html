@@ -1,0 +1,103 @@
+<article class="p-signup">
+  <!--Title-->
+  <h1 class="lead text-center p-home__title">
+    <small>Bienvenido al</small>
+    <br />CLUB MÁS RIFADO
+  </h1>
+  <div class="container">
+    <!--Box-->
+    <section class="c-signup">
+      <div class="l-container">
+        <div class="l-container__body">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-7">
+              <!--Title-->
+              <header class="text-center">
+                <h1 class="h1 mb-1">{{signup.title}}</h1>
+                <p class="h5 badge badge-secondary mb-4">
+                  {{signup.description}}
+                </p>
+              </header>
+              <!--Subtitle-->
+              <p class="h5 text-secondary text-center">
+                Accede usando tu cuenta de Facebook o Google
+              </p>
+              <!--Form-->
+              <form action="">
+                <!--Row-->
+                <div class="form-row">
+                  {{#each edit-profile.fields as |value key|}}
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <label for="editProfile_{{key}}" class="label"
+                        >{{value.label}}</label
+                      >
+                      {{#if (eq value.type 'select')}}
+                      <select
+                        name="editProfile_{{key}}"
+                        id="editProfile_{{key}}"
+                        class="form-control"
+                      >
+                        <option value="" selected disabled hidden>
+                          {{value.description}}
+                        </option>
+                        {{#each value.enum as |value key|}}
+                        <option value="{{value}}">{{value}}</option>
+                        {{/each}}
+                      </select>
+                      {{else}}
+                      <input
+                        id="editProfile_{{key}}"
+                        type="{{value.type}}"
+                        class="form-control"
+                        required="{{value.required}}"
+                      />
+                      {{/if}}
+                    </div>
+                  </div>
+                  {{/each}}
+                </div>
+                <!--Row-->
+                <div class="form-row justify-content-center mb-4">
+                  <div class="form-group">
+                    <div class="custom-control custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="editProfile_terms"
+                      />
+                      <label
+                        class="custom-control-label"
+                        for="editProfile_terms"
+                        >Acepto <a href="#">términos y condiciones</a> y
+                        <a href="#">política de privacidad</a></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!--Row-->
+                <div
+                  class="l-container__footer form-row justify-content-center"
+                >
+                  <div class="col-auto">
+                    <input
+                      type="submit"
+                      value="Crear cuenta"
+                      class="btn btn-secondary"
+                    />
+                  </div>
+                  <div class="w-100"></div>
+                  <div class="col-12 col-md-auto">
+                    <a href="#" class="text-center d-block"
+                      >Leer políticas de uso</a
+                    >
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</article>

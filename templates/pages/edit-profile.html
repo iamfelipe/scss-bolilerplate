@@ -1,0 +1,77 @@
+---
+layout: loggedin
+title: Editar Perfil
+---
+
+<article class="p-editProfile">
+  <div class="container">
+    <div class="l-container">
+      <div class="l-container__body">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-7">
+            <!--Header-->
+            <header class="text-center">
+              <h1 class="h1 -mb-1">{{edit-profile.title}}</h1>
+              <p class="h4 badge badge-secondary mb-3">
+                {{user.firstname}} {{user.lastname}}
+              </p>
+              <p class="h5 text-secondary mb-4">ID CORONA: {{user.id}}</p>
+            </header>
+            <!--Form-->
+            <form action="">
+              <!--Row-->
+              <div class="form-row">
+                {{#each edit-profile.fields as |value key|}}
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label for="editProfile_{{key}}" class="label"
+                      >{{value.label}}</label
+                    >
+                    {{#if (eq value.type 'select')}}
+                    <select
+                      name="editProfile_{{key}}"
+                      id="editProfile_{{key}}"
+                      class="form-control"
+                    >
+                      <option value="" selected disabled hidden>
+                        {{value.description}}
+                      </option>
+                      {{#each value.enum as |value key|}}
+                      <option value="{{value}}">{{value}}</option>
+                      {{/each}}
+                    </select>
+                    {{else}}
+                    <input
+                      id="editProfile_{{key}}"
+                      type="{{value.type}}"
+                      class="form-control"
+                      required="{{value.required}}"
+                    />
+                    {{/if}}
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+              <!--Row-->
+              <div
+                class="l-container__footer form-row justify-content-center mt-4"
+              >
+                <div class="col-auto">
+                  <input
+                    type="submit"
+                    value="Actualizar"
+                    class="btn btn-secondary"
+                  />
+                </div>
+                <div class="w-100"></div>
+                <div class="col-12 col-md-auto">
+                  <p class="text-white">* Campos obligatorios</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

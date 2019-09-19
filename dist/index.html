@@ -1,383 +1,378 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Title</title>
-    <link rel="stylesheet" href="./css/main.css" />
-  </head>
-  <body>
-    <!--header-->
-    <header class="sticky-top bg-primary">
-      <div class="container">
-        <nav class="c-navbar navbar navbar-dark">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <ul class="navbar-nav flex-row flex-grow-1">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Gana Coronas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Premios</a>
-            </li>
-            <li class="nav-item dropdown ml-auto">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Perfil
-              </a>
-              <div class="dropdown-menu dropdown-menu-right position-absolute" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Inicia con tu cuenta</a>
-                <a class="dropdown-item" href="#">Crea una cuenta</a>
-              </div>
-            </li>
-          </ul>
-        </nav>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Lorem ipsum.">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+<!--header-->
+<header class="sticky-top bg-primary">
+  <div class="container">
+    <nav class="c-navbar navbar navbar-dark">
+      <a class="navbar-brand" href="/index.html">Navbar</a>
+      <ul class="navbar-nav flex-row flex-grow-1">
+        <li class="nav-item active">
+          <a class="nav-link" href="/win-coronas.html">Gana Coronas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/prizes.html">Premios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/edit-profile.html">Editar perfil</a>
+        </li>
+        <li class="nav-item dropdown ml-auto">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Perfil
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-right position-absolute"
+            aria-labelledby="navbarDropdown"
+          >
+            <a class="dropdown-item" href="#">Inicia con tu cuenta</a>
+            <a class="dropdown-item" href="#">Crea una cuenta</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-    </header>
-    <section id="-c-baseline">
-      <!--Component Signup-->
-      <article class="p-signup">
-        <!--Title-->
-        <h1 class="lead text-center p-home__title">
-          <small>Bienvenido al</small><br />CLUB MÁS RIFADO
-        </h1>
-        <div class="container">
-          <!--Box-->
-          <section class="c-signup">
-            <div class="l-container">
-              <div class="l-container__body">
-                <div class="row justify-content-center">
-                  <div class="col-12 col-md-7">
-                    <!--Title-->
-                    <header class="text-center">
-                      <h1 class="h1 mb-1">Crea tu cuenta</h1>
-                      <p class="h5 badge badge-secondary mb-4">
-                        Si ya tienes cuenta inicia sesión aquí
-                      </p>
-                    </header>
-                    <!--Subtitle-->
-                    <p class="h5 text-secondary text-center">
-                      Accede usando tu cuenta de Facebook o Google
-                    </p>
-                    <!--Form-->
-                    <form action="">
-                      <div class="form-row">
-                        <!--Name-->
-                        <div class="col-12 col-md-6">
-                          <div class="form-group">
-                            <label for="signupFirstname" class="label"
-                              >Nombres</label
-                            >
-                            <input
-                              id="signupFirstname"
-                              type="text"
-                              class="form-control"
-                            />
-                          </div>
-                        </div>
-                        <!--Last name-->
-                        <div class="col-12 col-md-6">
-                          <div class="form-group">
-                            <label for="signupLastname" class="label"
-                              >Apellidos</label
-                            >
-                            <input
-                              id="signupLastname"
-                              type="text"
-                              class="form-control"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <!--Row-->
-                      <div class="form-row">
-                        <!--Email-->
-                        <div class="col-12 col-md-6">
-                          <div class="form-group">
-                            <label for="signupEmail" class="label"
-                              >E-mail</label
-                            >
-                            <input
-                              id="signupEmail"
-                              type="email"
-                              class="form-control"
-                            />
-                          </div>
-                        </div>
-                        <!--Phone-->
-                        <div class="col-12 col-md-6">
-                          <div class="form-group">
-                            <label for="signupPhone" class="label"
-                              >Teléfono</label
-                            >
-                            <input
-                              id="signupPhone"
-                              type="tel"
-                              class="form-control"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <!--Row-->
-                      <div class="form-row">
-                        <!--Email-->
-                        <div class="col-12 col-md-6">
-                          <div class="form-group">
-                            <label for="signupCity" class="label">Ciudad</label>
-                            <select
-                              id="signupCity"
-                              class="form-control"
-                              title="Ciudad"
-                            >
-                              <option value="CDMX">CDMX</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <!--Row-->
-                      <div class="form-row mb-4">
-                        <!--Password-->
-                        <div class="col-12 col-md-6">
-                          <div class="form-group">
-                            <label for="signupPass" class="label"
-                              >Contraseña</label
-                            >
-                            <input
-                              id="signupPass"
-                              type="password"
-                              class="form-control"
-                            />
-                          </div>
-                        </div>
-                        <!--Recover password-->
-                        <div class="col-12 col-md-6">
-                          <div class="form-group">
-                            <label for="signupPassrecover" class="label"
-                              >Confirmar Contraseña</label
-                            >
-                            <input
-                              id="signupPassrecover"
-                              type="password"
-                              class="form-control"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <!--Row-->
-                      <div class="form-row justify-content-center mb-4">
-                        <div class="form-group">
-                          <div class="custom-control custom-checkbox">
-                            <input
-                              type="checkbox"
-                              class="custom-control-input"
-                              id="signupTerms"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="signupTerms"
-                              >Acepto <a href="#">términos y condiciones</a> y
-                              <a href="#">política de privacidad</a></label
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <!--Row-->
-                      <div
-                        class="l-container__footer form-row justify-content-center"
+<!--Component Signup-->
+<article class="p-signup">
+  <!--Title-->
+  <h1 class="lead text-center p-home__title">
+    <small>Bienvenido al</small>
+    <br />CLUB MÁS RIFADO
+  </h1>
+  <div class="container">
+    <!--Box-->
+    <section class="c-signup">
+      <div class="l-container">
+        <div class="l-container__body">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-7">
+              <!--Title-->
+              <header class="text-center">
+                <h1 class="h1 mb-1">Crea tu cuenta</h1>
+                <p class="h5 badge badge-secondary mb-4">
+                  Si ya tienes cuenta inicia sesión aquí
+                </p>
+              </header>
+              <!--Subtitle-->
+              <p class="h5 text-secondary text-center">
+                Accede usando tu cuenta de Facebook o Google
+              </p>
+              <!--Form-->
+              <form action="">
+                <!--Row-->
+                <div class="form-row">
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <label for="editProfile_firstname" class="label"
+                        >Nombres</label
                       >
-                        <div class="col-auto">
-                          <input
-                            type="submit"
-                            value="Crear cuenta"
-                            class="btn btn-secondary"
-                          />
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col-12 col-md-auto">
-                          <a href="#" class="text-center d-block"
-                            >Leer políticas de uso</a
-                          >
-                        </div>
-                      </div>
-                    </form>
+                      <input
+                        id="editProfile_firstname"
+                        type="text"
+                        class="form-control"
+                        required="true"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <label for="editProfile_lastname" class="label"
+                        >Apellidos</label
+                      >
+                      <input
+                        id="editProfile_lastname"
+                        type="text"
+                        class="form-control"
+                        required="true"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <label for="editProfile_email" class="label"
+                        >E-mail</label
+                      >
+                      <input
+                        id="editProfile_email"
+                        type="email"
+                        class="form-control"
+                        required="true"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <label for="editProfile_phone" class="label"
+                        >Teléfono</label
+                      >
+                      <input
+                        id="editProfile_phone"
+                        type="tel"
+                        class="form-control"
+                        required="true"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <label for="editProfile_city" class="label"
+                        >Ciudad</label
+                      >
+                      <select
+                        name="editProfile_city"
+                        id="editProfile_city"
+                        class="form-control"
+                      >
+                        <option value="" selected disabled hidden>
+                          Elige una ciudad
+                        </option>
+                        <option value="CDMX">CDMX</option>
+                        <option value="Puebla">Puebla</option>
+                        <option value="Acapulco">Acapulco</option>
+                        <option value="Cancun">Cancun</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <label for="editProfile_passwords" class="label"
+                        >Contraseña</label
+                      >
+                      <input
+                        id="editProfile_passwords"
+                        type="password"
+                        class="form-control"
+                        required="true"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <label for="editProfile_confirmPassword" class="label"
+                        >Confirmar contraseña</label
+                      >
+                      <input
+                        id="editProfile_confirmPassword"
+                        type="password"
+                        class="form-control"
+                        required="true"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </article>
-
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12">
-            <h1 class="h1">H1: What Can I Do With Archetype?</h1>
-            <p>
-              Paragraph: Archetype lets designers like you very quickly and
-              easily create consistent typography styling and spacing live, in
-              the browser. These styles are all underpinned by established
-              typographic best practices meaning less guesswork and more
-              harmonious designs.
-            </p>
-            <h2 class="h2">H2: Sounds Great, Where Do I Start?</h2>
-            <p>
-              Paragraph: It's easy peasy: 1) Start by selecting a visually
-              compatible font pair. 2) Define harmoniously proportioned sizes
-              for all the standard typographic elements your design might
-              require. 3) Set the optimal vertical spacing of all elements in
-              your design. 4) Tweak and refine individual elements to get
-              everything looking exactly the way you want. 5) Export as CSS
-              ready to send to a developer. Job Done.
-            </p>
-            <h3 class="h3">H3: Help Us Improve</h3>
-            <p>
-              Paragraph: This is version 1 of Archetype and we'd love your
-              feedback and suggestions on how we can improve it to make it even
-              more useful. Please use the feedback link in the header to let us
-              know what you think. Be as critical as you like, we have thick
-              skin.
-            </p>
-            <h4 class="h4">
-              H4: Still Reading? H4: Still Reading? H4: Still Reading?
-            </h4>
-            <p>
-              Well here's some inspirational quotes for you: “Good design is
-              making something intelligible and memorable. Great design is
-              making something memorable and meaningful”: Dieter Rams.
-            </p>
-            <h5 class="h5">H5: More? Ok</h5>
-            <p>
-              Paragraph: “A designer knows he has achieved perfection not when
-              there is nothing left to add, but when there is nothing left to
-              take away”: Antoine de Saint-Exupery.
-            </p>
-            <h6 class="h6">H6: One For the Road</h6>
-            <p class="p">
-              Paragraph: Archetype lets designers like you very quickly and
-              easily create consistent typography styling and spacing live, in
-              the browser. These styles are all underpinned by established
-              typographic best practices meaning less guesswork and more
-              harmonious designs.
-            </p>
-            <p>
-              Ab delectus dolore, dolorem error fuga illo ipsa libero minus modi
-              nam officia, pariatur quos recusandae soluta veniam vitae
-              voluptatum?
-            </p>
-            <div class="c-heading">
-              <div class="c-heading__image">
-                <img
-                  src="https://picsum.photos/400"
-                  class="w-100"
-                  alt="Example image"
-                />
-              </div>
-              <div class="c-heading__title">
-                <h1 class="text-primary">
-                  Design System <i class="material-icons">face</i>
-                </h1>
-              </div>
-              <div class="c-heading__subtitle">
-                <h6>Standard project module structure</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-12 col-lg">
-            <div class="form-group">
-              <label for="text" class="label">Text label</label>
-              <input
-                id="text"
-                type="text"
-                placeholder="Placeholder"
-                id=""
-                class="form-control"
-              />
-            </div>
-          </div>
-          <div class="col-12 col-lg">
-            <div class="form-group">
-              <label for="select" class="label">Select label</label>
-              <select
-                id="select"
-                class="form-control"
-                title="seleccionar género"
-              >
-                <option>Male</option>
-                <option>Female</option>
-                <option>Undefined</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col-12 col-lg">
-            <div class="form-group">
-              <div class="custom-control custom-checkbox">
-                <input
-                  type="checkbox"
-                  class="custom-control-input"
-                  id="customCheck1"
-                />
-                <label class="custom-control-label label" for="customCheck1"
-                  >Check this custom checkbox</label
+                <!--Row-->
+                <div class="form-row justify-content-center mb-4">
+                  <div class="form-group">
+                    <div class="custom-control custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="editProfile_terms"
+                      />
+                      <label
+                        class="custom-control-label"
+                        for="editProfile_terms"
+                        >Acepto <a href="#">términos y condiciones</a> y
+                        <a href="#">política de privacidad</a></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!--Row-->
+                <div
+                  class="l-container__footer form-row justify-content-center"
                 >
-              </div>
+                  <div class="col-auto">
+                    <input
+                      type="submit"
+                      value="Crear cuenta"
+                      class="btn btn-secondary"
+                    />
+                  </div>
+                  <div class="w-100"></div>
+                  <div class="col-12 col-md-auto">
+                    <a href="#" class="text-center d-block"
+                      >Leer políticas de uso</a
+                    >
+                  </div>
+                </div>
+              </form>
             </div>
-          </div>
-          <div class="col-12 col-lg">
-            <div class="form-group">
-              <div class="custom-file">
-                <input type="file" class="custom-file-input" id="customFile" />
-                <label class="custom-file-label" for="customFile"
-                  >Seleccionar archivo</label
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-auto">
-            <a href="" class="btn btn-primary">Anchor primary</a>
-          </div>
-          <div class="col-auto">
-            <button class="btn btn-secondary">Button</button>
-          </div>
-          <div class="col-auto">
-            <input type="submit" class="btn btn-warning" value="Submit" />
           </div>
         </div>
       </div>
     </section>
-    <footer class="c-footer"><p>Footer</p></footer>
-    <!--jQuery-->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Bootstrap 4 -->
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
-    <!-- Custom select -->
-    <script src="./js/modernizr.js"></script>
-    <script src="./js/scripts.js"></script>
-  </body>
+  </div>
+</article>
+
+<section id="c-baseline">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <h1 class="h1">H1: Each list example</h1>
+        <ul class="breakfast-items">
+          <li class="pizza-0">pizza</li>
+          <li class="burger-1">burger</li>
+          <li class="coffee-2">coffee</li>
+          <li class="panini-3">panini</li>
+        </ul>
+        <h2>H2: Repeat N times example</h2>
+        <ul>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
+        <h3>H3: Help Us Improve</h3>
+        <p>
+          Paragraph: This is version 1 of Archetype and we'd love your feedback
+          and suggestions on how we can improve it to make it even more useful.
+          Please use the feedback link in the header to let us know what you
+          think. Be as critical as you like, we have thick skin.
+        </p>
+        <h4>H4: Still Reading? H4: Still Reading? H4: Still Reading?</h4>
+        <p>
+          Well here's some inspirational quotes for you: “Good design is making
+          something intelligible and memorable. Great design is making something
+          memorable and meaningful”: Dieter Rams.
+        </p>
+        <h5>H5: More? Ok</h5>
+        <p>
+          Paragraph: “A designer knows he has achieved perfection not when there
+          is nothing left to add, but when there is nothing left to take away”:
+          Antoine de Saint-Exupery.
+        </p>
+        <h6>H6: One For the Road</h6>
+        <p class="body">
+          Paragraph: Archetype lets designers like you very quickly and easily
+          create consistent typography styling and spacing live, in the browser.
+          These styles are all underpinned by established typographic best
+          practices meaning less guesswork and more harmonious designs.
+        </p>
+        <p>
+          Ab delectus dolore, dolorem error fuga illo ipsa libero minus modi nam
+          officia, pariatur quos recusandae soluta veniam vitae voluptatum?
+        </p>
+        <div class="c-heading">
+          <div class="c-heading__image">
+            <img
+              src="https://picsum.photos/400"
+              class="w-100"
+              alt="Example image"
+            />
+          </div>
+          <div class="c-heading__title">
+            <h1 class="text-primary">
+              Design System <i class="material-icons">face</i>
+            </h1>
+          </div>
+          <div class="c-heading__subtitle">
+            <h6>Standard project module structure</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-12 col-lg">
+        <div class="form-group">
+          <label for="text" class="label">Text label</label>
+          <input
+            id="text"
+            type="text"
+            placeholder="Placeholder"
+            id=""
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="col-12 col-lg">
+        <div class="form-group">
+          <label for="select" class="label">Select label</label>
+          <select id="select" class="form-control" title="seleccionar género">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Undefined</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-12 col-lg">
+        <div class="form-group">
+          <div class="custom-control custom-checkbox">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="customCheck1"
+            />
+            <label class="custom-control-label label" for="customCheck1"
+              >Check this custom checkbox</label
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg">
+        <div class="form-group">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="customFile" />
+            <label class="custom-file-label" for="customFile"
+              >Seleccionar archivo</label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-auto">
+        <a href="" class="btn btn-primary">Anchor primary</a>
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-secondary">Button</button>
+      </div>
+      <div class="col-auto">
+        <input type="submit" class="btn btn-warning" value="Submit" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="c-footer"><p>Footer</p></footer>
+<!--jQuery-->
+<script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+></script>
+<!-- Bootstrap 4 -->
+<script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+<!-- Custom select -->
+<script src="js/modernizr.js"></script>
+<script src="js/scripts.js"></script>
+</body>
 </html>

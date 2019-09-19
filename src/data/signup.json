@@ -1,0 +1,49 @@
+{
+  "title": "Crea tu cuenta",
+  "description": "Si ya tienes cuenta inicia sesión aquí",
+  "fields": {
+    "firstname": {
+      "label": "Nombres",
+      "description": "Ej. Radamar",
+      "type": "text",
+      "required": true
+    },
+    "lastname": {
+      "label": "Apellidos",
+      "description": "Ej. Flacao",
+      "type": "text",
+      "required": true
+    },
+    "email": {
+      "label": "E-mail",
+      "description": "Ej. radamar@mail.com",
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "label": "Teléfono",
+      "description": "Ej. 12345678",
+      "type": "tel",
+      "required": true
+    },
+    "city": {
+      "label": "Ciudad",
+      "description": "Elige una ciudad",
+      "type": "select",
+      "required": true,
+      "enum": ["CDMX", "Puebla", "Acapulco", "Cancun"]
+    },
+    "passwords": {
+      "label": "Contraseña",
+      "description": "",
+      "type": "password",
+      "required": true
+    },
+    "confirmPassword": {
+      "label": "Confirmar contraseña",
+      "description": "",
+      "type": "password",
+      "required": true
+    }
+  }
+}
