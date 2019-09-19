@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="">
-  <title></title>
-  <link rel="stylesheet" href="css/main.css" />
-</head>
-<body>
-<!--header-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!--header-->
 <header class="sticky-top bg-primary">
   <div class="container">
     <nav class="c-navbar navbar navbar-dark">
@@ -20,9 +20,6 @@
         <li class="nav-item">
           <a class="nav-link" href="/prizes.html">Premios</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/edit-profile.html">Editar perfil</a>
-        </li>
         <li class="nav-item dropdown ml-auto">
           <a
             class="nav-link dropdown-toggle"
@@ -33,20 +30,22 @@
             aria-haspopup="true"
             aria-expanded="false"
           >
-            Perfil
+            Radamar Flacao
           </a>
           <div
             class="dropdown-menu dropdown-menu-right position-absolute"
             aria-labelledby="navbarDropdown"
           >
-            <a class="dropdown-item" href="#">Inicia con tu cuenta</a>
-            <a class="dropdown-item" href="#">Crea una cuenta</a>
+            <a class="dropdown-item" href="/edit-profile.html">Editar perfil</a>
+            <a class="dropdown-item" href="/index.html">Cerrar sesión</a>
+            <a class="dropdown-item" href="/profile.html">Ir a perfil</a>
           </div>
         </li>
       </ul>
     </nav>
   </div>
 </header>
+ 
 <article class="p-profile">
   <!--Component Profile sidebar-->
 <aside class="c-profileSidebar bg-primary">
@@ -120,22 +119,235 @@
   </ul>
 </aside>
  <!--Component Profile points-->
-<aside class="c-profilePoints c-profile__points">
+<aside class="l-points c-profile__points bg-white">
   <p class="h4 m-0 badge badge-secondary">
     Tus puntos
   </p>
+  <!--Points list-->
+  <!--Component Points list-->
+  <ul class="l-points__list">
+     
+    <li class="l-points__link">
+      <div class="c-points">
+        <!--Icon-->
+        <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
+        <!--Title-->
+        <span class="c-points__name">
+          Compartir mi registro
+        </span>
+      </div>
+    </li>
+    
+    <li class="l-points__link">
+      <div class="c-points">
+        <!--Icon-->
+        <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
+        <!--Title-->
+        <span class="c-points__name">
+          Compartir trivias
+        </span>
+      </div>
+    </li>
+      
+    <li class="l-points__link">
+      <div class="c-points">
+        <!--Icon-->
+        <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
+        <!--Title-->
+        <span class="c-points__name">
+          Compartir mi registro
+        </span>
+      </div>
+    </li>
+    
+    <li class="l-points__link">
+      <div class="c-points">
+        <!--Icon-->
+        <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
+        <!--Title-->
+        <span class="c-points__name">
+          Compartir trivias
+        </span>
+      </div>
+    </li>
+      
+    <li class="l-points__link">
+      <div class="c-points">
+        <!--Icon-->
+        <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
+        <!--Title-->
+        <span class="c-points__name">
+          Compartir mi registro
+        </span>
+      </div>
+    </li>
+    
+    <li class="l-points__link">
+      <div class="c-points">
+        <!--Icon-->
+        <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
+        <!--Title-->
+        <span class="c-points__name">
+          Compartir trivias
+        </span>
+      </div>
+    </li>
+     
+  </ul>
 </aside>
  <!--Component Profile challenges-->
-<aside class="c-profileChallenges c-profile__challenges">
+<aside class="l-challenges c-profile__challenges bg-white">
   <p class="h4 m-0 badge badge-secondary">
-    Tus retos
+    tus retos
   </p>
+  <!--Challenges list-->
+  <!--Component Challenges list-->
+  <ul class="l-challenges__list">
+     
+    <li class="l-challenges__link">
+      <div class="c-challenge">
+        <!--Icon-->
+        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
+        <!--Title-->
+        <span class="c-challenge__name">
+          Trivia del día
+        </span>
+        <!--Points-->
+        <span class="c-challenge__points">
+          200 Puntos
+        </span>
+      </div>
+    </li>
+    
+    <li class="l-challenges__link">
+      <div class="c-challenge">
+        <!--Icon-->
+        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
+        <!--Title-->
+        <span class="c-challenge__name">
+          Trivia del día
+        </span>
+        <!--Points-->
+        <span class="c-challenge__points">
+          150 Puntos
+        </span>
+      </div>
+    </li>
+    
+    <li class="l-challenges__link">
+      <div class="c-challenge">
+        <!--Icon-->
+        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
+        <!--Title-->
+        <span class="c-challenge__name">
+          Agregar amigo
+        </span>
+        <!--Points-->
+        <span class="c-challenge__points">
+          300 Puntos
+        </span>
+      </div>
+    </li>
+      
+    <li class="l-challenges__link">
+      <div class="c-challenge">
+        <!--Icon-->
+        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
+        <!--Title-->
+        <span class="c-challenge__name">
+          Trivia del día
+        </span>
+        <!--Points-->
+        <span class="c-challenge__points">
+          200 Puntos
+        </span>
+      </div>
+    </li>
+    
+    <li class="l-challenges__link">
+      <div class="c-challenge">
+        <!--Icon-->
+        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
+        <!--Title-->
+        <span class="c-challenge__name">
+          Trivia del día
+        </span>
+        <!--Points-->
+        <span class="c-challenge__points">
+          150 Puntos
+        </span>
+      </div>
+    </li>
+    
+    <li class="l-challenges__link">
+      <div class="c-challenge">
+        <!--Icon-->
+        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
+        <!--Title-->
+        <span class="c-challenge__name">
+          Agregar amigo
+        </span>
+        <!--Points-->
+        <span class="c-challenge__points">
+          300 Puntos
+        </span>
+      </div>
+    </li>
+      
+    <li class="l-challenges__link">
+      <div class="c-challenge">
+        <!--Icon-->
+        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
+        <!--Title-->
+        <span class="c-challenge__name">
+          Trivia del día
+        </span>
+        <!--Points-->
+        <span class="c-challenge__points">
+          200 Puntos
+        </span>
+      </div>
+    </li>
+    
+    <li class="l-challenges__link">
+      <div class="c-challenge">
+        <!--Icon-->
+        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
+        <!--Title-->
+        <span class="c-challenge__name">
+          Trivia del día
+        </span>
+        <!--Points-->
+        <span class="c-challenge__points">
+          150 Puntos
+        </span>
+      </div>
+    </li>
+    
+    <li class="l-challenges__link">
+      <div class="c-challenge">
+        <!--Icon-->
+        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
+        <!--Title-->
+        <span class="c-challenge__name">
+          Agregar amigo
+        </span>
+        <!--Points-->
+        <span class="c-challenge__points">
+          300 Puntos
+        </span>
+      </div>
+    </li>
+     
+  </ul>
+  <span class="border-top w-100 d-block border-secondary my-4"></span>
+  <a href="/" class="h5 text-center text-primary d-block btn-link">Ver todas</a>
 </aside>
 
 </article>
 
-<footer class="c-footer"><p>Footer</p></footer>
-<!--jQuery-->
+ <footer class="c-footer"><p>Footer</p></footer>
+ <!--jQuery-->
 <script
     src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -156,5 +368,6 @@
 <!-- Custom select -->
 <script src="js/modernizr.js"></script>
 <script src="js/scripts.js"></script>
-</body>
+
+  </body>
 </html>

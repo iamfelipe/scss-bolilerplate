@@ -1,0 +1,10 @@
+<!--Component Challenges list-->
+<ul class="l-challenges__list">
+  {{#repeat 3}} {{#each challenges.list as |challenge key|}}
+  <li class="l-challenges__link">
+    {{> challenges-item challenge=challenge}}
+  </li>
+  {{/each}} {{/repeat}}
+</ul>
+<span class="border-top w-100 d-block border-secondary my-4"></span>
+<a href="/" class="h5 text-center text-primary d-block btn-link">Ver todas</a>

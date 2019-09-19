@@ -5,21 +5,21 @@
     {
       "id": 0,
       "img": "https://picsum.photos/200",
-      "title": "6 Pack Botellas 355 Ml",
+      "name": "6 Pack Botellas 355 Ml",
       "points": "200",
       "price": "72"
     },
     {
       "id": 1,
       "img": "https://picsum.photos/200",
-      "title": "Hielera",
+      "name": "Hielera",
       "points": "250",
       "price": "96"
     },
     {
       "id": 3,
       "img": "https://picsum.photos/200",
-      "title": "Camiseta",
+      "name": "Camiseta",
       "points": "400",
       "price": "120"
     }

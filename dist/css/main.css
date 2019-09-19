@@ -6627,7 +6627,7 @@ h4, .h4 {
       font-size: 31.104px; } }
 
 
-h5, .h5 {
+h5, .h5, .c-challenge__name, .c-challenge__points, .c-points__name {
   font-size: 17.71875px;
   line-height: 1.08024691em;
   font-weight: 400;
@@ -6635,11 +6635,11 @@ h5, .h5 {
   margin-bottom: 24px; }
   @media (min-width: 576px) and (max-width: 992px) {
     
-    h5, .h5 {
+    h5, .h5, .c-challenge__name, .c-challenge__points, .c-points__name {
       font-size: calc( 17.71875px + 8.20125 * ( ( 100vw - 576px) / 416 )); } }
   @media (min-width: 992px) {
     
-    h5, .h5 {
+    h5, .h5, .c-challenge__name, .c-challenge__points, .c-points__name {
       font-size: 25.92px; } }
 
 
@@ -6709,6 +6709,34 @@ h6, .h6, .btn, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-or
   @media (min-width: 992px) {
     .tiny {
       font-size: 12.5px; } }
+
+@font-face {
+  font-family: "Material Icons";
+  src: url("../fonts/MaterialIcons-Regular.eot");
+  src: url("../fonts/MaterialIcons-Regular.woff") format("woff"), url("../fonts/MaterialIcons-Regular.ttf") format("truetype"), url("../fonts/MaterialIcons-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../fonts/RobotoCondensed-Regular.eot");
+  src: url("../fonts/RobotoCondensed-Regular.woff") format("woff"), url("../fonts/RobotoCondensed-Regular.ttf") format("truetype"), url("../fonts/RobotoCondensed-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("../fonts/RobotoCondensed-Bold.eot");
+  src: url("../fonts/RobotoCondensed-Bold.woff") format("woff"), url("../fonts/RobotoCondensed-Bold.ttf") format("truetype"), url("../fonts/RobotoCondensed-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Hudson NY";
+  src: url("../fonts/HudsonNY.eot");
+  src: url("../fonts/HudsonNY.woff") format("woff"), url("../fonts/HudsonNY.ttf") format("truetype"), url("../fonts/HudsonNY.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
 .m-t-0 {
   margin-top: 0px !important; }
@@ -7032,33 +7060,11 @@ h6, .h6, .btn, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-or
   /* Support for IE. */
   font-feature-settings: "liga"; }
 
-@font-face {
-  font-family: "Material Icons";
-  src: url("../fonts/MaterialIcons-Regular.eot");
-  src: url("../fonts/MaterialIcons-Regular.woff") format("woff"), url("../fonts/MaterialIcons-Regular.ttf") format("truetype"), url("../fonts/MaterialIcons-Regular.svg") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+.font-primary {
+  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important; }
 
-@font-face {
-  font-family: "Roboto Condensed";
-  src: url("../fonts/RobotoCondensed-Regular.eot");
-  src: url("../fonts/RobotoCondensed-Regular.woff") format("woff"), url("../fonts/RobotoCondensed-Regular.ttf") format("truetype"), url("../fonts/RobotoCondensed-Regular.svg") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Roboto Condensed";
-  src: url("../fonts/RobotoCondensed-Bold.eot");
-  src: url("../fonts/RobotoCondensed-Bold.woff") format("woff"), url("../fonts/RobotoCondensed-Bold.ttf") format("truetype"), url("../fonts/RobotoCondensed-Bold.svg") format("svg");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Hudson NY";
-  src: url("../fonts/HudsonNY.eot");
-  src: url("../fonts/HudsonNY.woff") format("woff"), url("../fonts/HudsonNY.ttf") format("truetype"), url("../fonts/HudsonNY.svg") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+.font-secondary {
+  font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important; }
 
 /**
  * Set up a decent box model on the root element
@@ -7076,6 +7082,12 @@ html {
 *::before,
 *::after {
   box-sizing: inherit; }
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
 
 html {
   font-size: 14px; }
@@ -7115,7 +7127,7 @@ h4 {
   font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
 
-h5, .h5,
+h5, .h5, .c-challenge__name, .c-challenge__points, .c-points__name,
 h5 {
   font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
@@ -7259,6 +7271,9 @@ h6 {
     .btn-gray-dark.disabled, .btn-gray-dark:disabled {
       background-color: #454d55;
       border-color: #454d55; }
+  .btn-link {
+    font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-decoration: underline; }
 
 .badge {
   max-width: 100%;
@@ -7319,6 +7334,95 @@ h6 {
     background-color: #78909c;
     width: 0.11111111rem;
     display: block; }
+
+.c-challenge {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[2];
+  grid-template-rows: repeat(2, auto);
+  -ms-grid-columns: auto 0.66666667rem 1fr;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 0.66666667rem;
+  grid-template-areas: "icon name" "icon points";
+  margin-top: 1.33333333rem;
+  margin-bottom: 1.33333333rem; }
+  .c-challenge__icon {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: icon; }
+  .c-points > .c-challenge__icon {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1; }
+  .c-challenge__name {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: name; }
+  .c-points > .c-challenge__name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3; }
+  .c-challenge__points {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: points; }
+  .c-challenge__icon {
+    max-width: 1.77777778em;
+    max-height: 1.77777778em;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -ms-grid-row-align: center;
+    align-self: center; }
+  .c-challenge__name {
+    font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    margin-bottom: 0;
+    color: #0c2340; }
+  .c-challenge__points {
+    font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin-bottom: 0;
+    color: #78909c; }
+
+.c-points {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 0.66666667rem 1fr;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 0.66666667rem;
+  grid-template-areas: "icon name";
+  margin-top: 1.33333333rem;
+  margin-bottom: 1.33333333rem; }
+  .c-points__icon {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: icon; }
+  .c-points > .c-points__icon {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1; }
+  .c-points__name {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: name; }
+  .c-points > .c-points__name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3; }
+  .c-points__points {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: points; }
+  .c-points__icon {
+    max-width: 1.77777778em;
+    max-height: 1.77777778em;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -ms-grid-row-align: center;
+    align-self: center; }
+  .c-points__name {
+    font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin-bottom: 0;
+    color: #0c2340; }
 
 .c-navbar {
   position: relative; }

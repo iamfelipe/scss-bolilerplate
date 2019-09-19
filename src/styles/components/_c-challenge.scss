@@ -1,0 +1,37 @@
+// Component Challenge
+// ---------
+
+.c-challenge {
+  display: grid;
+  @include template(icon, name, points);
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: auto 1fr;
+  grid-column-gap: $grid-gutter-width / 2;
+  grid-template-areas:
+    "icon name"
+    "icon points";
+  margin-top: $grid-gutter-width / 1;
+  margin-bottom: $grid-gutter-width / 1;
+
+  @include e(icon) {
+    $prize-size: em(32);
+    max-width: $prize-size;
+    max-height: $prize-size;
+    object-fit: contain;
+    align-self: center;
+  }
+
+  @include e(name) {
+    @extend %h5;
+    font-family: $font-stack-primary;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: theme-color();
+  }
+  @include e(points) {
+    @extend %h5;
+    font-family: $font-stack-primary;
+    margin-bottom: 0;
+    color: gray("400");
+  }
+}

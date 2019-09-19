@@ -46,4 +46,9 @@
       @include button($value);
     }
   }
+
+  &-link {
+    font-family: $font-stack-primary;
+    text-decoration: underline;
+  }
 }

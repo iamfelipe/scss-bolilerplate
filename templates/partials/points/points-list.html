@@ -1,0 +1,8 @@
+<!--Component Points list-->
+<ul class="l-points__list">
+  {{#repeat 3}} {{#each points.list as |value key|}}
+  <li class="l-points__link">
+    {{> points-item value=value}}
+  </li>
+  {{/each}} {{/repeat}}
+</ul>

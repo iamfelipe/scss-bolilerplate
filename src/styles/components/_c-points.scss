@@ -1,0 +1,27 @@
+// Component Points
+// ---------
+
+.c-points {
+  display: grid;
+  @include template(icon, name, points);
+  grid-template-columns: auto 1fr;
+  grid-column-gap: $grid-gutter-width / 2;
+  grid-template-areas: "icon name";
+  margin-top: $grid-gutter-width / 1;
+  margin-bottom: $grid-gutter-width / 1;
+
+  @include e(icon) {
+    $prize-size: em(32);
+    max-width: $prize-size;
+    max-height: $prize-size;
+    object-fit: contain;
+    align-self: center;
+  }
+
+  @include e(name) {
+    @extend %h5;
+    font-family: $font-stack-primary;
+    margin-bottom: 0;
+    color: theme-color();
+  }
+}

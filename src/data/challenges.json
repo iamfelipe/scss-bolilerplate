@@ -1,0 +1,27 @@
+{
+  "name": "challenges",
+  "title": "tus retos",
+  "list": [
+    {
+      "id": 0,
+      "icon": "https://picsum.photos/200",
+      "name": "Trivia del día",
+      "points": "200",
+      "completed": true
+    },
+    {
+      "id": 1,
+      "icon": "https://picsum.photos/200",
+      "name": "Trivia del día",
+      "points": "150",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "icon": "https://picsum.photos/200",
+      "name": "Agregar amigo",
+      "points": "300",
+      "completed": true
+    }
+  ]
+}

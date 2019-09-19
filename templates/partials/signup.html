@@ -26,38 +26,7 @@
               <!--Form-->
               <form action="">
                 <!--Row-->
-                <div class="form-row">
-                  {{#each edit-profile.fields as |value key|}}
-                  <div class="col-12 col-md-6">
-                    <div class="form-group">
-                      <label for="editProfile_{{key}}" class="label"
-                        >{{value.label}}</label
-                      >
-                      {{#if (eq value.type 'select')}}
-                      <select
-                        name="editProfile_{{key}}"
-                        id="editProfile_{{key}}"
-                        class="form-control"
-                      >
-                        <option value="" selected disabled hidden>
-                          {{value.description}}
-                        </option>
-                        {{#each value.enum as |value key|}}
-                        <option value="{{value}}">{{value}}</option>
-                        {{/each}}
-                      </select>
-                      {{else}}
-                      <input
-                        id="editProfile_{{key}}"
-                        type="{{value.type}}"
-                        class="form-control"
-                        required="{{value.required}}"
-                      />
-                      {{/if}}
-                    </div>
-                  </div>
-                  {{/each}}
-                </div>
+                {{> form-user}}
                 <!--Row-->
                 <div class="form-row justify-content-center mb-4">
                   <div class="form-group">
