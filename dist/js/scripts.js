@@ -301,9 +301,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
     $(document).ready(function () {
       bs_custom_file_input__WEBPACK_IMPORTED_MODULE_0___default.a.init();
-      $('select').selectpicker({
-        style: '',
-        styleBase: 'form-control'
+      $("select").selectpicker({
+        style: "",
+        styleBase: "form-control"
         // liveSearch: true
       });
     });

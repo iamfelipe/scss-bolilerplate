@@ -23,6 +23,7 @@ const webp = require("gulp-webp");
 const clone = require("gulp-clone");
 const webpHTML = require("gulp-webp-html");
 const modernizr = require("gulp-modernizr");
+const panini = require("panini");
 
 // Proxy URL
 const proxyURL = "https://ponymalta.test.dd:8443/";
@@ -64,7 +65,8 @@ const srcPath = (file, watch = false) => {
   if (file === "scss" && watch === true) return "./src/styles/**/*.scss";
   if (file === "js" && watch === false) return entryArray;
   if (file === "js" && watch === true) return "./src/js/**/*.js";
-  if (file === "html") return "./templates/**/*.{html, tpl}";
+  if (file === "html" && watch === false) return "./templates/pages/*";
+  if (file === "html" && watch === true) return "./templates/**/*.{html, tpl}";
   if (file === "img") return "./src/img/**/*.{png,jpeg,jpg,svg,gif}";
   if (file === "fonts") return "./src/fonts/**/*.{eot,woff,woff2,ttf,svg}";
   console.error(
@@ -90,6 +92,18 @@ const cleanMarkup = mode => () => {
     ? del([distPath("html")])
     : undefined;
 };
+
+// Refresh
+const paniniRefresh = mode => done => {
+  ["development", "production"].includes(mode)
+    ? pump([panini.refresh(), done()])
+    : undefined;
+};
+
+function resetPages(done) {
+  panini.refresh();
+  done();
+}
 
 // Clean Images Task
 const cleanImages = mode => () => {
@@ -132,13 +146,17 @@ const cleanExport = mode => () => {
 
 // Build Markup Tasks
 const buildMarkup = mode => done => {
-  ["development", "production"].includes(mode)
+  ["development"].includes(mode)
     ? pump(
         [
           gulp.src(srcPath("html")),
-          ...(mode === "production"
-            ? [gulpHtmlmin({ collapseWhitespace: true }), webpHTML()]
-            : []),
+          panini({
+            root: "templates/pages/",
+            layouts: "templates/layouts/",
+            partials: "templates/partials/",
+            helpers: "templates/helpers/",
+            data: "templates/data/"
+          }),
           gulp.dest(distPath("html", true))
         ],
         done()
@@ -324,12 +342,13 @@ const genericTask = (mode, context = "building") => {
     });
 
     // Watch - Markup
-    gulp.watch(srcPath("html"), true).on(
+    gulp.watch(srcPath("html", true)).on(
       "all",
       gulp.series(
         Object.assign(cleanMarkup(mode), {
           displayName: `Watching Markup Task: Clean - ${modeName}`
         }),
+        resetPages,
         Object.assign(buildMarkup(mode), {
           displayName: `Watching Markup Task: Build - ${modeName}`
         }),
