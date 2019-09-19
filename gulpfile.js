@@ -155,7 +155,7 @@ const buildMarkup = mode => done => {
             layouts: "templates/layouts/",
             partials: "templates/partials/",
             helpers: "templates/helpers/",
-            data: "templates/data/"
+            data: "src/data/"
           }),
           gulp.dest(distPath("html", true))
         ],
