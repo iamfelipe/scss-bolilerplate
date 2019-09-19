@@ -18,9 +18,7 @@ title: Editar Perfil
                 class="rounded-circle"
               />
               <div class="w-100"></div>
-              <p class="h4 badge badge-secondary my-3">
-                {{user.firstname}} {{user.lastname}}
-              </p>
+              {{> badge title=user.name tag='h4' classes='my-3'}}
               <div class="w-100"></div>
               <p class="h5 text-secondary mb-4">ID CORONA: {{user.id}}</p>
             </header>

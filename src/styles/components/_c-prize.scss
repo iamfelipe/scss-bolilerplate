@@ -1,0 +1,33 @@
+// Component Prize
+// ---------
+
+.c-prize {
+  text-align: center;
+  @include e(img) {
+    $prize-size: em(200);
+    max-width: $prize-size;
+    max-height: $prize-size;
+    object-fit: cover;
+  }
+
+  @include e(title) {
+  }
+
+  @include e(description) {
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-stack-primary;
+  }
+
+  @include e(val) {
+    text-align: left;
+    font-family: inherit;
+  }
+
+  @include e(separator) {
+    height: 3em;
+    background-color: gray("400");
+    width: $border-width;
+    display: block;
+  }
+}

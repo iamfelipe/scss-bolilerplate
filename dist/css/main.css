@@ -7300,6 +7300,26 @@ h6 {
     .c-signup .l-container__footer {
       margin-bottom: -6em; } }
 
+.c-prize {
+  text-align: center; }
+  .c-prize__img {
+    max-width: 11.11111111em;
+    max-height: 11.11111111em;
+    -o-object-fit: cover;
+    object-fit: cover; }
+  .c-prize__description {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+  .c-prize__val {
+    text-align: left;
+    font-family: inherit; }
+  .c-prize__separator {
+    height: 3em;
+    background-color: #78909c;
+    width: 0.11111111rem;
+    display: block; }
+
 .c-navbar {
   position: relative; }
   .c-navbar::before {
@@ -7330,6 +7350,9 @@ h6 {
     .l-container__body--bg {
       padding: 1.33333333rem;
       background-color: #33465f; }
+
+.l-prizes__list {
+  display: flex; }
 
 .p-home__title {
   font-size: 45.46249436px;

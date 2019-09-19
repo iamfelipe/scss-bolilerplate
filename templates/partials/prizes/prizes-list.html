@@ -1,0 +1,8 @@
+<!--Component Prizes list-->
+<ul class="l-prizes__list">
+  {{#each prizes.list as |prize key|}}
+  <li class="l-prizes__link">
+    {{> prizes-item prize=prize}}
+  </li>
+  {{/each}}
+</ul>

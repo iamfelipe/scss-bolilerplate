@@ -1,0 +1,11 @@
+// Layout Prizes
+// ---------
+
+.l-prizes {
+  @include e(list) {
+    display: flex;
+  }
+
+  @include e(item) {
+  }
+}

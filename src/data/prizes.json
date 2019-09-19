@@ -1,0 +1,27 @@
+{
+  "title": "tus premios",
+  "description": "tus premios",
+  "list": [
+    {
+      "id": 0,
+      "img": "https://picsum.photos/200",
+      "title": "6 Pack Botellas 355 Ml",
+      "points": "200",
+      "price": "72"
+    },
+    {
+      "id": 1,
+      "img": "https://picsum.photos/200",
+      "title": "Hielera",
+      "points": "250",
+      "price": "96"
+    },
+    {
+      "id": 3,
+      "img": "https://picsum.photos/200",
+      "title": "Camiseta",
+      "points": "400",
+      "price": "120"
+    }
+  ]
+}
