@@ -1,0 +1,18 @@
+<div class="c-social">
+  <!--Title-->
+  <h6 class="c-footer__title">
+    {{social.title}}
+  </h6>
+  <hr class="border-secondary" />
+  <!--List-->
+  <ul class="c-social__list">
+    {{#each social.list as |value key|}}
+    <li class="c-social__item">
+      <a
+        href="{{value.url}}"
+        class="c-social__link c-social__link--{{value.name}}"
+      ></a>
+    </li>
+    {{/each}}
+  </ul>
+</div>

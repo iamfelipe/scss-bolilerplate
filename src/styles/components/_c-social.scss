@@ -1,0 +1,43 @@
+// Component SOCIAL
+// ---------
+
+.c-social {
+  $social-link-size: $grid-gutter-width * 2;
+  $networks: facebook twitter instagram youtube;
+
+  @include e(list) {
+    @extend .row;
+
+    @include media-breakpoint-up(md) {
+      margin-right: (-$social-link-size / 2);
+      margin-left: (-$social-link-size / 2);
+    }
+  }
+
+  @include e(item) {
+    @extend .col-auto;
+
+    @include media-breakpoint-up(md) {
+      padding: 0 ($social-link-size / 2);
+    }
+  }
+
+  @include e(link) {
+    display: block;
+    width: $social-link-size * 0.75;
+    height: $social-link-size * 0.75;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    @include media-breakpoint-up(lg) {
+      width: $social-link-size;
+      height: $social-link-size;
+    }
+
+    @each $value in $networks {
+      @include m(#{$value}) {
+        @include image("club-icon-#{$value}");
+      }
+    }
+  }
+}

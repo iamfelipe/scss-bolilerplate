@@ -325,6 +325,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       var options = {
         mobileFirst: true,
         infinite: true,
+        swipeToSlide: true,
         prevArrow: '<button type="button" class="slick-arrow slick-prev"><i class="material-icons">' + "keyboard_arrow_left" + "</i></button>",
         nextArrow: '<button type="button" class="slick-arrow slick-next"><i class="material-icons">' + "keyboard_arrow_right" + "</i></button>"
       };
@@ -334,7 +335,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         responsive: [{
           breakpoint: 768,
           settings: {
-            slidesToShow: 5
+            slidesToShow: 6
           }
         }]
       };

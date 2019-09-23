@@ -1,0 +1,32 @@
+// Component FOOTER
+// ---------
+
+.c-footer {
+  @include e(title) {
+    @extend %tiny;
+    display: flex;
+    align-items: flex-end;
+    line-height: em(12, ms(-2));
+    min-height: em(24, ms(-2));
+    margin-bottom: 0;
+    font-family: $font-stack-primary;
+    text-transform: uppercase;
+  }
+
+  @include e(logo) {
+    @include media-breakpoint-up(m) {
+      width: 12vw;
+    }
+  }
+
+  hr {
+    margin: $grid-gutter-width 0;
+    max-width: $grid-gutter-width * 7;
+  }
+
+  @include e(heading) {
+    @include ms-respond(font-size, 8);
+    margin-bottom: 0;
+    font-family: $font-stack-secondary;
+  }
+}

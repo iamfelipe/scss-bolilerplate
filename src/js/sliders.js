@@ -3,6 +3,7 @@ $(document).ready(function() {
   const options = {
     mobileFirst: true,
     infinite: true,
+    swipeToSlide: true,
     prevArrow:
       '<button type="button" class="slick-arrow slick-prev"><i class="material-icons">' +
       "keyboard_arrow_left" +
@@ -19,7 +20,7 @@ $(document).ready(function() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 5
+          slidesToShow: 6
         }
       }
     ]

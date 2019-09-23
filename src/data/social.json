@@ -1,0 +1,26 @@
+{
+  "name": "social",
+  "title": "Nuestras redes",
+  "list": [
+    {
+      "id": 0,
+      "name": "facebook",
+      "url": "https://picsum.photos/200"
+    },
+    {
+      "id": 1,
+      "name": "twitter",
+      "url": "https://picsum.photos/200"
+    },
+    {
+      "id": 2,
+      "name": "instagram",
+      "url": "https://picsum.photos/200"
+    },
+    {
+      "id": 3,
+      "name": "youtube",
+      "url": "https://picsum.photos/200"
+    }
+  ]
+}

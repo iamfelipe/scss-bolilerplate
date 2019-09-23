@@ -2,5 +2,39 @@
 // ---------
 
 #{$layout-footer} {
+  border-top: $border-width solid theme-color("secondary");
+  padding: $grid-gutter-width;
+  display: grid;
+  grid-gap: $grid-gutter-width;
+  grid-template-columns: auto repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  @include template(social, disclaimer, logo, tagline);
+  grid-template-areas: "social social disclaimer" "logo tagline tagline";
 
+  @include media-breakpoint-up(md) {
+    grid-gap: $grid-gutter-width * 3;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "social logo tagline" "disclaimer logo tagline";
+  }
+
+  @include e(social) {
+    @include media-breakpoint-up(md) {
+      align-self: flex-end;
+    }
+  }
+
+  @include e(disclaimer) {
+    @include media-breakpoint-up(md) {
+      align-self: flex-start;
+    }
+  }
+
+  @include e(logo) {
+    align-self: center;
+  }
+
+  @include e(tagline) {
+    align-self: center;
+  }
 }

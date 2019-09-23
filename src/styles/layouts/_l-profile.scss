@@ -3,13 +3,14 @@
 
 #{$layout-profile} {
   $nav-item-offset: 1.5em;
+  $layout-profile-height: 100vh;
   @include media-breakpoint-up(md) {
     display: grid;
     @include template(sidebar, content);
     //grid-column-gap: $grid-gutter-width;
     grid-template-columns: auto 1fr;
     grid-template-areas: "sidebar content";
-    height: 100vh;
+    //height: 100vh;
   }
 
   @include media-breakpoint-up(xl) {
@@ -19,6 +20,8 @@
   @include e(content) {
     background: $white;
     @include media-breakpoint-up(md) {
+      //max-height: $layout-profile-height;
+      //overflow-y: auto;
       .nav-pills {
         display: none !important;
       }
