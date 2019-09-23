@@ -7716,8 +7716,8 @@ h6 {
     text-transform: uppercase;
     font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
   .c-navbar__img {
-    width: 2.66666667em;
-    height: 2.66666667em;
+    width: 2.66666667rem;
+    height: 2.66666667rem;
     border-radius: 50%;
     -o-object-fit: cover;
     object-fit: cover; }

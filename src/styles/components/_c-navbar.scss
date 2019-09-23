@@ -74,7 +74,7 @@
   }
 
   // Custom
-  $img-size: em(48);
+  $img-size: rem(48);
   @include e(img) {
     width: $img-size;
     height: $img-size;
