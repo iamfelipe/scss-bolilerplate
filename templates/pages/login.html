@@ -1,0 +1,66 @@
+---
+layout: loggedin
+---
+
+<article class="p-login py-4">
+  <div class="container">
+    <section class="c-login">
+      <div class="l-container my-md-5">
+        <div class="l-container__body text-center text-md-left my-md-5">
+          <div class="row justify-content-center align-items-md-center">
+            <div class="col-auto col-md-4">
+              <figure class="c-login__badge">
+                <img
+                  src="{{root}}img/club-img-logo.png"
+                  alt="Medalla de membresía"
+                />
+              </figure>
+            </div>
+            <div class="col-12 col-md">
+              <!--Header-->
+              <h1 class="h1 text-white mb-2">Iniciar sesión</h1>
+              {{> badge title='SI CUENTAS CON TU ID CORONA INGRESALO' tag='h5'
+              classes='mb-4 px-2 px-lg-3'}}
+              <!--Form-->
+              <form action="">
+                <!--Row-->
+                <div class="form-row mb-4">
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <label for="login_id" class="label text-left"
+                        >ID Corona</label
+                      >
+                      <input
+                        id="login_id"
+                        type="number"
+                        class="form-control"
+                        required="required"
+                        placeholder="Ej. 12345678"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--Row-->
+                <div class="l-container__footer form-row mb-md-0">
+                  <div class="col-12 col-md-auto">
+                    <input
+                      type="submit"
+                      value="Iniciar sesión"
+                      class="btn btn-secondary btn-block"
+                    />
+                  </div>
+                  <div class="w-100"></div>
+                  <div class="col-12 col-md-auto">
+                    <a href="#" class="text-center d-block"
+                      >Si todavía no estás registrado, haz click aquí</a
+                    >
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</article>
