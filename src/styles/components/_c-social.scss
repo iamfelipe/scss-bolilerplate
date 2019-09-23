@@ -2,7 +2,7 @@
 // ---------
 
 .c-social {
-  $social-link-size: $grid-gutter-width * 2;
+  $social-link-size: em(40);
   $networks: facebook twitter instagram youtube;
 
   @include e(list) {

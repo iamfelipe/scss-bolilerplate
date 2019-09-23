@@ -192,7 +192,8 @@ $custom-control-indicator-size: rem(24);
 $custom-control-gutter: $custom-control-indicator-size / 2;
 
 // Dropdown
-$dropdown-item-padding-y: $input-btn-padding-y;
+$dropdown-item-padding-y: $input-btn-padding-y / 2;
+$dropdown-item-padding-x: 0;
 
 // Spacing
 $spacer: 1em;
@@ -218,7 +219,7 @@ $spacers: (
 
 // Navbar
 $navbar-padding-x: 0;
-$navbar-padding-y: $grid-gutter-width;
+$navbar-padding-y: $grid-gutter-width / 2;
 $navbar-dark-color: $component-active-bg;
 $navbar-dark-hover-color: rgba($component-active-bg, 0.75);
 
