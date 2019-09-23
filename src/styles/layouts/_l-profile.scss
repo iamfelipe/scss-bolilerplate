@@ -13,7 +13,7 @@
     //height: 100vh;
   }
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     grid-template-columns: minmax(auto, 20%) 1fr;
   }
 
