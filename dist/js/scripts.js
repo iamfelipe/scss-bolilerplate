@@ -298,6 +298,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     __webpack_require__.r(__webpack_exports__);
     /* harmony import */var bs_custom_file_input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! bs-custom-file-input */"./node_modules/bs-custom-file-input/dist/bs-custom-file-input.js");
     /* harmony import */var bs_custom_file_input__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bs_custom_file_input__WEBPACK_IMPORTED_MODULE_0__);
+    /* harmony import */var _sliders__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! ./sliders */"./src/js/sliders.js");
+    /* harmony import */var _sliders__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_sliders__WEBPACK_IMPORTED_MODULE_1__);
 
     $(document).ready(function () {
       bs_custom_file_input__WEBPACK_IMPORTED_MODULE_0___default.a.init();
@@ -306,6 +308,40 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         styleBase: "form-control"
         // liveSearch: true
       });
+    });
+
+    /***/
+  },
+
+  /***/"./src/js/sliders.js":
+  /*!***************************!*\
+    !*** ./src/js/sliders.js ***!
+    \***************************/
+  /*! no static exports found */
+  /***/function srcJsSlidersJs(module, exports) {
+
+    $(document).ready(function () {
+      var $slider = $(".c-slider");
+      var options = {
+        mobileFirst: true,
+        infinite: true,
+        prevArrow: '<button type="button" class="slick-arrow slick-prev"><i class="material-icons">' + "keyboard_arrow_left" + "</i></button>",
+        nextArrow: '<button type="button" class="slick-arrow slick-next"><i class="material-icons">' + "keyboard_arrow_right" + "</i></button>"
+      };
+      var prizes = {
+        slidesToShow: 3,
+        appendArrows: $(".l-prizes__header"),
+        responsive: [{
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 5
+          }
+        }]
+      };
+
+      if ($slider.length) {
+        $slider.slick(Object.assign(options, prizes));
+      }
     });
 
     /***/

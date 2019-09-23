@@ -6,6 +6,7 @@ $layout-sidebar: ".l-sidebar";
 $layout-footer: ".l-footer";
 $layout-form: ".l-form";
 $layout-container: ".l-container";
+$layout-profile: ".l-profile";
 
 //@import "l-header";
 //@import "l-footer";
@@ -13,3 +14,4 @@ $layout-container: ".l-container";
 //@import "l-forms";
 @import "l-container";
 @import "l-prizes";
+@import "l-profile";

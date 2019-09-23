@@ -1,6 +1,9 @@
 <!--Component Profile challenges-->
-<aside class="l-challenges c-profile__challenges bg-white">
-  {{> badge title=challenges.title tag='h4' classes='m-0'}}
+<aside class="l-challenges l-profile__tile">
+  <!--Header-->
+  <header class="l-challenges__header mb-4">
+    {{> badge title=challenges.title tag='h4' classes='m-0'}}
+  </header>
   <!--Challenges list-->
   {{> challenges-list}}
 </aside>

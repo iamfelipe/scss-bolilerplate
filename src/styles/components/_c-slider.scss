@@ -1,0 +1,33 @@
+// Component slider
+// ---------
+
+.slick-arrow {
+  @include transition();
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 0;
+  border: 0 none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: em(40);
+
+  @include plain-hover-focus() {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  @include hover() {
+    color: theme-color("secondary");
+  }
+}
+
+.c-slider {
+  &.slick-initialized.slick-slider {
+    .slick-arrow {
+    }
+  }
+}

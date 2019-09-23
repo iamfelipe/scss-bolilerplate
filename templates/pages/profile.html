@@ -2,7 +2,72 @@
 layout: loggedin
 ---
 
-<article class="p-profile">
-  {{> profile-sidebar}} {{> profile-prizes}} {{> profile-points}} {{>
-  profile-challenges}}
+<article class="p-profile l-profile">
+  {{> profile-sidebar}}
+  <div class="l-profile__content">
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          id="pills-prizes-tab"
+          data-toggle="pill"
+          href="#pills-prizes"
+          role="tab"
+          aria-controls="pills-prizes"
+          aria-selected="true"
+          >Tus premios</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="pills-points-tab"
+          data-toggle="pill"
+          href="#pills-points"
+          role="tab"
+          aria-controls="pills-points"
+          aria-selected="false"
+          >Tus puntos</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="pills-challenges-tab"
+          data-toggle="pill"
+          href="#pills-challenges"
+          role="tab"
+          aria-controls="pills-challenges"
+          aria-selected="false"
+          >Tus retos</a
+        >
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <div
+        class="tab-pane fade show active"
+        id="pills-prizes"
+        role="tabpanel"
+        aria-labelledby="pills-prizes-tab"
+      >
+        {{> profile-prizes}}
+      </div>
+      <div
+        class="tab-pane fade"
+        id="pills-points"
+        role="tabpanel"
+        aria-labelledby="pills-points-tab"
+      >
+        {{> profile-points}}
+      </div>
+      <div
+        class="tab-pane fade"
+        id="pills-challenges"
+        role="tabpanel"
+        aria-labelledby="pills-challenges-tab"
+      >
+        {{> profile-challenges}}
+      </div>
+    </div>
+  </div>
 </article>

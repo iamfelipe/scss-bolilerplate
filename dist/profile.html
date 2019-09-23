@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="">
+    <meta name="description" content="" />
     <title></title>
+    <!--Slick styles-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -46,325 +52,540 @@
   </div>
 </header>
  
-<article class="p-profile">
+<article class="p-profile l-profile">
   <!--Component Profile sidebar-->
-<aside class="c-profileSidebar bg-primary">
-  <!--Header-->
-  <header class="text-center">
-    <h1 class="h1">Perfil</h1>
-    <img
-      src="https://picsum.photos/200"
-      alt="..."
-      class="rounded-circle mb-4"
-    />
-    <div class="w-100"></div>
-    <p class="h3 text-white mb-2">
-      Radamar Flacao
-    </p>
-    <div class="w-100"></div>
-    <p class="h5 text-secondary mb-4">ID CORONA: 55232633333</p>
-  </header>
-</aside>
- <!--Component Profile prizes-->
-<aside class="c-profilePrizes c-profile__prizes bg-white">
-  <!--Title-->
-  <p class="h4 m-0 badge badge-secondary">
-    tus premios
-  </p>
-  <!--Prizes list-->
-  <!--Component Prizes list-->
-  <ul class="l-prizes__list">
-    <li class="l-prizes__link">
-      <!--Component Prizes item-->
-      <a href="#" class="l-prizes__item c-prize" id="prize-0">
-        <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
-        <h6 class="h5 text-primary mb-0 c-prize__title">6 Pack Botellas 355 Ml</h6>
-        <span class="c-prize__description">
-          <p class="h5 text-primary mb-0 c-prize__val">
-            200<br />Puntos
-          </p>
-          <span class="c-prize__separator"></span>
-          <p class="h5 text-primary mb-0 c-prize__val">$72<br />MXN</p>
-        </span>
-      </a>
-    </li>
-    <li class="l-prizes__link">
-      <!--Component Prizes item-->
-      <a href="#" class="l-prizes__item c-prize" id="prize-1">
-        <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
-        <h6 class="h5 text-primary mb-0 c-prize__title">Hielera</h6>
-        <span class="c-prize__description">
-          <p class="h5 text-primary mb-0 c-prize__val">
-            250<br />Puntos
-          </p>
-          <span class="c-prize__separator"></span>
-          <p class="h5 text-primary mb-0 c-prize__val">$96<br />MXN</p>
-        </span>
-      </a>
-    </li>
-    <li class="l-prizes__link">
-      <!--Component Prizes item-->
-      <a href="#" class="l-prizes__item c-prize" id="prize-3">
-        <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
-        <h6 class="h5 text-primary mb-0 c-prize__title">Camiseta</h6>
-        <span class="c-prize__description">
-          <p class="h5 text-primary mb-0 c-prize__val">
-            400<br />Puntos
-          </p>
-          <span class="c-prize__separator"></span>
-          <p class="h5 text-primary mb-0 c-prize__val">$120<br />MXN</p>
-        </span>
-      </a>
-    </li>
-  </ul>
-</aside>
- <!--Component Profile points-->
-<aside class="l-points c-profile__points bg-white">
-  <p class="h4 m-0 badge badge-secondary">
-    Tus puntos
-  </p>
-  <!--Points list-->
-  <!--Component Points list-->
-  <ul class="l-points__list">
-     
-    <li class="l-points__link">
-      <div class="c-points">
-        <!--Icon-->
-        <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
-        <!--Title-->
-        <span class="c-points__name">
-          Compartir mi registro
-        </span>
+  <aside class="c-profileSidebar l-profileContent__sidebar bg-primary">
+    <!--Header-->
+    <header class="text-center">
+      <h1 class="h1">Perfil</h1>
+      <img
+        src="https://picsum.photos/200"
+        alt="..."
+        class="rounded-circle mb-4"
+      />
+      <div class="w-100"></div>
+      <p class="h3 text-white mb-2">
+        Radamar Flacao
+      </p>
+      <div class="w-100"></div>
+      <p class="h5 text-secondary mb-4">ID CORONA: 55232633333</p>
+    </header>
+  </aside>
+  <div class="l-profile__content">
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          id="pills-prizes-tab"
+          data-toggle="pill"
+          href="#pills-prizes"
+          role="tab"
+          aria-controls="pills-prizes"
+          aria-selected="true"
+          >Tus premios</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="pills-points-tab"
+          data-toggle="pill"
+          href="#pills-points"
+          role="tab"
+          aria-controls="pills-points"
+          aria-selected="false"
+          >Tus puntos</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="pills-challenges-tab"
+          data-toggle="pill"
+          href="#pills-challenges"
+          role="tab"
+          aria-controls="pills-challenges"
+          aria-selected="false"
+          >Tus retos</a
+        >
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <div
+        class="tab-pane fade show active"
+        id="pills-prizes"
+        role="tabpanel"
+        aria-labelledby="pills-prizes-tab"
+      >
+        <!--Component Profile prizes-->
+        <aside class="c-profilePrizes l-profile__tile">
+          <!--Header-->
+          <header class="l-prizes__header mb-4">
+            <!--Title-->
+            <p class="h4 mb-0 mr-1 badge badge-secondary">
+              tus premios
+            </p>
+          </header>
+          <!--Prizes list-->
+          <!--Component Prizes list-->
+          <ul class="l-prizes__list c-slider">
+             
+            <li class="l-prizes__item">
+              <!--Component Prizes item-->
+              <div class="l-prizes__item c-prize" id="prize-0">
+                <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
+                <h6 class="h5 text-primary mb-0 c-prize__title">6 Pack Botellas 355 Ml</h6>
+                <span class="c-prize__description">
+                  <p class="h5 text-primary mb-0 c-prize__val">
+                    200<br />Puntos
+                  </p>
+                  <span class="c-prize__separator"></span>
+                  <p class="h5 text-primary mb-0 c-prize__val">$72<br />MXN</p>
+                </span>
+              </div>
+            </li>
+            
+            <li class="l-prizes__item">
+              <!--Component Prizes item-->
+              <div class="l-prizes__item c-prize" id="prize-1">
+                <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
+                <h6 class="h5 text-primary mb-0 c-prize__title">Hielera</h6>
+                <span class="c-prize__description">
+                  <p class="h5 text-primary mb-0 c-prize__val">
+                    250<br />Puntos
+                  </p>
+                  <span class="c-prize__separator"></span>
+                  <p class="h5 text-primary mb-0 c-prize__val">$96<br />MXN</p>
+                </span>
+              </div>
+            </li>
+            
+            <li class="l-prizes__item">
+              <!--Component Prizes item-->
+              <div class="l-prizes__item c-prize" id="prize-3">
+                <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
+                <h6 class="h5 text-primary mb-0 c-prize__title">Camiseta</h6>
+                <span class="c-prize__description">
+                  <p class="h5 text-primary mb-0 c-prize__val">
+                    400<br />Puntos
+                  </p>
+                  <span class="c-prize__separator"></span>
+                  <p class="h5 text-primary mb-0 c-prize__val">$120<br />MXN</p>
+                </span>
+              </div>
+            </li>
+              
+            <li class="l-prizes__item">
+              <!--Component Prizes item-->
+              <div class="l-prizes__item c-prize" id="prize-0">
+                <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
+                <h6 class="h5 text-primary mb-0 c-prize__title">6 Pack Botellas 355 Ml</h6>
+                <span class="c-prize__description">
+                  <p class="h5 text-primary mb-0 c-prize__val">
+                    200<br />Puntos
+                  </p>
+                  <span class="c-prize__separator"></span>
+                  <p class="h5 text-primary mb-0 c-prize__val">$72<br />MXN</p>
+                </span>
+              </div>
+            </li>
+            
+            <li class="l-prizes__item">
+              <!--Component Prizes item-->
+              <div class="l-prizes__item c-prize" id="prize-1">
+                <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
+                <h6 class="h5 text-primary mb-0 c-prize__title">Hielera</h6>
+                <span class="c-prize__description">
+                  <p class="h5 text-primary mb-0 c-prize__val">
+                    250<br />Puntos
+                  </p>
+                  <span class="c-prize__separator"></span>
+                  <p class="h5 text-primary mb-0 c-prize__val">$96<br />MXN</p>
+                </span>
+              </div>
+            </li>
+            
+            <li class="l-prizes__item">
+              <!--Component Prizes item-->
+              <div class="l-prizes__item c-prize" id="prize-3">
+                <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
+                <h6 class="h5 text-primary mb-0 c-prize__title">Camiseta</h6>
+                <span class="c-prize__description">
+                  <p class="h5 text-primary mb-0 c-prize__val">
+                    400<br />Puntos
+                  </p>
+                  <span class="c-prize__separator"></span>
+                  <p class="h5 text-primary mb-0 c-prize__val">$120<br />MXN</p>
+                </span>
+              </div>
+            </li>
+              
+            <li class="l-prizes__item">
+              <!--Component Prizes item-->
+              <div class="l-prizes__item c-prize" id="prize-0">
+                <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
+                <h6 class="h5 text-primary mb-0 c-prize__title">6 Pack Botellas 355 Ml</h6>
+                <span class="c-prize__description">
+                  <p class="h5 text-primary mb-0 c-prize__val">
+                    200<br />Puntos
+                  </p>
+                  <span class="c-prize__separator"></span>
+                  <p class="h5 text-primary mb-0 c-prize__val">$72<br />MXN</p>
+                </span>
+              </div>
+            </li>
+            
+            <li class="l-prizes__item">
+              <!--Component Prizes item-->
+              <div class="l-prizes__item c-prize" id="prize-1">
+                <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
+                <h6 class="h5 text-primary mb-0 c-prize__title">Hielera</h6>
+                <span class="c-prize__description">
+                  <p class="h5 text-primary mb-0 c-prize__val">
+                    250<br />Puntos
+                  </p>
+                  <span class="c-prize__separator"></span>
+                  <p class="h5 text-primary mb-0 c-prize__val">$96<br />MXN</p>
+                </span>
+              </div>
+            </li>
+            
+            <li class="l-prizes__item">
+              <!--Component Prizes item-->
+              <div class="l-prizes__item c-prize" id="prize-3">
+                <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
+                <h6 class="h5 text-primary mb-0 c-prize__title">Camiseta</h6>
+                <span class="c-prize__description">
+                  <p class="h5 text-primary mb-0 c-prize__val">
+                    400<br />Puntos
+                  </p>
+                  <span class="c-prize__separator"></span>
+                  <p class="h5 text-primary mb-0 c-prize__val">$120<br />MXN</p>
+                </span>
+              </div>
+            </li>
+              
+            <li class="l-prizes__item">
+              <!--Component Prizes item-->
+              <div class="l-prizes__item c-prize" id="prize-0">
+                <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
+                <h6 class="h5 text-primary mb-0 c-prize__title">6 Pack Botellas 355 Ml</h6>
+                <span class="c-prize__description">
+                  <p class="h5 text-primary mb-0 c-prize__val">
+                    200<br />Puntos
+                  </p>
+                  <span class="c-prize__separator"></span>
+                  <p class="h5 text-primary mb-0 c-prize__val">$72<br />MXN</p>
+                </span>
+              </div>
+            </li>
+            
+            <li class="l-prizes__item">
+              <!--Component Prizes item-->
+              <div class="l-prizes__item c-prize" id="prize-1">
+                <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
+                <h6 class="h5 text-primary mb-0 c-prize__title">Hielera</h6>
+                <span class="c-prize__description">
+                  <p class="h5 text-primary mb-0 c-prize__val">
+                    250<br />Puntos
+                  </p>
+                  <span class="c-prize__separator"></span>
+                  <p class="h5 text-primary mb-0 c-prize__val">$96<br />MXN</p>
+                </span>
+              </div>
+            </li>
+            
+            <li class="l-prizes__item">
+              <!--Component Prizes item-->
+              <div class="l-prizes__item c-prize" id="prize-3">
+                <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
+                <h6 class="h5 text-primary mb-0 c-prize__title">Camiseta</h6>
+                <span class="c-prize__description">
+                  <p class="h5 text-primary mb-0 c-prize__val">
+                    400<br />Puntos
+                  </p>
+                  <span class="c-prize__separator"></span>
+                  <p class="h5 text-primary mb-0 c-prize__val">$120<br />MXN</p>
+                </span>
+              </div>
+            </li>
+              
+            <li class="l-prizes__item">
+              <!--Component Prizes item-->
+              <div class="l-prizes__item c-prize" id="prize-0">
+                <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
+                <h6 class="h5 text-primary mb-0 c-prize__title">6 Pack Botellas 355 Ml</h6>
+                <span class="c-prize__description">
+                  <p class="h5 text-primary mb-0 c-prize__val">
+                    200<br />Puntos
+                  </p>
+                  <span class="c-prize__separator"></span>
+                  <p class="h5 text-primary mb-0 c-prize__val">$72<br />MXN</p>
+                </span>
+              </div>
+            </li>
+            
+            <li class="l-prizes__item">
+              <!--Component Prizes item-->
+              <div class="l-prizes__item c-prize" id="prize-1">
+                <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
+                <h6 class="h5 text-primary mb-0 c-prize__title">Hielera</h6>
+                <span class="c-prize__description">
+                  <p class="h5 text-primary mb-0 c-prize__val">
+                    250<br />Puntos
+                  </p>
+                  <span class="c-prize__separator"></span>
+                  <p class="h5 text-primary mb-0 c-prize__val">$96<br />MXN</p>
+                </span>
+              </div>
+            </li>
+            
+            <li class="l-prizes__item">
+              <!--Component Prizes item-->
+              <div class="l-prizes__item c-prize" id="prize-3">
+                <img src="https://picsum.photos/200" alt="Premio Corona" class="c-prize__img" />
+                <h6 class="h5 text-primary mb-0 c-prize__title">Camiseta</h6>
+                <span class="c-prize__description">
+                  <p class="h5 text-primary mb-0 c-prize__val">
+                    400<br />Puntos
+                  </p>
+                  <span class="c-prize__separator"></span>
+                  <p class="h5 text-primary mb-0 c-prize__val">$120<br />MXN</p>
+                </span>
+              </div>
+            </li>
+             
+          </ul>
+        </aside>
       </div>
-    </li>
-    
-    <li class="l-points__link">
-      <div class="c-points">
-        <!--Icon-->
-        <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
-        <!--Title-->
-        <span class="c-points__name">
-          Compartir trivias
-        </span>
+      <div
+        class="tab-pane fade"
+        id="pills-points"
+        role="tabpanel"
+        aria-labelledby="pills-points-tab"
+      >
+        <!--Component Profile points-->
+        <aside class="l-points l-profile__tile">
+          <!--Header-->
+          <header class="l-points__header mb-4">
+            <p class="h4 m-0 badge badge-secondary">
+              Tus puntos
+            </p>
+          </header>
+          <!--Points list-->
+          <!--Component Points list-->
+          <ul class="l-points__list">
+             
+            <li class="l-points__link">
+              <div class="c-points">
+                <!--Icon-->
+                <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
+                <!--Title-->
+                <span class="c-points__name">
+                  Compartir mi registro
+                </span>
+              </div>
+            </li>
+            
+            <li class="l-points__link">
+              <div class="c-points">
+                <!--Icon-->
+                <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
+                <!--Title-->
+                <span class="c-points__name">
+                  Compartir trivias
+                </span>
+              </div>
+            </li>
+              
+            <li class="l-points__link">
+              <div class="c-points">
+                <!--Icon-->
+                <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
+                <!--Title-->
+                <span class="c-points__name">
+                  Compartir mi registro
+                </span>
+              </div>
+            </li>
+            
+            <li class="l-points__link">
+              <div class="c-points">
+                <!--Icon-->
+                <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
+                <!--Title-->
+                <span class="c-points__name">
+                  Compartir trivias
+                </span>
+              </div>
+            </li>
+              
+            <li class="l-points__link">
+              <div class="c-points">
+                <!--Icon-->
+                <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
+                <!--Title-->
+                <span class="c-points__name">
+                  Compartir mi registro
+                </span>
+              </div>
+            </li>
+            
+            <li class="l-points__link">
+              <div class="c-points">
+                <!--Icon-->
+                <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
+                <!--Title-->
+                <span class="c-points__name">
+                  Compartir trivias
+                </span>
+              </div>
+            </li>
+             
+          </ul>
+        </aside>
       </div>
-    </li>
-      
-    <li class="l-points__link">
-      <div class="c-points">
-        <!--Icon-->
-        <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
-        <!--Title-->
-        <span class="c-points__name">
-          Compartir mi registro
-        </span>
+      <div
+        class="tab-pane fade"
+        id="pills-challenges"
+        role="tabpanel"
+        aria-labelledby="pills-challenges-tab"
+      >
+        <!--Component Profile challenges-->
+        <aside class="l-challenges l-profile__tile">
+          <!--Header-->
+          <header class="l-challenges__header mb-4">
+            <p class="h4 m-0 badge badge-secondary">
+              tus retos
+            </p>
+          </header>
+          <!--Challenges list-->
+          <!--Component Challenges list-->
+          <ul class="l-challenges__list">
+             
+            <li class="l-challenges__link">
+              <div class="c-challenge">
+                <!--Icon-->
+                <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
+                <!--Title-->
+                <span class="c-challenge__name">
+                  Trivia del día
+                </span>
+                <!--Points-->
+                <span class="c-challenge__points">
+                  200 Puntos
+                </span>
+              </div>
+            </li>
+            
+            <li class="l-challenges__link">
+              <div class="c-challenge">
+                <!--Icon-->
+                <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
+                <!--Title-->
+                <span class="c-challenge__name">
+                  Trivia del día
+                </span>
+                <!--Points-->
+                <span class="c-challenge__points">
+                  150 Puntos
+                </span>
+              </div>
+            </li>
+            
+            <li class="l-challenges__link">
+              <div class="c-challenge">
+                <!--Icon-->
+                <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
+                <!--Title-->
+                <span class="c-challenge__name">
+                  Agregar amigo
+                </span>
+                <!--Points-->
+                <span class="c-challenge__points">
+                  300 Puntos
+                </span>
+              </div>
+            </li>
+              
+            <li class="l-challenges__link">
+              <div class="c-challenge">
+                <!--Icon-->
+                <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
+                <!--Title-->
+                <span class="c-challenge__name">
+                  Trivia del día
+                </span>
+                <!--Points-->
+                <span class="c-challenge__points">
+                  200 Puntos
+                </span>
+              </div>
+            </li>
+            
+            <li class="l-challenges__link">
+              <div class="c-challenge">
+                <!--Icon-->
+                <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
+                <!--Title-->
+                <span class="c-challenge__name">
+                  Trivia del día
+                </span>
+                <!--Points-->
+                <span class="c-challenge__points">
+                  150 Puntos
+                </span>
+              </div>
+            </li>
+            
+            <li class="l-challenges__link">
+              <div class="c-challenge">
+                <!--Icon-->
+                <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
+                <!--Title-->
+                <span class="c-challenge__name">
+                  Agregar amigo
+                </span>
+                <!--Points-->
+                <span class="c-challenge__points">
+                  300 Puntos
+                </span>
+              </div>
+            </li>
+             
+          </ul>
+          <span class="border-top w-100 d-block border-secondary my-4"></span>
+          <a href="/" class="h5 text-center text-primary d-block btn-link">Ver todas</a>
+        </aside>
       </div>
-    </li>
-    
-    <li class="l-points__link">
-      <div class="c-points">
-        <!--Icon-->
-        <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
-        <!--Title-->
-        <span class="c-points__name">
-          Compartir trivias
-        </span>
-      </div>
-    </li>
-      
-    <li class="l-points__link">
-      <div class="c-points">
-        <!--Icon-->
-        <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
-        <!--Title-->
-        <span class="c-points__name">
-          Compartir mi registro
-        </span>
-      </div>
-    </li>
-    
-    <li class="l-points__link">
-      <div class="c-points">
-        <!--Icon-->
-        <img src="https://picsum.photos/200" alt="Puntos ícono" class="c-points__icon" />
-        <!--Title-->
-        <span class="c-points__name">
-          Compartir trivias
-        </span>
-      </div>
-    </li>
-     
-  </ul>
-</aside>
- <!--Component Profile challenges-->
-<aside class="l-challenges c-profile__challenges bg-white">
-  <p class="h4 m-0 badge badge-secondary">
-    tus retos
-  </p>
-  <!--Challenges list-->
-  <!--Component Challenges list-->
-  <ul class="l-challenges__list">
-     
-    <li class="l-challenges__link">
-      <div class="c-challenge">
-        <!--Icon-->
-        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
-        <!--Title-->
-        <span class="c-challenge__name">
-          Trivia del día
-        </span>
-        <!--Points-->
-        <span class="c-challenge__points">
-          200 Puntos
-        </span>
-      </div>
-    </li>
-    
-    <li class="l-challenges__link">
-      <div class="c-challenge">
-        <!--Icon-->
-        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
-        <!--Title-->
-        <span class="c-challenge__name">
-          Trivia del día
-        </span>
-        <!--Points-->
-        <span class="c-challenge__points">
-          150 Puntos
-        </span>
-      </div>
-    </li>
-    
-    <li class="l-challenges__link">
-      <div class="c-challenge">
-        <!--Icon-->
-        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
-        <!--Title-->
-        <span class="c-challenge__name">
-          Agregar amigo
-        </span>
-        <!--Points-->
-        <span class="c-challenge__points">
-          300 Puntos
-        </span>
-      </div>
-    </li>
-      
-    <li class="l-challenges__link">
-      <div class="c-challenge">
-        <!--Icon-->
-        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
-        <!--Title-->
-        <span class="c-challenge__name">
-          Trivia del día
-        </span>
-        <!--Points-->
-        <span class="c-challenge__points">
-          200 Puntos
-        </span>
-      </div>
-    </li>
-    
-    <li class="l-challenges__link">
-      <div class="c-challenge">
-        <!--Icon-->
-        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
-        <!--Title-->
-        <span class="c-challenge__name">
-          Trivia del día
-        </span>
-        <!--Points-->
-        <span class="c-challenge__points">
-          150 Puntos
-        </span>
-      </div>
-    </li>
-    
-    <li class="l-challenges__link">
-      <div class="c-challenge">
-        <!--Icon-->
-        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
-        <!--Title-->
-        <span class="c-challenge__name">
-          Agregar amigo
-        </span>
-        <!--Points-->
-        <span class="c-challenge__points">
-          300 Puntos
-        </span>
-      </div>
-    </li>
-      
-    <li class="l-challenges__link">
-      <div class="c-challenge">
-        <!--Icon-->
-        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
-        <!--Title-->
-        <span class="c-challenge__name">
-          Trivia del día
-        </span>
-        <!--Points-->
-        <span class="c-challenge__points">
-          200 Puntos
-        </span>
-      </div>
-    </li>
-    
-    <li class="l-challenges__link">
-      <div class="c-challenge">
-        <!--Icon-->
-        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
-        <!--Title-->
-        <span class="c-challenge__name">
-          Trivia del día
-        </span>
-        <!--Points-->
-        <span class="c-challenge__points">
-          150 Puntos
-        </span>
-      </div>
-    </li>
-    
-    <li class="l-challenges__link">
-      <div class="c-challenge">
-        <!--Icon-->
-        <img src="https://picsum.photos/200" alt="Reto ícono" class="c-challenge__icon" />
-        <!--Title-->
-        <span class="c-challenge__name">
-          Agregar amigo
-        </span>
-        <!--Points-->
-        <span class="c-challenge__points">
-          300 Puntos
-        </span>
-      </div>
-    </li>
-     
-  </ul>
-  <span class="border-top w-100 d-block border-secondary my-4"></span>
-  <a href="/" class="h5 text-center text-primary d-block btn-link">Ver todas</a>
-</aside>
-
+    </div>
+  </div>
 </article>
 
  <footer class="c-footer"><p>Footer</p></footer>
  <!--jQuery-->
 <script
-    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"
 ></script>
 <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  crossorigin="anonymous"
 ></script>
 <!-- Bootstrap 4 -->
 <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+  crossorigin="anonymous"
 ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+<!--Slick-->
+<script
+  type="text/javascript"
+  src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+></script>
 <!-- Custom select -->
 <script src="js/modernizr.js"></script>
 <script src="js/scripts.js"></script>

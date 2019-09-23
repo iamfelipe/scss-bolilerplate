@@ -1,0 +1,85 @@
+// Layout PROFILE
+// ---------
+
+#{$layout-profile} {
+  @include media-breakpoint-up(md) {
+    display: grid;
+    @include template(sidebar, content);
+    //grid-column-gap: $grid-gutter-width;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "sidebar content";
+    height: 100vh;
+  }
+
+  @include e(content) {
+    background: $white;
+    @include media-breakpoint-up(md) {
+      .nav-pills {
+        display: none;
+      }
+      .tab-content {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto 1fr;
+        grid-template-areas: "prizes prizes" "points challenges";
+
+        #pills-challenges,
+        #pills-points {
+          background-color: gray("100");
+        }
+
+        #pills-prizes {
+          grid-area: prizes;
+        }
+
+        #pills-points {
+          grid-area: points;
+        }
+
+        #pills-challenges {
+          grid-area: challenges;
+        }
+      }
+
+      .tab-pane {
+        display: block !important;
+      }
+    }
+
+    .nav-pills {
+      display: flex;
+      justify-content: center;
+      margin-right: auto;
+      margin-left: auto;
+      width: calc(100% - #{$grid-gutter-width * 2});
+
+      .nav-item {
+        flex-grow: 1;
+        max-width: calc(100% / 3);
+        @extend .text-truncate;
+      }
+    }
+
+    .nav-link {
+      @extend .btn;
+      width: 100%;
+      background-color: $white;
+      margin-bottom: 0;
+      border-color: theme-color("secondary");
+
+      &,
+      &.active {
+        color: theme-color();
+      }
+    }
+  }
+
+  @include e(tile) {
+    padding: $grid-gutter-width;
+
+    @include media-breakpoint-up(md) {
+      padding: $grid-gutter-width * 2;
+    }
+  }
+}

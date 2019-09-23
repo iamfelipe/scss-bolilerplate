@@ -1,7 +1,10 @@
 <!--Component Profile prizes-->
-<aside class="c-profilePrizes c-profile__prizes bg-white">
-  <!--Title-->
-  {{> badge title=prizes.title tag='h4' classes='m-0'}}
+<aside class="c-profilePrizes l-profile__tile">
+  <!--Header-->
+  <header class="l-prizes__header mb-4">
+    <!--Title-->
+    {{> badge title=prizes.title tag='h4' classes='mb-0 mr-1'}}
+  </header>
   <!--Prizes list-->
   {{> prizes-list}}
 </aside>

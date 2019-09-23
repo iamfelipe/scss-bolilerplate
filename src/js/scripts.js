@@ -1,4 +1,5 @@
 import bsCustomFileInput from "bs-custom-file-input";
+import "./sliders";
 
 $(document).ready(function() {
   bsCustomFileInput.init();

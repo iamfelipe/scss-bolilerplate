@@ -1,8 +1,8 @@
 <!--Component Prizes list-->
-<ul class="l-prizes__list">
-  {{#each prizes.list as |prize key|}}
-  <li class="l-prizes__link">
+<ul class="l-prizes__list c-slider">
+  {{#repeat 5}} {{#each prizes.list as |prize key|}}
+  <li class="l-prizes__item">
     {{> prizes-item prize=prize}}
   </li>
-  {{/each}}
+  {{/each}} {{/repeat}}
 </ul>
