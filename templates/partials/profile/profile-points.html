@@ -4,6 +4,11 @@
   <header class="l-points__header mb-4">
     {{> badge title='Tus puntos' tag='h4' classes='m-0'}}
   </header>
+  <h6
+    class="h5 text-dark text-uppercase border-bottom border-secondary d-inline-block mb-1"
+  >
+    Total {{user.points}} puntos
+  </h6>
   <!--Points list-->
   {{> points-list}}
 </aside>

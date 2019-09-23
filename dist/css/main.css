@@ -7521,12 +7521,12 @@ h6 {
 
 .c-profile {
   background-color: #0c2340;
-  margin-top: 3.55555556em;
   padding: 1.33333333rem;
   padding-top: 2.66666667rem;
   padding-bottom: 2.66666667rem; }
   .c-profile__img {
-    max-width: calc(100% / 3); }
+    max-width: calc(100% / 3);
+    width: calc(100% / 3); }
   .c-profile__badge {
     background-color: #0c2340;
     width: 6.66666667em;

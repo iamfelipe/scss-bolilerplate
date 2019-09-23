@@ -7,13 +7,15 @@
 
   // Properties
   background-color: theme-color();
-  margin-top: $badge-offset;
+  //margin-top: $badge-offset;
   padding: $grid-gutter-width;
   padding-top: $grid-gutter-width * 2;
   padding-bottom: $grid-gutter-width * 2;
 
   @include e(img) {
-    max-width: calc(100% / 3);
+    $img-width: calc(100% / 3);
+    max-width: $img-width;
+    width: $img-width;
   }
 
   @include e(badge) {
