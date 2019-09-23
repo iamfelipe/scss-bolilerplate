@@ -1,0 +1,24 @@
+// Layout TILE
+// ---------
+
+#{$layout-tile} {
+  .embed-responsive {
+    overflow: initial;
+  }
+  @include e(list) {
+    @extend .row;
+  }
+
+  @include e(item) {
+    @extend .col;
+    @include media-breakpoint-down(sm) {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-bottom: $grid-gutter-width * 2;
+    }
+
+    @include media-breakpoint-up(md) {
+      flex-grow: 1;
+    }
+  }
+}

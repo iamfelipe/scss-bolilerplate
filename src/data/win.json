@@ -1,0 +1,28 @@
+{
+  "name": "win",
+  "title": "Gana ecoronas",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.",
+  "list": [
+    {
+      "id": 0,
+      "icon": "https://picsum.photos/200",
+      "name": "trivias",
+      "title": "Trivias",
+      "available": "unlocked"
+    },
+    {
+      "id": 1,
+      "icon": "https://picsum.photos/200",
+      "name": "questions",
+      "title": "Preguntas",
+      "available": "unlocked"
+    },
+    {
+      "id": 2,
+      "icon": "https://picsum.photos/200",
+      "name": "pool",
+      "title": "Quiniela",
+      "available": "locked"
+    }
+  ]
+}

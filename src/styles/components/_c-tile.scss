@@ -1,0 +1,45 @@
+// Component TILE
+// ---------
+
+.c-tile {
+  padding: $grid-gutter-width;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  border: $border-width solid transparent;
+
+  @include media-breakpoint-up(md) {
+    flex-wrap: wrap;
+  }
+
+  @include m(unlocked) {
+    @include media-breakpoint-up(md) {
+      background-color: gray("800");
+    }
+
+    @include media-breakpoint-down(sm) {
+      border: $border-width solid theme-color("secondary") !important;
+    }
+  }
+
+  @include e(icon) {
+    width: calc(100% / 3);
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: $grid-gutter-width;
+  }
+  @include e(title) {
+    @extend %h3;
+    margin-bottom: $grid-gutter-width;
+  }
+  @include e(link) {
+    @include media-breakpoint-down(sm) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -1.5em;
+    }
+  }
+}

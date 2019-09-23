@@ -8,6 +8,7 @@ $layout-form: ".l-form";
 $layout-container: ".l-container";
 $layout-profile: ".l-profile";
 $layout-login: ".l-login";
+$layout-tile: ".l-tile";
 
 //@import "l-header";
 @import "l-footer";
@@ -17,3 +18,4 @@ $layout-login: ".l-login";
 @import "l-container";
 @import "l-prizes";
 @import "l-profile";
+@import "l-tile";
