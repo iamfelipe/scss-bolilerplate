@@ -1,0 +1,27 @@
+// Component SUCCESS
+// ---------
+
+.c-success {
+  $margin-bottom: $grid-gutter-width;
+  .l-container__body {
+    background-color: gray("800");
+    padding: ($grid-gutter-width * 2) $grid-gutter-width;
+    text-align: center;
+  }
+
+  @include e(img) {
+    width: em(96);
+    margin-bottom: $margin-bottom;
+  }
+
+  @include e(title) {
+    display: inline-block;
+    border-bottom: $border-width solid theme-color("secondary");
+    margin-bottom: $margin-bottom;
+    padding-bottom: $margin-bottom;
+  }
+
+  @include e(description) {
+    font-family: $font-stack-primary;
+  }
+}
