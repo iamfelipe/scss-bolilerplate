@@ -8,6 +8,18 @@
   .dropdown-toggle {
     display: flex !important;
     align-items: center;
+
+    &::after {
+      @extend .material-icons;
+      border: 0 none;
+      content: "keyboard_arrow_down";
+    }
+  }
+
+  .dropdown {
+    &.show .dropdown-toggle::after {
+      content: "keyboard_arrow_up";
+    }
   }
 
   .navbar-brand {
