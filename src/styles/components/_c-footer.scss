@@ -15,8 +15,11 @@
   }
 
   @include e(logo) {
-    @include media-breakpoint-up(m) {
-      width: 12vw;
+    object-fit: contain;
+    max-height: 20vw;
+    @include media-breakpoint-up(lg) {
+      max-height: 15vw;
+      max-width: 10vw;
     }
   }
 

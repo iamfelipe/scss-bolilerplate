@@ -11,10 +11,13 @@
   grid-template-areas: "social social disclaimer" "logo tagline tagline";
 
   @include media-breakpoint-up(md) {
-    grid-gap: $grid-gutter-width * 3;
     grid-template-columns: 1fr auto 1fr;
     grid-template-rows: repeat(2, auto);
     grid-template-areas: "social logo tagline" "disclaimer logo tagline";
+  }
+
+  @include media-breakpoint-up(lg) {
+    grid-gap: $grid-gutter-width * 3;
   }
 
   @include e(social) {
