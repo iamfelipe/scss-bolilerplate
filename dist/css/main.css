@@ -7586,32 +7586,31 @@ h6 {
   .webp .c-social__link--youtube {
     background-image: url("../img/club-icon-youtube.webp"); }
 
-.c-footer__title {
-  display: flex;
-  align-items: flex-end;
-  line-height: 0.96em;
-  min-height: 1.92em;
-  margin-bottom: 0;
-  font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  text-transform: uppercase; }
-
-.c-footer__logo {
-  width: 12vw; }
-
-.c-footer hr {
-  margin: 1.33333333rem 0;
-  max-width: 9.33333333rem; }
-
-.c-footer__heading {
-  font-size: 35.9209832px;
-  margin-bottom: 0;
-  font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
-  @media (min-width: 576px) and (max-width: 992px) {
-    .c-footer__heading {
-      font-size: calc( 35.9209832px + 41.47572208 * ( ( 100vw - 576px) / 416 )); } }
-  @media (min-width: 992px) {
-    .c-footer__heading {
-      font-size: 77.39670528px; } }
+.c-footer {
+  border-top: 0.11111111rem solid #ffc629; }
+  .c-footer__title {
+    display: flex;
+    align-items: flex-end;
+    line-height: 0.96em;
+    min-height: 1.92em;
+    margin-bottom: 0;
+    font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-transform: uppercase; }
+  .c-footer__logo {
+    width: 12vw; }
+  .c-footer hr {
+    margin: 1.33333333rem 0;
+    max-width: 9.33333333rem; }
+  .c-footer__heading {
+    font-size: 35.9209832px;
+    margin-bottom: 0;
+    font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+    @media (min-width: 576px) and (max-width: 992px) {
+      .c-footer__heading {
+        font-size: calc( 35.9209832px + 41.47572208 * ( ( 100vw - 576px) / 416 )); } }
+    @media (min-width: 992px) {
+      .c-footer__heading {
+        font-size: 77.39670528px; } }
 
 @media (max-width: 767.98px) {
   .c-login .badge-secondary {
@@ -7732,7 +7731,6 @@ h6 {
         align-self: center; }
 
 .l-footer {
-  border-top: 0.11111111rem solid #ffc629;
   padding: 1.33333333rem;
   display: -ms-grid;
   display: grid;

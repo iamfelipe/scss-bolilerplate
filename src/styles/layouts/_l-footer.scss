@@ -2,7 +2,6 @@
 // ---------
 
 #{$layout-footer} {
-  border-top: $border-width solid theme-color("secondary");
   padding: $grid-gutter-width;
   display: grid;
   grid-gap: $grid-gutter-width;

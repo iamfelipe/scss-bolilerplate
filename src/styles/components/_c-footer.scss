@@ -2,6 +2,7 @@
 // ---------
 
 .c-footer {
+  border-top: $border-width solid theme-color("secondary");
   @include e(title) {
     @extend %tiny;
     display: flex;
