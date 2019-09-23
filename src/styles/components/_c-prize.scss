@@ -2,11 +2,15 @@
 // ---------
 
 .c-prize {
+  $prize-size-img: em(200);
   text-align: center;
+
+  .embed-responsive {
+    width: 100%;
+    margin-bottom: $grid-gutter-width / 2;
+  }
   @include e(img) {
-    $prize-size: em(200);
-    max-width: $prize-size;
-    max-height: $prize-size;
+    width: 100%;
     object-fit: cover;
   }
 

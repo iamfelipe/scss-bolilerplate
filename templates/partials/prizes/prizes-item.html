@@ -1,6 +1,12 @@
 <!--Component Prizes item-->
-<div class="l-prizes__item c-prize" id="prize-{{prize.id}}">
-  <img src="{{prize.img}}" alt="Premio Corona" class="c-prize__img" />
+<div class="c-prize" id="prize-{{prize.id}}">
+  <div class="embed-responsive embed-responsive-1by1">
+    <img
+      src="{{prize.img}}"
+      alt="Premio Corona"
+      class="c-prize__img embed-responsive-item"
+    />
+  </div>
   <h6 class="h5 text-primary mb-0 c-prize__title">{{prize.name}}</h6>
   <span class="c-prize__description">
     <p class="h5 text-primary mb-0 c-prize__val">

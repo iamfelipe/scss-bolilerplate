@@ -27,6 +27,16 @@
 
 .c-slider {
   &.slick-initialized.slick-slider {
+    $slider-gutter: $grid-gutter-width / 2;
+    .slick-list {
+      margin-left: -$slider-gutter;
+      margin-right: -$slider-gutter;
+    }
+
+    .slick-slide {
+      padding-right: $slider-gutter;
+      padding-left: $slider-gutter;
+    }
     .slick-arrow {
     }
   }

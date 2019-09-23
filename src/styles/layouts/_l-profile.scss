@@ -2,6 +2,7 @@
 // ---------
 
 #{$layout-profile} {
+  $nav-item-offset: 1.5em;
   @include media-breakpoint-up(md) {
     display: grid;
     @include template(sidebar, content);
@@ -11,11 +12,15 @@
     height: 100vh;
   }
 
+  @include media-breakpoint-up(xl) {
+    grid-template-columns: minmax(auto, 20%) 1fr;
+  }
+
   @include e(content) {
     background: $white;
     @include media-breakpoint-up(md) {
       .nav-pills {
-        display: none;
+        display: none !important;
       }
       .tab-content {
         height: 100%;
@@ -55,6 +60,7 @@
       width: calc(100% - #{$grid-gutter-width * 2});
 
       .nav-item {
+        margin-top: -$nav-item-offset;
         flex-grow: 1;
         max-width: calc(100% / 3);
         @extend .text-truncate;

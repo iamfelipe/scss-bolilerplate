@@ -3,5 +3,6 @@
   "id": "55232633333",
   "email": "flacao@mail.com",
   "phone": "555-1212",
+  "points": "700",
   "list": ["pizza", "burger", "coffee", "panini"]
 }

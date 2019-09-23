@@ -1,18 +1,41 @@
 <!--Component Profile sidebar-->
-<aside class="c-profileSidebar l-profileContent__sidebar bg-primary">
+<aside class="l-profile__sidebar c-profile">
   <!--Header-->
   <header class="text-center">
-    <h1 class="h1">Perfil</h1>
+    <h1 class="h2">Perfil</h1>
     <img
       src="https://picsum.photos/200"
-      alt="..."
-      class="rounded-circle mb-4"
+      alt="Imagen de perfil"
+      class="rounded-circle mb-4 c-profile__img"
     />
     <div class="w-100"></div>
     <p class="h3 text-white mb-2">
       {{user.name}}
     </p>
     <div class="w-100"></div>
-    <p class="h5 text-secondary mb-4">ID CORONA: {{user.id}}</p>
+    <p
+      class="h5 text-secondary mb-5 border-bottom border-secondary d-inline-block"
+    >
+      ID CORONA: {{user.id}}
+    </p>
+    <div class="l-container">
+      <div class="l-container__body">
+        <figure class="c-profile__badge">
+          <img
+            src="{{root}}img/club-img-badge-bronze.png"
+            alt="Medalla de membresía"
+          />
+        </figure>
+        <p class="text-white p font-secondary mb-3">{{user.points}} Puntos</p>
+        <div class="l-container__footer">
+          <a href="/edit-profile.html" class="btn btn-secondary"
+            >Editar perfil</a
+          >
+          <a href="#" class="text-center text-white btn-link d-block"
+            >Saber más acerca de la membresía</a
+          >
+        </div>
+      </div>
+    </div>
   </header>
 </aside>

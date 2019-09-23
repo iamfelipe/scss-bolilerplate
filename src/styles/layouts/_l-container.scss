@@ -3,9 +3,10 @@
 
 #{$layout-container} {
   $container-bg-level: -2;
-  border: $border-width solid theme-color('secondary');
+  $container-footer-offset: 6em;
+  border: $border-width solid theme-color("secondary");
   margin-top: $grid-gutter-width;
-  margin-bottom: $grid-gutter-width;
+  margin-bottom: $container-footer-offset;
 
   @include media-breakpoint-down(sm) {
     margin-right: $grid-gutter-width / 2;
@@ -17,11 +18,11 @@
 
     @include m(bg) {
       padding: $grid-gutter-width;
-      background-color: theme-color-level('primary', $container-bg-level);
+      background-color: theme-color-level("primary", $container-bg-level);
     }
   }
 
   @include e(footer) {
-
+    margin-bottom: -$container-footer-offset;
   }
 }
