@@ -8,4 +8,8 @@
       margin: 0;
     }
   }
+
+  @include e(title) {
+    @extend .underline;
+  }
 }

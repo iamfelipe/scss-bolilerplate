@@ -7255,6 +7255,20 @@ h6, .h6, .btn, .l-profile__content .nav-link, .btn-blue, .btn-indigo, .btn-purpl
 h6 {
   font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
+.underline, .c-win__title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem; }
+  .underline::after, .c-win__title::after {
+    content: "";
+    position: absolute;
+    bottom: -0.66666667rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-bottom: 0.11111111rem solid #ffc629;
+    width: calc(100% - 1.33333333rem); }
+
 .custom-file-label,
 .form-control, input, select, textarea {
   height: auto;

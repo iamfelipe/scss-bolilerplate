@@ -1,4 +1,5 @@
 ---
+layout: loggedin
 title: Gana ecoronas
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.
 ---
@@ -10,8 +11,12 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
         <div class="l-container__body">
           <!--Header-->
           <header class="text-center my-5">
-            <h1 class="h1 text-white">{{win.title}}</h1>
-            <p class="p text-white">{{win.description}}</p>
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <h1 class="h1 text-white c-win__title">{{win.title}}</h1>
+                <p class="p text-white mb-0">{{win.description}}</p>
+              </div>
+            </div>
           </header>
           <!--List-->
           <section class="l-tile">
@@ -29,7 +34,9 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
                     />
                     <h5 class="c-tile__title h3">{{value.title}}</h5>
                     <div class="w-100"></div>
-                    <a href="#" class="c-tile__link btn btn-secondary"
+                    <a
+                      href="/trivia.html"
+                      class="c-tile__link btn btn-secondary"
                       >Participa</a
                     >
                   </div>

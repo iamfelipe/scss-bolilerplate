@@ -1,0 +1,48 @@
+{
+  "id": "2",
+  "title": "Trivia 1",
+  "questions": [
+    {
+      "title": "Pregunta",
+      "choices": [
+        {
+          "id": "3",
+          "title": "Respuesta 1"
+        },
+        {
+          "id": "4",
+          "title": "Respuesta 2"
+        },
+        {
+          "id": "5",
+          "title": "Respuesta 3"
+        },
+        {
+          "id": "6",
+          "title": "Respuesta 4"
+        }
+      ]
+    },
+    {
+      "title": "Pregunta 2",
+      "choices": [
+        {
+          "id": "8",
+          "title": "Respuesta 5"
+        },
+        {
+          "id": "9",
+          "title": "Respuesta 6"
+        },
+        {
+          "id": "10",
+          "title": "Respuesta 7"
+        },
+        {
+          "id": "11",
+          "title": "Respuesta 8"
+        }
+      ]
+    }
+  ]
+}

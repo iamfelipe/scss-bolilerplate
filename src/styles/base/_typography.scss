@@ -25,3 +25,19 @@
     @extend %#{$base};
   }
 }
+
+.underline {
+  position: relative;
+  display: inline-block;
+  margin-bottom: $grid-gutter-width * 1.5;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -$grid-gutter-width / 2;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: $border-width solid theme-color("secondary");
+    width: calc(100% - #{$grid-gutter-width});
+  }
+}
