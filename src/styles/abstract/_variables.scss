@@ -60,6 +60,16 @@ $black: #000;
 $primary: #0c2340;
 $secondary: #ffc629;
 
+$bronze: #aa7546;
+$silver: #aaaaaa;
+$gold: $secondary;
+
+$theme-colors: (
+  "bronze": $bronze,
+  "silver": $silver,
+  "gold": $gold
+);
+
 // Grid columns
 $grid-columns: 12;
 $grid-gutter-width: rem(24);
@@ -232,5 +242,11 @@ $navbar-dark-hover-color: rgba($component-active-bg, 0.75);
 // Badges
 $badge-padding-x: em(24);
 $badge-padding-y: em(6);
+
+// Progress
+$progress-height: calc(#{$grid-gutter-width / 3} + #{$border-width});
+$progress-bg: $gray-800;
+$progress-border-radius: 0;
+$progress-bar-bg: $secondary;
 
 //$colors: map-merge(map-merge($grays, $theme-colors), $colors);

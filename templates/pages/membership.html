@@ -5,32 +5,57 @@ title: Membresía
 
 <article class="p-membership py-4">
   <div class="container">
-    <section class="-c-membership">
-      <div class="l-container my-md-5">
+    <section class="l-membership">
+      <div class="l-container my-0 my-md-5">
         <div class="l-container__body">
           <!--Header-->
-          <header class="text-center my-5">
+          <header class="text-center mt-4 mt-md-5 mb-2">
             <div class="row justify-content-center">
               <div class="col-md-6">
-                <h1 class="h1 text-white">{{title}}</h1>
+                <h1 class="h1 text-white underline">{{title}}</h1>
               </div>
             </div>
           </header>
           <!--List-->
-          <section class="l-membership">
+          <section class="l-membership__container">
+            <!--List-->
             <ul class="l-membership__list">
               {{#each membership as |value key|}}
               <li class="l-membership__item" id="membership_{{value.id}}">
-                <section class="c-membership">
+                <section class="c-membership c-membership--{{value.name}}">
                   <figure class="c-membership__badge">
                     <img src="{{value.icon}}" alt="Medalla de membresía" />
                   </figure>
+                  <div class="c-membership__status"></div>
                   <p class="c-membership__points">{{value.points}} Puntos</p>
                   <h6 class="c-membership__title">{{value.name}}</h6>
                 </section>
+                <div class="d-none d-md-block">
+                  {{>membership-progress points=value.points}}
+                </div>
               </li>
               {{/each}}
             </ul>
+            <footer class="l-membership__footer">
+              <div class="row no-gutters align-items-center">
+                <div class="col">
+                  {{>membership-progress}}
+                </div>
+                <div class="col-auto">
+                  <figure class="c-membership__badge">
+                    <img
+                      src="{{root}}img/club-img-badge-2.png"
+                      alt="Medalla de membresía"
+                    />
+                  </figure>
+                </div>
+              </div>
+            </footer>
+            <div class="row justify-content-center my-4 my-md-5">
+              <div class="col-auto">
+                <a href="#" class="btn-link text-secondary">Ver beneficios</a>
+              </div>
+            </div>
           </section>
         </div>
       </div>

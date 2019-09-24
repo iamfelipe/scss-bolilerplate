@@ -1,0 +1,20 @@
+// Component PROGRESS
+// ---------
+$component-progress: ".c-progress";
+#{$component-progress} {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    border-bottom: $border-width solid theme-color();
+  }
+
+  @include e(title) {
+    min-height: em(24, ms(1));
+  }
+}

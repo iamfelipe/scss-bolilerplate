@@ -1,0 +1,79 @@
+// Component MEMBERSHIP
+// ---------
+$component-membership: ".c-membership";
+#{$component-membership} {
+  // Variables
+  $margin-bottom: $grid-gutter-width / 2;
+  $membership-badge-size: em(72);
+  $membership-status-size: $grid-gutter-width;
+  $membership-btn-padding-y: rem(8) - $border-width;
+  // Properties
+  & {
+    text-align: center;
+    padding-right: $grid-gutter-width / 2;
+    padding-left: $grid-gutter-width / 2;
+  }
+  @include e(badge) {
+    margin-right: auto;
+    margin-bottom: $margin-bottom;
+    margin-left: auto;
+    width: $membership-badge-size;
+
+    @include media-breakpoint-up(md) {
+      width: $membership-badge-size * 1.5;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  @include e(status) {
+    margin-right: auto;
+    margin-bottom: $margin-bottom;
+    margin-left: auto;
+    width: $membership-status-size;
+    height: $membership-status-size;
+    @include image("club-icon-checked");
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  @include e(points) {
+    margin-bottom: $margin-bottom;
+    font-family: $font-stack-secondary;
+    text-transform: uppercase;
+  }
+  @include e(title) {
+    @extend .btn;
+    margin-bottom: 0;
+    padding-top: $membership-btn-padding-y;
+    padding-bottom: $membership-btn-padding-y;
+    color: theme-color();
+  }
+
+  @include m(bronce) {
+    #{$component-membership} {
+      @include e(title) {
+        background-color: theme-color("bronze");
+      }
+    }
+  }
+
+  @include m(plata) {
+    #{$component-membership} {
+      @include e(title) {
+        background-color: theme-color("silver");
+      }
+    }
+  }
+
+  @include m(oro) {
+    #{$component-membership} {
+      @include e(title) {
+        background-color: theme-color("gold");
+      }
+    }
+  }
+}

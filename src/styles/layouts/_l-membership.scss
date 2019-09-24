@@ -1,0 +1,53 @@
+// Layout MEMBERSHIP
+// ---------
+
+#{$layout-membership} {
+  .l-container {
+    @include media-breakpoint-down(sm) {
+      border-color: transparent;
+      @include e(body) {
+        margin: 0;
+      }
+    }
+  }
+  @include e(list) {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+
+    @include media-breakpoint-up(md) {
+      justify-content: center;
+    }
+  }
+
+  @include e(item) {
+    display: flex;
+    flex-direction: row;
+
+    &:last-child .c-progress__wrap {
+      display: none;
+    }
+
+    .c-progress__wrap {
+      margin-top: 2em;
+
+      @include media-breakpoint-down(sm) {
+        .c-progress__title,
+        .c-progress__description {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include e(footer) {
+    @include media-breakpoint-down(sm) {
+      margin-top: $grid-gutter-width * 2;
+      padding: $grid-gutter-width;
+      border: $border-width solid theme-color("secondary");
+    }
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+}

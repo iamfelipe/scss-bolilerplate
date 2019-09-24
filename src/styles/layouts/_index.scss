@@ -9,6 +9,7 @@ $layout-container: ".l-container";
 $layout-profile: ".l-profile";
 $layout-login: ".l-login";
 $layout-tile: ".l-tile";
+$layout-membership: ".l-membership";
 $layout-ranking: ".l-ranking";
 
 //@import "l-header";
@@ -20,4 +21,5 @@ $layout-ranking: ".l-ranking";
 @import "l-prizes";
 @import "l-profile";
 @import "l-ranking";
+@import "l-membership";
 @import "l-tile";
