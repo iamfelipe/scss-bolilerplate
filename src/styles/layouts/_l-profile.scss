@@ -72,6 +72,8 @@
 
     .nav-link {
       @extend .btn;
+      padding-right: 0;
+      padding-left: 0;
       width: 100%;
       background-color: $white;
       margin-bottom: 0;
