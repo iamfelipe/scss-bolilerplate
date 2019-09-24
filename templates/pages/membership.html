@@ -1,0 +1,39 @@
+---
+layout: loggedin
+title: Membresía
+---
+
+<article class="p-membership py-4">
+  <div class="container">
+    <section class="-c-membership">
+      <div class="l-container my-md-5">
+        <div class="l-container__body">
+          <!--Header-->
+          <header class="text-center my-5">
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <h1 class="h1 text-white">{{title}}</h1>
+              </div>
+            </div>
+          </header>
+          <!--List-->
+          <section class="l-membership">
+            <ul class="l-membership__list">
+              {{#each membership as |value key|}}
+              <li class="l-membership__item" id="membership_{{value.id}}">
+                <section class="c-membership">
+                  <figure class="c-membership__badge">
+                    <img src="{{value.icon}}" alt="Medalla de membresía" />
+                  </figure>
+                  <p class="c-membership__points">{{value.points}} Puntos</p>
+                  <h6 class="c-membership__title">{{value.name}}</h6>
+                </section>
+              </li>
+              {{/each}}
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+  </div>
+</article>

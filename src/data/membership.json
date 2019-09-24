@@ -1,0 +1,20 @@
+[
+  {
+    "id": "3",
+    "name": "BRONCE",
+    "icon": "http://dev-mx-corona-club.pantheonsite.io/sites/default/files/2019-09/Screen%20Shot%202019-09-21%20at%2015.58.35.png",
+    "points": "700"
+  },
+  {
+    "id": "4",
+    "name": "PLATA",
+    "icon": "http://dev-mx-corona-club.pantheonsite.io/sites/default/files/2019-09/Screen%20Shot%202019-09-21%20at%2015.58.40.png",
+    "points": "1000"
+  },
+  {
+    "id": "5",
+    "name": "ORO",
+    "icon": "http://dev-mx-corona-club.pantheonsite.io/sites/default/files/2019-09/Screen%20Shot%202019-09-21%20at%2015.58.44.png",
+    "points": "5000"
+  }
+]
