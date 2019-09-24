@@ -1,0 +1,52 @@
+<!-- Modal -->
+<div
+  class="c-modal modal fade"
+  id="modalRanking"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalRankingTitle"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-md -modal-dialog-scrollable modal-dialog-centered"
+    role="document"
+  >
+    <div class="modal-content l-container my-0">
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <i class="material-icons">
+          close
+        </i>
+      </button>
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalRankingTitle">
+          Los mejores records
+        </h5>
+      </div>
+      <div class="modal-body">
+        <section class="l-ranking">
+          <ul class="l-ranking__list">
+            {{#each ranking as |value key|}}
+            <li class="l-ranking__item">
+              <div class="c-ranking">
+                <span class="c-ranking__position">{{value.position}}</span>
+                <p class="c-ranking__name">{{value.name}}</p>
+                <span class="c-ranking__points">{{value.points}} Puntos</span>
+                <img
+                  class="c-ranking__membership"
+                  src="{{root}}img/club-img-badge-{{value.membership}}.png"
+                  alt="Escudo de la membresía"
+                />
+              </div>
+            </li>
+            {{/each}}
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

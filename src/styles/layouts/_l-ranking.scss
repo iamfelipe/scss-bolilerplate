@@ -1,0 +1,9 @@
+// Layout RANKING
+// ---------
+
+#{$layout-ranking} {
+  @include e(list) {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+}

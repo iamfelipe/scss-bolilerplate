@@ -9,6 +9,7 @@ $layout-container: ".l-container";
 $layout-profile: ".l-profile";
 $layout-login: ".l-login";
 $layout-tile: ".l-tile";
+$layout-ranking: ".l-ranking";
 
 //@import "l-header";
 @import "l-footer";
@@ -18,4 +19,5 @@ $layout-tile: ".l-tile";
 @import "l-container";
 @import "l-prizes";
 @import "l-profile";
+@import "l-ranking";
 @import "l-tile";

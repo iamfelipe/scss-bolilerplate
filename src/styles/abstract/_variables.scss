@@ -216,7 +216,12 @@ $spacers: (
   )
 );
 
-// Navs
+// Modal
+$modal-content-bg: transparent;
+$modal-content-border-width: 0;
+$modal-inner-padding: $grid-gutter-width;
+$modal-content-border-radius: 0;
+$modal-header-padding-y: $grid-gutter-width * 1.5;
 
 // Navbar
 $navbar-padding-x: 0;

@@ -1,0 +1,48 @@
+// Component RANKING
+// ---------
+
+.c-ranking {
+  $ranking-gap: $grid-gutter-width / 1.5;
+  display: grid;
+  @include template(position, name, points, membership);
+  grid-template-areas: "position name membership" "position points membership";
+  grid-template-columns: $ranking-gap 1fr auto;
+  grid-column-gap: $ranking-gap;
+  padding-top: $ranking-gap;
+  padding-bottom: $ranking-gap;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - #{$ranking-gap * 2});
+    border-bottom: $border-width solid theme-color("secondary");
+  }
+
+  @mixin text() {
+    margin-bottom: 0;
+  }
+
+  @include e(position) {
+    @include text();
+    @extend %tiny;
+    color: gray("400");
+    align-self: center;
+  }
+  @include e(name) {
+    @extend %h6;
+    @include text();
+  }
+  @include e(points) {
+    @extend %tiny;
+    color: gray("600");
+    text-transform: uppercase;
+    @include text();
+  }
+  @include e(membership) {
+    align-self: center;
+    width: em(20);
+  }
+}
