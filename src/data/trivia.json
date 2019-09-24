@@ -3,11 +3,11 @@
   "title": "Trivia 1",
   "questions": [
     {
-      "title": "Pregunta",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.",
       "choices": [
         {
           "id": "3",
-          "title": "Respuesta 1"
+          "title": "Respuesta 1a"
         },
         {
           "id": "4",

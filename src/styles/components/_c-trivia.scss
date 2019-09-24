@@ -1,0 +1,95 @@
+// Component TRIVIA
+// ---------
+
+.c-trivia {
+  // Variables
+  $margin-bottom: $grid-gutter-width * 1;
+  $counter-size: em(56);
+
+  // Properties
+  text-align: center;
+
+  .l-container {
+    position: relative;
+    @include e(body) {
+      margin-top: $grid-gutter-width * 2;
+      @include media-breakpoint-up(md) {
+        margin-right: $grid-gutter-width * 2;
+        margin-left: $grid-gutter-width * 2;
+      }
+    }
+  }
+  @include e(counter) {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -$counter-size / 2;
+    right: -$counter-size / 2;
+    width: $counter-size;
+    height: $counter-size;
+    background-color: $white;
+    border-radius: 50%;
+
+    @include m(left) {
+      @extend %h5;
+      margin-bottom: 0;
+      color: theme-color();
+      text-align: center;
+    }
+  }
+  @include e(title) {
+    @extend %h4;
+    margin-bottom: $margin-bottom;
+    font-weight: 700;
+    font-family: $font-stack-primary;
+    text-transform: initial;
+  }
+  @include e(steps) {
+    @extend %h6;
+    letter-spacing: em(8);
+    font-family: $font-stack-primary;
+    font-weight: 400;
+    margin-bottom: $margin-bottom;
+    @include m(current) {
+      @extend %h4;
+      font-weight: 700;
+      color: theme-color("secondary");
+    }
+    @include m(total) {
+    }
+  }
+  @include e(grid) {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-gap: $grid-gutter-width;
+    margin-bottom: $margin-bottom;
+
+    @include media-breakpoint-up(md) {
+      grid-template: repeat(2, auto) / repeat(2, auto);
+    }
+  }
+  @include e(choice) {
+    margin-bottom: 0;
+    @include media-breakpoint-up(md) {
+      //width: 50%;
+    }
+
+    &,
+    &:not(:disabled):not(.disabled).active {
+      background-color: gray("800");
+    }
+
+    &:not(:disabled):not(.disabled).active {
+      color: theme-color("secondary");
+    }
+
+    &:not(.active) {
+      color: $white;
+      border-color: transparent;
+    }
+
+    &.active {
+    }
+  }
+}

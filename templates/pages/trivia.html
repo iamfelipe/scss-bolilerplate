@@ -17,21 +17,45 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
         </div>
       </header>
       <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-11 col-md-8">
           <div class="l-container mt-0">
+            <div class="c-trivia__counter">
+              <!--Circle progress-->
+              <div id="triviaTimeout"></div>
+              <!--Seconds left-->
+              <span class="c-trivia__counter--left">15</span>
+            </div>
             <div class="l-container__body mb-4">
+              {{#each trivia.questions as |question key|}}
               <!--Steps-->
               <div class="c-trivia__steps">
-                <span class="c-trivia__steps--current">1</span>/4
+                <span class="c-trivia__steps--current">{{key}}</span>/4
               </div>
               <!--Title-->
-              <h6 class="c-trivia__title">trivia</h6>
-
+              <h6 class="c-trivia__title">{{question.title}}</h6>
+              <!--Choices-->
+              <div
+                class="btn-group btn-group-toggle c-trivia__grid"
+                data-toggle="buttons"
+              >
+                {{#each question.choices as |choice key|}}
+                <label class="btn btn-outline-secondary c-trivia__choice">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option{{choice.id}}"
+                    autocomplete="off"
+                  />
+                  {{choice.title}}
+                </label>
+                {{/each}}
+              </div>
+              {{/each}}
               <!--Footer-->
               <div class="l-container__footer">
                 <div class="row justify-content-center">
                   <div class="col-12 col-md-auto">
-                    <button class="btn btn-secondary mx-auto btn-block">
+                    <button class="btn btn-secondary mx-auto btn-block px-5">
                       Siguiente
                     </button>
                   </div>

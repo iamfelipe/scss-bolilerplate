@@ -6726,23 +6726,23 @@ h3, .h3, .c-tile__title {
       font-size: 37.3248px; } }
 
 
-h4, .h4 {
+h4, .h4, .c-trivia__title, .c-trivia__steps--current {
   font-size: 19.93359375px;
-  line-height: 1.02880658em;
+  line-height: 1.28600823em;
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 24px; }
   @media (min-width: 576px) and (max-width: 992px) {
     
-    h4, .h4 {
+    h4, .h4, .c-trivia__title, .c-trivia__steps--current {
       font-size: calc( 19.93359375px + 11.17040625 * ( ( 100vw - 576px) / 416 )); } }
   @media (min-width: 992px) {
     
-    h4, .h4 {
+    h4, .h4, .c-trivia__title, .c-trivia__steps--current {
       font-size: 31.104px; } }
 
 
-h5, .h5, .c-challenge__name, .c-challenge__points, .c-points__name {
+h5, .h5, .c-trivia__counter--left, .c-challenge__name, .c-challenge__points, .c-points__name {
   font-size: 17.71875px;
   line-height: 1.08024691em;
   font-weight: 400;
@@ -6750,15 +6750,15 @@ h5, .h5, .c-challenge__name, .c-challenge__points, .c-points__name {
   margin-bottom: 24px; }
   @media (min-width: 576px) and (max-width: 992px) {
     
-    h5, .h5, .c-challenge__name, .c-challenge__points, .c-points__name {
+    h5, .h5, .c-trivia__counter--left, .c-challenge__name, .c-challenge__points, .c-points__name {
       font-size: calc( 17.71875px + 8.20125 * ( ( 100vw - 576px) / 416 )); } }
   @media (min-width: 992px) {
     
-    h5, .h5, .c-challenge__name, .c-challenge__points, .c-points__name {
+    h5, .h5, .c-trivia__counter--left, .c-challenge__name, .c-challenge__points, .c-points__name {
       font-size: 25.92px; } }
 
 
-h6, .h6, .btn, .l-profile__content .nav-link, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-navbar .nav-link {
+h6, .h6, .btn, .l-profile__content .nav-link, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-trivia__steps, .c-navbar .nav-link {
   font-size: 15.75px;
   line-height: 1.11111111em;
   font-weight: 400;
@@ -6766,11 +6766,11 @@ h6, .h6, .btn, .l-profile__content .nav-link, .btn-blue, .btn-indigo, .btn-purpl
   margin-bottom: 24px; }
   @media (min-width: 576px) and (max-width: 992px) {
     
-    h6, .h6, .btn, .l-profile__content .nav-link, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-navbar .nav-link {
+    h6, .h6, .btn, .l-profile__content .nav-link, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-trivia__steps, .c-navbar .nav-link {
       font-size: calc( 15.75px + 5.85 * ( ( 100vw - 576px) / 416 )); } }
   @media (min-width: 992px) {
     
-    h6, .h6, .btn, .l-profile__content .nav-link, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-navbar .nav-link {
+    h6, .h6, .btn, .l-profile__content .nav-link, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-trivia__steps, .c-navbar .nav-link {
       font-size: 21.6px; } }
 
 .p, .label, .custom-file-label,
@@ -7241,17 +7241,17 @@ h3 {
   font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
 
-h4, .h4,
+h4, .h4, .c-trivia__title, .c-trivia__steps--current,
 h4 {
   font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
 
-h5, .h5, .c-challenge__name, .c-challenge__points, .c-points__name,
+h5, .h5, .c-trivia__counter--left, .c-challenge__name, .c-challenge__points, .c-points__name,
 h5 {
   font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
 
-h6, .h6, .btn, .l-profile__content .nav-link, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-navbar .nav-link,
+h6, .h6, .btn, .l-profile__content .nav-link, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark, .c-trivia__steps, .c-navbar .nav-link,
 h6 {
   font-family: "Hudson NY", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
@@ -7468,6 +7468,66 @@ h6 {
   .c-win .l-container {
     border-color: transparent;
     margin: 0; } }
+
+.c-trivia {
+  text-align: center; }
+  .c-trivia .l-container {
+    position: relative; }
+    .c-trivia .l-container__body {
+      margin-top: 2.66666667rem; }
+      @media (min-width: 768px) {
+        .c-trivia .l-container__body {
+          margin-right: 2.66666667rem;
+          margin-left: 2.66666667rem; } }
+  .c-trivia__counter {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -1.55555556em;
+    right: -1.55555556em;
+    width: 3.11111111em;
+    height: 3.11111111em;
+    background-color: #fff;
+    border-radius: 50%; }
+    .c-trivia__counter--left {
+      margin-bottom: 0;
+      color: #0c2340;
+      text-align: center; }
+  .c-trivia__title {
+    margin-bottom: 1.33333333rem;
+    font-weight: 700;
+    font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-transform: initial; }
+  .c-trivia__steps {
+    letter-spacing: 0.44444444em;
+    font-family: "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 400;
+    margin-bottom: 1.33333333rem; }
+    .c-trivia__steps--current {
+      font-weight: 700;
+      color: #ffc629; }
+  .c-trivia__grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (auto)[4];
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 1.33333333rem;
+    margin-bottom: 1.33333333rem; }
+    @media (min-width: 768px) {
+      .c-trivia__grid {
+        -ms-grid-rows: auto 1.33333333rem auto;
+        -ms-grid-columns: auto 1.33333333rem auto;
+        grid-template: repeat(2, auto)/repeat(2, auto); } }
+  .c-trivia__choice {
+    margin-bottom: 0; }
+    .c-trivia__choice, .c-trivia__choice:not(:disabled):not(.disabled).active {
+      background-color: #203753; }
+    .c-trivia__choice:not(:disabled):not(.disabled).active {
+      color: #ffc629; }
+    .c-trivia__choice:not(.active) {
+      color: #fff;
+      border-color: transparent; }
 
 .c-challenge {
   display: -ms-grid;

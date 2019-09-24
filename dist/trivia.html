@@ -94,21 +94,116 @@
         </div>
       </header>
       <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-11 col-md-8">
           <div class="l-container mt-0">
+            <div class="c-trivia__counter">
+              <!--Circle progress-->
+              <div id="triviaTimeout"></div>
+              <!--Seconds left-->
+              <span class="c-trivia__counter--left">15</span>
+            </div>
             <div class="l-container__body mb-4">
+              <!--Steps-->
+              <div class="c-trivia__steps">
+                <span class="c-trivia__steps--current">0</span>/4
+              </div>
+              <!--Title-->
+              <h6 class="c-trivia__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.</h6>
+              <!--Choices-->
+              <div
+                class="btn-group btn-group-toggle c-trivia__grid"
+                data-toggle="buttons"
+              >
+                <label class="btn btn-outline-secondary c-trivia__choice">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option3"
+                    autocomplete="off"
+                  />
+                  Respuesta 1a
+                </label>
+                <label class="btn btn-outline-secondary c-trivia__choice">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option4"
+                    autocomplete="off"
+                  />
+                  Respuesta 2
+                </label>
+                <label class="btn btn-outline-secondary c-trivia__choice">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option5"
+                    autocomplete="off"
+                  />
+                  Respuesta 3
+                </label>
+                <label class="btn btn-outline-secondary c-trivia__choice">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option6"
+                    autocomplete="off"
+                  />
+                  Respuesta 4
+                </label>
+              </div>
               <!--Steps-->
               <div class="c-trivia__steps">
                 <span class="c-trivia__steps--current">1</span>/4
               </div>
               <!--Title-->
-              <h6 class="c-trivia__title">trivia</h6>
-
+              <h6 class="c-trivia__title">Pregunta 2</h6>
+              <!--Choices-->
+              <div
+                class="btn-group btn-group-toggle c-trivia__grid"
+                data-toggle="buttons"
+              >
+                <label class="btn btn-outline-secondary c-trivia__choice">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option8"
+                    autocomplete="off"
+                  />
+                  Respuesta 5
+                </label>
+                <label class="btn btn-outline-secondary c-trivia__choice">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option9"
+                    autocomplete="off"
+                  />
+                  Respuesta 6
+                </label>
+                <label class="btn btn-outline-secondary c-trivia__choice">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option10"
+                    autocomplete="off"
+                  />
+                  Respuesta 7
+                </label>
+                <label class="btn btn-outline-secondary c-trivia__choice">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option11"
+                    autocomplete="off"
+                  />
+                  Respuesta 8
+                </label>
+              </div>
               <!--Footer-->
               <div class="l-container__footer">
                 <div class="row justify-content-center">
                   <div class="col-12 col-md-auto">
-                    <button class="btn btn-secondary mx-auto btn-block">
+                    <button class="btn btn-secondary mx-auto btn-block px-5">
                       Siguiente
                     </button>
                   </div>
@@ -221,13 +316,13 @@
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
   crossorigin="anonymous"
 ></script>
+<!-- Custom select -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
 <!--Slick-->
 <script
   type="text/javascript"
   src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
 ></script>
-<!-- Custom select -->
 <script src="js/modernizr.js"></script>
 <script src="js/scripts.js"></script>
 
