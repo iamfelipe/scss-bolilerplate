@@ -3314,9 +3314,6 @@ input[type="button"].btn-block {
   .form-control::-webkit-input-placeholder {
     color: #78909c;
     opacity: 1; }
-  .form-control::-moz-placeholder {
-    color: #78909c;
-    opacity: 1; }
   .form-control:-ms-input-placeholder {
     color: #78909c;
     opacity: 1; }
@@ -4095,12 +4092,15 @@ textarea.form-control {
     height: calc(1.33333333rem - 0.44444444rem);
     background-color: #adb5bd;
     border-radius: 0.66666667rem;
-    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out; }
     @media (prefers-reduced-motion: reduce) {
       .custom-switch .custom-control-label::after {
         transition: none; } }
   .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
     background-color: transparent;
+    -webkit-transform: translateX(1rem);
     transform: translateX(1rem); }
   .custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
     background-color: rgba(12, 35, 64, 0.5); }
@@ -6599,6 +6599,7 @@ select.selectpicker {
   height: 1em;
   border-style: solid;
   border-width: 0 0.26em 0.26em 0;
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg); }
 
 .bootstrap-select.show-menu-arrow.open > .dropdown-toggle,
@@ -7172,6 +7173,7 @@ h6, .h6, .btn, .l-profile__content .nav-link, .btn-blue, .btn-indigo, .btn-purpl
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
+  -webkit-font-feature-settings: "liga";
   font-feature-settings: "liga"; }
 
 .font-primary {
@@ -7448,6 +7450,11 @@ h6 {
     width: 0.11111111rem;
     display: block; }
 
+@media (max-width: 767.98px) {
+  .c-win .l-container {
+    border-color: transparent;
+    margin: 0; } }
+
 .c-challenge {
   display: -ms-grid;
   display: grid;
@@ -7723,14 +7730,60 @@ h6 {
   text-align: center;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   border: 0.11111111rem solid transparent; }
   @media (min-width: 768px) {
-    .c-tile {
-      flex-wrap: wrap; } }
+    .c-tile .c-tile__link {
+      transition: all 0.2s ease-in-out;
+      -webkit-transform-style: cubic-bezier(0.39, 0.575, 0.565, 1);
+      transform-style: cubic-bezier(0.39, 0.575, 0.565, 1);
+      margin-bottom: -4em;
+      opacity: 0; } }
+  @media (min-width: 768px) and (prefers-reduced-motion: reduce) {
+    .c-tile .c-tile__link {
+      transition: none; } }
+  .c-tile--locked {
+    pointer-events: none;
+    position: relative; }
+    .c-tile--locked::after {
+      content: "";
+      position: absolute;
+      bottom: -1.55555556em;
+      border-radius: 50%;
+      background-color: #78909c;
+      background-image: url("../img/club-icon-lock.svg");
+      width: 3.11111111em;
+      height: 3.11111111em;
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center center; }
+      @media (max-width: 767.98px) {
+        .c-tile--locked::after {
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); } }
+      @media (min-width: 768px) {
+        .c-tile--locked::after {
+          top: 0;
+          right: 0; } }
+    @media (max-width: 767.98px) {
+      .c-tile--locked {
+        background-color: #203753; } }
+    .c-tile--locked .c-tile__icon {
+      opacity: 0.5; }
+    .c-tile--locked .c-tile__title {
+      opacity: 0.5; }
+    .c-tile--locked .c-tile__link {
+      opacity: 0;
+      visibility: hidden; }
   @media (min-width: 768px) {
     .c-tile--unlocked {
-      background-color: #203753; } }
+      background-color: #203753; }
+      .c-tile--unlocked:hover, .c-tile--unlocked:focus {
+        cursor: pointer; }
+        .c-tile--unlocked:hover .c-tile__link, .c-tile--unlocked:focus .c-tile__link {
+          margin-bottom: 0;
+          opacity: 1; } }
   @media (max-width: 767.98px) {
     .c-tile--unlocked {
       border: 0.11111111rem solid #ffc629 !important; } }
@@ -7741,12 +7794,15 @@ h6 {
     margin-bottom: 1.33333333rem; }
   .c-tile__title {
     margin-bottom: 1.33333333rem; }
-  @media (max-width: 767.98px) {
-    .c-tile__link {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: -1.5em; } }
+  .c-tile__link {
+    margin-bottom: 0; }
+    @media (max-width: 767.98px) {
+      .c-tile__link {
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        bottom: -1.5em; } }
 
 .c-navbar {
   position: relative; }
@@ -7784,6 +7840,7 @@ h6 {
     position: absolute;
     bottom: 0.11111111rem;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 100vw;
     border-bottom: 0.11111111rem solid #ffc629; }

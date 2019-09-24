@@ -15,7 +15,7 @@
       "icon": "https://picsum.photos/200",
       "name": "questions",
       "title": "Preguntas",
-      "available": "unlocked"
+      "available": "locked"
     },
     {
       "id": 2,

@@ -1,0 +1,11 @@
+// Component WIN
+// ---------
+
+.c-win {
+  .l-container {
+    @include media-breakpoint-down(sm) {
+      border-color: transparent;
+      margin: 0;
+    }
+  }
+}

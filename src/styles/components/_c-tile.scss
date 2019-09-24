@@ -1,22 +1,86 @@
 // Component TILE
 // ---------
-
-.c-tile {
+$component-tile: ".c-tile";
+#{$component-tile} {
   padding: $grid-gutter-width;
   display: flex;
   text-align: center;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   border: $border-width solid transparent;
 
   @include media-breakpoint-up(md) {
-    flex-wrap: wrap;
+    #{$component-tile} {
+      @include e(link) {
+        @include transition();
+        transform-style: $easeOutSine;
+        margin-bottom: -4em;
+        opacity: 0;
+      }
+    }
+  }
+
+  @include m(locked) {
+    $lock-size: em(56);
+    pointer-events: none;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -$lock-size / 2;
+      border-radius: 50%;
+      background-color: gray("400");
+      background-image: image("club-icon-lock.svg");
+      width: $lock-size;
+      height: $lock-size;
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      @include media-breakpoint-down(sm) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @include media-breakpoint-up(md) {
+        top: 0;
+        right: 0;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      background-color: gray("800");
+    }
+
+    #{$component-tile} {
+      $locked-opacity: 0.5;
+
+      @include e(icon) {
+        opacity: $locked-opacity;
+      }
+      @include e(title) {
+        opacity: $locked-opacity;
+      }
+      @include e(link) {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
   }
 
   @include m(unlocked) {
     @include media-breakpoint-up(md) {
       background-color: gray("800");
+      @include hover-focus() {
+        cursor: pointer;
+        #{$component-tile} {
+          @include e(link) {
+            margin-bottom: 0;
+            opacity: 1;
+          }
+        }
+      }
     }
 
     @include media-breakpoint-down(sm) {
@@ -35,6 +99,7 @@
     margin-bottom: $grid-gutter-width;
   }
   @include e(link) {
+    margin-bottom: 0;
     @include media-breakpoint-down(sm) {
       position: absolute;
       left: 50%;
