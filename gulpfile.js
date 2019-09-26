@@ -61,7 +61,7 @@ const srcPath = (file, watch = false) => {
   if (file === "scss" && watch === false) return "./src/styles/main.scss";
   if (file === "scss" && watch === true) return "./src/styles/**/*.scss";
   if (file === "js" && watch === false) return entryArray;
-  if (file === "js" && watch === true) return "./src/js/**/*.js";
+  if (file === "js" && watch === true) return "./src/js/**/*.ts";
   if (file === "html" && watch === false) return "./templates/pages/*";
   if (file === "html" && watch === true) return "./templates/**/*.{html, tpl}";
   if (file === "img") return "./src/img/**/*.{png,jpeg,jpg,svg,gif}";

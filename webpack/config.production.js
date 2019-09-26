@@ -8,5 +8,8 @@ module.exports = {
   entry,
   mode: "production",
   devtool: "source-map",
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"]
+  },
   output
 };

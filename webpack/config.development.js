@@ -8,5 +8,8 @@ module.exports = {
   mode: "development",
   devtool: "inline-cheap-source-map",
   loader: { test: /\.js$/, loader: "babel", query: { compact: false } },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"]
+  },
   output
 };
