@@ -10,7 +10,7 @@
 ///
 /// @return {URL} - A `url()` function leading to the asset
 @function asset($type, $file) {
-  @return url($asset-base-path+"/"+$type+"/"+$file);
+  @return url("#{$asset-base-path}/#{$type}/#{$file}");
 }
 
 /// Image asset helper
