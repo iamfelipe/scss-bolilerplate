@@ -16,7 +16,6 @@ const postcssUncss = require("postcss-uncss");
 const gulpSass = require("gulp-sass");
 const gulpBabel = require("gulp-babel");
 const gulpImagemin = require("gulp-imagemin");
-const gulpHtmlmin = require("gulp-htmlmin");
 const imageminPngquant = require("imagemin-pngquant");
 const imageminJpegRecompress = require("imagemin-jpeg-recompress");
 const webp = require("gulp-webp");
@@ -157,6 +156,7 @@ const buildMarkup = mode => done => {
             helpers: "templates/helpers/",
             data: "src/data/"
           }),
+          // webpHTML(),
           gulp.dest(distPath("html", true))
         ],
         done()
