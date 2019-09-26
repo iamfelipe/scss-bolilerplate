@@ -265,7 +265,7 @@ const buildScripts = mode => done => {
             if (!isSourceMap) this.push(file);
             cb();
           }),
-          gulpBabel({ presets: [["env", babelConfig]] }),
+          gulpBabel(),
           ...(mode === "production" ? [gulpUglify()] : []),
           gulpSourcemaps.write("./"),
           gulp.dest(distPath("js")),
