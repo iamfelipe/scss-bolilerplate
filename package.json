@@ -1,7 +1,8 @@
 {
   "name": "name",
   "version": "1.0.0",
-  "description": "",
+  "description": "Project description",
+  "repository": "https://github.com/iamfelipe/scss-bolilerplate",
   "main": "index.js",
   "author": "",
   "license": "ISC",
