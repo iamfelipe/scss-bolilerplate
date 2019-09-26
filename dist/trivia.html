@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem." />
+    <title>Trivia</title>
+    <!--Slick styles-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!--header-->
+<header class="sticky-top bg-primary">
+  <div class="container">
+    <nav class="c-navbar navbar navbar-dark">
+      <a class="navbar-brand" href="/index.html">
+        <img src="img/club-img-logo.png" alt="Club Corona Logo" />
+      </a>
+      <ul class="navbar-nav flex-row flex-grow-1 align-items-center">
+        <li class="nav-item d-none d-md-block">
+          <a class="nav-link" href="/win-coronas.html">Gana Coronas</a>
+        </li>
+        <li class="nav-item d-none d-md-block">
+          <a class="nav-link" href="/prizes.html">Premios</a>
+        </li>
+        <li class="nav-item ml-auto">
+          <a
+            href="/challenges.html"
+            class="c-navbar__grid c-navbar__grid--challenges"
+          >
+            <img
+              src="https://picsum.photos/200"
+              alt="Retos ícono"
+              class="c-navbar__img"
+            />
+            <p class="c-navbar__text text-secondary">Retos</p>
+            <p class="c-navbar__text text-white">8 Disponibles</p>
+          </a>
+        </li>
+        <li class="nav-item"></li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            data-offset="10,20"
+          >
+            <div class="c-navbar__grid c-navbar__grid--profile">
+              <p class="c-navbar__text text-secondary">
+                700
+              </p>
+              <img
+                src="https://picsum.photos/200"
+                alt="Retos ícono"
+                class="c-navbar__img"
+              />
+            </div>
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-right position-absolute"
+            aria-labelledby="navbarDropdown"
+          >
+            <a class="dropdown-item active" href="/edit-profile.html"
+              >Editar perfil</a
+            >
+            <a class="dropdown-item" href="/profile.html">Ir a perfil</a>
+            <a class="dropdown-item" href="/index.html">Cerrar sesión</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+ 
+<article class="p-trivia py-4">
+  <div class="container">
+    <section class="c-trivia">
+      <!--Header-->
+      <header class="text-center my-5">
+        <div class="row justify-content-center">
+          <div class="col-10 col-md-5">
+            <h1 class="h1 text-white underline">Trivia</h1>
+            <p class="p text-white mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.</p>
+          </div>
+        </div>
+      </header>
+      <div class="row justify-content-center">
+        <div class="col-11 col-md-8">
+          <div class="l-container mt-0">
+            <div class="c-trivia__counter">
+              <!--Circle progress-->
+              <div id="triviaTimeout"></div>
+              <!--Seconds left-->
+              <span class="c-trivia__counter--left">15</span>
+            </div>
+            <div class="l-container__body mb-4">
+              <!--Steps-->
+              <div class="c-trivia__steps">
+                <span class="c-trivia__steps--current">0</span>/4
+              </div>
+              <!--Title-->
+              <h6 class="c-trivia__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.</h6>
+              <!--Choices-->
+              <div
+                class="btn-group btn-group-toggle c-trivia__grid"
+                data-toggle="buttons"
+              >
+                <label class="btn btn-outline-secondary c-trivia__choice">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option3"
+                    autocomplete="off"
+                  />
+                  Respuesta 1a
+                </label>
+                <label class="btn btn-outline-secondary c-trivia__choice">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option4"
+                    autocomplete="off"
+                  />
+                  Respuesta 2
+                </label>
+                <label class="btn btn-outline-secondary c-trivia__choice">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option5"
+                    autocomplete="off"
+                  />
+                  Respuesta 3
+                </label>
+                <label class="btn btn-outline-secondary c-trivia__choice">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option6"
+                    autocomplete="off"
+                  />
+                  Respuesta 4
+                </label>
+              </div>
+              <!--Steps-->
+              <div class="c-trivia__steps">
+                <span class="c-trivia__steps--current">1</span>/4
+              </div>
+              <!--Title-->
+              <h6 class="c-trivia__title">Pregunta 2</h6>
+              <!--Choices-->
+              <div
+                class="btn-group btn-group-toggle c-trivia__grid"
+                data-toggle="buttons"
+              >
+                <label class="btn btn-outline-secondary c-trivia__choice">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option8"
+                    autocomplete="off"
+                  />
+                  Respuesta 5
+                </label>
+                <label class="btn btn-outline-secondary c-trivia__choice">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option9"
+                    autocomplete="off"
+                  />
+                  Respuesta 6
+                </label>
+                <label class="btn btn-outline-secondary c-trivia__choice">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option10"
+                    autocomplete="off"
+                  />
+                  Respuesta 7
+                </label>
+                <label class="btn btn-outline-secondary c-trivia__choice">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option11"
+                    autocomplete="off"
+                  />
+                  Respuesta 8
+                </label>
+              </div>
+              <!--Footer-->
+              <div class="l-container__footer">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-md-auto">
+                    <button class="btn btn-secondary mx-auto btn-block px-5">
+                      Siguiente
+                    </button>
+                  </div>
+                  <div class="w-100"></div>
+                  <div class="col">
+                    <a
+                      href="#"
+                      class="text-center d-block btn-link"
+                      data-toggle="modal"
+                      data-target="#modalRanking"
+                      >Ver los mejores records</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</article>
+<!-- Modal -->
+<div
+  class="c-modal modal fade"
+  id="modalRanking"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalRankingTitle"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-md -modal-dialog-scrollable modal-dialog-centered"
+    role="document"
+  >
+    <div class="modal-content l-container my-0">
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <i class="material-icons">
+          close
+        </i>
+      </button>
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalRankingTitle">
+          Los mejores records
+        </h5>
+      </div>
+      <div class="modal-body">
+        <section class="l-ranking">
+          <ul class="l-ranking__list">
+            <li class="l-ranking__item">
+              <div class="c-ranking">
+                <span class="c-ranking__position">1</span>
+                <p class="c-ranking__name">Pepito Perez1</p>
+                <span class="c-ranking__points">100 Puntos</span>
+                <img
+                  class="c-ranking__membership"
+                  src="img/club-img-badge-1.png"
+                  alt="Escudo de la membresía"
+                />
+              </div>
+            </li>
+            <li class="l-ranking__item">
+              <div class="c-ranking">
+                <span class="c-ranking__position">2</span>
+                <p class="c-ranking__name">Pepito Perez2</p>
+                <span class="c-ranking__points">100 Puntos</span>
+                <img
+                  class="c-ranking__membership"
+                  src="img/club-img-badge-1.png"
+                  alt="Escudo de la membresía"
+                />
+              </div>
+            </li>
+            <li class="l-ranking__item">
+              <div class="c-ranking">
+                <span class="c-ranking__position">3</span>
+                <p class="c-ranking__name">Pepito Perez3</p>
+                <span class="c-ranking__points">100 Puntos</span>
+                <img
+                  class="c-ranking__membership"
+                  src="img/club-img-badge-1.png"
+                  alt="Escudo de la membresía"
+                />
+              </div>
+            </li>
+            <li class="l-ranking__item">
+              <div class="c-ranking">
+                <span class="c-ranking__position">4</span>
+                <p class="c-ranking__name">Pepito Perez4</p>
+                <span class="c-ranking__points">100 Puntos</span>
+                <img
+                  class="c-ranking__membership"
+                  src="img/club-img-badge-1.png"
+                  alt="Escudo de la membresía"
+                />
+              </div>
+            </li>
+            <li class="l-ranking__item">
+              <div class="c-ranking">
+                <span class="c-ranking__position">5</span>
+                <p class="c-ranking__name">Pepito Perez5</p>
+                <span class="c-ranking__points">100 Puntos</span>
+                <img
+                  class="c-ranking__membership"
+                  src="img/club-img-badge-1.png"
+                  alt="Escudo de la membresía"
+                />
+              </div>
+            </li>
+            <li class="l-ranking__item">
+              <div class="c-ranking">
+                <span class="c-ranking__position">6</span>
+                <p class="c-ranking__name">Pepito Perez6</p>
+                <span class="c-ranking__points">100 Puntos</span>
+                <img
+                  class="c-ranking__membership"
+                  src="img/club-img-badge-1.png"
+                  alt="Escudo de la membresía"
+                />
+              </div>
+            </li>
+            <li class="l-ranking__item">
+              <div class="c-ranking">
+                <span class="c-ranking__position">7</span>
+                <p class="c-ranking__name">Pepito Perez7</p>
+                <span class="c-ranking__points">100 Puntos</span>
+                <img
+                  class="c-ranking__membership"
+                  src="img/club-img-badge-1.png"
+                  alt="Escudo de la membresía"
+                />
+              </div>
+            </li>
+            <li class="l-ranking__item">
+              <div class="c-ranking">
+                <span class="c-ranking__position">8</span>
+                <p class="c-ranking__name">Pepito Perez8</p>
+                <span class="c-ranking__points">100 Puntos</span>
+                <img
+                  class="c-ranking__membership"
+                  src="img/club-img-badge-1.png"
+                  alt="Escudo de la membresía"
+                />
+              </div>
+            </li>
+            <li class="l-ranking__item">
+              <div class="c-ranking">
+                <span class="c-ranking__position">9</span>
+                <p class="c-ranking__name">Pepito Perez9</p>
+                <span class="c-ranking__points">100 Puntos</span>
+                <img
+                  class="c-ranking__membership"
+                  src="img/club-img-badge-1.png"
+                  alt="Escudo de la membresía"
+                />
+              </div>
+            </li>
+            <li class="l-ranking__item">
+              <div class="c-ranking">
+                <span class="c-ranking__position">10</span>
+                <p class="c-ranking__name">Pepito Perez10</p>
+                <span class="c-ranking__points">100 Puntos</span>
+                <img
+                  class="c-ranking__membership"
+                  src="img/club-img-badge-1.png"
+                  alt="Escudo de la membresía"
+                />
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <footer class="c-footer">
+  <div class="container">
+    <div class="l-footer">
+      <!--Social-->
+      <div class="l-footer__social">
+        <div class="c-social">
+          <!--Title-->
+          <h6 class="c-footer__title">
+            Nuestras redes
+          </h6>
+          <hr class="border-secondary" />
+          <!--List-->
+          <ul class="c-social__list">
+            <li class="c-social__item">
+              <a
+                href="https://picsum.photos/200"
+                class="c-social__link c-social__link--facebook"
+              ></a>
+            </li>
+            <li class="c-social__item">
+              <a
+                href="https://picsum.photos/200"
+                class="c-social__link c-social__link--twitter"
+              ></a>
+            </li>
+            <li class="c-social__item">
+              <a
+                href="https://picsum.photos/200"
+                class="c-social__link c-social__link--instagram"
+              ></a>
+            </li>
+            <li class="c-social__item">
+              <a
+                href="https://picsum.photos/200"
+                class="c-social__link c-social__link--youtube"
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--Disclaimer-->
+      <div class="l-footer__disclaimer">
+        <!--Title-->
+        <h6 class="c-footer__title">
+          AVISO DE PRIVACIDAD
+          <br />
+          TÉRMINOS Y CONDICIONES
+        </h6>
+        <hr class="border-secondary" />
+        <h6 class="c-footer__title">
+          TODO CON MEDIDA
+          <br />
+          NO COMPARTA ESTE CONTENIDO CON MENORES DE EDAD.
+          <br />
+          © 2019 CORONA TODOS LOS DERECHOS RESEVADOS.
+        </h6>
+      </div>
+      <!--Logo-->
+      <div class="l-footer__logo">
+        <img
+          src="/img/club-img-logo.png"
+          alt="Logo Club Corona"
+          class="c-footer__logo"
+        />
+      </div>
+      <!--Tagline-->
+      <div class="l-footer__tagline">
+        <h5 class="c-footer__heading">
+          EL CLUB
+          <br />
+          MÁS RIFADO
+        </h5>
+      </div>
+    </div>
+  </div>
+</footer>
+ <!--jQuery-->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  crossorigin="anonymous"
+></script>
+<!-- Bootstrap 4 -->
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+  crossorigin="anonymous"
+></script>
+<!-- Custom select -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+<!--Slick-->
+<script
+  type="text/javascript"
+  src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+></script>
+<script src="js/modernizr.js"></script>
+<script src="js/scripts.js"></script>
+
+  </body>
+</html>
