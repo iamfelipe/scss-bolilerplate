@@ -54,7 +54,6 @@ const autoprefixConfig = {
   cascade: false,
   grid: true
 };
-const babelConfig = { targets: { browsers: supportedBrowsers } };
 
 // Paths for reuse
 const exportPath = "./dist/**/*";
