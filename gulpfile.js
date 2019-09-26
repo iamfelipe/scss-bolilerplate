@@ -20,7 +20,6 @@ const imageminPngquant = require("imagemin-pngquant");
 const imageminJpegRecompress = require("imagemin-jpeg-recompress");
 const webp = require("gulp-webp");
 const clone = require("gulp-clone");
-const webpHTML = require("gulp-webp-html");
 const modernizr = require("gulp-modernizr");
 const panini = require("panini");
 
@@ -156,7 +155,6 @@ const buildMarkup = mode => done => {
             helpers: "templates/helpers/",
             data: "src/data/"
           }),
-          webpHTML(),
           gulp.dest(distPath("html", true))
         ],
         done()
