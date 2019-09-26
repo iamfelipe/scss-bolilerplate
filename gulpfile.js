@@ -145,7 +145,7 @@ const cleanExport = mode => () => {
 
 // Build Markup Tasks
 const buildMarkup = mode => done => {
-  ["development"].includes(mode)
+  ["development", "production"].includes(mode)
     ? pump(
         [
           gulp.src(srcPath("html")),
@@ -156,7 +156,7 @@ const buildMarkup = mode => done => {
             helpers: "templates/helpers/",
             data: "src/data/"
           }),
-          // webpHTML(),
+          webpHTML(),
           gulp.dest(distPath("html", true))
         ],
         done()
