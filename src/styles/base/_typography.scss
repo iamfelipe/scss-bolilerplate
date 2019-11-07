@@ -12,22 +12,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+// Typography header tags
 @for $i from 1 through 6 {
   h#{$i} {
     @extend %h#{$i};
   }
 }
 
+p {
+  @extend %body;
+}
+
+// Typography classes
 @each $base, $properties in $custom-scale {
   .#{$base} {
     @extend %#{$base};
-  }
-}
-
-p {
-  @extend %body;
-
-  + p {
-    @include margin-bottom();
   }
 }

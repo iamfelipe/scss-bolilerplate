@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="292" height="334" viewBox="0 0 292 334">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2, .cls-3, .cls-5 {
+        font-size: 13.258px;
+        text-transform: uppercase;
+      }
+
+      .cls-2, .cls-3, .cls-5, .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-6 {
+        font-family: FranklinGothicCondensed, "Franklin Gothic";
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        font-family: "Integral CF";
+      }
+
+      .cls-5 {
+        text-anchor: end;
+      }
+    </style>
+    <filter id="filter" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#b6965b"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="DID_ANYONE_SEE_AN_ANGEL_" data-name="DID ANYONE SEE AN ANGEL?" class="cls-1">
+    <text id="Did_anyone_" data-name="Did anyone " class="cls-2" transform="translate(112.454 27.145) scale(2.662)">Did anyone </text>
+    <text id="see" class="cls-3" transform="translate(112.454 98.523) scale(6.74)">see</text>
+    <text id="angel_" data-name="angel?" class="cls-3" transform="translate(112.454 261.951) scale(3.138)">angel?</text>
+    <text id="an" class="cls-2" transform="translate(115.964 224.098) scale(12.086)">an</text>
+    <text id="Aston_Villa_vs" data-name="Aston Villa vs" class="cls-2" transform="translate(35.519 333.431) rotate(-90) scale(3.599)">Aston Villa <tspan class="cls-4">vs</tspan></text>
+    <text id="Everton" class="cls-2" transform="translate(107.07 336.135) rotate(-90) scale(6.878)">Everton</text>
+    <text id="_26·12·2005" data-name="26·12·2005" class="cls-5" transform="translate(292.671 332.361) scale(2.415 2.415)">26<tspan class="cls-6">·12·</tspan>2005</text>
+    <rect id="Rectángulo_8_copia" data-name="Rectángulo 8 copia" class="cls-7" x="114" y="284" width="176" height="7"/>
+  </g>
+</svg>

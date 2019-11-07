@@ -13,7 +13,8 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
+  xxl: 1920px
 );
 
 // Grid containers
@@ -21,18 +22,19 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
+  xl: 1140px,
+  xxl: 1260px
 );
 
 // Modular scale
 $modularscale: (
-  base: 16px,
-  ratio: $minor-third,
+  base: 13px,
+  ratio: $fourth,
   map-get($grid-breakpoints, "sm"): (
-    base: 16px
+    base: 13px
   ),
   map-get($grid-breakpoints, "lg"): (
-    base: 18px,
+    base: 13px,
     ratio: $fourth
   )
 );
@@ -52,11 +54,12 @@ $white: #fff;
 $gray-100: #f8f9fa;
 $gray-200: #b0bec5;
 $gray-400: #78909c;
-$gray-900: #2c3637;
-$black: #000;
+$gray-900: #010101;
+$black: #010101;
 
-$primary: #0090c7;
+$primary: #bd9c69;
 $secondary: #008834;
+$dark: $black;
 
 // Grid columns
 $grid-columns: 12;
@@ -79,7 +82,7 @@ $transition: all $transition-duration $transition-timing-function;
 // Font, line-height, and color for body text, headings, and more.
 $ms-base: ms(0);
 $font-size-base: rem($ms-base);
-$line-height-base: 1.5;
+$line-height-base: 1.846153846153846;
 $vertical-rhythm: $ms-base * $line-height-base;
 
 $font-family-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -177,3 +180,6 @@ $custom-control-gutter: $custom-control-indicator-size / 2;
 $dropdown-item-padding-y: $input-btn-padding-y;
 
 //$colors: map-merge(map-merge($grays, $theme-colors), $colors);
+
+// Embed
+$embed-responsive-aspect-ratios: ((21 9), (16 9), (9 6), (4 3), (1 1));
