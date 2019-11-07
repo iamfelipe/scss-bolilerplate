@@ -80,4 +80,5 @@ website.zip
 # Idea
 .idea
 
-package-lock.json
+dist
+

@@ -1,10 +1,11 @@
-import bsCustomFileInput from "bs-custom-file-input";
+// import bsCustomFileInput from "bs-custom-file-input";
+// import Select from "./custom-select";
+// $(document).ready(() => {
+//   let select = new Select($("select"));
+// });
 
-$(document).ready(function() {
-  bsCustomFileInput.init();
-  $("select").selectpicker({
-    style: "",
-    styleBase: "form-control"
-    // liveSearch: true
-  });
-});
+let myName = "Pipe";
+// myName = 26;
+
+let myAge = 26.23;
+myAge = 1;

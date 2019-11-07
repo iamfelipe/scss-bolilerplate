@@ -7,7 +7,15 @@ module.exports = {
   entry,
   mode: "development",
   devtool: "inline-cheap-source-map",
-  loader: { test: /\.js$/, loader: "babel", query: { compact: false } },
+  module: {
+    rules: [
+      {
+        test: /\.ts?$/,
+        use: "ts-loader",
+        exclude: /node_modules/
+      }
+    ]
+  },
   resolve: {
     extensions: [".tsx", ".ts", ".js"]
   },

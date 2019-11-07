@@ -10,7 +10,7 @@
 ///
 /// @return {URL} - A `url()` function leading to the asset
 @function asset($type, $file) {
-  @return url($asset-base-path + '/' + $type + '/' + $file);
+  @return url("#{$asset-base-path}/#{$type}/#{$file}");
 }
 
 /// Image asset helper
@@ -22,7 +22,7 @@
 ///
 /// @require {function} asset
 @function image($file) {
-  @return asset('images', $file);
+  @return asset("img", $file);
 }
 
 /// Font asset helper
@@ -34,15 +34,5 @@
 ///
 /// @require {function} asset
 @function font($file) {
-  @return asset('fonts', $file);
-}
-
-/// Palette helper
-/// @access private
-/// @group addons
-///
-/// @param {Map} $palette - Palette colors map
-/// @param {String} $shade [base] - Shade or state of palette
-@function palette($palette, $shade: 'base') {
-  @return map-get(map-get($palettes, $palette), $shade);
+  @return asset("fonts", $file);
 }
