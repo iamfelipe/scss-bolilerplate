@@ -161,7 +161,7 @@ const buildMarkup = mode => done => {
     : undefined;
 };
 
-var sink = clone.sink();
+const sink = clone.sink();
 
 // Build Images Task
 const buildImages = mode => done => {
