@@ -12,8 +12,10 @@
     "export": "gulp export"
   },
   "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
     "autoprefixer": "^9.7.1",
-    "babel-preset-env": "^1.7.0",
     "bootstrap": "^4.3.1",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
@@ -60,7 +62,7 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "@babel/core": "^7.7.2",
+    "@babel/polyfill": "^7.7.0",
     "@types/jquery": "^3.3.31",
     "bootstrap-select": "^1.13.12",
     "bs-custom-file-input": "^1.3.2",
