@@ -1,3 +1,3 @@
 module.exports = {
-  filename: "[name].js"
+  filename: "bundle.js"
 };

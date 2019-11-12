@@ -16,6 +16,7 @@
 @for $i from 1 through 6 {
   h#{$i} {
     @extend %h#{$i};
+    font-family: $font-stack-secondary;
   }
 }
 
