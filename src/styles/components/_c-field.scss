@@ -1,0 +1,29 @@
+// Component FIELD
+// ---------
+
+.c-field {
+  position: relative;
+  overflow: hidden;
+
+  @include e(container) {
+  }
+
+  .morph-wrap,
+  .morph-wrap svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  svg {
+    transform: scaleX(1) scaleY(1) translateX(9%) translateY(42%) rotate(0deg) !important;
+  }
+
+  .morph {
+    fill: none;
+    stroke-width: rem(6);
+    stroke: theme-color("secondary");
+  }
+}

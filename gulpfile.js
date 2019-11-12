@@ -208,7 +208,6 @@ const buildStyles = mode => done => {
     ? pump(
         [
           gulp.src(srcPath("scss")),
-          gulpSourcemaps.init({ loadMaps: true }),
           gulpSass({ outputStyle, precision: 8 }).on(
             "error",
             gulpSass.logError
@@ -223,6 +222,7 @@ const buildStyles = mode => done => {
                 })
               ]
             : []),
+          gulpSourcemaps.init({ loadMaps: true }),
           gulpSourcemaps.write("./"),
           gulp.dest(distPath("css")),
           browserSync.stream()
