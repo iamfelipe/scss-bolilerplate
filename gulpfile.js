@@ -12,7 +12,7 @@ const gulpUglify = require("gulp-uglify");
 const gulpSourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("autoprefixer");
 const gulpPostcss = require("gulp-postcss");
-const postcssUncss = require("postcss-uncss");
+const purgecss = require("gulp-purgecss");
 const gulpSass = require("gulp-sass");
 const gulpBabel = require("gulp-babel");
 const gulpImagemin = require("gulp-imagemin");
@@ -214,6 +214,15 @@ const buildStyles = mode => done => {
             gulpSass.logError
           ),
           gulpPostcss(postcssPlugins),
+          ...(mode === "production"
+            ? [
+                purgecss({
+                  content: [srcPath("html", true)],
+                  whitelistPatternsChildren: [/(toast|tooltip)/],
+                  fontFace: true
+                })
+              ]
+            : []),
           gulpSourcemaps.write("./"),
           gulp.dest(distPath("css")),
           browserSync.stream()
