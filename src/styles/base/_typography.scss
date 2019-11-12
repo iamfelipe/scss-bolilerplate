@@ -13,6 +13,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@custom-selector :--heading h1, h2, h3;
+@custom-selector :--subheading h4, h5, h6;
+
+:--heading {
+  font-family: $font-stack-primary;
+}
+
 @for $i from 1 through 6 {
   h#{$i} {
     @extend %h#{$i};

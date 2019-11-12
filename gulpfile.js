@@ -13,6 +13,7 @@ const gulpSourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("autoprefixer");
 const gulpPostcss = require("gulp-postcss");
 const purgecss = require("gulp-purgecss");
+const postcssCustomSelectors = require("postcss-custom-selectors");
 const gulpSass = require("gulp-sass");
 const gulpBabel = require("gulp-babel");
 const gulpImagemin = require("gulp-imagemin");
@@ -202,7 +203,10 @@ const buildStyles = mode => done => {
   else if (mode === "production") outputStyle = "compressed";
   else outputStyle = undefined;
 
-  const postcssPlugins = [autoprefixer(autoprefixConfig)];
+  const postcssPlugins = [
+    autoprefixer(autoprefixConfig),
+    postcssCustomSelectors()
+  ];
 
   ["development", "production"].includes(mode)
     ? pump(
