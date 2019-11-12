@@ -4,6 +4,7 @@
 @at-root html {
   @include ms-respond(font-size, 0);
 }
+
 @at-root body {
   font-size: inherit;
   font-kerning: auto;

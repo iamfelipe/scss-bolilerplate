@@ -218,7 +218,7 @@ const buildStyles = mode => done => {
             ? [
                 purgecss({
                   content: [srcPath("html", true)],
-                  whitelistPatternsChildren: [/(toast|tooltip)/],
+                  whitelistPatternsChildren: [/(ali|cate)/],
                   fontFace: true
                 })
               ]
