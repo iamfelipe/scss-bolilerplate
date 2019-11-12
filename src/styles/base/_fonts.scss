@@ -3,7 +3,8 @@
 // -----------------------------------------------------------------------------
 
 @include font-face("Material Icons", "MaterialIcons-Regular");
-@include font-face("Asap", "Asap-Bold");
+@include font-face("Helvetica Neue", "HelveticaNeueLTStd-Roman");
+@include font-face("Franklin Gothic Condensed", "FranklinGothicCondensed");
 
 $font-stack-primary: "Helvetica Neue", $font-family-sans-serif;
-$font-stack-secondary: "Roboto", $font-family-serif;
+$font-stack-secondary: "Franklin Gothic Condensed", $font-family-sans-serif;
