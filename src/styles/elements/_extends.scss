@@ -3,7 +3,7 @@
 
 %box {
   // padding: em(16px) em(24px);
-  @extend %body;
+  @extend %p;
   height: auto;
   font-family: $font-stack-primary;
   border-width: $border-width;

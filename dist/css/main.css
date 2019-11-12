@@ -6889,7 +6889,7 @@ h6, .h6 {
     h6, .h6 {
       font-size: 23.99999999px; } }
 
-.body, p, .custom-file-label,
+p, .p, .custom-file-label,
 .form-control, input, select, textarea, .btn, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark {
   font-size: 16px;
   line-height: 1.5em;
@@ -6897,11 +6897,11 @@ h6, .h6 {
   margin-top: 0;
   margin-bottom: 24px; }
   @media (min-width: 576px) and (max-width: 992px) {
-    .body, p, .custom-file-label,
+    p, .p, .custom-file-label,
     .form-control, input, select, textarea, .btn, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark {
       font-size: calc( 16px + 2 * ( ( 100vw - 576px) / 416 )); } }
   @media (min-width: 992px) {
-    .body, p, .custom-file-label,
+    p, .p, .custom-file-label,
     .form-control, input, select, textarea, .btn, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark {
       font-size: 18px; } }
 
@@ -7010,12 +7010,6 @@ body {
   font-family: "Asap", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-h1,h2,h3 {
-  font-family: "Asap", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
-
-p + p {
-  margin-bottom: 1.5rem; }
-
 .custom-file-label,
 .form-control, input, select, textarea, .btn, .btn-blue, .btn-indigo, .btn-purple, .btn-pink, .btn-red, .btn-orange, .btn-yellow, .btn-green, .btn-teal, .btn-cyan, .btn-white, .btn-gray, .btn-gray-dark {
   height: auto;
