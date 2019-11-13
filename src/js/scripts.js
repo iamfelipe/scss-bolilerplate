@@ -1,12 +1,16 @@
 import Shape from "./morphing-shapes";
+import ImageGrid from "./image-grid";
 
-const Bud = new Shape();
+// Image grid
+if (document.querySelectorAll(".c-grid__wrap").length) {
+  document.querySelectorAll(".c-grid").forEach(item => {
+    const grid = new ImageGrid(item);
+    console.log(grid);
+  });
+}
 
-Bud.initShapeEl();
-Bud.createScrollWatchers();
-// console.log(Bud);
-
-// window.addEventListener("scroll", function(event) {
-//   var scroll = this.scrollY;
-//   console.log(scroll);
-// });
+// Bud logo animation
+if (document.querySelectorAll(".content-wrap").length) {
+  const Bud = new Shape();
+  Bud.initShapeEl();
+}

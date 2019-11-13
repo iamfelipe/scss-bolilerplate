@@ -4,25 +4,33 @@ description: Lorem ipsum.
 ---
 
 <div class="c-grid__wrap embed-responsive embed-responsive-16by9">
+  <div class="c-grid__footer">
+    <button class="c-grid__btn c-grid__btn--spread btn btn-success mb-0">
+      Spread
+    </button>
+    <button class="c-grid__btn c-grid__btn--collapse btn btn-warning mb-0">
+      Collapse
+    </button>
+  </div>
   <div class="c-grid c-grid--layout embed-responsive-item">
-    {{#repeat 3}}
-    <div class="c-grid__item-wrap revealer--showY">
+    {{#repeat 18}}
+    <div class="c-grid__item-wrap">
       <div class="c-grid__item">
         <img src="./img/img-grid-1a.png" alt="" />
       </div>
     </div>
     {{/repeat}}
-    <div class="c-grid__item-wrap revealer--showX revealer--right">
-      <div class="c-grid__item">
-        <img src="./img/img-grid-1a.png" alt="" />
-      </div>
-    </div>
-    {{#repeat 16}}
-    <div class="c-grid__item-wrap -revealer--showY revealer--bottom">
-      <div class="c-grid__item">
-        <img src="./img/img-grid-1a.png" alt="" />
-      </div>
-    </div>
-    {{/repeat}}
+    <!--    <div class="c-grid__item-wrap revealer&#45;&#45;showX revealer&#45;&#45;right">-->
+    <!--      <div class="c-grid__item">-->
+    <!--        <img src="./img/img-grid-1a.png" alt="" />-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--    {{#repeat 16}}-->
+    <!--    <div class="c-grid__item-wrap -revealer&#45;&#45;showY revealer&#45;&#45;bottom">-->
+    <!--      <div class="c-grid__item">-->
+    <!--        <img src="./img/img-grid-1a.png" alt="" />-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--    {{/repeat}}-->
   </div>
 </div>

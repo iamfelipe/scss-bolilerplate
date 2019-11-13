@@ -23,10 +23,10 @@ $c-grid: ".c-grid";
       #{$c-grid} {
         @include e(item-wrap) {
           &:nth-child(1) {
-            grid-area: 1 / 1 / span / span;
+            grid-area: 1 / 1 / span 1 / span 1;
           }
           &:nth-child(2) {
-            grid-area: 1 / 2 / span / span;
+            grid-area: 1 / 2 / span 1 / span 1;
           }
           &:nth-child(3) {
             grid-area: 1 / 3 / span 1 / span 2;
@@ -87,11 +87,13 @@ $c-grid: ".c-grid";
   @include e(item-wrap) {
     border: $border-width solid theme-color();
     will-change: transform;
+    overflow: hidden;
   }
   // Item
   @include e(item) {
     width: 100%;
     height: 100%;
+    will-change: transform;
     //background-size: cover;
     //background-repeat: no-repeat;
     //background-position: center center;
@@ -107,32 +109,11 @@ $c-grid: ".c-grid";
       will-change: transform;
     }
   }
-}
 
-//.revealer {
-//  position: absolute;
-//  width: calc(100% + 4px);
-//  height: calc(100% + 4px); /* Firefox and Safari gap hack */
-//  background: #fff;
-//  top: -2px;
-//  left: -2px;
-//  opacity: 0;
-//  pointer-events: none;
-//
-//  /* Direction control */
-//  @include m(right) {
-//    transform-origin: 100% 50%;
-//  }
-//
-//  @include m(left) {
-//    transform-origin: 0% 50%;
-//  }
-//
-//  @include m(top) {
-//    transform-origin: 50% 0%;
-//  }
-//
-//  @include m(bottom) {
-//    transform-origin: 50% 100%;
-//  }
-//}
+  @include e(footer) {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+}

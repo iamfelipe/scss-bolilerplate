@@ -76,6 +76,7 @@ export default class Shape {
       translateY: this.shapes[0].ty + "px",
       rotate: this.shapes[0].rotate + "deg"
     });
+    this.createScrollWatchers();
   }
 
   createScrollWatchers() {
