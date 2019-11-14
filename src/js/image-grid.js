@@ -14,10 +14,12 @@ const ANIMATION_SETTINGS = {
 // Images Grid
 export default class ImageGrid {
   constructor(el) {
+    this.isAnimating = false;
     this.DOM = { el: el };
     this.DOM.imageWrap = [
       ...this.DOM.el.querySelectorAll(".c-grid__item-wrap")
     ];
+    this.DOM.imageHero = this.DOM.el.querySelector(".c-grid__item-hero");
     this.itemsTotal = this.DOM.imageWrap.length;
     this.DOM.images = [...this.DOM.el.querySelectorAll(".c-grid__item")];
     this.goalsItem = [
@@ -26,234 +28,126 @@ export default class ImageGrid {
         tx: "0",
         ty: "-100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay / 2,
-        in: {
-          delay: ANIMATION_SETTINGS.delay / 2
-        },
-        out: {
-          delay: 0
-        }
+        delay: ANIMATION_SETTINGS.delay / 2
       },
       {
         id: 2,
         tx: "0",
         ty: "-100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0,
-        in: {
-          delay: 0
-        },
-        out: {
-          delay: 0
-        }
+        delay: 0
       },
       {
         id: 3,
         tx: "0",
         ty: "-100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0,
-        in: {
-          delay: 0
-        },
-        out: {
-          delay: 0
-        }
+        delay: 0
       },
       {
         id: 4,
         tx: "100%",
         ty: "0",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0,
-        in: {
-          delay: 0
-        },
-        out: {
-          delay: 0
-        }
+        delay: 0
       },
       {
         id: 5,
         tx: "-100%",
         ty: "0",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0,
-        in: {
-          delay: 0
-        },
-        out: {
-          delay: 0
-        }
+        delay: 0
       },
       {
         id: 6,
         tx: "0",
         ty: "-100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay,
-        in: {
-          delay: ANIMATION_SETTINGS.delay
-        },
-        out: {
-          delay: 0
-        }
+        delay: ANIMATION_SETTINGS.delay
       },
       {
         id: 7,
         tx: "0",
         ty: "100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay,
-        in: {
-          delay: ANIMATION_SETTINGS.delay
-        },
-        out: {
-          delay: 0
-        }
+        delay: ANIMATION_SETTINGS.delay
       },
       {
         id: 8,
         tx: "0",
         ty: "-100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay,
-        in: {
-          delay: ANIMATION_SETTINGS.delay
-        },
-        out: {
-          delay: 0
-        }
+        delay: ANIMATION_SETTINGS.delay
       },
       {
         id: 9,
         tx: "0",
         ty: "-100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay,
-        in: {
-          delay: ANIMATION_SETTINGS.delay
-        },
-        out: {
-          delay: 0
-        }
+        delay: ANIMATION_SETTINGS.delay
       },
       {
         id: 10,
         tx: "100%",
         ty: "0",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay,
-        in: {
-          delay: ANIMATION_SETTINGS.delay
-        },
-        out: {
-          delay: 0
-        }
+        delay: ANIMATION_SETTINGS.delay
       },
       {
         id: 11,
         tx: "-100%",
         ty: "0",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0,
-        in: {
-          delay: 0
-        },
-        out: {
-          delay: 0
-        }
+        delay: 0
       },
       {
         id: 12,
         tx: "100%",
         ty: "0",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay / 2,
-        in: {
-          delay: ANIMATION_SETTINGS.delay / 2
-        },
-        out: {
-          delay: 0
-        }
+        delay: ANIMATION_SETTINGS.delay / 2
       },
       {
         id: 13,
         tx: "0",
         ty: "100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay / 2,
-        in: {
-          delay: ANIMATION_SETTINGS.delay / 2
-        },
-        out: {
-          delay: 0
-        }
+        delay: ANIMATION_SETTINGS.delay / 2
       },
       {
         id: 14,
         tx: "0",
         ty: "100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay,
-        in: {
-          delay: ANIMATION_SETTINGS.delay
-        },
-        out: {
-          delay: 0
-        }
+        delay: ANIMATION_SETTINGS.delay
       },
       {
         id: 15,
         tx: "0",
         ty: "-100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay,
-        in: {
-          delay: ANIMATION_SETTINGS.delay
-        },
-        out: {
-          delay: 0
-        }
+        delay: ANIMATION_SETTINGS.delay
       },
       {
         id: 16,
         tx: "0",
         ty: "100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay / 2,
-        in: {
-          delay: ANIMATION_SETTINGS.delay / 2
-        },
-        out: {
-          delay: 0
-        }
+        delay: ANIMATION_SETTINGS.delay / 2
       },
       {
         id: 17,
         tx: "100%",
         ty: "0",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0,
-        in: {
-          delay: 0
-        },
-        out: {
-          delay: 0
-        }
+        delay: 0
       },
       {
         id: 18,
         tx: "0",
         ty: "100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0,
-        in: {
-          delay: 0
-        },
-        out: {
-          delay: 0
-        }
+        delay: 0
       }
     ];
     // Spread the grid items
@@ -274,8 +168,6 @@ export default class ImageGrid {
   spread(animate = false) {
     return new Promise((resolve, reject) => {
       let animateCount = 0;
-      const gridHeight = this.DOM.el.scrollHeight;
-      const gridTop = this.DOM.el.offsetTop;
       this.DOM.imageWrap.forEach((item, pos) => {
         item = item.querySelector(".c-grid__item");
         // Save the current translation
@@ -284,6 +176,7 @@ export default class ImageGrid {
         item.dataset.id = this.goalsItem[pos].id;
 
         if (animate) {
+          this.hideHero();
           TweenMax.to(item, this.goalsItem[pos].duration, {
             ease: ANIMATION_SETTINGS.ease.out,
             x: this.goalsItem[pos].tx,
@@ -304,6 +197,7 @@ export default class ImageGrid {
             }
           });
         } else {
+          this.setHero();
           TweenMax.set(item, {
             x: this.goalsItem[pos].tx,
             y: this.goalsItem[pos].ty
@@ -317,6 +211,7 @@ export default class ImageGrid {
   collapse() {
     return new Promise((resolve, reject) => {
       let animateCount = 0;
+      this.showHero();
       this.DOM.imageWrap.forEach((item, pos) => {
         item = item.querySelector(".c-grid__item");
         TweenMax.to(item, ANIMATION_SETTINGS.duration, {
@@ -335,7 +230,20 @@ export default class ImageGrid {
       });
     });
   }
-  showImages() {
-    TweenMax.set(this.DOM.images, { opacity: 1 });
+  setHero() {
+    TweenMax.set(this.DOM.imageHero, { opacity: 0 });
+  }
+  showHero() {
+    TweenMax.to(this.DOM.imageHero, ANIMATION_SETTINGS.duration, {
+      ease: ANIMATION_SETTINGS.ease.in,
+      opacity: 1
+    });
+  }
+  hideHero() {
+    TweenMax.to(this.DOM.imageHero, ANIMATION_SETTINGS.duration, {
+      ease: ANIMATION_SETTINGS.ease.out,
+      delay: ANIMATION_SETTINGS.delay,
+      opacity: 0
+    });
   }
 }
