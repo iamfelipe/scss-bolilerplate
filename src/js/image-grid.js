@@ -19,8 +19,8 @@ export default class ImageGrid {
     this.DOM.imageWrap = [
       ...this.DOM.el.querySelectorAll(".c-grid__item-wrap")
     ];
-    this.DOM.imageHero = this.DOM.el.querySelector(".c-grid__item-hero");
     this.itemsTotal = this.DOM.imageWrap.length;
+    this.DOM.imageHero = this.DOM.el.querySelector(".c-grid__item-hero");
     this.DOM.images = [...this.DOM.el.querySelectorAll(".c-grid__item")];
     this.goalsItem = [
       {
@@ -152,6 +152,7 @@ export default class ImageGrid {
     ];
     // Spread the grid items
     this.spread();
+    // Init debug buttons
     this.initButtons();
   }
   initButtons() {
@@ -166,7 +167,9 @@ export default class ImageGrid {
   }
   // Spreads the grid items by randomly positioning them and scaling them down
   spread(animate = false) {
+    if (this.isAnimating) return;
     return new Promise((resolve, reject) => {
+      this.isAnimating = true;
       let animateCount = 0;
       this.DOM.imageWrap.forEach((item, pos) => {
         item = item.querySelector(".c-grid__item");
@@ -192,6 +195,7 @@ export default class ImageGrid {
               ++animateCount;
               if (animateCount === this.itemsTotal) {
                 console.log("Spread");
+                this.isAnimating = false;
                 resolve();
               }
             }
@@ -202,6 +206,7 @@ export default class ImageGrid {
             x: this.goalsItem[pos].tx,
             y: this.goalsItem[pos].ty
           });
+          this.isAnimating = false;
           resolve();
         }
       });
@@ -209,7 +214,9 @@ export default class ImageGrid {
   }
   // Resets the items to the original position (forming again the original grid)
   collapse() {
+    if (this.isAnimating) return;
     return new Promise((resolve, reject) => {
+      this.isAnimating = true;
       let animateCount = 0;
       this.showHero();
       this.DOM.imageWrap.forEach((item, pos) => {
@@ -223,6 +230,7 @@ export default class ImageGrid {
             ++animateCount;
             if (animateCount === this.itemsTotal) {
               console.log("Collapsed");
+              this.isAnimating = false;
               resolve();
             }
           }
