@@ -3,9 +3,12 @@ import { TweenMax } from "gsap";
 const ANIMATION_SETTINGS = {
   // Animation settings (after the drag ends, the menu, letters and images need to be positioned or reset)
   // Grid
-  duration: 0.8,
-  ease: "Quart.easeOut",
-  delay: 0.8
+  duration: 1,
+  ease: {
+    in: "Quart.easeOut",
+    out: "Quart.easeIn"
+  },
+  delay: 0.5
 };
 
 // Images Grid
@@ -23,126 +26,234 @@ export default class ImageGrid {
         tx: "0",
         ty: "-100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay
+        delay: ANIMATION_SETTINGS.delay / 2,
+        in: {
+          delay: ANIMATION_SETTINGS.delay / 2
+        },
+        out: {
+          delay: 0
+        }
       },
       {
         id: 2,
         tx: "0",
         ty: "-100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0
+        delay: 0,
+        in: {
+          delay: 0
+        },
+        out: {
+          delay: 0
+        }
       },
       {
         id: 3,
         tx: "0",
         ty: "-100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0
+        delay: 0,
+        in: {
+          delay: 0
+        },
+        out: {
+          delay: 0
+        }
       },
       {
         id: 4,
         tx: "100%",
         ty: "0",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0
+        delay: 0,
+        in: {
+          delay: 0
+        },
+        out: {
+          delay: 0
+        }
       },
       {
         id: 5,
         tx: "-100%",
         ty: "0",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0
+        delay: 0,
+        in: {
+          delay: 0
+        },
+        out: {
+          delay: 0
+        }
       },
       {
         id: 6,
         tx: "0",
         ty: "-100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay
+        delay: ANIMATION_SETTINGS.delay,
+        in: {
+          delay: ANIMATION_SETTINGS.delay
+        },
+        out: {
+          delay: 0
+        }
       },
       {
         id: 7,
         tx: "0",
         ty: "100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay
+        delay: ANIMATION_SETTINGS.delay,
+        in: {
+          delay: ANIMATION_SETTINGS.delay
+        },
+        out: {
+          delay: 0
+        }
       },
       {
         id: 8,
         tx: "0",
         ty: "-100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay
+        delay: ANIMATION_SETTINGS.delay,
+        in: {
+          delay: ANIMATION_SETTINGS.delay
+        },
+        out: {
+          delay: 0
+        }
       },
       {
         id: 9,
         tx: "0",
         ty: "-100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0
-      },
-      {
-        id: 9,
-        tx: "100%",
-        ty: "0",
-        duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay
-      },
-      {
-        id: 10,
-        tx: "-100%",
-        ty: "0",
-        duration: ANIMATION_SETTINGS.duration,
-        delay: 0
+        delay: ANIMATION_SETTINGS.delay,
+        in: {
+          delay: ANIMATION_SETTINGS.delay
+        },
+        out: {
+          delay: 0
+        }
       },
       {
         id: 10,
         tx: "100%",
         ty: "0",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay
+        delay: ANIMATION_SETTINGS.delay,
+        in: {
+          delay: ANIMATION_SETTINGS.delay
+        },
+        out: {
+          delay: 0
+        }
       },
       {
         id: 11,
-        tx: "0",
-        ty: "100%",
+        tx: "-100%",
+        ty: "0",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0
+        delay: 0,
+        in: {
+          delay: 0
+        },
+        out: {
+          delay: 0
+        }
       },
       {
         id: 12,
-        tx: "0",
-        ty: "100%",
+        tx: "100%",
+        ty: "0",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay
+        delay: ANIMATION_SETTINGS.delay / 2,
+        in: {
+          delay: ANIMATION_SETTINGS.delay / 2
+        },
+        out: {
+          delay: 0
+        }
       },
       {
         id: 13,
         tx: "0",
-        ty: "-100%",
+        ty: "100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay
+        delay: ANIMATION_SETTINGS.delay / 2,
+        in: {
+          delay: ANIMATION_SETTINGS.delay / 2
+        },
+        out: {
+          delay: 0
+        }
       },
       {
         id: 14,
         tx: "0",
         ty: "100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay
+        delay: ANIMATION_SETTINGS.delay,
+        in: {
+          delay: ANIMATION_SETTINGS.delay
+        },
+        out: {
+          delay: 0
+        }
       },
       {
         id: 15,
-        tx: "100%",
-        ty: "0",
+        tx: "0",
+        ty: "-100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0
+        delay: ANIMATION_SETTINGS.delay,
+        in: {
+          delay: ANIMATION_SETTINGS.delay
+        },
+        out: {
+          delay: 0
+        }
       },
       {
         id: 16,
         tx: "0",
         ty: "100%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0
+        delay: ANIMATION_SETTINGS.delay / 2,
+        in: {
+          delay: ANIMATION_SETTINGS.delay / 2
+        },
+        out: {
+          delay: 0
+        }
+      },
+      {
+        id: 17,
+        tx: "100%",
+        ty: "0",
+        duration: ANIMATION_SETTINGS.duration,
+        delay: 0,
+        in: {
+          delay: 0
+        },
+        out: {
+          delay: 0
+        }
+      },
+      {
+        id: 18,
+        tx: "0",
+        ty: "100%",
+        duration: ANIMATION_SETTINGS.duration,
+        delay: 0,
+        in: {
+          delay: 0
+        },
+        out: {
+          delay: 0
+        }
       }
     ];
     // Spread the grid items
@@ -170,17 +281,24 @@ export default class ImageGrid {
         // Save the current translation
         item.dataset.ctx = this.goalsItem[pos].tx;
         item.dataset.cty = this.goalsItem[pos].ty;
+        item.dataset.id = this.goalsItem[pos].id;
 
         if (animate) {
           TweenMax.to(item, this.goalsItem[pos].duration, {
-            ease: ANIMATION_SETTINGS.ease,
+            ease: ANIMATION_SETTINGS.ease.out,
             x: this.goalsItem[pos].tx,
             y: this.goalsItem[pos].ty,
-            // delay: this.goalsItem[pos].delay,
-            delay: 0,
+            delay:
+              this.goalsItem[pos].delay === 0
+                ? ANIMATION_SETTINGS.delay
+                : this.goalsItem[pos].delay === ANIMATION_SETTINGS.delay
+                ? 0
+                : this.goalsItem[pos].delay / 2,
+            // delay: 0,
             onComplete: () => {
               ++animateCount;
               if (animateCount === this.itemsTotal) {
+                console.log("Spread");
                 resolve();
               }
             }
@@ -198,14 +316,21 @@ export default class ImageGrid {
   // Resets the items to the original position (forming again the original grid)
   collapse() {
     return new Promise((resolve, reject) => {
+      let animateCount = 0;
       this.DOM.imageWrap.forEach((item, pos) => {
         item = item.querySelector(".c-grid__item");
         TweenMax.to(item, ANIMATION_SETTINGS.duration, {
-          ease: ANIMATION_SETTINGS.ease,
+          ease: ANIMATION_SETTINGS.ease.in,
           x: 0,
           y: 0,
           delay: this.goalsItem[pos].delay,
-          onComplete: resolve
+          onComplete: () => {
+            ++animateCount;
+            if (animateCount === this.itemsTotal) {
+              console.log("Collapsed");
+              resolve();
+            }
+          }
         });
       });
     });
