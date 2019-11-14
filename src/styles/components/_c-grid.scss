@@ -8,11 +8,6 @@ $c-grid: ".c-grid";
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    @include m(animating) {
-      background-color: theme-color("dark");
-      will-change: opacity;
-    }
   }
   // Root
   & {
@@ -24,6 +19,11 @@ $c-grid: ".c-grid";
     //height: var(--gridheight);
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(6, 1fr);
+
+    @include m(is-animating) {
+      background-color: theme-color("dark");
+      will-change: opacity;
+    }
 
     @include m(layout) {
       #{$c-grid} {

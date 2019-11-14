@@ -179,6 +179,7 @@ export default class ImageGrid {
         item.dataset.id = this.goalsItem[pos].id;
 
         if (animate) {
+          this.DOM.el.classList.remove("c-grid--is-animating");
           this.hideHero();
           TweenMax.to(item, this.goalsItem[pos].duration, {
             ease: ANIMATION_SETTINGS.ease.out,
@@ -230,6 +231,7 @@ export default class ImageGrid {
             ++animateCount;
             if (animateCount === this.itemsTotal) {
               console.log("Collapsed");
+              this.DOM.el.classList.add("c-grid--is-animating");
               this.isAnimating = false;
               resolve();
             }
@@ -239,6 +241,7 @@ export default class ImageGrid {
     });
   }
   setHero() {
+    this.DOM.el.classList.add("c-grid--is-animating");
     TweenMax.set(this.DOM.imageHero, { opacity: 0 });
   }
   showHero() {
