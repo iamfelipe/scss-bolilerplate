@@ -29,18 +29,8 @@ $c-grid: ".c-grid";
       #{$c-grid} {
         @include e(item-hero) {
           grid-area: 3 / 3 / span 2 / span 2;
-          #{$c-grid}__item {
-            @include image("img-grid-0");
-          }
         }
         @include e(item-wrap) {
-          @for $i from 0 through 18 {
-            @include m(#{$i}) {
-              #{$c-grid}__item {
-                @include image("img-grid-#{$i + 1}");
-              }
-            }
-          }
           @include m(0) {
             grid-area: 1 / 1 / span 1 / span 1;
           }
@@ -102,11 +92,37 @@ $c-grid: ".c-grid";
       }
     }
   }
+
+  @include e(bg) {
+    background-color: theme-color("dark");
+    @include image("bg-grid", "jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   // Item wrapper
   @include e(item-wrap) {
     //border: $border-width solid theme-color();
     will-change: transform;
     overflow: hidden;
+
+    button {
+      &:not(:disabled),
+      &:not([disabled]) {
+        @include hover-focus() {
+          outline: 0;
+          box-shadow: none;
+          img {
+            transform: scale(1.02);
+          }
+        }
+      }
+    }
   }
   // Item
   @include e(item) {
@@ -117,9 +133,13 @@ $c-grid: ".c-grid";
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    will-change: transform;
+    border: 0 none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 
     img {
+      @include transition();
       position: absolute;
       top: 0;
       left: 0;

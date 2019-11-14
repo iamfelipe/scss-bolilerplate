@@ -5,22 +5,22 @@ description: Lorem ipsum.
 
 <div class="c-grid__wrap embed-responsive embed-responsive-16by9">
   <div class="c-grid__footer">
-    <button class="c-grid__btn c-grid__btn--spread btn btn-success mb-0">
-      Spread
-    </button>
     <button class="c-grid__btn c-grid__btn--collapse btn btn-warning mb-0">
       Collapse
     </button>
   </div>
   <div class="c-grid c-grid--layout embed-responsive-item">
+    <div class="c-grid__bg"></div>
     <div class="c-grid__item-hero">
-      <div class="c-grid__item"></div>
+      <div class="c-grid__item">
+        <img src="./img/img-grid-hero.png" alt="Goals of kings" />
+      </div>
     </div>
     {{#repeat 18}}
     <div class="c-grid__item-wrap c-grid__item-wrap--{{@index}}">
-      <a href="#" class="c-grid__item">
-        <!--        <img src="./img/img-grid-1a.png" alt="" />-->
-      </a>
+      <button type="button" class="c-grid__item">
+        <img src="./img/img-grid-{{@index}}.png" alt="Goals of kings" />
+      </button>
     </div>
     {{/repeat}}
   </div>

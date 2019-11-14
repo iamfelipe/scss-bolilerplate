@@ -21,133 +21,152 @@ export default class ImageGrid {
     ];
     this.itemsTotal = this.DOM.imageWrap.length;
     this.DOM.imageHero = this.DOM.el.querySelector(".c-grid__item-hero");
+    this.DOM.background = this.DOM.el.querySelector(".c-grid__bg");
     this.DOM.images = [...this.DOM.el.querySelectorAll(".c-grid__item")];
     this.goalsItem = [
       {
         id: 1,
         tx: "0",
-        ty: "-100%",
+        ty: "-101%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay / 2
+        delay: ANIMATION_SETTINGS.delay / 2,
+        isGoal: false
       },
       {
         id: 2,
         tx: "0",
-        ty: "-100%",
+        ty: "-101%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0
+        delay: 0,
+        isGoal: false
       },
       {
         id: 3,
         tx: "0",
-        ty: "-100%",
+        ty: "-101%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0
+        delay: 0,
+        isGoal: true
       },
       {
         id: 4,
-        tx: "100%",
+        tx: "101%",
         ty: "0",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0
+        delay: 0,
+        isGoal: false
       },
       {
         id: 5,
-        tx: "-100%",
+        tx: "-101%",
         ty: "0",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0
+        delay: 0,
+        isGoal: true
       },
       {
         id: 6,
         tx: "0",
-        ty: "-100%",
+        ty: "-101%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay
+        delay: ANIMATION_SETTINGS.delay,
+        isGoal: true
       },
       {
         id: 7,
         tx: "0",
-        ty: "100%",
+        ty: "101%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay
+        delay: ANIMATION_SETTINGS.delay,
+        isGoal: false
       },
       {
         id: 8,
         tx: "0",
-        ty: "-100%",
+        ty: "-101%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay
+        delay: ANIMATION_SETTINGS.delay,
+        isGoal: false
       },
       {
         id: 9,
         tx: "0",
-        ty: "-100%",
+        ty: "-101%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay
+        delay: ANIMATION_SETTINGS.delay,
+        isGoal: true
       },
       {
         id: 10,
-        tx: "100%",
+        tx: "101%",
         ty: "0",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay
+        delay: ANIMATION_SETTINGS.delay,
+        isGoal: true
       },
       {
         id: 11,
-        tx: "-100%",
+        tx: "-101%",
         ty: "0",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0
+        delay: 0,
+        isGoal: true
       },
       {
         id: 12,
-        tx: "100%",
+        tx: "101%",
         ty: "0",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay / 2
+        delay: ANIMATION_SETTINGS.delay / 2,
+        isGoal: true
       },
       {
         id: 13,
         tx: "0",
-        ty: "100%",
+        ty: "101%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay / 2
+        delay: ANIMATION_SETTINGS.delay / 2,
+        isGoal: false
       },
       {
         id: 14,
         tx: "0",
-        ty: "100%",
+        ty: "101%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay
+        delay: ANIMATION_SETTINGS.delay,
+        isGoal: true
       },
       {
         id: 15,
         tx: "0",
-        ty: "-100%",
+        ty: "-101%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay
+        delay: ANIMATION_SETTINGS.delay,
+        isGoal: true
       },
       {
         id: 16,
         tx: "0",
-        ty: "100%",
+        ty: "101%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: ANIMATION_SETTINGS.delay / 2
+        delay: ANIMATION_SETTINGS.delay / 2,
+        isGoal: true
       },
       {
         id: 17,
-        tx: "100%",
+        tx: "101%",
         ty: "0",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0
+        delay: 0,
+        isGoal: true
       },
       {
         id: 18,
         tx: "0",
-        ty: "100%",
+        ty: "101%",
         duration: ANIMATION_SETTINGS.duration,
-        delay: 0
+        delay: 0,
+        isGoal: true
       }
     ];
     // Spread the grid items
@@ -156,30 +175,38 @@ export default class ImageGrid {
     this.initButtons();
   }
   initButtons() {
-    this.DOM.btnCollapse = document.querySelector(".c-grid__btn--collapse");
-    this.DOM.btnSpread = document.querySelector(".c-grid__btn--spread");
-    this.DOM.btnCollapse.addEventListener("click", () => {
-      this.collapse();
+    this.DOM.imageWrap.forEach((item, pos) => {
+      item = item.querySelector(".c-grid__item");
+      item.addEventListener("click", e => {
+        this.selectGoal(e);
+      });
     });
-    this.DOM.btnSpread.addEventListener("click", () => {
-      this.spread(true);
-    });
+  }
+  // On click goal
+  selectGoal(e) {
+    console.log(e);
+    this.spread(true);
   }
   // Spreads the grid items by randomly positioning them and scaling them down
   spread(animate = false) {
     if (this.isAnimating) return;
     return new Promise((resolve, reject) => {
-      this.isAnimating = true;
       let animateCount = 0;
+      this.isAnimating = true;
       this.DOM.imageWrap.forEach((item, pos) => {
         item = item.querySelector(".c-grid__item");
         // Save the current translation
         item.dataset.ctx = this.goalsItem[pos].tx;
         item.dataset.cty = this.goalsItem[pos].ty;
-        item.dataset.id = this.goalsItem[pos].id;
+        item.dataset.id = pos;
+        // Disable if is not a link
+        item.disabled = !this.goalsItem[pos].isGoal;
 
         if (animate) {
-          this.DOM.el.classList.remove("c-grid--is-animating");
+          TweenMax.to(this.DOM.background, ANIMATION_SETTINGS.duration, {
+            opacity: 0
+          });
+          // this.DOM.el.classList.remove("c-grid--is-animating");
           this.hideHero();
           TweenMax.to(item, this.goalsItem[pos].duration, {
             ease: ANIMATION_SETTINGS.ease.out,
@@ -220,6 +247,10 @@ export default class ImageGrid {
       this.isAnimating = true;
       let animateCount = 0;
       this.showHero();
+      // Background color
+      TweenMax.to(this.DOM.background, ANIMATION_SETTINGS.duration, {
+        opacity: 1
+      });
       this.DOM.imageWrap.forEach((item, pos) => {
         item = item.querySelector(".c-grid__item");
         TweenMax.to(item, ANIMATION_SETTINGS.duration, {
@@ -231,7 +262,6 @@ export default class ImageGrid {
             ++animateCount;
             if (animateCount === this.itemsTotal) {
               console.log("Collapsed");
-              this.DOM.el.classList.add("c-grid--is-animating");
               this.isAnimating = false;
               resolve();
             }
@@ -241,7 +271,9 @@ export default class ImageGrid {
     });
   }
   setHero() {
-    this.DOM.el.classList.add("c-grid--is-animating");
+    TweenMax.set(this.DOM.background, {
+      opacity: 1
+    });
     TweenMax.set(this.DOM.imageHero, { opacity: 0 });
   }
   showHero() {
