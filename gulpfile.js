@@ -6,7 +6,6 @@ const webpack = require("webpack");
 const webpackStream = require("webpack-stream");
 const browserSync = require("browser-sync").create();
 const vinylNamed = require("vinyl-named");
-const through2 = require("through2");
 const gulpZip = require("gulp-zip");
 const gulpUglify = require("gulp-uglify");
 const gulpSourcemaps = require("gulp-sourcemaps");
@@ -15,7 +14,6 @@ const gulpPostcss = require("gulp-postcss");
 const purgecss = require("gulp-purgecss");
 const postcssCustomSelectors = require("postcss-custom-selectors");
 const gulpSass = require("gulp-sass");
-const gulpBabel = require("gulp-babel");
 const gulpImagemin = require("gulp-imagemin");
 const imageminPngquant = require("imagemin-pngquant");
 const imageminJpegRecompress = require("imagemin-jpeg-recompress");
@@ -268,15 +266,6 @@ const buildScripts = mode => done => {
           gulp.src(srcPath("js")),
           vinylNamed(),
           webpackStream(streamMode, webpack),
-          gulpSourcemaps.init({ loadMaps: true }),
-          through2.obj(function(file, enc, cb) {
-            const isSourceMap = /\.map$/.test(file.path);
-            if (!isSourceMap) this.push(file);
-            cb();
-          }),
-          gulpBabel(),
-          ...(mode === "production" ? [gulpUglify()] : []),
-          gulpSourcemaps.write("./"),
           gulp.dest(distPath("js")),
           browserSync.stream()
         ],

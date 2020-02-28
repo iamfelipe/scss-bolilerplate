@@ -4,9 +4,11 @@
 //   let select = new bsCustomFileInput($("select"));
 // });
 
-let myName = "Pipe";
-myName = "26";
-console.log(myName);
+let myNames = [];
+myNames = ["26", 1, true, {}.toString()];
 
+for (const name of myNames) {
+  console.log(name);
+}
 const myAge = 26.23;
 console.log(myAge);
