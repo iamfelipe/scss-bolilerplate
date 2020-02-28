@@ -5,7 +5,6 @@ const del = require("del");
 const webpack = require("webpack");
 const webpackStream = require("webpack-stream");
 const browserSync = require("browser-sync").create();
-const vinylNamed = require("vinyl-named");
 const gulpZip = require("gulp-zip");
 const gulpUglify = require("gulp-uglify");
 const gulpSourcemaps = require("gulp-sourcemaps");
@@ -21,6 +20,7 @@ const webp = require("gulp-webp");
 const clone = require("gulp-clone");
 const modernizr = require("gulp-modernizr");
 const panini = require("panini");
+const changed = require("gulp-changed");
 
 // Proxy URL
 const proxyURL = "https://ponymalta.test.dd:8443/";
@@ -264,7 +264,7 @@ const buildScripts = mode => done => {
     ? pump(
         [
           gulp.src(srcPath("js")),
-          vinylNamed(),
+          changed(distPath("js")),
           webpackStream(streamMode, webpack),
           gulp.dest(distPath("js")),
           browserSync.stream()
