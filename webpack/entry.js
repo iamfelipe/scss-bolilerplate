@@ -1,3 +1,4 @@
 module.exports = {
-  scripts: "./src/js/scripts.ts"
+  main: "./src/js/index.ts",
+  vendor: "./src/js/vendor.js"
 };

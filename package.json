@@ -7,21 +7,24 @@
   "author": "",
   "license": "ISC",
   "scripts": {
+    "lint": "eslint ./src/js --fix",
     "start": "gulp",
     "dev": "gulp dev",
     "export": "gulp export"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "^2.20.0",
     "autoprefixer": "^9.7.1",
     "babel-preset-env": "^1.7.0",
     "bootstrap": "^4.3.1",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
-    "eslint": "^6.6.0",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.5.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
@@ -58,7 +61,8 @@
     "vinyl-named": "^1.1.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-    "webpack-stream": "^5.2.1"
+    "webpack-stream": "^5.2.1",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "@babel/core": "^7.7.2",

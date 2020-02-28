@@ -1,11 +1,12 @@
 // import bsCustomFileInput from "bs-custom-file-input";
 // import Select from "./custom-select";
 // $(document).ready(() => {
-//   let select = new Select($("select"));
+//   let select = new bsCustomFileInput($("select"));
 // });
 
 let myName = "Pipe";
-// myName = 26;
+myName = "26";
+console.log(myName);
 
-let myAge = 26.23;
-myAge = 1;
+const myAge = 26.23;
+console.log(myAge);

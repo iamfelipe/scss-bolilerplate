@@ -5,7 +5,6 @@ const output = require("./output");
 
 module.exports = {
   entry,
-  mode: "development",
   devtool: "inline-cheap-source-map",
   module: {
     rules: [

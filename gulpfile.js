@@ -257,10 +257,9 @@ const buildModernizr = mode => done => {
 // Build Scripts Task
 const buildScripts = mode => done => {
   let streamMode;
-  if (mode === "development")
-    streamMode = require("./webpack/config.development.js");
+  if (mode === "development") streamMode = require("./webpack/webpack.dev.js");
   else if (mode === "production")
-    streamMode = require("./webpack/config.production.js");
+    streamMode = require("./webpack/webpack.prod.js");
   else streamMode = undefined;
 
   ["development", "production"].includes(mode)
@@ -372,9 +371,6 @@ const genericTask = (mode, context = "building") => {
     gulp.watch(srcPath("img", true)).on(
       "all",
       gulp.series(
-        Object.assign(cleanImages(mode), {
-          displayName: `Watching Images Task: Clean - ${modeName}`
-        }),
         Object.assign(buildImages(mode), {
           displayName: `Watching Images Task: Build - ${modeName}`
         })
@@ -414,9 +410,6 @@ const genericTask = (mode, context = "building") => {
     gulp.watch(srcPath("js", true)).on(
       "all",
       gulp.series(
-        Object.assign(cleanScripts(mode), {
-          displayName: `Watching Scripts Task: Clean - ${modeName}`
-        }),
         Object.assign(buildScripts(mode), {
           displayName: `Watching Scripts Task: Build - ${modeName}`
         }),
