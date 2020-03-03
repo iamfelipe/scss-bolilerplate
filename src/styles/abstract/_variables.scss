@@ -27,25 +27,25 @@ $container-max-widths: (
 // Modular scale
 $modularscale: (
   base: 16px,
-  ratio: $minor-third,
+  ratio: $major-third,
   map-get($grid-breakpoints, "sm"): (
     base: 16px
   ),
-  map-get($grid-breakpoints, "lg"): (
-    base: 18px,
-    ratio: $fourth
-  )
+  //map-get($grid-breakpoints, "lg"): (
+  //  base: 15px,
+  //  ratio: $major-third
+  //)
 );
 
 //  TAG     MB      DK
-//  lead    00      62
-//  h1      00      57
-//  h2      00      39
-//  h3      00      32
-//  h4      00      29/30
-//  h5      00      24/25
-//  h6      00      20/21
-//  p       00      18
+//  lead    00      XX
+//  h1      00      XX
+//  h2      00      XX
+//  h3      00      XX
+//  h4      00      33
+//  h5      00      25
+//  h6      00      20
+//  p       00      16
 
 // Color system
 $white: #fff;
@@ -92,49 +92,53 @@ $font-family-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 $custom-scale: (
   h1: (
     scale: 6,
-    line-height: 56,
-    font-weight: 700
+    line-height: 1,
+    font-weight: 400
   ),
   h2: (
     scale: 5,
-    line-height: 30,
-    font-weight: 700
+    line-height: 1,
+    font-weight: 400
   ),
   h3: (
     scale: 4,
-    line-height: 28,
+    line-height: 1.02398689296777,
     font-weight: 400
   ),
   h4: (
     scale: 3,
-    line-height: 24,
-    font-weight: 700
+    line-height: 1.024,
+    font-weight: 400
   ),
   h5: (
     scale: 2,
-    line-height: 22
+    line-height: 1.2,
+    font-weight: 400
   ),
   h6: (
     scale: 1,
-    line-height: 20,
-    font-weight: 600
+    line-height: 1.2,
+    font-weight: 400
   ),
   p: (
     scale: 0,
-    line-height: 24,
+    line-height: 1.5,
     font-weight: 400
   ),
   small: (
     scale: -1,
-    line-height: 20
+    line-height: 1,
+    font-weight: 400
   ),
   caption: (
     scale: -1,
-    line-height: 20
+    line-height: 1,
+    font-weight: 400
   ),
   tiny: (
     scale: -2,
-    line-height: 18
+    line-height: 1,
+    font-weight: 400
   )
 );
 
@@ -150,6 +154,15 @@ $border-width: rem(1);
 $input-btn-padding-y: rem(16) - $border-width;
 $input-btn-padding-x: rem(24) - $border-width;
 $border-radius: rem(4);
+
+// Buttons
+$btn-padding-y: rem(20) - $border-width;
+$btn-padding-x: $input-btn-padding-x;
+
+$btn-padding-y-lg: rem(24) - $border-width;
+$btn-padding-x-lg: $btn-padding-y-lg;
+$btn-font-size-lg: $h6-font-size;
+$btn-line-height-lg: map-get(map-get($custom-scale, 'h6'), 'line-height');
 
 // Forms
 //

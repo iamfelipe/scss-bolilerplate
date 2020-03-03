@@ -13,6 +13,7 @@
   $disabled-background: lighten($background, 7.5%)
 ) {
   @extend %box;
+  font-family: $font-stack-primary;
   //background-color: $background;
   //border-color: $background;
 

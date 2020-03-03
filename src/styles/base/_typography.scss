@@ -8,7 +8,7 @@
 @at-root body {
   font-size: inherit;
   font-kerning: auto;
-  font-family: $font-stack-primary;
+  font-family: $font-stack-tertiary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -19,9 +19,10 @@
 @custom-selector :--heading h1, h2, h3;
 @custom-selector :--subheading h4, h5, h6;
 // Uncomment to discover 🧭
-//:--heading {
-//  font-family: $font-stack-primary;
-//}
+:--heading,
+:--subheading {
+  font-family: $font-stack-primary;
+}
 
 //
 // Element tags

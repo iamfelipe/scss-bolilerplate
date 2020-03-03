@@ -26,9 +26,11 @@
     @font-face {
       font-family: quote($font-name);
       src: font($file-name + ".eot");
-      src: font($file-name + ".woff") format("woff"),
+      src: font($file-name +".eot?#iefix") format("embedded-opentype"),
+        font($file-name + ".woff2") format("woff2"),
+        font($file-name + ".woff") format("woff"),
         font($file-name + ".ttf") format("truetype"),
-        font($file-name + ".svg") format("svg");
+        font($file-name + ".svg#svgFontName") format("svg");
       font-weight: $weight;
       font-style: $style;
     }

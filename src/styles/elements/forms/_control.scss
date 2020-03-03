@@ -3,7 +3,8 @@
 
 %control {
   @extend %box;
-  margin-bottom: 0;
+  @extend %h6;
+  font-family: $font-stack-secondary;
 
   @include hover() {
     border-color: theme-color(primary);
