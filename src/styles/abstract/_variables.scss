@@ -161,8 +161,8 @@ $btn-padding-x: $input-btn-padding-x;
 
 $btn-padding-y-lg: rem(24) - $border-width;
 $btn-padding-x-lg: $btn-padding-y-lg;
-$btn-font-size-lg: $h6-font-size;
-$btn-line-height-lg: map-get(map-get($custom-scale, 'h6'), 'line-height');
+$btn-font-size-lg: ms(get('h6.scale'));
+$btn-line-height-lg: get('h6.line-height');
 
 // Forms
 //
