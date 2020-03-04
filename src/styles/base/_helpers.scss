@@ -27,7 +27,6 @@
   font-feature-settings: "liga";
 }
 
-
 $weights: 400 500 600 700;
 
 @each $weight in $weights {
@@ -46,4 +45,53 @@ $weights: 400 500 600 700;
 
 .font-family-tertiary {
   font-family: $font-stack-tertiary;
+}
+
+.tile {
+  background-size: 100% 100%;
+  text-align: center;
+  padding: rem(16) 0;
+
+  @include media-breakpoint-up(md) {
+    padding: rem(22) 0;
+  }
+
+  @include e(sm) {
+    @include image("tile-sm-dark");
+  }
+}
+
+//
+// Layout
+//
+
+.container {
+
+  @include m(wider) {
+    @include media-breakpoint-up(xxl) {
+      max-width: 1640px;
+    }
+  }
+}
+
+.section {
+  @include e(container) {
+    padding-top: rem(24);
+    padding-bottom: rem(24);
+
+    @include media-breakpoint-up(md) {
+      padding-top: rem(32);
+      padding-bottom: rem(32);
+    }
+
+    @include m(lg) {
+      padding-top: rem(32);
+      padding-bottom: rem(32);
+
+      @include media-breakpoint-up(md) {
+        padding-top: rem(48);
+        padding-bottom: rem(48);
+      }
+    }
+  }
 }

@@ -1,0 +1,27 @@
+// Component Video
+// ---------
+
+.c-video {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 46.5%;
+    left: 49.75%;
+    transform: translate(-50%, -50%) scale(0.999, 1.04);
+    width: 104%;
+    height: 104%;
+    @include image('modal-frame');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+    @include drop-shadow($white);
+  }
+
+  @include e(mask) {
+    mask-image: image('modal-frame.svg');
+    mask-size: 100% 100%;
+  }
+}
