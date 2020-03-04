@@ -10,7 +10,45 @@
 
   //&,
   .navbar-collapse {
-    flex-direction: column;
+    @include transition();
+    background-color: $white;
+
+    @include media-breakpoint-down(lg) {
+      height: 100vh !important;
+      transform: translateY(-100%);
+    }
+
+    &.collapsing,
+    &.show {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      justify-content: center;
+      z-index: 2;
+
+      .nav-item {
+        &.active {
+          .nav-link {
+            color: $white;
+          }
+        }
+
+        .nav-link {
+          color: rgba($white, 0.333);
+        }
+      }
+    }
+
+    &.collapsing {
+      background-color: rgba(theme-color(dark), 1);
+    }
+
+    &.show {
+      transform: none;
+      background-color: rgba(theme-color(dark), 0.8);
+    }
   }
 
   .navbar-nav {
@@ -60,8 +98,28 @@
   }
 
   .navbar-toggler {
+    @include transition();
     border-color: transparent;
     align-self: flex-start;
+
+    &:not(.collapsed) {
+      z-index: 3;
+
+      & {
+        position: fixed;
+        top: calc(#{$navbar-button-size} + #{$navbar-toggler-padding-y} * 2 + #{$border-width * 2});
+        right: 0;
+
+        .navbar-toggler-icon {
+          @include image("modal-btn-close");
+          @include drop-shadow($white);
+        }
+      }
+    }
+
+    @include hover-focus() {
+      outline: 0;
+    }
   }
 
   .navbar-toggler-icon {
@@ -71,7 +129,8 @@
 
   .navbar-profile {
     border: $border-width solid transparent;
-    align-self: flex-end;
+    //align-self: flex-end;
+    margin-left: auto;
 
     .navbar-profile-icon {
       width: $navbar-button-size;
