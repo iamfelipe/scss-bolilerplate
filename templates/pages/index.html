@@ -1,141 +1,91 @@
----
-title: Home
-description: Lorem ipsum.
----
-
-<section id="c-baseline">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <h1 class="h1">H1: Each list example</h1>
-        <ul class="breakfast-items">
-          {{#each contact.list}}
-          <li class="{{this}}-{{@index}}">{{ this }}</li>
-          {{/each}}
-        </ul>
-        <h2>H2: Repeat N times example</h2>
-        <ul>
-          {{#repeat 3}}
-          <li>Lorem ipsum dolor sit amet.</li>
-          {{/repeat}}
-        </ul>
-        <h3>H3: Help Us Improve</h3>
-        <p>
-          Paragraph: This is version 1 of Archetype and we'd love your feedback
-          and suggestions on how we can improve it to make it even more useful.
-          Please use the feedback link in the header to let us know what you
-          think. Be as critical as you like, we have thick skin.
-        </p>
-        <h4>H4: Still Reading? H4: Still Reading? H4: Still Reading?</h4>
-        <p>
-          Well here's some inspirational quotes for you: “Good design is making
-          something intelligible and memorable. Great design is making something
-          memorable and meaningful”: Dieter Rams.
-        </p>
-        <h5>
-          H5: Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
-          deleniti excepturi vel?
-        </h5>
-        <p>
-          Paragraph: “A designer knows he has achieved perfection not when there
-          is nothing left to add, but when there is nothing left to take away”:
-          Antoine de Saint-Exupery.
-        </p>
-        <h6>
-          H6: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
-          neque nulla voluptatem?
+<article class="p-register">
+  <div class="container py-4">
+    <!--Divider top-->
+    <img src="./img/hr-white-top.png" alt="Divisor blanco" class="w-100" />
+    <!--Header row-->
+    <div class="row py-4">
+      <div class="col-12 text-center">
+        <!--Header-->
+        <h2 class="h4 text-center">Registro</h2>
+        <h6 class="h6 text-center">
+          Ingresa tu información <br />para quedar registarado
         </h6>
-        <p class="body">
-          Paragraph: Archetype lets designers like you very quickly and easily
-          create consistent typography styling and spacing live, in the browser.
-          These styles are all underpinned by established typographic best
-          practices meaning less guesswork and more harmonious designs.
+        <!--Login-->
+        <p class="small text-center text-uppercase mb-0">
+          ¿Ya tienes una cuenta?
         </p>
-        <p>
-          Ab delectus dolore, dolorem error fuga illo ipsa libero minus modi nam
-          officia, pariatur quos recusandae soluta veniam vitae voluptatum?
-        </p>
-        <div class="c-heading">
-          <div class="c-heading__image">
-            <img
-              src="https://picsum.photos/400"
-              class="w-100"
-              alt="Example image"
-            />
-          </div>
-          <div class="c-heading__title">
-            <h1 class="text-primary">
-              Design System <i class="material-icons">face</i>
-            </h1>
-          </div>
-          <div class="c-heading__subtitle">
-            <h6>Standard project module structure</h6>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="col-12 col-lg">
-        <div class="form-group">
-          <label for="text" class="label">Text label</label>
-          <input
-            id="text"
-            type="text"
-            placeholder="Placeholder"
-            class="form-control"
-          />
-        </div>
-      </div>
-      <div class="col-12 col-lg">
-        <div class="form-group">
-          <label for="select" class="label">Select label</label>
-          <select id="select" class="form-control" title="seleccionar género">
-            <option>Male</option>
-            <option>Female</option>
-            <option>Undefined</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <div class="form-row">
-      <div class="col-12 col-lg">
-        <div class="form-group">
-          <div class="custom-control custom-checkbox">
-            <input
-              type="checkbox"
-              class="custom-control-input"
-              id="customCheck1"
-            />
-            <label class="custom-control-label label" for="customCheck1"
-              >Check this custom checkbox</label
-            >
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg">
-        <div class="form-group">
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" id="customFile" />
-            <label class="custom-file-label" for="customFile"
-              >Seleccionar archivo</label
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="col-auto">
-        <a href="" class="btn btn-lg btn__solid btn__solid--arrow-left"
-          >Anchor primary</a
+        <a
+          href="#"
+          class="btn-link d-inline-block p text-center font-weight-700 font-family-primary text-dark"
+          >Inicia sesión aquí</a
         >
       </div>
-      <div class="col-auto">
-        <button class="btn btn__solid btn__solid--arrow-right">Button</button>
-      </div>
-      <div class="col-auto">
-        <input type="submit" class="btn btn-warning" value="Submit" />
+    </div>
+    <!--Form wrap-->
+    <div class="row justify-content-center pb-6">
+      <!--Form container-->
+      <div class="col-12 col-md-auto">
+        <form action="">
+          <div class="form-group">
+            <label for="text" class="sr-only">Ciudad</label>
+            <input
+              id="text"
+              type="text"
+              placeholder="Ciudad"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="text" class="sr-only">Ciudad</label>
+            <input
+              id="text"
+              type="text"
+              placeholder="Ciudad"
+              class="form-control error"
+            />
+          </div>
+          <div class="form-group">
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="customCheck1"
+              />
+              <label class="custom-control-label" for="customCheck1"
+                >Acepto términos y condiciones y Politicas de privacidad</label
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="customCheck2"
+              />
+              <label class="custom-control-label" for="customCheck2"
+                >Deseo recibir información comercial y eventos de sabores de
+                otra dimensión</label
+              >
+            </div>
+          </div>
+        </form>
+        <!--Wizard controls-->
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <button class="btn btn-block btn__white btn__white--arrow-left">
+              Atrás
+            </button>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-block btn__white btn__white--arrow-right">
+              Finalizar
+            </button>
+          </div>
+        </div>
       </div>
     </div>
+    <!--Divider bottom-->
+    <img src="./img/hr-white-bottom.png" alt="Divisor blanco" class="w-100" />
   </div>
-</section>
+</article>

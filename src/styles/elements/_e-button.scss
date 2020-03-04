@@ -48,7 +48,7 @@
 
   }
 
-  @include e(dark) {
+  @include e(white) {
     color: theme-color(dark);
 
     @include m(arrow-left) {
@@ -60,7 +60,7 @@
     }
   }
 
-  @include e(white) {
+  @include e(dark) {
 
     @include plain-hover-focus() {
       color: $white;

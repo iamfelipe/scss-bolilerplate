@@ -69,6 +69,7 @@ $c-card: ".c-card";
 
   .card-title {
     @extend %h4;
+    margin-bottom: .2em;
   }
 
   .card-subtitle {
@@ -80,7 +81,7 @@ $c-card: ".c-card";
 
   .card-text {
     line-height: 1.1;
-    margin-bottom: .75em;
+    margin-bottom: .25em;
   }
 
 
@@ -92,6 +93,11 @@ $c-card: ".c-card";
     display: flex;
     padding: 0;
     justify-content: flex-end;
+
+    .btn__white {
+      margin-right: -1em;
+      pointer-events: none;
+    }
   }
 
   .card-img {
@@ -106,5 +112,9 @@ $c-card: ".c-card";
         padding-top: 64%;
       }
     }
+  }
+
+  .btn-share-img {
+    width: rem(32);
   }
 }
