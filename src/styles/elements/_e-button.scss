@@ -40,10 +40,16 @@
 
 .btn {
   @include button(theme-color(primary));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 
   @include e(solid) {
+
+
+  }
+
+  @include e(dark) {
     color: theme-color(dark);
-    background-size: 100% 100%;
 
     @include m(arrow-left) {
       @include image('btn-solid-arrow-white-left');
@@ -51,6 +57,17 @@
 
     @include m(arrow-right) {
       @include image('btn-solid-arrow-white-right');
+    }
+  }
+
+  @include e(white) {
+
+    @include plain-hover-focus() {
+      color: $white;
+    }
+
+    @include m(arrow-left) {
+      @include image('card-btn-dark');
     }
   }
 

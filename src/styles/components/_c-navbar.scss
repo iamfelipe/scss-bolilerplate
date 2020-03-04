@@ -148,16 +148,16 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-
-    @include media-breakpoint-down(lg) {
-      width: 100vw;
-      height: 17.5vw;
-    }
+    width: 100vw;
+    height: 17.5vw;
 
     @include media-breakpoint-up(md) {
-      @include image("navbar-control-desktop");
       width: $navbar-brand-width;
       height: $navbar-height;
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include image("navbar-control-desktop");
     }
   }
 }

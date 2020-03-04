@@ -5,6 +5,7 @@
 //@include font-face("Material Icons", "MaterialIcons-Regular");
 @include font-face("DDC Hardware", "DDCHardware-Regular");
 @include font-face("Panton", "PantonDemo-Light", 300);
+@include font-face("Panton", "PantonDemo-Black", 900);
 @include font-face("Roboto Condensed", "RobotoCondensed-Regular");
 
 $font-stack-primary: "DDC Hardware", $font-family-sans-serif;

@@ -89,8 +89,8 @@ $weights: 400 500 600 700;
       padding-bottom: rem(32);
 
       @include media-breakpoint-up(md) {
-        padding-top: rem(48);
-        padding-bottom: rem(48);
+        padding-top: rem(56);
+        padding-bottom: rem(56);
       }
     }
   }

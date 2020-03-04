@@ -14,7 +14,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1920px,
+  xxl: 1920px
 );
 
 // Grid containers
@@ -23,7 +23,7 @@ $container-max-widths: (
   md: 720px,
   lg: 960px,
   xl: 1140px,
-  xxl: 1320px,
+  xxl: 1320px
 );
 
 // Modular scale
@@ -241,5 +241,12 @@ $navbar-toggler-border-radius: 0;
 $navbar-dark-color: $gray-200;
 $navbar-dark-active-color: $dark;
 $navbar-dark-hover-color: $gray-400;
+
+// Card
+$card-bg: transparent;
+$card-inner-border-radius: 0;
+$card-cap-bg: $card-bg;
+$card-border-width: 0;
+$card-border-color: $card-bg;
 
 //$colors: map-merge(map-merge($grays, $theme-colors), $colors);
