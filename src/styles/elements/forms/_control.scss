@@ -3,11 +3,25 @@
 
 %control {
   @extend %box;
-  @extend %h6;
+  @extend %p;
+  @include transition();
+  line-height: 1;
+  background-size: 100% 100%;
   font-family: $font-stack-secondary;
+  //@include drop-shadow(theme-color(dark));
 
-  @include hover() {
-    border-color: theme-color(primary);
+  @include media-breakpoint-up(md) {
+    @include ms-respond(font-size, get("h6.scale"));
+    line-height: get("h6.line-height");
+  }
+
+  &.error {
+    @include drop-shadow(theme-color(danger));
+  }
+
+  @include hover-focus() {
+    @include drop-shadow($white);
+    border-color: transparent;
   }
 }
 
@@ -17,7 +31,6 @@
 }
 
 .custom-file-label {
-
   &::after {
     height: initial;
   }

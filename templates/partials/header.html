@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+<nav class="c-navbar navbar navbar-expand-xl navbar-dark bg-dark sticky-top">
   <button
     class="navbar-toggler"
     type="button"
@@ -10,34 +10,42 @@
   >
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">Brand</a>
-
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="#"
-          >Home <span class="sr-only">(current)</span></a
-        >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
-          >Disabled</a
-        >
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input
-        class="form-control mr-sm-2"
-        type="search"
-        placeholder="Search"
-        aria-label="Search"
-      />
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-        Search
-      </button>
-    </form>
+  <a href="./profile.html" class="navbar-profile">
+    <img
+      src="./img/icon-white-profile.png"
+      alt="Icono perfil blanco"
+      class="navbar-profile-icon"
+    />
+  </a>
+  <a class="navbar-brand" href="./index.html"></a>
+  <div class="collapse navbar-collapse w-100 bg-white" id="navbarTogglerDemo03">
+    <!--Nav white-->
+    <div class="navbar-nav row w-100">
+      <ul
+        class="d-flex flex-column flex-xl-row justify-content-xl-end col col-xl-6"
+      >
+        <li class="nav-item active">
+          <a class="nav-link" href="#"
+            >Feed <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Conoce</a>
+        </li>
+      </ul>
+      <ul
+        class="d-flex flex-column flex-xl-row justify-content-xl-start col col-xl-6"
+      >
+        <li class="nav-item">
+          <a class="nav-link" href="#">Retos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Votación</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ranking</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>

@@ -12,7 +12,7 @@
   $hover-background: darken($background, 7.5%),
   $disabled-background: lighten($background, 7.5%)
 ) {
-  @extend %box;
+  //@extend %box;
   font-family: $font-stack-primary;
   //background-color: $background;
   //border-color: $background;
@@ -40,6 +40,19 @@
 
 .btn {
   @include button(theme-color(primary));
+
+  @include e(solid) {
+    color: theme-color(dark);
+    background-size: 100% 100%;
+
+    @include m(arrow-left) {
+      @include image('btn-solid-arrow-white-left');
+    }
+
+    @include m(arrow-right) {
+      @include image('btn-solid-arrow-white-right');
+    }
+  }
 
   @each $color, $value in $colors {
     &-#{$color} {

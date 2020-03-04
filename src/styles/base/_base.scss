@@ -9,6 +9,10 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  background-color: theme-color();
+}
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -19,4 +23,10 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
 }

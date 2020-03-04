@@ -26,3 +26,24 @@
   /* Support for IE. */
   font-feature-settings: "liga";
 }
+
+
+$weights: 400 500 600 700;
+
+@each $weight in $weights {
+  .font-weight-#{$weight} {
+    font-weight: $weight;
+  }
+}
+
+.font-family-primary {
+  font-family: $font-stack-primary;
+}
+
+.font-family-secondary {
+  font-family: $font-stack-secondary;
+}
+
+.font-family-tertiary {
+  font-family: $font-stack-tertiary;
+}

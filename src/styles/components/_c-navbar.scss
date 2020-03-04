@@ -1,0 +1,104 @@
+// Component Navbar
+// ---------
+
+.c-navbar {
+  & {
+    @include media-breakpoint-up(xl) {
+      flex-direction: column;
+    }
+  }
+
+  //&,
+  .navbar-collapse {
+    flex-direction: column;
+  }
+
+  .navbar-nav {
+    justify-content: center;
+
+    @include media-breakpoint-up(xl) {
+      .d-flex {
+        &:first-child {
+          .nav-item:last-child {
+            margin-right: $navbar-brand-offset;
+          }
+        }
+
+        &:last-child {
+          .nav-item:first-child {
+            margin-left: $navbar-brand-offset;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-link {
+    @extend %h6;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    font-family: $font-stack-primary;
+    padding: $navbar-nav-link-padding-y $navbar-nav-link-padding-x;
+  }
+
+  .nav-item {
+    z-index: 1;
+    position: relative;
+  }
+
+  .navbar-profile,
+  .navbar-toggler {
+    padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
+    z-index: 2;
+
+    .navbar-toggler-icon,
+    .navbar-profile-icon {
+      width: $navbar-button-size;
+      height: $navbar-button-size;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: transparent;
+    align-self: flex-start;
+  }
+
+  .navbar-toggler-icon {
+    @include image("icon-white-menu");
+    background-size: contain;
+  }
+
+  .navbar-profile {
+    border: $border-width solid transparent;
+    align-self: flex-end;
+
+    .navbar-profile-icon {
+      width: $navbar-button-size;
+      height: $navbar-button-size;
+    }
+  }
+
+  .navbar-brand {
+    @include image("navbar-control");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    @include media-breakpoint-down(lg) {
+      width: 100vw;
+      height: 17.5vw;
+    }
+
+    @include media-breakpoint-up(md) {
+      @include image("navbar-control-desktop");
+      width: $navbar-brand-width;
+      height: $navbar-height;
+    }
+  }
+}

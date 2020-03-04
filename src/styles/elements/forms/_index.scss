@@ -7,3 +7,9 @@
 @import "input";
 @import "select";
 @import "textarea";
+
+form {
+  max-width: calc(
+    #{map-get($container-max-widths, "sm")} - #{$grid-gutter-width * 3}
+  );
+}

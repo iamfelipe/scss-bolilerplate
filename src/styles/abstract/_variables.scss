@@ -50,13 +50,14 @@ $modularscale: (
 // Color system
 $white: #fff;
 $gray-100: #f8f9fa;
-$gray-200: #b0bec5;
+$gray-200: #d7d7d7;
 $gray-400: #78909c;
-$gray-900: #2c3637;
+$gray-900: #101010;
 $black: #000;
 
-$primary: #0090c7;
+$primary: #fae62b;
 $secondary: #008834;
+$dark: $gray-900;
 
 // Grid columns
 $grid-columns: 12;
@@ -79,7 +80,7 @@ $transition: all $transition-duration $transition-timing-function;
 // Font, line-height, and color for body text, headings, and more.
 $ms-base: ms(0);
 $font-size-base: rem($ms-base);
-$line-height-base: 1.5;
+$line-height-base: 1;
 $vertical-rhythm: $ms-base * $line-height-base;
 
 $font-family-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -117,7 +118,7 @@ $custom-scale: (
   ),
   h6: (
     scale: 1,
-    line-height: 1.2,
+    line-height: 1,
     font-weight: 400
   ),
   p: (
@@ -149,31 +150,59 @@ $h4-font-size: ms(3);
 $h5-font-size: ms(2);
 $h6-font-size: ms(1);
 
+// Spacing
+$spacer: 1rem;
+$spacers: (
+  5: (
+    $spacer * 2
+  ),
+  6: (
+    $spacer * 3
+  )
+);
+
 // Buttons + Forms
 $border-width: rem(1);
-$input-btn-padding-y: rem(16) - $border-width;
-$input-btn-padding-x: rem(24) - $border-width;
+$input-btn-padding-y: rem(18) - $border-width;
+$input-btn-padding-x: rem(40) - $border-width;
 $border-radius: rem(4);
 
 // Buttons
 $btn-padding-y: rem(20) - $border-width;
 $btn-padding-x: $input-btn-padding-x;
 
-$btn-padding-y-lg: rem(24) - $border-width;
+$btn-padding-y-lg: rem(26) - $border-width;
 $btn-padding-x-lg: $btn-padding-y-lg;
-$btn-font-size-lg: ms(get('h6.scale'));
-$btn-line-height-lg: get('h6.line-height');
+$btn-font-size-lg: ms(get("h6.scale"));
+$btn-line-height-lg: get("h6.line-height");
 
 // Forms
 //
 $form-grid-gutter-width: $grid-gutter-width / 1.5;
 $input-placeholder-color: $gray-400;
 $input-color: $gray-900;
+$input-line-height: get("h6.line-height");
+
+$input-btn-focus-color: transparent;
+$input-border-color: transparent;
+$input-bg: transparent;
 
 // Lang
 $custom-file-text: (
   en: "Elegir"
 );
+
+// Checkbox
+$custom-control-indicator-bg: transparent;
+$custom-control-indicator-border-color: transparent;
+
+$custom-control-indicator-checked-color: transparent;
+$custom-control-indicator-checked-bg: transparent;
+$custom-control-indicator-checked-disabled-bg: transparent;
+$custom-control-indicator-checked-border-color: transparent;
+
+$custom-control-indicator-focus-box-shadow: transparent;
+$custom-control-indicator-focus-border-color: white;
 
 // Select
 $input-color-placeholder: $input-placeholder-color;
@@ -188,5 +217,27 @@ $custom-control-gutter: $custom-control-indicator-size / 2;
 
 // Dropdown
 $dropdown-item-padding-y: $input-btn-padding-y;
+
+// Navbar
+$navbar-height: rem(120);
+$navbar-button-size: rem(20);
+$navbar-brand-width: map-get($grid-breakpoints, "md");
+$navbar-brand-offset: calc(#{$navbar-brand-width / 2.75});
+
+$navbar-padding-y: rem(0);
+$navbar-padding-x: $navbar-padding-y;
+
+$navbar-nav-link-padding-y: rem(18);
+$navbar-nav-link-padding-x: rem(12);
+
+$navbar-brand-padding-y: 0;
+
+$navbar-toggler-padding-y: calc(#{rem(14)} - #{$border-width});
+$navbar-toggler-padding-x: $navbar-toggler-padding-y;
+$navbar-toggler-border-radius: 0;
+
+$navbar-dark-color: $gray-200;
+$navbar-dark-active-color: $dark;
+$navbar-dark-hover-color: $gray-400;
 
 //$colors: map-merge(map-merge($grays, $theme-colors), $colors);

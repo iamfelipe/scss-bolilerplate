@@ -3,9 +3,36 @@
 
 %input {
   @extend %control;
+  @include image("control-input-dark");
+
+  &.error {
+    @include image("control-input-error");
+  }
+
+  @include hover-focus() {
+    @include image("control-input-focus");
+  }
 }
 
 input {
-  @extend %input;
+  &[type="text"],
+  &[type="number"],
+  &[type="password"] {
+    @extend %input;
+  }
+
+  &[type="checkbox"] {
+  }
 }
 
+.custom-checkbox {
+  .custom-control-input:checked ~ .custom-control-label::after {
+    @include image("control-input-checkbox-checked");
+  }
+  .custom-control-label {
+    &::before {
+      @include image("control-input-checkbox");
+      background-size: contain;
+    }
+  }
+}
