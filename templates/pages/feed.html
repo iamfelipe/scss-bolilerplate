@@ -1,16 +1,9 @@
-<article class="p-feed">
+<article class="p-feed py-6">
   <div class="container container--wider section__container--lg">
     <div class="row align-items-md-center justify-content-md-between">
       <!--Featured video-->
       <div class="col-12 col-lg-7 mb-5 mb-lg-0">
-        <div class="c-video">
-          <div class="c-video__mask embed-responsive embed-responsive-16by9">
-            <iframe
-              class="embed-responsive-item"
-              src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-            ></iframe>
-          </div>
-        </div>
+        {{> video-frame}}
       </div>
       <div class="col-12 col-lg-4">
         <section class="section__container">
@@ -55,20 +48,7 @@
         </div>
         <!--Countdown wrap-->
         <section class="section__container">
-          <div class="row justify-content-center">
-            <div class="col-10 col-md-auto">
-              <h2 class="h6 text-center -mb-0">
-                Inicio de próximo reto
-              </h2>
-              <!--Countdown-->
-              <div class="tile tile__sm">
-                <span class="h4 font-family-primary">03:00:00</span>
-                <p class="p text-uppercase font-family-primary mb-0">
-                  Días:Horas:Minutos
-                </p>
-              </div>
-            </div>
-          </div>
+          {{> countdown}}
         </section>
       </div>
     </div>
@@ -93,52 +73,7 @@
           <ul class="row justify-content-around c-slider" id="sliderChallenges">
             {{#repeat 3}}
             <li class="col-12 col-md-6 col-lg-auto">
-              <div class="c-card-wrap c-card-wrap--vote">
-                <div class="c-card card">
-                  <div class="card-header">
-                    <span class="h4 font-family-primary mb-0">01</span>
-                    <h6 class="card-subtitle mb-1 mr-2 text-right">
-                      Mundo Pix
-                    </h6>
-                  </div>
-                  <div class="embed-responsive card-img-wrap">
-                    <img
-                      class="embed-responsive-item card-img"
-                      src="https://picsum.photos/200/400"
-                      alt=""
-                    />
-                    <div
-                      class="card-img-overlay d-flex justify-content-end align-items-end"
-                    >
-                      <a href="#" class="btn-share">
-                        <img
-                          src="./img/icon-white-share.png"
-                          class="btn-share-img"
-                          alt="Icono compartir blanco"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Delectus mollitia reiciendis soluta!
-                    </h5>
-                  </div>
-                  <div class="card-footer">
-                    <a
-                      href="#"
-                      class="btn btn-lg btn__white btn__white--arrow-left pl-3 pr-5 py-3"
-                      >123</a
-                    >
-                    <a
-                      href="#"
-                      class="btn btn-lg btn__dark btn__dark--arrow-left px-6 py-3"
-                      >Votar</a
-                    >
-                  </div>
-                </div>
-              </div>
+              {{> card-vote}}
             </li>
             {{/repeat}}
           </ul>
@@ -168,47 +103,7 @@
           <ul class="row c-slider" id="sliderNextChallenges">
             {{#repeat 5}}
             <li class="col-12 col-md-6 col-lg-auto">
-              <div class="c-card-wrap c-card-wrap--next-challenges">
-                <div class="c-card card">
-                  <div class="embed-responsive card-img-wrap">
-                    <img
-                      class="embed-responsive-item card-img"
-                      src="https://picsum.photos/200/400"
-                      alt=""
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Delectus mollitia reiciendis soluta!
-                    </h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Aliquam at porttitor sem. Aliquam erat volutpat. Donec
-                      placerat nisl magna, et faucibus arcu condimentum sed.
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Aliquam at porttitor sem. Aliquam erat volutpat. Donec
-                      placerat nisl magna, et faucibus arcu condimentum sed.
-                    </p>
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <a href="#" class="btn text-dark btn-link p-0"
-                          >Conoce más</a
-                        >
-                      </div>
-                      <div class="col-auto ml-auto">
-                        <a href="#" class="btn-share">
-                          <img
-                            src="./img/icon-white-share.png"
-                            class="btn-share-img"
-                            alt="Icono compartir blanco"
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {{> card-challenges}}
             </li>
             {{/repeat}}
           </ul>
@@ -216,7 +111,7 @@
       </div>
       <div class="row justify-content-center mt-6">
         <div class="col-auto">
-          <a href="#" class="btn btn__white btn__white--arrow"
+          <a href="#" class="btn btn-lg btn__white btn__white--arrow"
             >Conoce el ranking</a
           >
         </div>
@@ -228,45 +123,6 @@
       alt="Divisor blanco"
       class="e-divider"
     />
-    <section class="section__container--lg">
-      <div class="row align-items-md-center">
-        <div class="col-12 col-md-6">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe
-              class="embed-responsive-item"
-              src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-            ></iframe>
-          </div>
-        </div>
-        <div class="col-12 col-md-5 mx-md-auto">
-          <!--Header-->
-          <header class="mb-4">
-            <h2 class="h4 text-center mb-0">Fortnite</h2>
-            <h6 class="h5 text-center mb-0">
-              Participa por estar en la final
-            </h6>
-          </header>
-          <!--Text-->
-          <p class="p">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit, tempus risus
-            etia. Lorem ipsum dolor sit amet consectetur adipiscing elit, tempus
-            risus etiam conubia taciti quam, nam dui laoreet morbi sollicitudin
-            feugiat.
-          </p>
-          <p class="p">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit, tempus risus
-            etia. Lorem ipsum dolor sit amet consectetur adipiscing elit, tempus
-            risus etiam conubia taciti quam, nam dui laoreet morbi sollicitudin
-            feugiat.
-          </p>
-          <p class="p">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit, tempus risus
-            etia. Lorem ipsum dolor sit amet consectetur adipiscing elit, tempus
-            risus etiam conubia taciti quam, nam dui laoreet morbi sollicitudin
-            feugiat.
-          </p>
-        </div>
-      </div>
-    </section>
+    {{> section-take-part}}
   </div>
 </article>

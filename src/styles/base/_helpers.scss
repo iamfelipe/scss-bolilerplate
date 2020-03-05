@@ -76,21 +76,21 @@ $weights: 400 500 600 700;
 
 .section {
   @include e(container) {
-    padding-top: rem(24);
-    padding-bottom: rem(24);
+    margin-top: rem(24);
+    margin-bottom: rem(24);
 
     @include media-breakpoint-up(md) {
-      padding-top: rem(32);
-      padding-bottom: rem(32);
+      margin-top: rem(32);
+      margin-bottom: rem(32);
     }
 
     @include m(lg) {
-      padding-top: rem(32);
-      padding-bottom: rem(32);
+      margin-top: rem(32);
+      margin-bottom: rem(32);
 
       @include media-breakpoint-up(md) {
-        padding-top: rem(56);
-        padding-bottom: rem(56);
+        margin-top: rem(56);
+        margin-bottom: rem(56);
       }
     }
   }
