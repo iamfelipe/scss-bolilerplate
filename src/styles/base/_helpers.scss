@@ -51,13 +51,15 @@ $weights: 400 500 600 700;
   background-size: 100% 100%;
   text-align: center;
   padding: rem(16) 0;
+  @include image("tile-sm-dark");
 
   @include media-breakpoint-up(md) {
+    min-width: rem(256);
     padding: rem(22) 0;
   }
 
   @include e(sm) {
-    @include image("tile-sm-dark");
+    min-width: auto;
   }
 }
 
@@ -102,4 +104,8 @@ $weights: 400 500 600 700;
   margin-right: auto;
   margin-left: auto;
   max-width: rem(870);
+
+  @include m(horizontal) {
+    width: rem(5);
+  }
 }

@@ -44,34 +44,37 @@
   background-repeat: no-repeat;
 
   @include e(solid) {
-
-
   }
 
   @include e(white) {
     color: theme-color(dark);
 
     @include m(arrow-left) {
-      @include image('btn-solid-arrow-white-left');
+      @include image("btn-solid-arrow-white-left");
     }
 
     @include m(arrow-right) {
-      @include image('btn-solid-arrow-white-right');
+      @include image("btn-solid-arrow-white-right");
     }
 
     @include m(arrow) {
-      @include image('btn-solid-arrow-white');
+      @include image("btn-solid-arrow-white");
     }
   }
 
   @include e(dark) {
-
     @include plain-hover-focus() {
       color: $white;
     }
 
     @include m(arrow-left) {
-      @include image('card-btn-dark');
+      @include image("card-btn-dark");
+    }
+  }
+
+  @include e(outline) {
+    @include m(arrow-left) {
+      @include image("btn-outline-arrow-dark-left");
     }
   }
 

@@ -1,0 +1,85 @@
+<article class="p-challenges py-6">
+  <div class="container">
+    <!--Header wrap-->
+    <section class="section__container">
+      <div class="row justify-content-center">
+        <div class="col-md-auto">
+          <!--Header-->
+          <header class="">
+            <h2 class="h6 text-center mb-0">
+              Pony Malta te invita a que pruebes
+            </h2>
+            <h6 class="h4 text-center text-uppercase mb-0">
+              Black & White
+            </h6>
+          </header>
+        </div>
+      </div>
+    </section>
+    <!--Divider top-->
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        {{> divider position='top'}}
+      </div>
+    </div>
+    <!--Countdown wrap-->
+    <section class="section__container">
+      {{> countdown}}
+    </section>
+    <!--Video featured frame-->
+    <section class="section__container--lg">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-9">
+          {{> video-frame}}
+        </div>
+      </div>
+    </section>
+    <!--Divider compound-->
+    {{> divider position='compound'}}
+    <!--Section challenge info-->
+    <section class="section__container">
+      <div class="row justify-content-lg-around align-items-md-center">
+        <!--Card-->
+        <div class="col-12 col-md-auto">
+          {{> card-challenges}}
+        </div>
+        <!--Vertical divider-->
+        <div class="col-auto d-none d-lg-block">
+          <img src="./img/vr.png" alt="" class="e-divider--horizontal" />
+        </div>
+        <div class="col-12 col-md col-lg-6">
+          <h5 class="h4 mb-1">Reto 01</h5>
+          <h6 class="h5 mb-3">Cada semana se habilitará un nuevo reto</h6>
+          <h6 class="h5">Especificaciones</h6>
+          <p class="p">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit, tempus risus
+            etia. Lorem ipsum dolor sit amet consectetur adipiscing elit, tempus
+            risus etiam conubia taciti quam, nam dui laoreet morbi sollicitudin
+          </p>
+          <h6 class="h5">Favoritos</h6>
+          <p class="p">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit, tempus risus
+            etia. Lorem ipsum dolor sit amet consectetur adipiscing elit, tempus
+            risus etiam conubia taciti quam, nam dui laoreet morbi sollicitudin
+          </p>
+          <div class="row justify-content-lg-start mt-5">
+            <div class="col-auto">
+              <a href="#" class="btn btn__outline btn__outline--arrow-left"
+                >Votar por tu favorito</a
+              >
+            </div>
+            <div class="col-auto">
+              <a href="#" class="btn btn__white btn__white--arrow-right"
+                >Subir reto</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Divider compound-->
+    {{> divider position='compound'}}
+    <!--Section challenges-->
+    {{> section-challenges}}
+  </div>
+</article>

@@ -1,0 +1,67 @@
+<article class="p-ranking py-6">
+  <div class="container">
+    <!--Page header wrap-->
+    <section class="section__container--lg">
+      <div class="row justify-content-center">
+        <div class="col-md-auto">
+          <!--Header-->
+          <header class="">
+            <h2 class="h5 text-center mb-0">
+              Mundo Pix y Bit se enfrentan
+            </h2>
+            <h6 class="h4 text-center text-uppercase mb-0">
+              Tabla de posiciones
+            </h6>
+          </header>
+        </div>
+      </div>
+    </section>
+    <!--Challenge header wrap-->
+    <section class="section__container--lg">
+      <!--Header-->
+      <h2 class="h4 text-center mb-0">Reto 04</h2>
+      <h6 class="h6 text-center">
+        Bailar con una Pony Malta en la cabeza por 15 segundos
+      </h6>
+    </section>
+    <!--Points wrap-->
+    <section class="section__container--lg d-none d-md-block">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-auto">
+          {{> section-points}}
+        </div>
+      </div>
+    </section>
+    <!--Tabs wrap-->
+    <section class="section__container--lg">
+      <nav class="c-nav nav nav-pills justify-content-md-center">
+        {{#repeat 5}}
+        <a class="nav-link" href="#">Semana 0{{@index}}</a>
+        {{/repeat}}
+        <a class="nav-link active" href="#">Semana 05</a>
+      </nav>
+    </section>
+    <!--Rank list wrap-->
+    <section class="section__container--lg">
+      <div class="row justify-content-lg-around">
+        {{#repeat 3}}
+        <div class="col-12 col-md-6 col-lg-auto">
+          {{> card-vote}}
+        </div>
+        {{/repeat}}
+      </div>
+    </section>
+    <!--Paginator wrap-->
+    <section class="section__container--lg"></section>
+    <!--CTA-->
+    <section class="section__container--lg">
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <a href="#" class="btn btn-lg btn__white btn__white--arrow"
+            >Conoce el ranking</a
+          >
+        </div>
+      </div>
+    </section>
+  </div>
+</article>

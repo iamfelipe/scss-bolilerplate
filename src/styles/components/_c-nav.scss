@@ -1,0 +1,40 @@
+// Component Nav
+// ---------
+
+.c-nav {
+
+  @include media-breakpoint-down(md) {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav-link {
+    color: theme-color(dark);
+    text-transform: uppercase;
+    font-family: $font-stack-primary;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    white-space: nowrap;
+
+    @include media-breakpoint-down(md) {
+      margin-left: $grid-gutter-width;
+    }
+
+    & + .nav-link {
+      margin-left: $grid-gutter-width / 2;
+    }
+
+    &:not(.active) {
+      @include image("tile-sm-dark");
+    }
+
+    &.active {
+      //@include drop-shadow();
+      @include image("tile-sm-light");
+    }
+  }
+}

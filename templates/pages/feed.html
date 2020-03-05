@@ -16,25 +16,8 @@
               Pix y bit
             </h6>
           </header>
-          <!--Points-->
-          <ul class="form-row -no-gutters">
-            <li class="col-6">
-              <div class="tile tile__sm">
-                <span class="h4 font-family-primary">1500</span>
-                <p class="h6 text-uppercase font-family-secondary mb-0">
-                  Equipo Bit
-                </p>
-              </div>
-            </li>
-            <li class="col-6">
-              <div class="tile tile__sm">
-                <span class="h4 font-family-primary">1308</span>
-                <p class="h6 text-uppercase font-family-secondary mb-0">
-                  Equipo Pix
-                </p>
-              </div>
-            </li>
-          </ul>
+          <!--Points wrap-->
+          {{> section-points}}
         </section>
         <!--Divider top-->
         <div class="row justify-content-center">
@@ -73,35 +56,13 @@
         </div>
       </div>
     </section>
+    <!--Divider-->
     {{> divider position='compound'}}
-    <section class="section__container--lg">
-      <!--Header row-->
-      <div class="row mb-3 mb-md-6">
-        <div class="col-12 text-center">
-          {{> section-header title='Próximos retos' subtitle='Cada semana se
-          habilitará un nuevo reto'}}
-        </div>
-      </div>
-      <!--Next challenges wrap-->
-      <div class="row">
-        <div class="col-12">
-          <ul class="row c-slider" id="sliderNextChallenges">
-            {{#repeat 5}}
-            <li class="col-12 col-md-6 col-lg-auto">
-              {{> card-challenges}}
-            </li>
-            {{/repeat}}
-          </ul>
-        </div>
-      </div>
-      <div class="row justify-content-center mt-6">
-        <div class="col-auto">
-          <a href="#" class="btn btn-lg btn__white btn__white--arrow"
-            >Conoce el ranking</a
-          >
-        </div>
-      </div>
-    </section>
-    {{> divider position='compound'}} {{> section-take-part}}
+    <!--Section challenges-->
+    {{> section-challenges}}
+    <!--Divider-->
+    {{> divider position='compound'}}
+    <!--Section take part-->
+    {{> section-take-part}}
   </div>
 </article>
