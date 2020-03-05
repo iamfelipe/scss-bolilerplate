@@ -34,7 +34,8 @@
         </div>
       </div>
     </section>
-    {{> divider position='compound'}} {{> section-take-part}}
+    {{> divider position='compound'}} {{> section-take-part}} {{> divider
+    position='compound'}}
     <section class="section__container--lg">
       <!--Header wrap-->
       <div class="row mb-3 mb-md-6">
@@ -44,13 +45,18 @@
         </div>
       </div>
       <!--Steps wrap-->
-      <ul>
-        <li>
-          <div class="c-step-wrap">
-            <div class="c-step"></div>
-          </div>
-        </li>
+      <ul class="row">
+        {{#repeat 3}}
+        <li class="col-12 col-md-4">{{> card-step}}</li>
+        {{/repeat}}
       </ul>
+      <div class="row justify-content-center mt-6">
+        <div class="col-auto">
+          <a href="#" class="btn btn-lg btn__white btn__white--arrow"
+            >Vivir la experiencia</a
+          >
+        </div>
+      </div>
     </section>
   </div>
 </article>
