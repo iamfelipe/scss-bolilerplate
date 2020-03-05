@@ -19,11 +19,7 @@
     <!--Divider top-->
     <div class="row justify-content-center">
       <div class="col-md-5">
-        <img
-          src="./img/hr-white-top.png"
-          alt="Divisor blanco"
-          class="e-divider"
-        />
+        {{> divider position='top'}}
       </div>
     </div>
     <!--Countdown wrap-->
@@ -38,30 +34,23 @@
         </div>
       </div>
     </section>
-    <!--Divider compound-->
-    <img
-      src="./img/hr-white-compound.png"
-      alt="Divisor blanco"
-      class="e-divider"
-    />
-    {{> section-take-part}}
-    <!--Divider compound-->
-    <img
-      src="./img/hr-white-compound.png"
-      alt="Divisor blanco"
-      class="e-divider"
-    />
+    {{> divider position='compound'}} {{> section-take-part}}
     <section class="section__container--lg">
-      <!--Header row-->
+      <!--Header wrap-->
       <div class="row mb-3 mb-md-6">
         <div class="col-12 text-center">
-          <!--Header-->
-          <h2 class="h4 text-center mb-0">Dinámica</h2>
-          <h6 class="h5 text-center">
-            Participa, diviértet y gana
-          </h6>
+          {{> section-header title='Dinámica' subtitle='Participa, diviértete y
+          gana'}}
         </div>
       </div>
+      <!--Steps wrap-->
+      <ul>
+        <li>
+          <div class="c-step-wrap">
+            <div class="c-step"></div>
+          </div>
+        </li>
+      </ul>
     </section>
   </div>
 </article>

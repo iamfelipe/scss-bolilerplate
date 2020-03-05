@@ -39,11 +39,7 @@
         <!--Divider top-->
         <div class="row justify-content-center">
           <div class="col-10">
-            <img
-              src="./img/hr-white-top.png"
-              alt="Divisor blanco"
-              class="w-100"
-            />
+            {{> divider position='top'}}
           </div>
         </div>
         <!--Countdown wrap-->
@@ -55,16 +51,13 @@
   </div>
   <div class="container">
     <!--Divider top-->
-    <img src="./img/hr-white-top.png" alt="Divisor blanco" class="e-divider" />
+    {{> divider position='top'}}
     <section class="section__container--lg">
       <!--Header row-->
       <div class="row mb-3 mb-md-6">
         <div class="col-12 text-center">
-          <!--Header-->
-          <h2 class="h4 text-center mb-0">Retos Black & White</h2>
-          <h6 class="h5 text-center">
-            Primeros lugares en los retos
-          </h6>
+          {{> section-header title='Retos Black & White' subtitle='Primeros
+          lugares en los retos'}}
         </div>
       </div>
       <!--Challenges wrap-->
@@ -80,21 +73,13 @@
         </div>
       </div>
     </section>
-    <!--Divider compound-->
-    <img
-      src="./img/hr-white-compound.png"
-      alt="Divisor blanco"
-      class="e-divider"
-    />
+    {{> divider position='compound'}}
     <section class="section__container--lg">
       <!--Header row-->
       <div class="row mb-3 mb-md-6">
         <div class="col-12 text-center">
-          <!--Header-->
-          <h2 class="h4 text-center mb-0">Próximos retos</h2>
-          <h6 class="h5 text-center">
-            Cada semana se habilitará un nuevo reto
-          </h6>
+          {{> section-header title='Próximos retos' subtitle='Cada semana se
+          habilitará un nuevo reto'}}
         </div>
       </div>
       <!--Next challenges wrap-->
@@ -117,12 +102,6 @@
         </div>
       </div>
     </section>
-    <!--Divider compound-->
-    <img
-      src="./img/hr-white-compound.png"
-      alt="Divisor blanco"
-      class="e-divider"
-    />
-    {{> section-take-part}}
+    {{> divider position='compound'}} {{> section-take-part}}
   </div>
 </article>
