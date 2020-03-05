@@ -75,7 +75,7 @@
   </div>
   <div class="container">
     <!--Divider top-->
-    <img src="./img/hr-white-top.png" alt="Divisor blanco" class="w-100" />
+    <img src="./img/hr-white-top.png" alt="Divisor blanco" class="e-divider" />
     <section class="section__container--lg">
       <!--Header row-->
       <div class="row mb-3 mb-md-6">
@@ -90,7 +90,8 @@
       <!--Challenges wrap-->
       <div class="row">
         <div class="col-12">
-          <ul class="row">
+          <ul class="row justify-content-around c-slider" id="sliderChallenges">
+            {{#repeat 3}}
             <li class="col-12 col-md-6 col-lg-auto">
               <div class="c-card-wrap c-card-wrap--vote">
                 <div class="c-card card">
@@ -119,7 +120,10 @@
                     </div>
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title">Lorem ipsum</h5>
+                    <h5 class="card-title">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Delectus mollitia reiciendis soluta!
+                    </h5>
                   </div>
                   <div class="card-footer">
                     <a
@@ -136,6 +140,33 @@
                 </div>
               </div>
             </li>
+            {{/repeat}}
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--Divider compound-->
+    <img
+      src="./img/hr-white-compound.png"
+      alt="Divisor blanco"
+      class="e-divider"
+    />
+    <section class="section__container--lg">
+      <!--Header row-->
+      <div class="row mb-3 mb-md-6">
+        <div class="col-12 text-center">
+          <!--Header-->
+          <h2 class="h4 text-center mb-0">Próximos retos</h2>
+          <h6 class="h5 text-center">
+            Cada semana se habilitará un nuevo reto
+          </h6>
+        </div>
+      </div>
+      <!--Next challenges wrap-->
+      <div class="row">
+        <div class="col-12">
+          <ul class="row c-slider" id="sliderNextChallenges">
+            {{#repeat 5}}
             <li class="col-12 col-md-6 col-lg-auto">
               <div class="c-card-wrap c-card-wrap--next-challenges">
                 <div class="c-card card">
@@ -147,8 +178,14 @@
                     />
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title">Título ###</h5>
+                    <h5 class="card-title">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Delectus mollitia reiciendis soluta!
+                    </h5>
                     <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Aliquam at porttitor sem. Aliquam erat volutpat. Donec
+                      placerat nisl magna, et faucibus arcu condimentum sed.
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Aliquam at porttitor sem. Aliquam erat volutpat. Donec
                       placerat nisl magna, et faucibus arcu condimentum sed.
@@ -173,11 +210,63 @@
                 </div>
               </div>
             </li>
+            {{/repeat}}
           </ul>
         </div>
       </div>
+      <div class="row justify-content-center mt-6">
+        <div class="col-auto">
+          <a href="#" class="btn btn__white btn__white--arrow"
+            >Conoce el ranking</a
+          >
+        </div>
+      </div>
     </section>
-    <!--Divider bottom-->
-    <img src="./img/hr-white-compound.png" alt="Divisor blanco" class="w-100" />
+    <!--Divider compound-->
+    <img
+      src="./img/hr-white-compound.png"
+      alt="Divisor blanco"
+      class="e-divider"
+    />
+    <section class="section__container--lg">
+      <div class="row align-items-md-center">
+        <div class="col-12 col-md-6">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              class="embed-responsive-item"
+              src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+            ></iframe>
+          </div>
+        </div>
+        <div class="col-12 col-md-5 mx-md-auto">
+          <!--Header-->
+          <header class="mb-4">
+            <h2 class="h4 text-center mb-0">Fortnite</h2>
+            <h6 class="h5 text-center mb-0">
+              Participa por estar en la final
+            </h6>
+          </header>
+          <!--Text-->
+          <p class="p">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit, tempus risus
+            etia. Lorem ipsum dolor sit amet consectetur adipiscing elit, tempus
+            risus etiam conubia taciti quam, nam dui laoreet morbi sollicitudin
+            feugiat.
+          </p>
+          <p class="p">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit, tempus risus
+            etia. Lorem ipsum dolor sit amet consectetur adipiscing elit, tempus
+            risus etiam conubia taciti quam, nam dui laoreet morbi sollicitudin
+            feugiat.
+          </p>
+          <p class="p">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit, tempus risus
+            etia. Lorem ipsum dolor sit amet consectetur adipiscing elit, tempus
+            risus etiam conubia taciti quam, nam dui laoreet morbi sollicitudin
+            feugiat.
+          </p>
+        </div>
+      </div>
+    </section>
   </div>
 </article>

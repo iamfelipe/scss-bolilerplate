@@ -1,10 +1,13 @@
-// import bsCustomFileInput from "bs-custom-file-input";
-// import Select from "./custom-select";
-// $(document).ready(() => {
-//   let select = new bsCustomFileInput($("select"));
-// });
+// eslint-disable-next-line import/extensions,import/no-unresolved
+import * as $ from "jquery";
 
-console.log($("body"));
+import { Slider } from "./modules/slider";
+
+$(() => {
+  const customSlider = new Slider("#sliderNextChallenges");
+  customSlider.init();
+  console.log(customSlider);
+});
 
 // let myNames = [];
 // myNames = ["26", 1, true, {}.toString()];

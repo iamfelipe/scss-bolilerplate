@@ -64,7 +64,8 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "@types/jquery": "^3.3.31",
+    "@types/jquery": "^3.3.33",
+    "@types/slick-carousel": "^1.6.34",
     "babel-loader": "^8.0.6",
     "bootstrap-select": "^1.13.12",
     "bs-custom-file-input": "^1.3.2",

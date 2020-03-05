@@ -95,3 +95,11 @@ $weights: 400 500 600 700;
     }
   }
 }
+
+.e-divider {
+  display: block;
+  width: calc(100% - #{$grid-gutter-width * 2});
+  margin-right: auto;
+  margin-left: auto;
+  max-width: rem(870);
+}

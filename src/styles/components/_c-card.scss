@@ -6,6 +6,7 @@ $c-card: ".c-card";
 #{$c-card} {
   &-wrap {
     @extend .embed-responsive;
+    //margin-bottom: $grid-gutter-width;
 
     @include media-breakpoint-down(sm) {
       margin-bottom: $grid-gutter-width * 1.5;
@@ -13,6 +14,8 @@ $c-card: ".c-card";
 
     @include media-breakpoint-up(lg) {
       width: rem(370);
+      margin-right: auto;
+      margin-left: auto;
     }
 
     &::before {
@@ -69,6 +72,8 @@ $c-card: ".c-card";
 
   .card-title {
     @extend %h4;
+    @extend .text-truncate;
+    //max-height: rem(ms(3) * (get("h4.line-height") * 1));
     margin-bottom: .2em;
   }
 
@@ -80,8 +85,10 @@ $c-card: ".c-card";
   }
 
   .card-text {
-    line-height: 1.1;
+    line-height: get("h5.line-height");
+    max-height: rem(ms(0) * (get("h5.line-height") * 4));
     margin-bottom: .25em;
+    overflow-y: auto;
   }
 
 

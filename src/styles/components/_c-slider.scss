@@ -1,0 +1,87 @@
+// Component Slider
+// ---------
+
+.c-slider {
+  $slider-arrow-size: rem(40);
+  &.slick-initialized {
+
+    // Arrows
+    .slick-arrow {
+      @include transition();
+      @include drop-shadow();
+      width: $slider-arrow-size;
+      height: $slider-arrow-size;
+      background: transparent;
+      padding: 0;
+      background-size: contain;
+      border: 0;
+
+      @include media-breakpoint-up(md) {
+        position: absolute;
+        top: calc(50% - #{$grid-gutter-width});
+        transform: translateY(-50%);
+      }
+
+      &.slick-prev {
+        @include image('slider-arrow-dark-left');
+
+        @include media-breakpoint-up(md) {
+          left: -$slider-arrow-size;
+        }
+      }
+
+      &.slick-next {
+        @include image('slider-arrow-dark-right');
+
+        @include media-breakpoint-up(md) {
+          right: -$slider-arrow-size;
+        }
+      }
+
+      &.slick-disabled {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+
+    // Slides
+    .slick-slide {
+      @include transition();
+      opacity: 0;
+      &.slick-active {
+        opacity: 1;
+      }
+
+      @include plain-hover-focus() {
+        outline: 0;
+      }
+    }
+
+    // Dots
+    .slick-dots {
+      display: flex;
+      margin: ($grid-gutter-width * 2) auto 0;
+
+      button {
+        @include transition();
+        width: rem(140);
+        height: rem(6);
+        font-size: 1px;
+        border: 0;
+        background-color: rgba(theme-color(dark), .2);
+
+        @include plain-hover-focus() {
+          outline: 0;
+        }
+      }
+
+      li {
+
+        &.slick-active button {
+          background-color: theme-color(dark);
+          border-radius: rem(100);
+        }
+      }
+    }
+  }
+}

@@ -53,7 +53,8 @@ $modularscale: (
 $white: #fff;
 $gray-100: #f8f9fa;
 $gray-200: #d7d7d7;
-$gray-400: #78909c;
+$gray-400: #BDBDBD;
+$gray-500: #9E9E9E;
 $gray-900: #101010;
 $black: #000;
 
@@ -240,7 +241,7 @@ $navbar-toggler-border-radius: 0;
 
 $navbar-dark-color: $gray-200;
 $navbar-dark-active-color: $dark;
-$navbar-dark-hover-color: $gray-400;
+$navbar-dark-hover-color: $gray-500;
 
 // Card
 $card-bg: transparent;

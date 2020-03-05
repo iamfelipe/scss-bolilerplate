@@ -58,6 +58,10 @@
     @include m(arrow-right) {
       @include image('btn-solid-arrow-white-right');
     }
+
+    @include m(arrow) {
+      @include image('btn-solid-arrow-white');
+    }
   }
 
   @include e(dark) {
