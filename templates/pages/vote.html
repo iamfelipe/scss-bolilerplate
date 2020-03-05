@@ -1,0 +1,85 @@
+<article class="p-vote py-6">
+  <div class="container">
+    <!--Page header wrap-->
+    <section class="section__container--lg">
+      <div class="row justify-content-center">
+        <div class="col-md-auto">
+          <!--Header-->
+          <header class="">
+            <h2 class="h5 text-center mb-0">
+              Mundo Pix y Bit se enfrentan
+            </h2>
+            <h6 class="h4 text-center text-uppercase mb-0">
+              Vota por tu favorito
+            </h6>
+          </header>
+        </div>
+      </div>
+    </section>
+    <!--Tabs wrap-->
+    <section class="section__container--lg">
+      <nav class="c-nav nav nav-pills justify-content-md-center">
+        {{#repeat 5}}
+        <a class="nav-link" href="#">Semana 0{{@index}}</a>
+        {{/repeat}}
+        <a class="nav-link active" href="#">Semana 05</a>
+      </nav>
+    </section>
+    <!--Challenge header wrap-->
+    <section class="section__container--lg">
+      <!--Header-->
+      <h2 class="h4 text-center mb-0">Reto 04</h2>
+      <h6 class="h6 text-center">
+        Bailar con una Pony Malta en la cabeza por 15 segundos
+      </h6>
+    </section>
+    <!--Rank list wrap-->
+    <section class="section__container--lg">
+      <div class="row justify-content-lg-around">
+        {{#repeat 3}}
+        <div class="col-12 col-md-6 col-lg-auto">
+          {{> card-vote}}
+        </div>
+        {{/repeat}}
+      </div>
+    </section>
+    <!--Paginator wrap-->
+    <section class="section__container--lg"></section>
+    <!--CTA-->
+    <section class="section__container--lg">
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <a
+            href="./ranking.html"
+            class="btn btn-lg btn__white btn__white--arrow"
+            >Conoce el ranking</a
+          >
+        </div>
+      </div>
+    </section>
+    <!--Divider-->
+    {{>divider position="compound"}}
+    <!--Paginator wrap-->
+    <section class="section__container--lg">
+      <!--Header row-->
+      <div class="row mb-3 mb-md-6">
+        <div class="col-12 text-center">
+          {{> section-header title='Primeros puestos' subtitle='Personas que han
+          tenido primeros lu'}}
+        </div>
+      </div>
+      <!--Challenges wrap-->
+      <div class="row">
+        <div class="col-12">
+          <ul class="row justify-content-around c-slider" id="sliderChallenges">
+            {{#repeat 3}}
+            <li class="col-12 col-md-6 col-lg-auto">
+              {{> card-vote}}
+            </li>
+            {{/repeat}}
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</article>

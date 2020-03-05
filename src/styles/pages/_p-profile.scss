@@ -1,0 +1,15 @@
+// Pages Profile
+// ---------
+
+#{$page-profile} {
+
+  @include e(pic) {
+    width: rem(96);
+    height: rem(96);
+
+    @include media-breakpoint-up(md) {
+      width: rem(120);
+      height: rem(120);
+    }
+  }
+}

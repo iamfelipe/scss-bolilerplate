@@ -1,0 +1,76 @@
+<article class="p-profile py-6">
+  <div class="container">
+    <!--Header wrap-->
+    <section class="section__container--lg">
+      <div class="row justify-content-center align-items-lg-center">
+        <!--User info wrap-->
+        <div
+          class="col-12 col-md-8 col-lg-6 col-xl-5 col-xxl-4 ml-xl-auto mb-5 mb-lg-0"
+        >
+          <div class="row align-items-center">
+            <!--User pic wrap-->
+            <div class="col-auto">
+              <img
+                src="https://picsum.photos/200/400"
+                alt="..."
+                class="rounded-circle p-profile__pic"
+              />
+            </div>
+            <!--User personal info wrap-->
+            <div class="col">
+              <h6 class="h6 font-family-primary mb-0">Mundo Bit</h6>
+              <h5 class="h4 font-family-primary mb-0">Pedro Navaja</h5>
+              <a href="#" class="btn text-dark btn-link p-0 mb-0"
+                >Editar perfil</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <!--User & team points wrap-->
+          {{> section-points }}
+        </div>
+      </div>
+    </section>
+    <!--Divider-->
+    <div class="d-none d-lg-block">
+      {{> divider position='compound'}}
+    </div>
+    <!--Challenge wrap-->
+    <section class="section__container--lg">
+      <!--Challenge header wrap-->
+      <header class="mb-6">
+        <h2 class="h4 text-center mb-0">Reto 04</h2>
+        <h6 class="h6 text-center">
+          Bailar con una Pony Malta en la cabeza por 15 segundos
+        </h6>
+      </header>
+      <div class="row align-items-md-center">
+        <!--Challenge video-->
+        <div class="col-12 col-md-6">
+          {{> video-default}}
+        </div>
+        <!--Challenge info-->
+        <div class="col-12 col-md-6 col-lg-4 mx-lg-auto">
+          <h6 class="h4">Título ###</h6>
+          <p class="p">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil nisi
+            qui sed veritatis! Asperiores deserunt dolore, exercitationem nisi
+            odit pariatur.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--Divider-->
+    {{> divider position='compound'}}
+    <!--Other challenges wrap-->
+    <section class="section__container--lg">
+      <header class="mb-6">
+        <h2 class="h4 text-center mb-0">Otros retos</h2>
+        <h6 class="h6 text-center">
+          Retos cargados anteriormente
+        </h6>
+      </header>
+    </section>
+  </div>
+</article>

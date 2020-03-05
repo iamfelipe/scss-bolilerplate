@@ -54,7 +54,7 @@ $weights: 400 500 600 700;
   @include image("tile-sm-dark");
 
   @include media-breakpoint-up(md) {
-    min-width: rem(256);
+    width: rem(256);
     padding: rem(22) 0;
   }
 
