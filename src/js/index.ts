@@ -1,9 +1,3 @@
-// import bsCustomFileInput from "bs-custom-file-input";
-// import Select from "./custom-select";
-// $(document).ready(() => {
-//   let select = new bsCustomFileInput($("select"));
-// });
-
 let myNames = [];
 myNames = ["26", 1, true, {}.toString()];
 

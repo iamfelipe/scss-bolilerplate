@@ -19,9 +19,9 @@
 @custom-selector :--heading h1, h2, h3;
 @custom-selector :--subheading h4, h5, h6;
 // Uncomment to discover 🧭
-//:--heading {
-//  font-family: $font-stack-primary;
-//}
+:--heading {
+  font-family: $font-stack-secondary;
+}
 
 //
 // Element tags
