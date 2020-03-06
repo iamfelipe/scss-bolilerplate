@@ -44,6 +44,7 @@ class SplitLayout {
     collapseSide() {
         for (let i = 0; i < this.DOM.backButtons.length; i += 1) {
             this.DOM.backButtons[i].addEventListener(this.eventType, e => {
+                e.preventDefault();
                 e.stopPropagation();
                 this.states.transition = true;
                 this.reset();

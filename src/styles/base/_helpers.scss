@@ -68,7 +68,6 @@ $weights: 400 500 600 700;
 //
 
 .container {
-
   @include m(wider) {
     @include media-breakpoint-up(xxl) {
       max-width: 1640px;
@@ -107,5 +106,19 @@ $weights: 400 500 600 700;
 
   @include m(horizontal) {
     width: rem(5);
+  }
+}
+
+.glitch-text {
+  display: flex;
+  flex-wrap: wrap;
+  white-space: pre;
+  justify-content: center;
+  align-items: flex-start;
+  span {
+    will-change: transform, opacity;
+    position: relative;
+    display: block;
+    flex: none;
   }
 }
