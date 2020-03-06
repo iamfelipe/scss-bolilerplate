@@ -28,10 +28,24 @@ export class Slider {
     this.settings = {
       ...this.globalSettings
     };
+    this.init();
+    this.onScroll();
   }
 
   init() {
     // (<any>$("#sliderChallenges")).slick();
     this.DOM.el.slick(this.settings);
+  }
+
+  onScroll() {
+    this.DOM.el.on("wheel", e => {
+      e.preventDefault();
+
+      if ((<any>e.originalEvent).deltaY < 0) {
+        this.DOM.el.slick("slickNext");
+      } else {
+        this.DOM.el.slick("slickPrev");
+      }
+    });
   }
 }

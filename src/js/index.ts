@@ -5,8 +5,6 @@ import { Slider } from "./modules/slider";
 
 $(() => {
   const customSlider = new Slider("#sliderNextChallenges");
-  customSlider.init();
-  console.log(customSlider);
 });
 
 // let myNames = [];
