@@ -1,0 +1,88 @@
+// Component Modal
+// ---------
+
+.c-modal {
+  $modal-frame-height: rem(100);
+  $modal-icon-close: rem(40);
+
+  .modal-content {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &::before {
+      @include image("modal-bg-light-top");
+      height: $modal-frame-height;
+      top: -$modal-frame-height;
+      background-position: center bottom;
+    }
+
+    &::after {
+      @include image("modal-bg-light-bottom");
+      height: $modal-frame-height;
+      bottom: -$modal-frame-height;
+      background-position: center top;
+    }
+  }
+
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .modal-header {
+    flex-direction: column;
+    padding-bottom: 0;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: $grid-gutter-width * 1.5;
+    }
+  }
+
+  .modal-body {
+  }
+
+  .modal-footer {
+    padding-top: 0;
+    //justify-content: center;
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: $grid-gutter-width * 1.5;
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: -$modal-icon-close * 1.5;
+    right: $modal-icon-close / 4;
+    width: $modal-icon-close;
+    height: $modal-icon-close;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    @include image('modal-btn-close');
+    background-size: 80%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include drop-shadow();
+  }
+
+  .modal-title {
+    @extend %h3;
+    text-align: center;
+  }
+
+  @include m(variant) {
+    .modal-content::before {
+      @include image('modal-bg-light-top-2');
+    }
+  }
+}

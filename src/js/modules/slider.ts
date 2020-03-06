@@ -20,6 +20,12 @@ export class Slider {
       nextArrow: '<button type="button" class="slick-next"></button>',
       responsive: [
         {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
           breakpoint: 768,
           settings: "unslick"
         }

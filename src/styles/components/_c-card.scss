@@ -12,7 +12,7 @@ $c-card: ".c-card";
       margin-bottom: $grid-gutter-width * 1;
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       width: rem(370);
       margin-right: auto;
       margin-left: auto;
