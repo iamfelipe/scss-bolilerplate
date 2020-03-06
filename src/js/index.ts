@@ -2,17 +2,12 @@
 import * as $ from "jquery";
 
 import { Slider } from "./modules/slider";
+import SplitLayout from "./modules/split-layout";
 
 $(() => {
   const customSlider = new Slider("#sliderNextChallenges");
+  const $splitLayout: HTMLElement = document.querySelector(".c-split-layout");
+  if ($splitLayout) {
+    const splitLayout = new SplitLayout($splitLayout);
+  }
 });
-
-// let myNames = [];
-// myNames = ["26", 1, true, {}.toString()];
-//
-// for (const name of myNames) {
-//   console.log(name);
-// }
-//
-// const myAge = 26.23;
-// console.log(myAge);

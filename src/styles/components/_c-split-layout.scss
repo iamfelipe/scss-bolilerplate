@@ -1,0 +1,122 @@
+// Component Split layout
+// ---------
+
+$c-split-layout: ".c-split-layout";
+
+%side-collapse {
+  flex-basis: 0;
+  width: 1px;
+  #{$c-split-layout} {
+    @include e(container) {
+      transform: scale(0.7);
+    }
+  }
+}
+
+#{$c-split-layout} {
+  $split-duration: 0.8s;
+  $split-timing-function: $easeInOutCubic;
+  display: flex;
+  overflow: hidden;
+  height: 80vh;
+
+  @include media-breakpoint-up(sm) {
+    cursor: pointer;
+  }
+
+  //
+  // Sides
+  //
+  @include e(side) {
+    flex-basis: 50%;
+    overflow: hidden;
+    transition: all $split-duration $split-timing-function;
+    will-change: contents;
+
+    @include m(left) {
+      background: yellow;
+
+      #{$c-split-layout} {
+        @include e(bottle) {
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    @include m(right) {
+      background: purple;
+
+      #{$c-split-layout} {
+        @include e(bottle) {
+          right: 50%;
+          transform: translate(50%, -50%);
+        }
+      }
+    }
+  }
+
+  //
+  // Elements
+  //
+  @include e(container) {
+    height: 100%;
+    position: relative;
+    transition: all $split-duration $split-timing-function;
+    transform-origin: right center;
+    transform: none;
+    will-change: transform;
+  }
+  @include e(bottle) {
+    width: 40vh;
+    position: absolute;
+    top: 50%;
+
+    transition: all $split-duration $split-timing-function;
+    //transition-delay: $split-duration;
+  }
+@include e(backToIntro) {
+  position: relative;
+  z-index: 1;
+}
+  //
+  // States
+  //
+  @include m(open-left) {
+    #{$c-split-layout} {
+      @include e(side) {
+        @include m(left) {
+          flex-basis: calc(100% + #{1px});
+          #{$c-split-layout} {
+            @include e(bottle) {
+              left: 0;
+              transform: translate(0, -50%);
+            }
+          }
+        }
+        @include m(right) {
+          @extend %side-collapse;
+        }
+      }
+    }
+  }
+
+  @include m(open-right) {
+    #{$c-split-layout} {
+      @include e(side) {
+        @include m(right) {
+          flex-basis: calc(100% + #{1px});
+          #{$c-split-layout} {
+            @include e(bottle) {
+              right: 0;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+        @include m(left) {
+          @extend %side-collapse;
+        }
+      }
+    }
+  }
+}

@@ -72,6 +72,7 @@
   }
 
   .nav-link {
+    @include transition();
     @extend %h6;
     text-align: center;
     display: block;
