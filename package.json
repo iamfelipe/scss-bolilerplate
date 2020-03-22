@@ -1,9 +1,23 @@
 {
-  "name": "name",
-  "version": "1.0.0",
-  "description": "Project description",
-  "repository": "https://github.com/iamfelipe/scss-bolilerplate",
+  "name": "@felipecastillo/scss-boilerplate",
+  "version": "1.1.10",
+  "description": "SCSS Boilerplate ready.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamfelipe/scss-bolilerplate.git"
+  },
+  "keywords": [
+    "iamfelipe",
+    "scss",
+    "mixins",
+    "helpers",
+    "patterns",
+    "variables",
+    "styles",
+    "sass",
+    "boilerplate"
+  ],
   "author": "",
   "license": "ISC",
   "scripts": {
