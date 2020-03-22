@@ -1,0 +1,18 @@
+//
+// Main root
+//
+
+// Vendors
+@import "vendor/index";
+// Configuration and helpers
+@import "abstract/index";
+//Base stuff
+@import "base/index";
+//Elements
+@import "elements/index";
+//Components
+@import "components/index";
+//Layout styles
+@import "layouts/index";
+//Page-specific styles
+@import "pages/index";

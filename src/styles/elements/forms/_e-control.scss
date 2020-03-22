@@ -1,0 +1,14 @@
+// Control root
+// ---------
+
+%control {
+  //margin-bottom: 0;
+
+  @include plain-hover-focus() {
+    outline: transparent;
+  }
+}
+
+.form-control {
+  @extend %control;
+}
