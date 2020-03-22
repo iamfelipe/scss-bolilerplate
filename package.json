@@ -16,9 +16,8 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
-    "babel-loader": "^8.0.6",
-    "gulp-babel": "^8.0.0",
     "autoprefixer": "^9.7.1",
+    "babel-loader": "^8.0.6",
     "bootstrap": "^4.3.1",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
@@ -26,12 +25,13 @@
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.5.0",
+    "eslint-loader": "^3.0.3",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-react": "^7.16.0",
     "family.scss": "^1.0.8",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
     "gulp-clone": "^2.0.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^6.1.1",
@@ -74,6 +74,9 @@
     "webpack-merge": "^4.2.2"
   },
   "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "printWidth": 70,
     "overrides": [
       {
         "files": "*.tpl.php",
@@ -89,13 +92,9 @@
       "es6": true
     },
     "extends": [
-      "airbnb-base",
+      "eslint:recommended",
       "prettier"
     ],
-    "globals": {
-      "Atomics": "readonly",
-      "SharedArrayBuffer": "readonly"
-    },
     "parserOptions": {
       "ecmaVersion": 2018,
       "sourceType": "module"
@@ -104,6 +103,7 @@
       "prettier"
     ],
     "rules": {
+      "no-console": 0,
       "prettier/prettier": [
         "error"
       ]

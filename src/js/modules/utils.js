@@ -1,1 +1,3 @@
-export const sumar = (a, b) => a + b;
+const sumar = (a, b) => a + b;
+
+export default sumar;
