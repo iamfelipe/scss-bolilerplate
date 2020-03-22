@@ -74,5 +74,15 @@
     "popper.js": "^1.16.0",
     "typescript": "^3.7.2",
     "webpack-merge": "^4.2.2"
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": "*.tpl.php",
+        "options": {
+          "parser": "html"
+        }
+      }
+    ]
   }
 }
