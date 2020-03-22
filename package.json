@@ -17,6 +17,7 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "autoprefixer": "^9.7.1",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.6",
     "bootstrap": "^4.3.1",
     "browser-sync": "^2.26.7",
@@ -95,6 +96,7 @@
       "eslint:recommended",
       "prettier"
     ],
+    "parser": "babel-eslint",
     "parserOptions": {
       "ecmaVersion": 2018,
       "sourceType": "module"
