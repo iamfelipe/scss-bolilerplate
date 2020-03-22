@@ -3,7 +3,6 @@
 //
 
 // Typography
-
 @each $base, $properties in $custom-scale {
   %#{$base} {
     // Variables

@@ -26,9 +26,9 @@ $modularscale: (
   map-get($grid-breakpoints, "sm"): (
     base: 16px,
   ),
-  map-get($grid-breakpoints, "lg"): (
+  map-get($grid-breakpoints, "xl"): (
     base: 18px,
-    ratio: $augmented-fourth,
+    ratio: $major-third,
   ),
 );
 
@@ -75,11 +75,11 @@ $custom-scale: (
     scale: -1,
   ),
   caption: (
-    scale: -1,
+    scale: -2,
     line-height: 1.5,
   ),
   tiny: (
-    scale: -2,
+    scale: -3,
     line-height: 1.5,
   ),
 );
@@ -94,6 +94,9 @@ $asset-base-path: "..";
 
 // Bootstrap theme
 @import "bootstrap-theme";
+
+$font-stack-primary: "Caponi Display", $font-family-base;
+$font-stack-secondary: "SS Nickson Six", $font-family-base;
 
 :root {
   --color-primary: #{$primary};

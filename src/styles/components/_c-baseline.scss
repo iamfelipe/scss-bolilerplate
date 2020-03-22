@@ -1,12 +1,13 @@
+//
 // Component Baseline
-// ---------
+//
 
 #c-baseline {
   background-image: linear-gradient(
     to bottom,
-    #0ff 0,
+    $cyan 0,
     rgba(255, 255, 255, 0) 1px
   );
   background-repeat: repeat-y;
-  background-size: 100% 1rem;
+  background-size: 100% $vertical-rhythm;
 }

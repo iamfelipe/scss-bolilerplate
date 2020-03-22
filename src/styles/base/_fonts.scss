@@ -7,6 +7,3 @@
 @include font-face("Caponi Display", "CaponiDisplay-Medium", 500);
 @include font-face("Caponi Display", "CaponiDisplay-Bold", 700);
 @include font-face("SS Nickson Six", "SSNicksonSix");
-
-$font-stack-primary: "Caponi Display", $font-family-base;
-$font-stack-secondary: "SS Nickson Six", $font-family-base;
