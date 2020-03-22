@@ -109,6 +109,9 @@
       ]
     }
   },
+  "eslintIgnore": [
+    "dist/"
+  ],
   "babel": {
     "presets": [
       [
