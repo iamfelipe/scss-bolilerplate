@@ -1,5 +1,6 @@
+//
 // Mixins
-// ---------
+//
 
 /// Import and declare the font face.
 ///
@@ -21,7 +22,12 @@
 ///     //      font-style: normal;
 ///     //  }
 
-@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+@mixin font-face(
+  $font-name,
+  $file-name,
+  $weight: normal,
+  $style: normal
+) {
   @at-root {
     @font-face {
       font-family: quote($font-name);

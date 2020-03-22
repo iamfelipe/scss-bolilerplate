@@ -1,5 +1,44 @@
+//
 // Functions
-// ---------
+//
+
+/// Calculate em values.
+/// @access private
+/// @group addons
+///
+/// @param {Number} $pixels - Font size in pixels
+/// @param {Number} $context [$base-font-size] - Calculate relative to this context.
+///
+/// @example scss
+///     font-size: em(24px, 18px);
+///     //  font-size: 1.333em;
+
+@function em($pixels, $context: ms(0)) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return ($pixels / $context) * 1em;
+}
+
+/// Calculate rem values.
+/// @access private
+/// @group addons
+///
+/// @param {Number} $pixels - Font size in pixels
+///
+/// @example scss
+///     font-size: rem(24px);
+///     //  font-size: 1.5rem;
+
+@function rem($pixels) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @return ($pixels / ms(0)) * 1rem;
+}
 
 /// Asset URL builder
 /// @access private
@@ -53,8 +92,8 @@
 //
 // @return Anything
 // ---------------------------------------------------------
-@function get ($key, $map: $custom-scale) {
-  $keys: str-explode($key, '.');
+@function get($key, $map: $custom-scale) {
+  $keys: str-explode($key, ".");
 
   @if not deep-map-check($map, $keys...) {
     @error 'The argument $map: `#{$map}` doesn\'t has some of the $keys: `#{$keys}`!';
@@ -76,11 +115,10 @@
 //
 // @return List
 // ---------------------------------------------------------
-@function str-explode ($string, $delimiter: '') {
-  @if type-of($string) != 'string' {
+@function str-explode($string, $delimiter: "") {
+  @if type-of($string) != "string" {
     @error 'The argument $string: `#{$string}` is of incorrect type: `#{type-of($string)}`. Type of `String` is required!';
-  }
-  @else if type-of($delimiter) != 'string' {
+  } @else if type-of($delimiter) != "string" {
     @error 'The argument $string: `#{$string}` is of incorrect type: `#{type-of($string)}`. Type of `String` is required!';
   }
 
@@ -102,8 +140,7 @@
       $item: str-slice($string, 1, ($index - 1));
       $result: append($result, $item);
       $string: str-slice($string, ($index + str-length($delimiter)));
-    }
-    @else {
+    } @else {
       $running: false;
     }
   }
@@ -124,8 +161,8 @@
 //
 // @return Bool
 // ---------------------------------------------------------
-@function deep-map-check ($map, $keys...) {
-  @if type-of($map) != 'map' {
+@function deep-map-check($map, $keys...) {
+  @if type-of($map) != "map" {
     @error 'The argument $map: `#{$map}` is of incorrect type: `#{type-of($map)}`. Type of `Map` is required!';
   }
 
@@ -140,7 +177,6 @@
   @return true;
 }
 
-
 // ---------------------------------------------------------
 // deep-map-get
 // Get a value from nested map by the keys
@@ -154,8 +190,8 @@
 //
 // @return Unspecified (it may return anything as a result)
 // ---------------------------------------------------------
-@function deep-map-get ($map, $keys...) {
-  @if type-of($map) != 'map' {
+@function deep-map-get($map, $keys...) {
+  @if type-of($map) != "map" {
     @error 'The argument $map: `#{$map}` is of incorrect type: `#{type-of($map)}`. Type of `Map` is required!';
   }
 

@@ -1,6 +1,7 @@
+//
 // Vendor root
-// ---------
-@import "bootstrap/index";
-@import "../../../node_modules/bootstrap-select/sass/variables";
-@import "../../../node_modules/bootstrap-select/sass/bootstrap-select";
+//
+
+@import "easing";
+@import "../../../node_modules/modularscale-sass/stylesheets/modularscale";
 @import "../../../node_modules/family.scss/source/src/family";

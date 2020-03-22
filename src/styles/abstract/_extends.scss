@@ -1,5 +1,8 @@
+//
 // Extends
-// ---------
+//
+
+// Typography
 
 @each $base, $properties in $custom-scale {
   %#{$base} {
@@ -7,11 +10,17 @@
     $scale: map-get($properties, scale);
     $line-height: map-get($properties, line-height);
     $font-weight: map-get($properties, font-weight);
+    // Set defaults
+    @if $font-weight == null {
+      $font-weight: $font-weight-base;
+    }
+    @if $line-height == null {
+      $line-height: $line-height-base;
+    }
     // Properties
     @include ms-respond(font-size, $scale);
-    line-height: em($line-height, ms($scale));
+    line-height: $line-height;
     font-weight: $font-weight;
-    margin-top: 0;
     margin-bottom: $vertical-rhythm;
   }
 }

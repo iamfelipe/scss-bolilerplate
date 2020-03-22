@@ -1,7 +1,11 @@
-// Configuration and helpers
-@import "abstract/index";
+//
+// Main root
+//
+
 // Vendors
 @import "vendor/index";
+// Configuration and helpers
+@import "abstract/index";
 //Base stuff
 @import "base/index";
 //Elements

@@ -1,6 +1,6 @@
-// -----------------------------------------------------------------------------
+//
 // Fonts
-// -----------------------------------------------------------------------------
+//
 
 @include font-face("Material Icons", "MaterialIcons-Regular");
 @include font-face("Caponi Display", "CaponiDisplay-Roman", 400);
@@ -8,5 +8,5 @@
 @include font-face("Caponi Display", "CaponiDisplay-Bold", 700);
 @include font-face("SS Nickson Six", "SSNicksonSix");
 
-$font-stack-primary: "Caponi Display", $font-family-sans-serif;
-$font-stack-secondary: "SS Nickson Six", $font-family-serif;
+$font-stack-primary: "Caponi Display", $font-family-base;
+$font-stack-secondary: "SS Nickson Six", $font-family-base;
