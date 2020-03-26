@@ -6,14 +6,14 @@ description: Lorem ipsum.
 <section id="c-baseline">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-12">
+      <div class="col-12 col-md-6">
         <h1 class="h1">H1: Each list example</h1>
         <ul class="breakfast-items">
           {{#each contact.list}}
           <li class="{{this}}-{{@index}}">{{ this }}</li>
           {{/each}}
         </ul>
-        <h2>H2: Repeat N times example</h2>
+        <h2>H2: Repeat <span id="foo"></span> times example</h2>
         <ul>
           {{#repeat 3}}
           <li>Lorem ipsum dolor sit amet.</li>

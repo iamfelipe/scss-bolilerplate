@@ -20,6 +20,6 @@
     @include ms-respond(font-size, $scale);
     line-height: $line-height;
     font-weight: $font-weight;
-    margin-bottom: $vertical-rhythm;
+    @include margin-bottom();
   }
 }

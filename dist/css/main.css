@@ -5070,7 +5070,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 57.3308928px;
   line-height: 1.5;
   font-weight: 700;
-  margin-bottom: 24px; }
+  margin-bottom: 1.5rem; }
   @media (min-width: 576px) and (max-width: 1200px) {
     .lead {
       font-size: calc( 57.3308928px + 28.49979568 * ( ( 100vw - 576px) / 624 )); } }
@@ -5080,9 +5080,9 @@ a.text-dark:hover, a.text-dark:focus {
 
 h1, .h1 {
   font-size: 47.775744px;
-  line-height: 1.5;
+  line-height: 1.00470958;
   font-weight: 700;
-  margin-bottom: 24px; }
+  margin-bottom: 1.5rem; }
   @media (min-width: 576px) and (max-width: 1200px) {
     h1, .h1 {
       font-size: calc( 47.775744px + 20.88880678 * ( ( 100vw - 576px) / 624 )); } }
@@ -5092,9 +5092,9 @@ h1, .h1 {
 
 h2, .h2 {
   font-size: 39.81312px;
-  line-height: 1.5;
+  line-height: 1.20563635;
   font-weight: 700;
-  margin-bottom: 24px; }
+  margin-bottom: 1.5rem; }
   @media (min-width: 576px) and (max-width: 1200px) {
     h2, .h2 {
       font-size: calc( 39.81312px + 15.11852063 * ( ( 100vw - 576px) / 624 )); } }
@@ -5106,7 +5106,7 @@ h3, .h3 {
   font-size: 33.1776px;
   line-height: 1.5;
   font-weight: 400;
-  margin-bottom: 24px; }
+  margin-bottom: 1.5rem; }
   @media (min-width: 576px) and (max-width: 1200px) {
     h3, .h3 {
       font-size: calc( 33.1776px + 10.7677125 * ( ( 100vw - 576px) / 624 )); } }
@@ -5118,7 +5118,7 @@ h4, .h4 {
   font-size: 27.648px;
   line-height: 1.5;
   font-weight: 700;
-  margin-bottom: 24px; }
+  margin-bottom: 1.5rem; }
   @media (min-width: 576px) and (max-width: 1200px) {
     h4, .h4 {
       font-size: calc( 27.648px + 7.50825 * ( ( 100vw - 576px) / 624 )); } }
@@ -5130,7 +5130,7 @@ h5, .h5 {
   font-size: 23.04px;
   line-height: 1.5;
   font-weight: 400;
-  margin-bottom: 24px; }
+  margin-bottom: 1.5rem; }
   @media (min-width: 576px) and (max-width: 1200px) {
     h5, .h5 {
       font-size: calc( 23.04px + 5.085 * ( ( 100vw - 576px) / 624 )); } }
@@ -5142,7 +5142,7 @@ h6, .h6 {
   font-size: 19.2px;
   line-height: 1.5;
   font-weight: 600;
-  margin-bottom: 24px; }
+  margin-bottom: 1.5rem; }
   @media (min-width: 576px) and (max-width: 1200px) {
     h6, .h6 {
       font-size: calc( 19.2px + 3.3 * ( ( 100vw - 576px) / 624 )); } }
@@ -5154,7 +5154,7 @@ html, .base {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
-  margin-bottom: 24px; }
+  margin-bottom: 1.5rem; }
   @media (min-width: 576px) and (max-width: 1200px) {
     html, .base {
       font-size: calc( 16px + 2 * ( ( 100vw - 576px) / 624 )); } }
@@ -5166,7 +5166,7 @@ html, .base {
   font-size: 13.33333333px;
   line-height: 1.5;
   font-weight: 400;
-  margin-bottom: 24px; }
+  margin-bottom: 1.5rem; }
   @media (min-width: 576px) and (max-width: 1200px) {
     .small, .form-control-label {
       font-size: calc( 13.33333333px + 1.06666667 * ( ( 100vw - 576px) / 624 )); } }
@@ -5176,9 +5176,9 @@ html, .base {
 
 .caption {
   font-size: 11.11111111px;
-  line-height: 1.5;
+  line-height: 1.75;
   font-weight: 400;
-  margin-bottom: 24px; }
+  margin-bottom: 1.5rem; }
   @media (min-width: 576px) and (max-width: 1200px) {
     .caption {
       font-size: calc( 11.11111111px + 0.40888889 * ( ( 100vw - 576px) / 624 )); } }
@@ -5190,7 +5190,7 @@ html, .base {
   font-size: 9.25925926px;
   line-height: 1.5;
   font-weight: 400;
-  margin-bottom: 24px; }
+  margin-bottom: 1.5rem; }
   @media (min-width: 576px) and (max-width: 1200px) {
     .tiny {
       font-size: calc( 9.25925926px + -0.04325926 * ( ( 100vw - 576px) / 624 )); } }
@@ -5261,6 +5261,9 @@ figure {
     -o-object-fit: cover;
     object-fit: cover; }
 
+ul {
+  margin-bottom: 1.5rem; }
+
 body {
   font-size: inherit;
   -webkit-font-kerning: auto;
@@ -5305,6 +5308,6 @@ body {
 #c-baseline {
   background-image: linear-gradient(to bottom, #17a2b8 0, rgba(255, 255, 255, 0) 1px);
   background-repeat: repeat-y;
-  background-size: 100% 24px; }
+  background-size: 100% 1.5rem; }
 
 /*# sourceMappingURL=main.css.map */

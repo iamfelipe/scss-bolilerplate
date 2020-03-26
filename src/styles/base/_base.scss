@@ -9,3 +9,7 @@ figure {
     object-fit: cover;
   }
 }
+
+ul {
+  @include margin-bottom();
+}

@@ -9,5 +9,5 @@
     rgba(255, 255, 255, 0) 1px
   );
   background-repeat: repeat-y;
-  background-size: 100% $vertical-rhythm;
+  background-size: 100% rem($vertical-rhythm);
 }
