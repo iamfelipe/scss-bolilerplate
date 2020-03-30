@@ -21,6 +21,7 @@ const clone = require("gulp-clone");
 const modernizr = require("gulp-modernizr");
 const panini = require("panini");
 const changed = require("gulp-changed");
+const tailwindcss = require("tailwindcss");
 
 // Proxy URL
 const proxyURL = "https://ponymalta.test.dd:8443/";
@@ -204,6 +205,21 @@ const buildFonts = mode => done => {
     : undefined;
 };
 
+// Build tailwindcss Task
+const buildTailwindCSS = mode => done => {
+  const postcssPlugins = [tailwindcss];
+  ["development", "production"].includes(mode)
+    ? pump(
+        [
+          gulp.src("./src/styles/_tailwind.scss"),
+          gulpPostcss(postcssPlugins),
+          gulp.dest("./src/styles/vendor"),
+        ],
+        done()
+      )
+    : undefined;
+};
+
 // Build Styles Task
 const buildStyles = mode => done => {
   let outputStyle;
@@ -230,7 +246,7 @@ const buildStyles = mode => done => {
             ? [
                 purgecss({
                   content: [srcPath("html", true)],
-                  whitelistPatternsChildren: [/(ali|cate)/],
+                  // whitelistPatternsChildren: [/(alan|brito)/],
                   fontFace: true,
                 }),
               ]
@@ -342,6 +358,9 @@ const genericTask = (mode, context = "building") => {
     }),
     Object.assign(cleanStyles(mode), {
       displayName: `Booting Styles Task: Clean - ${modeName}`,
+    }),
+    Object.assign(buildTailwindCSS(mode), {
+      displayName: `Booting Tailwind CSS Task: Build - ${modeName}`,
     }),
     Object.assign(buildStyles(mode), {
       displayName: `Booting Styles Task: Build - ${modeName}`,
