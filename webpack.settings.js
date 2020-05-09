@@ -19,4 +19,7 @@ module.exports = {
   entries: {
     main: ["index.js"],
   },
+  babelLoaderConfig: {
+    exclude: [/(node_modules)/],
+  },
 };
