@@ -19,6 +19,41 @@ const configureCleanWebpack = () => {
   };
 };
 
+// Configure Image loader
+const configureImageLoader = () => {
+  return {
+    test: /\.(png|jpe?g|gif|svg|webp)$/i,
+    use: [
+      {
+        loader: "file-loader",
+        options: {
+          name: "img/[name].[ext]?[contenthash:4]",
+        },
+      },
+      {
+        loader: "img-loader",
+        options: {
+          plugins: [
+            require("imagemin-gifsicle")({
+              interlaced: true,
+            }),
+            require("imagemin-mozjpeg")({
+              progressive: true,
+              arithmetic: false,
+            }),
+            require("imagemin-optipng")({
+              optimizationLevel: 5,
+            }),
+            require("imagemin-svgo")({
+              plugins: [{ convertPathData: false }],
+            }),
+          ],
+        },
+      },
+    ],
+  };
+};
+
 // Configure optimization
 const configureOptimization = () => {
   return {
@@ -55,7 +90,7 @@ module.exports = () => {
       devtool: "source-map",
       optimization: configureOptimization(),
       module: {
-        rules: [],
+        rules: [configureImageLoader()],
       },
       plugins: [new CleanWebpackPlugin(configureCleanWebpack())],
     }),
