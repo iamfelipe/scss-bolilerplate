@@ -1,4 +1,6 @@
 {
-  "main.css": "/dist/css/main.css?53f4",
-  "main.js": "/dist/js/main.bundle.js"
+  "main.css": "/dist/css/main.css?177d",
+  "main.js": "/dist/js/main.bundle.js",
+  "main.js.map": "/dist/js/main.bundle.js.map",
+  "css/main.css.map?177d": "/dist/css/main.css.map?177d"
 }
