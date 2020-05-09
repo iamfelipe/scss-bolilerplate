@@ -2,12 +2,12 @@ import sumar from "./modules/utils";
 
 window.onload = () => {
   /* eslint-disable no-unused-vars */
-  const resultado = sumar(5, 2);
+  const result = sumar(5, 2);
 
-  console.log(resultado);
+  console.log(result);
 
   const setText = (element, textContent) => {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         element.textContent = textContent;
         resolve();
