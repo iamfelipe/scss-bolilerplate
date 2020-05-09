@@ -1,5 +1,8 @@
 import sumar from "./modules/utils";
 
+// Import theme styles
+import "../css/main.scss";
+
 window.onload = () => {
   /* eslint-disable no-unused-vars */
   const result = sumar(5, 2);
