@@ -1,5 +1,8 @@
 // Node modules
 const path = require("path");
+
+// Webpack plugins
+const ManifestPlugin = require("webpack-manifest-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // Config files
@@ -91,6 +94,18 @@ const configureFontLoader = () => {
   };
 };
 
+// Configure Manifest
+const configureManifest = (fileName) => {
+  return {
+    fileName: fileName,
+    basePath: settings.manifestConfig.basePath,
+    map: (file) => {
+      file.name = file.name.replace(/(\.[a-f0-9]{32})(\..*)$/, "$2");
+      return file;
+    },
+  };
+};
+
 // Common module exports
 module.exports = {
   name: pkg.name,
@@ -108,6 +123,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new ManifestPlugin(configureManifest("manifest.json")),
     new MiniCssExtractPlugin({
       path: path.resolve(__dirname, settings.paths.dist.base),
       filename: path.join("./css", "[name].css?[contenthash:4]"),

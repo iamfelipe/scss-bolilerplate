@@ -22,4 +22,7 @@ module.exports = {
   babelLoaderConfig: {
     exclude: [/(node_modules)/],
   },
+  manifestConfig: {
+    basePath: "",
+  },
 };
