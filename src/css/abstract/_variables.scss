@@ -1,0 +1,108 @@
+//
+// Variables
+//
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+);
+
+// Modular scale
+$modularscale: (
+  base: 12px,
+  ratio: $minor-third,
+  map-get($grid-breakpoints, "sm"): (
+    base: 12px,
+  ),
+  map-get($grid-breakpoints, "lg"): (
+    base: 14px,
+    ratio: $major-sixth,
+  ),
+  map-get($grid-breakpoints, "xl"): (
+    base: 21px,
+    ratio: $major-sixth,
+  ),
+);
+
+// Custom scale
+$custom-scale: (
+  lead: (
+    scale: 7,
+    line-height: 1.5,
+    font-weight: 700,
+  ),
+  h1: (
+    scale: 6,
+    line-height: 1.004709576138148,
+    font-weight: 700,
+  ),
+  h2: (
+    scale: 5,
+    line-height: 1.205636349935951,
+    font-weight: 700,
+  ),
+  h3: (
+    scale: 4,
+    line-height: 1.5,
+  ),
+  h4: (
+    scale: 3,
+    line-height: 1.5,
+    font-weight: 700,
+  ),
+  h5: (
+    scale: 2,
+    line-height: 1.5,
+  ),
+  h6: (
+    scale: 1,
+    line-height: 1.5,
+    font-weight: 600,
+  ),
+  base: (
+    scale: 0,
+    line-height: 1.5,
+  ),
+  small: (
+    scale: -1,
+  ),
+  caption: (
+    scale: -2,
+    line-height: 1.75,
+  ),
+  tiny: (
+    scale: -3,
+    line-height: 1.5,
+  ),
+);
+
+// Typography
+$ms-base: ms(get("base.scale"));
+$line-height-base: get("base.line-height");
+$vertical-rhythm: $ms-base * $line-height-base;
+
+// Paths
+$asset-base-path: "..";
+
+// Bootstrap theme
+@import "bootstrap-theme";
+
+$font-stack-primary: "Caponi Display", $font-family-base;
+$font-stack-secondary: "SS Nickson Six", $font-family-base;
+
+:root {
+  --color-primary: #{$primary};
+  --color-secondary: #{$secondary};
+}

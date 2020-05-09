@@ -1,0 +1,37 @@
+//
+// Typography
+//
+
+@at-root html {
+  @extend %base;
+}
+
+@at-root body {
+  font-size: inherit;
+  font-kerning: auto;
+  font-family: $font-stack-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Group selectors
+// Uncomment to discover 🧭
+//@custom-selector :--heading h1, h2, h3;
+//@custom-selector :--subheading h4, h5, h6;
+//:--heading {
+//  font-family: $font-stack-primary;
+//}
+
+//Element tags
+@for $i from 1 through 6 {
+  h#{$i} {
+    @extend %h#{$i};
+  }
+}
+
+//Element classes
+@each $base, $properties in $custom-scale {
+  .#{$base} {
+    @extend %#{$base};
+  }
+}
