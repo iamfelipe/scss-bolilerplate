@@ -4,6 +4,7 @@ const path = require("path");
 // Webpack plugins
 const ManifestPlugin = require("webpack-manifest-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const WebpackNotifierPlugin = require("webpack-notifier");
 
 // Config files
 const pkg = require("./package.json");
@@ -127,6 +128,11 @@ module.exports = {
     new MiniCssExtractPlugin({
       path: path.resolve(__dirname, settings.paths.dist.base),
       filename: path.join("./css", "[name].css?[contenthash:4]"),
+    }),
+    new WebpackNotifierPlugin({
+      title: "Webpack",
+      excludeWarnings: true,
+      alwaysNotify: true,
     }),
   ],
 };
