@@ -1,13 +1,15 @@
 // Node modules
+const path = require("path");
 const merge = require("webpack-merge");
 
 // Webpack plugins
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // Config files
-const common = require("./webpack.common.js");
+const commonConfig = require("./webpack.common.js");
 const settings = require("./webpack.settings.js");
 
 // Configure Clean webpack
@@ -82,17 +84,35 @@ const configureTerser = () => {
   };
 };
 
-// Production module exports
-module.exports = () => {
-  return [
-    merge(common, {
-      mode: "production",
-      devtool: "source-map",
-      optimization: configureOptimization(),
-      module: {
-        rules: [configureImageLoader()],
+// Configure the Postcss loader
+const configurePostcssLoader = () => {
+  return {
+    test: /\.s[ac]ss$/i,
+    use: [
+      {
+        loader: MiniCssExtractPlugin.loader,
       },
-      plugins: [new CleanWebpackPlugin(configureCleanWebpack())],
-    }),
-  ];
+    ],
+  };
 };
+
+prodConfig = {
+  mode: "production",
+  devtool: "source-map",
+  optimization: configureOptimization(),
+  module: {
+    rules: [configureImageLoader(), configurePostcssLoader()],
+  },
+  plugins: [
+    new CleanWebpackPlugin(configureCleanWebpack()),
+    new MiniCssExtractPlugin({
+      path: path.resolve(__dirname, settings.paths.dist.base),
+      filename: path.join("./css", "[name].css?[contenthash:4]"),
+    }),
+  ],
+};
+
+// Production module exports
+module.exports = merge.strategy({
+  "module.rules": "prepend",
+})(commonConfig, prodConfig);

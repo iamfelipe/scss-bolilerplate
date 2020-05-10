@@ -218,3 +218,22 @@
 @mixin margin-bottom() {
   margin-bottom: rem($vertical-rhythm);
 }
+
+@mixin palette($name, $color) {
+  --color-#{$name}-50: #{mix(white, $color, 90%)};
+  --color-#{$name}-100: #{mix(white, $color, 80%)};
+  --color-#{$name}-200: #{mix(white, $color, 60%)};
+  --color-#{$name}-300: #{mix(white, $color, 40%)};
+  --color-#{$name}-400: #{mix(white, $color, 20%)};
+  --color-#{$name}-500: #{$color};
+  --color-#{$name}-600: #{mix(black, $color, 20%)};
+  --color-#{$name}-700: #{mix(black, $color, 40%)};
+  --color-#{$name}-800: #{mix(black, $color, 60%)};
+  --color-#{$name}-900: #{mix(black, $color, 80%)};
+}
+
+@mixin set-text($custom-scale) {
+  @each $base, $properties in $custom-scale {
+    --text-#{$base}: #{rem(ms(map-get($properties, scale)))};
+  }
+}

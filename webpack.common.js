@@ -3,7 +3,6 @@ const path = require("path");
 
 // Webpack plugins
 const ManifestPlugin = require("webpack-manifest-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WebpackNotifierPlugin = require("webpack-notifier");
 
 // Config files
@@ -55,9 +54,6 @@ const configurePostcssLoader = () => {
   return {
     test: /\.s[ac]ss$/i,
     use: [
-      {
-        loader: MiniCssExtractPlugin.loader,
-      },
       {
         loader: "css-loader",
         options: {
@@ -118,17 +114,13 @@ module.exports = {
   },
   module: {
     rules: [
-      configureBabelLoader(),
       configurePostcssLoader(),
+      configureBabelLoader(),
       configureFontLoader(),
     ],
   },
   plugins: [
     new ManifestPlugin(configureManifest("manifest.json")),
-    new MiniCssExtractPlugin({
-      path: path.resolve(__dirname, settings.paths.dist.base),
-      filename: path.join("./css", "[name].css?[contenthash:4]"),
-    }),
     new WebpackNotifierPlugin({
       title: "Webpack",
       excludeWarnings: true,

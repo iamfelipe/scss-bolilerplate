@@ -1,13 +1,39 @@
+//
 // Bootstrap root
-// ---------
-@import "~bootstrap/scss/bootstrap-reboot";
-@import "~bootstrap/scss/bootstrap-grid";
-@import "~bootstrap/scss/buttons";
-@import "~bootstrap/scss/forms";
-@import "~bootstrap/scss/navbar";
-@import "~bootstrap/scss/transitions";
-@import "~bootstrap/scss/custom-forms";
-@import "~bootstrap/scss/utilities/position";
-@import "~bootstrap/scss/utilities/background";
-@import "~bootstrap/scss/utilities/text";
-@import "~bootstrap/scss/utilities/sizing";
+//
+
+//
+// Variables
+//
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1920px,
+);
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1180px,
+);
+
+// Colors
+$white: #ffffff;
+$black: #1a202c;
+$primary: #12c3f1;
+$secondary: #e349fa;
+
+//
+// Bootstrap root
+//
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";

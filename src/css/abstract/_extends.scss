@@ -4,11 +4,11 @@
 
 // Typography
 @each $base, $properties in $custom-scale {
-  %#{$base} {
-    // Variables
-    $scale: map-get($properties, scale);
-    $line-height: map-get($properties, line-height);
-    $font-weight: map-get($properties, font-weight);
+  // Variables
+  $line-height: map-get($properties, line-height);
+  $font-weight: map-get($properties, font-weight);
+  $scale: map-get($properties, scale);
+  .type-#{$base} {
     // Set defaults
     @if $font-weight == null {
       $font-weight: $font-weight-base;
@@ -20,6 +20,5 @@
     @include ms-respond(font-size, $scale);
     line-height: $line-height;
     font-weight: $font-weight;
-    @include margin-bottom();
   }
 }
