@@ -1,5 +1,4 @@
 // Node modules
-const path = require("path");
 const merge = require("webpack-merge");
 
 // Webpack plugins
@@ -59,6 +58,5 @@ module.exports = merge(common, {
     contentBase: settings.paths.templates,
     port: settings.devServerConfig.port(),
     watchContentBase: true,
-    writeToDisk: true,
   },
 });
