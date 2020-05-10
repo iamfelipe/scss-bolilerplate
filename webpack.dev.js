@@ -52,6 +52,7 @@ module.exports = merge(common, {
     rules: [configureImageLoader()],
   },
   devServer: {
+    compress: true,
     contentBase: settings.paths.templates,
     hot: true,
     inline: true,
@@ -59,7 +60,7 @@ module.exports = merge(common, {
     watchContentBase: true,
   },
   plugins: [
-    new BrowserSyncPlugin(configureBrowserSync()),
+    // new BrowserSyncPlugin(configureBrowserSync()),
     new CleanWebpackPlugin(configureCleanWebpack()),
     new webpack.HotModuleReplacementPlugin(),
   ],
