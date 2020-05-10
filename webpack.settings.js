@@ -1,3 +1,8 @@
+// webpack.settings.js - webpack settings config
+
+// Node modules
+require("dotenv").config();
+
 // Webpack settings exports
 module.exports = {
   copyright: "Serempre",

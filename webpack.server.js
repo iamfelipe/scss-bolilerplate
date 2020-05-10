@@ -21,6 +21,9 @@ const configurePostcssLoader = () => {
 };
 
 const serverConfig = {
+  output: {
+    publicPath: settings.devServerConfig.public(),
+  },
   devServer: {
     hot: true,
     compress: true,
