@@ -2,6 +2,7 @@
 const merge = require("webpack-merge");
 
 // Webpack plugins
+const webpack = require("webpack");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 
@@ -50,13 +51,16 @@ module.exports = merge(common, {
   module: {
     rules: [configureImageLoader()],
   },
-  plugins: [
-    new BrowserSyncPlugin(configureBrowserSync()),
-    new CleanWebpackPlugin(configureCleanWebpack()),
-  ],
   devServer: {
     contentBase: settings.paths.templates,
+    hot: true,
+    inline: true,
     port: settings.devServerConfig.port(),
     watchContentBase: true,
   },
+  plugins: [
+    new BrowserSyncPlugin(configureBrowserSync()),
+    new CleanWebpackPlugin(configureCleanWebpack()),
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 });

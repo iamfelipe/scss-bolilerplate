@@ -31,8 +31,8 @@ window.onload = () => {
 
   (async () => {
     const foo = document.querySelector("#foo");
-    await setText(foo, "foo");
-    await setText(foo, "bar");
-    await setText(foo, "baz");
+    await setText(foo, "one");
+    await setText(foo, "two");
+    await setText(foo, "three");
   })();
 };
