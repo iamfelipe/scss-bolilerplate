@@ -26,6 +26,7 @@ $custom-scale: (
   ),
   "4xl": (
     scale: 5,
+    font-weight: 700,
   ),
   "3xl": (
     scale: 4,
@@ -60,8 +61,8 @@ $asset-base-path: "..";
 
 :root {
   // fontFamily
-  --font-family-primary: ConfigUltra;
-  --font-family-secondary: Futura;
+  --font-family-primary: Caponi Display;
+  --font-family-secondary: SS Nickson Six;
   // fontSize
   @include set-text($custom-scale);
   // colors

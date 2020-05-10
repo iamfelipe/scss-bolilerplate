@@ -2,14 +2,16 @@
 // Base css
 //
 
+@at-root {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 figure {
   margin-bottom: 0;
 
   img {
     object-fit: cover;
   }
-}
-
-ul {
-  @include margin-bottom();
 }
