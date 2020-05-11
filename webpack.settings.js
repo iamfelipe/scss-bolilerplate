@@ -41,4 +41,7 @@ module.exports = {
   manifestConfig: {
     basePath: "",
   },
+  purgeCssConfig: {
+    paths: ["./templates/**/*.{twig,html}"],
+  },
 };

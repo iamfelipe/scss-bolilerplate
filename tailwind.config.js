@@ -1,11 +1,14 @@
 const regex = new RegExp(/production/);
 const production = process.argv.some((e) => regex.test(e));
 
+// Config files
+const settings = require("./webpack.settings.js");
+
 module.exports = {
   target: "ie11",
   purge: {
     enabled: production,
-    content: ["./templates/**/*.{html,twig}"],
+    content: settings.purgeCssConfig.paths,
   },
   theme: {
     extend: {
