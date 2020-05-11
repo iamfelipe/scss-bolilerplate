@@ -22,6 +22,9 @@ const configureBabelLoader = () => {
           [
             "@babel/preset-env",
             {
+              targets: {
+                node: "current",
+              },
               modules: false,
               corejs: {
                 version: 2,

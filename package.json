@@ -20,7 +20,8 @@
   "scripts": {
     "dev:start-server": "webpack-dev-server --config=webpack.server.js",
     "dev:start-proxy": "webpack --watch --config=webpack.proxy.js",
-    "prod:build": "webpack --env.NODE_ENV=production --progress --config=webpack.prod.js"
+    "prod:build": "webpack --env.NODE_ENV=production --progress --config=webpack.prod.js",
+    "test": "jest"
   },
   "husky": {
     "hooks": {
@@ -45,6 +46,7 @@
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
+    "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "^2.2.2",
@@ -53,6 +55,7 @@
     "file-loader": "^6.0.0",
     "husky": "^4.2.5",
     "img-loader": "^3.0.1",
+    "jest": "^26.0.1",
     "mini-css-extract-plugin": "^0.9.0",
     "modularscale-sass": "^3.0.10",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
