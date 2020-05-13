@@ -20,7 +20,7 @@
   "scripts": {
     "dev:start-server": "webpack-dev-server --env.NODE_ENV=development --config=webpack.dev.js",
     "prod:build": "webpack --env.NODE_ENV=production --progress --config=webpack.prod.js",
-    "test": "jest"
+    "dev:test": "jest"
   },
   "husky": {
     "hooks": {

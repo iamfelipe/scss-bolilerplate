@@ -96,7 +96,7 @@ const configurePostcssLoader = () => {
   };
 };
 
-prodConfig = {
+const prodConfig = {
   mode: "production",
   devtool: "source-map",
   optimization: configureOptimization(),
