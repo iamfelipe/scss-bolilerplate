@@ -17,13 +17,6 @@ module.exports = {
     },
     templates: "./templates/",
   },
-  devServerConfig: {
-    public: () => process.env.DEVSERVER_PUBLIC || "http://localhost:8080",
-    host: () => process.env.DEVSERVER_HOST || "localhost",
-    poll: () => process.env.DEVSERVER_POLL || false,
-    port: () => process.env.DEVSERVER_PORT || 8080,
-    https: () => process.env.DEVSERVER_HTTPS || true,
-  },
   urls: {
     publicPath: () => process.env.PUBLIC_PATH || "/dist/",
   },
@@ -40,6 +33,13 @@ module.exports = {
       flatten: true,
     },
   ],
+  devServerConfig: {
+    public: () => process.env.DEVSERVER_PUBLIC || "http://localhost:8080",
+    host: () => process.env.DEVSERVER_HOST || "localhost",
+    poll: () => process.env.DEVSERVER_POLL || false,
+    port: () => process.env.DEVSERVER_PORT || 8080,
+    https: () => process.env.DEVSERVER_HTTPS || true,
+  },
   manifestConfig: {
     basePath: "",
   },

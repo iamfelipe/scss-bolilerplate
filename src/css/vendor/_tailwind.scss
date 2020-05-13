@@ -1,3 +1,24 @@
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ */
 @tailwind base;
+/**
+ * This injects any component classes registered by plugins.
+ *
+ */
 @tailwind components;
+/**
+ * Here we add custom component classes; stuff we want loaded
+ * *before* the utilities so that the utilities can still
+ * override them.
+ *
+ */
+//@import "main";
+/**
+ * This injects all of Tailwind's utility classes, generated based on your
+ * config file.
+ *
+ */
 @tailwind utilities;

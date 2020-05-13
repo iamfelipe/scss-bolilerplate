@@ -111,9 +111,9 @@ module.exports = {
   name: pkg.name,
   entry: configureEntries(),
   output: {
+    filename: path.join("./js", "[name].bundle.js"),
     path: path.resolve(__dirname, settings.paths.dist.base),
     publicPath: settings.urls.publicPath(),
-    filename: path.join("./js", "[name].bundle.js"),
   },
   module: {
     rules: [
@@ -121,6 +121,20 @@ module.exports = {
       configureBabelLoader(),
       configureFontLoader(),
     ],
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        default: false,
+        common: false,
+        vendor: {
+          test: /node_modules/,
+          chunks: "initial",
+          name: "vendor",
+          enforce: true,
+        },
+      },
+    },
   },
   plugins: [
     new ManifestPlugin(configureManifest("manifest.json")),
