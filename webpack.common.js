@@ -87,7 +87,7 @@ const configureFontLoader = () => {
         loader: "url-loader",
         options: {
           limit: 50000,
-          name: "fonts/[name].[ext]",
+          name: "fonts/[name].[ext]?[contenthash:4]",
         },
       },
     ],

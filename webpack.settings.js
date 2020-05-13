@@ -5,7 +5,6 @@ require("dotenv").config();
 
 // Webpack settings exports
 module.exports = {
-  copyright: "Serempre",
   paths: {
     src: {
       base: "./src/",
@@ -17,6 +16,13 @@ module.exports = {
       clean: ["**/*"],
     },
     templates: "./templates/",
+  },
+  devServerConfig: {
+    public: () => process.env.DEVSERVER_PUBLIC || "http://localhost:8080",
+    host: () => process.env.DEVSERVER_HOST || "localhost",
+    poll: () => process.env.DEVSERVER_POLL || false,
+    port: () => process.env.DEVSERVER_PORT || 8080,
+    https: () => process.env.DEVSERVER_HTTPS || true,
   },
   urls: {
     publicPath: () => process.env.PUBLIC_PATH || "/dist/",
@@ -34,17 +40,6 @@ module.exports = {
       flatten: true,
     },
   ],
-  devServerConfig: {
-    public: () => process.env.DEVSERVER_PUBLIC || "http://localhost:8080",
-    proxy: () =>
-      process.env.DEVSERVER_PROXY ||
-      console.warn(
-        "⚠️ Add an .env file at the theme's root with a valid DEVSERVER_PROXY ⚠️\nEj: DEVSERVER_PROXY='https://url.dd:0000/'️️"
-      ),
-    host: () => process.env.DEVSERVER_HOST || "localhost",
-    port: () => process.env.DEVSERVER_PORT || 8080,
-    https: () => process.env.DEVSERVER_HTTPS || false,
-  },
   manifestConfig: {
     basePath: "",
   },

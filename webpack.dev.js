@@ -1,5 +1,6 @@
 // Node modules
 const merge = require("webpack-merge");
+const path = require("path");
 
 // Webpack plugins
 const webpack = require("webpack");
@@ -41,8 +42,28 @@ const configureImageLoader = () => {
   };
 };
 
-const regex = new RegExp(/development/);
-const development = process.argv.some((e) => regex.test(e));
+// Configure the webpack-dev-server
+const configureDevServer = () => {
+  return {
+    contentBase: path.resolve(__dirname, settings.paths.templates),
+    host: settings.devServerConfig.host(),
+    port: settings.devServerConfig.port(),
+    disableHostCheck: true,
+    hot: true,
+    overlay: true,
+    https: true,
+    watchContentBase: true,
+    watchOptions: {
+      poll: !!parseInt(settings.devServerConfig.poll()),
+      ignored: /node_modules/,
+    },
+    writeToDisk: false,
+    compress: true,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+  };
+};
 
 const devConfig = {
   mode: "development",
@@ -50,16 +71,7 @@ const devConfig = {
   output: {
     publicPath: settings.devServerConfig.public(),
   },
-  devServer: {
-    compress: true,
-    contentBase: settings.paths.templates,
-    disableHostCheck: development,
-    host: settings.devServerConfig.host(),
-    hot: true,
-    port: settings.devServerConfig.port(),
-    watchContentBase: true,
-    writeToDisk: true,
-  },
+  devServer: configureDevServer(),
   module: {
     rules: [configurePostcssLoader(), configureImageLoader()],
   },

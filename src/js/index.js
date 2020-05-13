@@ -17,8 +17,14 @@ window.onload = () => {
 
   (async () => {
     const foo = document.querySelector("#foo");
-    await setText(foo, "one");
-    await setText(foo, "two");
-    await setText(foo, "three");
+    await setText(foo, "uno");
+    await setText(foo, "dos");
+    await setText(foo, "tres");
+    await setText(foo, "catorce");
   })();
 };
+
+// Accept HMR as per: https://webpack.js.org/api/hot-module-replacement#accept
+if (module.hot) {
+  module.hot.accept();
+}

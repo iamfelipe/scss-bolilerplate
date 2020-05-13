@@ -37,9 +37,10 @@
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
     "imagemin-svgo": "^7.1.0",
+    "moment": "^2.25.3",
     "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.4.6",
-    "stickybits": "^3.7.7"
+    "stickybits": "^3.7.7",
+    "tailwindcss": "^1.4.6"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -48,11 +49,10 @@
     "@babel/preset-env": "^7.9.6",
     "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
-    "browser-sync": "^2.26.7",
-    "browser-sync-webpack-plugin": "^2.2.2",
     "core-js": "^2.6.11",
     "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
+    "git-rev-sync": "^2.0.0",
     "husky": "^4.2.5",
     "img-loader": "^3.0.1",
     "jest": "^26.0.1",
