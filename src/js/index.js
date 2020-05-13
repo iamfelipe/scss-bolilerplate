@@ -1,6 +1,10 @@
 // Import theme styles
 import "../css/main.scss";
 
+import stickybits from "stickybits";
+
+stickybits("#header");
+
 window.onload = () => {
   const setText = (element, textContent) => {
     return new Promise((resolve) => {

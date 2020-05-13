@@ -27,9 +27,9 @@
     @font-face {
       font-family: $font-name;
       src: font($file-name + ".eot");
-      src: font($file-name + ".woff") format("woff"),
-        font($file-name + ".ttf") format("truetype"),
-        font($file-name + ".svg") format("svg");
+      src: font($file-name + ".eot?#iefix") format("ie9-skip-eot"),
+        font($file-name + ".woff") format("woff"),
+        font($file-name + ".woff2") format("woff2");
       font-weight: $weight;
       font-style: $style;
     }

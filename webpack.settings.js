@@ -27,6 +27,13 @@ module.exports = {
   babelLoaderConfig: {
     exclude: [/(node_modules)/],
   },
+  copyWebpackConfig: [
+    {
+      from: "./src/static/**/*",
+      to: "[folder]/[name].[ext]?[contenthash]",
+      flatten: true,
+    },
+  ],
   devServerConfig: {
     public: () => process.env.DEVSERVER_PUBLIC || "http://localhost:8080",
     proxy: () =>

@@ -18,7 +18,7 @@
   },
   "private": true,
   "scripts": {
-    "dev:start-server": "webpack-dev-server --config=webpack.server.js",
+    "dev:start-server": "webpack-dev-server --env.NODE_ENV=development --config=webpack.server.js",
     "dev:start-proxy": "webpack --watch --config=webpack.proxy.js",
     "prod:build": "webpack --env.NODE_ENV=production --progress --config=webpack.prod.js",
     "test": "jest"
@@ -39,7 +39,8 @@
     "imagemin-optipng": "^7.1.0",
     "imagemin-svgo": "^7.1.0",
     "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.4.6",
+    "stickybits": "^3.7.7"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
