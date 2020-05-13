@@ -112,6 +112,7 @@ module.exports = {
   entry: configureEntries(),
   output: {
     filename: path.join("./js", "[name].bundle.js"),
+    chunkFilename: path.join("./js", "[name].bundle.js"),
     path: path.resolve(__dirname, settings.paths.dist.base),
     publicPath: settings.urls.publicPath(),
   },
@@ -125,8 +126,6 @@ module.exports = {
   optimization: {
     splitChunks: {
       cacheGroups: {
-        default: false,
-        common: false,
         vendor: {
           test: /node_modules/,
           chunks: "initial",
